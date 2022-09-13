@@ -17,7 +17,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
   <author>Mariusz Migut SP-MMA(3D, Sounds), Patrice Poly "WooT" (FDM )</author>
 
   <flight-model>jsb</flight-model>
-  <aero>PZL-Koliber-160A</aero>
+  <aero>PZL-Koliber-160</aero>
 
   <startup>
     <splash-texture>Aircraft/PZL-Koliber-family/splash.png</splash-texture>
