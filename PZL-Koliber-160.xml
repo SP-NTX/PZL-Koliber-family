@@ -67,7 +67,7 @@
    <vtailarea  unit="M2">    1.80 </vtailarea>
    <vtailarm  unit="M" >     3.80 </vtailarm>
    <location name="AERORP" unit="M">
-     <x>     3.57 </x>
+     <x>     0.34 </x>
      <y>     0.00 </y>
      <z>     0.00 </z>
    </location>
@@ -89,17 +89,17 @@
    <izz unit="KG*M2">   2312.00 </izz>
    <emptywt unit="KG" >    567.00 </emptywt>
    <location name="CG" unit="M">
-     <x>     3.35 </x>
+     <x>   -0.106109  </x>
      <y>     0.00 </y>
-     <z>    -0.18 </z>
+     <z>    0.348 </z>
    </location>
    <pointmass name="Payload">
     <description> 157.20 kg should bring model up to entered max weight </description>
     <weight unit="KG"> 78.60 </weight>
     <location name="POINTMASS" unit="M">
-     <x>     3.35 </x>
+     <x>    -0.106109  </x>
      <y>     0.00 </y>
-     <z>    -0.18 </z>
+     <z>    0.348</z>
    </location>
   </pointmass>
  </mass_balance>
@@ -112,9 +112,9 @@
     <thruster file="sensenich_propeller">
      <sense> 1 </sense>
      <location unit="M">
-       <x>     0.91 </x>
+       <x> 0.225294</x>
        <y>     0.00 </y>
-       <z>     0.00 </z>
+       <z>   0.0503</z>
      </location>
      <orient unit="DEG">
        <pitch>     0.00 </pitch>
@@ -126,18 +126,18 @@
 
   <tank type="FUEL" number="0">
      <location unit="M">
-       <x>     3.35 </x>
-       <y>     0.00 </y>
-       <z>    -0.18 </z>
+       <x> 0.17164 </x>
+       <y>   -1.51915 </y>
+       <z>   -0.007596  </z>
      </location>
      <capacity unit="KG"> 62.90 </capacity>
      <contents unit="KG"> 31.45 </contents>
   </tank>
   <tank type="FUEL" number="1">
      <location unit="M">
-       <x>     3.35 </x>
-       <y>     0.00 </y>
-       <z>    -0.18 </z>
+       <x>  0.17164</x>
+       <y>   1.51915  </y>
+       <z>   -0.007596  </z>
      </location>
      <capacity unit="KG"> 62.90 </capacity>
      <contents unit="KG"> 31.45 </contents>
@@ -149,9 +149,9 @@
 
   <contact type="BOGEY" name="NOSE">
     <location unit="M">
-      <x>     0.96 </x>
-      <y>     0.00 </y>
-      <z>    -0.88 </z>
+      <x>     -1.51674 </x>
+      <y>   0.074282 </y>
+      <z>   -0.798493  </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
@@ -165,9 +165,9 @@
 
   <contact type="BOGEY" name="LEFT_MAIN">
     <location unit="M">
-      <x>     3.49 </x>
-      <y>    -0.85 </y>
-      <z>    -0.88 </z>
+      <x> 0.128909  </x>
+      <y>  -0.919246  </y>
+      <z>  -0.820845  </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
@@ -181,9 +181,9 @@
 
   <contact type="BOGEY" name="RIGHT_MAIN">
     <location unit="M">
-      <x>     3.49 </x>
-      <y>     0.85 </y>
-      <z>    -0.88 </z>
+      <x> 0.128909  </x>
+      <y>  0.919246  </y>
+      <z>  -0.820845  </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
@@ -197,9 +197,9 @@
 
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="M">
-     <x>     3.35 </x>
-     <y>    -4.74 </y>
-     <z>    -0.18 </z>
+     <x>  0.176815  </x>
+     <y> -4.86388  </y>
+     <z>  0.396997  </z>
     </location>
    <static_friction>  1 </static_friction>
    <dynamic_friction> 1 </dynamic_friction>
@@ -209,9 +209,35 @@
 
   <contact type="STRUCTURE" name="RIGHT_WING">
     <location unit="M">
-     <x>     3.35 </x>
-     <y>     4.74 </y>
-     <z>    -0.18 </z>
+     <x>  0.176815  </x>
+     <y> 4.86388  </y>
+     <z>  0.396997  </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+  
+  
+    <contact type="STRUCTURE" name="TAIL">
+    <location unit="M">
+     <x> 4.13963  </x>
+     <y> 0 </y>
+     <z>  -0.046462  </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+  
+  
+    <contact type="STRUCTURE" name="NOSE_STR">
+    <location unit="M">
+     <x>-1.94565  </x>
+     <y>0</y>
+     <z> 0.1249  </z>
     </location>
    <static_friction>  1 </static_friction>
    <dynamic_friction> 1 </dynamic_friction>
@@ -391,9 +417,9 @@
             <independentVar lookup="row">aero/beta-rad</independentVar>
             <tableData>
               -1.57    1.2300
-              -0.26    0.0500
+              -0.26    0.0900
                0.00    0.0000
-               0.26    0.0500
+               0.26    0.0900
                1.57    1.2300
             </tableData>
           </table>
