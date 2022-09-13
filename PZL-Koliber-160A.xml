@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+YASim aerodynamic model for a PZL Koliber 160A
+************************************************************************
+Autor: SP-MMA Mariusz Migut
+Dane poprawione dla Koliber 160A
+
+  Wingspan      :   34 ft 4 in ( 9.74 m  )
+  lenght        :   25 ft 5 in ( 7.37 m  )
+  height        :    7 ft 0 in ( 2.8 m  )
+  Empty mass    : 1338 lb      (   607 kg )
+  Engine        : 1 Lycoming O-320 D2A, 160 hp
+  Cruise speed  :  105 kt
+  Maximum speed :  107 kt at sea level ( 200 km/h )
+
+PZL-Koliber 160A silnik Lycoming O-320 D2A
+-->
+<airplane mass="1338" version="YASIM_VERSION_CURRENT">
+<!-- Approach configuration -->
+<approach speed="47" aoa="4" >
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+</approach>
+
+<cruise speed="105" alt="5000" >
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.70"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.70"/>
+  <control-setting axis="/controls/flight/flaps" value="0.0"/>
+</cruise>
+
+
+<cockpit x="-0.072" y="0.253" z="0.690"/>
+
+
+<fuselage ax="2.324" ay="0" az="0.424" bx="-4.198" by="0" bz="0.046" width="1.231" taper="0.3" midpoint="0.299"/>
+
+<!--<wing x="0.186" y="0.435" z="-0.097" taper="1.0" incidence="4" twist="0" length="4.347" chord="1.346" sweep="0" dihedral="7" camber="0.15">-->
+<wing x="-0.2" y="0.500" z="-0.097" taper="1.0" incidence="4" twist="0" length="4.347" chord="1.346" sweep="0" dihedral="7" camber="0.15">
+	<stall aoa="19.5" width="3" peak="1.5"/>
+	<flap0 start="0.567" end="0.903" lift="1.2" drag="1.4"/>
+	<flap1 start="0.1" end="0.63" lift="1.4" drag="2.2"/>
+	
+	<slat start="0" end="1" aoa="5" drag="1.2"/>
+	<control-input axis="/controls/flight/slats" control="SLAT"/>		
+	<control-output control="SLAT" prop="/surface-positions/slats-pos-norm"/>
+	<!--<control-speed control="SLAT" transition-time="2.5"/> -->
+	
+	<control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+	<control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+	<control-output control="FLAP0" side="left"
+			prop="/surface-positions/left-aileron-pos-norm"/>
+	<control-output control="FLAP0" side="right"
+			prop="/surface-positions/right-aileron-pos-norm"/>
+	<control-input axis="/controls/flight/flaps" control="FLAP1"/>
+	<control-speed control="FLAP1" transition-time="5"/>
+	<control-output control="FLAP1" prop="/surface-positions/flap-pos-norm"/>
+</wing>
+
+<hstab x="-3.905" y="0.0" z="0.352" taper="1" effectiveness="2" incidence="0" length="1.793" chord="0.966" sweep="0">
+	<stall aoa="18.5" width="3" peak="1.5"/>
+	<flap0 start="0" end="1" lift="1.6" drag="1.1"/>
+	<control-input axis="/controls/flight/elevator" control="FLAP0"/>
+	<control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+	<control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+</hstab>
+
+<!--<vstab x="-3.395" y="0" z="0.277" taper="0.6" effectiveness="2.0" length="1.688" chord="0.915" sweep="22" incidence="0">-->
+<vstab x="-3.395" y="0.0" z="0.277" taper="0.75" effectiveness="2.0" length="1.688" chord="1.20" sweep="27" incidence="0">
+	<stall aoa="18" width="4" peak="1.5"/>
+	<flap0 start="0.125" end="1" lift="1.4" drag="1.2"/>
+	<control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+	<control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+	<control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"
+			min="1" max="-1"/>
+</vstab>
+
+<!--Cruise-speed obliczone dla 70% mocy
+takeoff na maxdane
+moment=(14,69x(0.98x0.98)/2 masa śmigla w kg x promień śmigła do kwadratu wynik
+podzielić przez ilość ramion. W tym wypadku 2
+Propeller Sensenich 74DM-0-58 two blades fi 1880mm = 74in-->
+<propeller x="1.516" y="0" z="0.389"
+             mass="310.4"
+             radius="0.98"
+             moment="4"
+             cruise-speed="126"
+             cruise-rpm="2675"
+             cruise-alt="7000"
+             cruise-power="120"
+             takeoff-power="160"
+             takeoff-rpm="2700" >
+  <actionpt x="2.04" y="0.0" z="0.414"/>
+  <piston-engine eng-rpm="2700"
+                 eng-power="160"
+                 displacement="320"
+                 compression="8.5"
+		 wastegate-mp="35"/>
+    <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+    <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+    <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+    <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+</propeller>
+
+<!--Podwozie samolotu przod-->
+<gear x="1.596" y="-0.075" z="-0.828" compression="0.11"
+    upx="-0.55" upy="0" upz="1"
+	spring="0.6"
+	damp="0.8"
+	sfric="0.7"
+	dfric="0.6">
+	<control-input axis="/controls/flight/rudder" control="STEER" square="true"
+	 src0="-1.0" src1="1.0"
+	 dst0="-0.5" dst1="0.5"/>
+</gear>
+<!--lewy -->
+<gear x="-0.133" y="0.95" z="-0.828" compression="0.11"
+    upx="0" upy="-0.2" upz="1"
+	spring="0.6"
+	damp="0.5"
+    sfric="0.7"
+    dfric="0.6">
+	<control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+	<control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+</gear>
+
+<gear x="-0.133" y="-0.95" z="-0.828" compression="0.11"
+    upx="0" upy="0.2" upz="1"
+	 spring="0.6"
+     damp="0.5"
+     sfric="0.7"
+     dfric="0.6"> 
+	<control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+	<control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+</gear>
+
+
+<tank x="0" y="1.668" z="0.118" capacity="156"/> 
+<tank x="0" y="-1.668" z="0.118" capacity="156"/> 
+
+<!-- Oblicznie wyważenia samolotu. Balast-->
+
+<ballast x="-3.35" y="0" z="-0.38" mass="50"/>
+<!--<ballast x="2.0" y="0" z="-0.70" mass="100"/>-->
+<ballast x="1.77" y="0" z="0.38" mass="300"/>
+<!-- pilot -->
+<weight x="0.008" y="0.258" z="0.286" mass-prop="/sim/weight[0]/weight-lb"/>
+
+<!-- passenger -->
+<weight x="0.008" y="-0.258" z="0.286" mass-prop="/sim/weight[1]/weight-lb"/>
+
+<!-- hitch -->
+<hitch name="aerotow" x="-4.198" y="0" z="0.046" force-is-calculated-by-other="1">
+	<tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+	<winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+</hitch>
+</airplane>
+
+
