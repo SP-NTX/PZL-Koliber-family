@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!--
+  File:     Lycoming_O-320.xml
+  Author:   AeromatiC++ v 3.3.20
+
+  See: http://wiki.flightgear.org/JSBSim_Engines#FGPiston
+
+  Inputs:
+    name:           Lycoming_O-320
+    type:           Piston Engine
+    power:          160.92 hp
+-->
+
+<piston_engine name="Lycoming_O-320">
+  <minmp unit="INHG">         10.0 </minmp>
+  <maxmp unit="INHG">         28.5 </maxmp>
+    <displacement unit="IN3"> 305.748 </displacement>
+  <maxhp>        160.92 </maxhp>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      700.0 </idlerpm>
+  <maxrpm>      2800.0 </maxrpm>
+  <sparkfaildrop>  0.1 </sparkfaildrop>
+  <volumetric-efficiency> 0.85 </volumetric-efficiency>
+  <man-press-lag> 0.1 </man-press-lag>
+  <static-friction  unit="HP"> 0.8046 </static-friction>
+  <starter-torque> 128.736 </starter-torque>
+  <starter-rpm> 1400 </starter-rpm>
+ <!-- Defining <bsfc> over-rides the built-in horsepower calculations -->
+ <!--<bsfc>           0.45 </bsfc>-->
+  <stroke unit="IN">  4.375 </stroke>
+  <bore unit="IN">    5.125 </bore>
+  <cylinders>         3  </cylinders>
+  <compression-ratio>  8.0 </compression-ratio>
+</piston_engine>
