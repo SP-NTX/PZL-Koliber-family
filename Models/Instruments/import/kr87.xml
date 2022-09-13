@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+
+<!--
+Bendix/King KR-87 ADF
+Gary "Buckaroo" Neely
+Timer functions not yet implemented.
+Released under GNU GENERAL PUBLIC LICENSE Version 2
+-->
+
+<PropertyList>
+
+<path>kr87.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Bezel</object-name>
+  <object-name>AdfKnob1</object-name>
+  <object-name>AdfKnob2</object-name>
+  <object-name>KnobPwr</object-name>
+  <object-name>BtnFRQ</object-name>
+  <object-name>BtnADF</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>LabelsGlow</object-name>
+  <object-name>AdfSelDigit1</object-name>
+  <object-name>AdfSelDigit2</object-name>
+  <object-name>AdfSelDigit3</object-name>
+  <object-name>AdfSelDigit4</object-name>
+  <object-name>AdfSbyDigit1</object-name>
+  <object-name>AdfSbyDigit2</object-name>
+  <object-name>AdfSbyDigit3</object-name>
+  <object-name>AdfSbyDigit4</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LabelsGlow</object-name>
+  <object-name>AdfSelDigit1</object-name>
+  <object-name>AdfSelDigit2</object-name>
+  <object-name>AdfSelDigit3</object-name>
+  <object-name>AdfSelDigit4</object-name>
+  <object-name>AdfSbyDigit1</object-name>
+  <object-name>AdfSbyDigit2</object-name>
+  <object-name>AdfSbyDigit3</object-name>
+  <object-name>AdfSbyDigit4</object-name>
+  <condition>
+    <property>/systems/electrical/outputs/kr-87</property>
+  </condition>
+</animation>
+
+
+<!--  Active Freq Digits -->
+
+<animation>
+  <type>select</type>
+  <object-name>AdfSelDigit1</object-name>
+  <condition>
+    <greater-than>
+      <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+      <value>999</value>
+    </greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSelDigit1</object-name>
+  <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSelDigit2</object-name>
+  <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSelDigit3</object-name>
+  <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSelDigit4</object-name>
+  <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Standby Freq Digits -->
+
+<animation>
+  <type>select</type>
+  <object-name>AdfSbyDigit1</object-name>
+  <condition>
+    <greater-than>
+      <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+      <value>999</value>
+    </greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSbyDigit1</object-name>
+  <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSbyDigit2</object-name>
+  <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSbyDigit3</object-name>
+  <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>AdfSbyDigit4</object-name>
+  <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Freq Transfer Button -->
+
+<animation>
+  <type>pick</type>
+  <object-name>BtnFRQ</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+      <property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+    </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>KnobPwr</object-name>
+  <property>/controls/switches/kr-87</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>-120</dep></entry>
+    <entry><ind>1</ind><dep> 120</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.038</y-m>
+    <z-m>-0.006</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>
+
+

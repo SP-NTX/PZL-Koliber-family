@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- **********************************
+	Mariusz Migut as SP-MMA
+	PZL Koliber 160A
+	
+	**********************************-->
+	
+<PropertyList>
+	<path>carb_temp.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>tarcza</object-name>
+		<object-name>wskazowka</object-name>
+		<object-name>wskazowka-off</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+	</animation>
+	
+	<animation>
+  <type>select</type>
+  <object-name>wskazowka</object-name>
+  <condition>
+    <property>systems/electrical/outputs/bus-dc</property>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>wskazowka-off</object-name>
+  <condition>
+    <not><property>systems/electrical/outputs/bus-dc</property></not>
+  </condition>
+</animation>	
+	
+	<animation> 
+    <type>rotate</type>
+    <object-name>wskazowka</object-name>
+    <property>engines/engine[0]/carb-temp-degc</property>
+    <interpolation>
+        <entry><ind>-50</ind><dep>-39</dep></entry>
+        <entry><ind>-40</ind><dep>-36</dep></entry>
+        <entry><ind>-30</ind><dep>-30</dep></entry>
+        <entry><ind>-20</ind><dep>-22</dep></entry>
+        <entry><ind>-10</ind><dep>-12</dep></entry>
+        <entry><ind>0.00</ind><dep>0</dep></entry>
+        <entry><ind>10</ind><dep>12</dep></entry>
+        <entry><ind>20</ind><dep>22</dep></entry>
+        <entry><ind>30</ind><dep>30</dep></entry>
+        <entry><ind>40</ind><dep>36</dep></entry>
+        <entry><ind>50</ind><dep>40</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.00178 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.01431 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+</PropertyList>

@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+
+<!--
+Bendix/King KX-155 Nav/Comm Tranceiver 
+Gary "Buckaroo" Neely
+Released under GNU GENERAL PUBLIC LICENSE Version 2
+-->
+
+<PropertyList>
+
+<path>kx155.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Bezel</object-name>
+  <object-name>CommTFR</object-name>
+  <object-name>NavTFR</object-name>
+  <object-name>NavKnob1</object-name>
+  <object-name>NavKnob2</object-name>
+  <object-name>CommKnob1</object-name>
+  <object-name>CommKnob2</object-name>
+  <object-name>KnobOn</object-name>
+  <object-name>KnobIdent</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>CommSelDigit1</object-name>
+  <object-name>CommSelDigit2</object-name>
+  <object-name>CommSelDigit3</object-name>
+  <object-name>CommSelDigit4</object-name>
+  <object-name>CommSelDigit5</object-name>
+  <object-name>CommSbyDigit1</object-name>
+  <object-name>CommSbyDigit2</object-name>
+  <object-name>CommSbyDigit3</object-name>
+  <object-name>CommSbyDigit4</object-name>
+  <object-name>CommSbyDigit5</object-name>
+  <object-name>NavSelDigit1</object-name>
+  <object-name>NavSelDigit2</object-name>
+  <object-name>NavSelDigit3</object-name>
+  <object-name>NavSelDigit4</object-name>
+  <object-name>NavSelDigit5</object-name>
+  <object-name>NavSbyDigit1</object-name>
+  <object-name>NavSbyDigit2</object-name>
+  <object-name>NavSbyDigit3</object-name>
+  <object-name>NavSbyDigit4</object-name>
+  <object-name>NavSbyDigit5</object-name>
+  <object-name>Decimals</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>CommSelDigit1</object-name>
+  <object-name>CommSelDigit2</object-name>
+  <object-name>CommSelDigit3</object-name>
+  <object-name>CommSelDigit4</object-name>
+  <object-name>CommSelDigit5</object-name>
+  <object-name>CommSbyDigit1</object-name>
+  <object-name>CommSbyDigit2</object-name>
+  <object-name>CommSbyDigit3</object-name>
+  <object-name>CommSbyDigit4</object-name>
+  <object-name>CommSbyDigit5</object-name>
+  <condition>
+    <property>/systems/electrical/outputs/kx-155-2</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>NavSelDigit1</object-name>
+  <object-name>NavSelDigit2</object-name>
+  <object-name>NavSelDigit3</object-name>
+  <object-name>NavSelDigit4</object-name>
+  <object-name>NavSelDigit5</object-name>
+  <object-name>NavSbyDigit1</object-name>
+  <object-name>NavSbyDigit2</object-name>
+  <object-name>NavSbyDigit3</object-name>
+  <object-name>NavSbyDigit4</object-name>
+  <object-name>NavSbyDigit5</object-name>
+  <object-name>Decimals</object-name>
+  <condition>
+    <property>/systems/electrical/outputs/kx-155-2</property>
+  </condition>
+</animation>
+
+<!--  Active Comm Freq Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSelDigit1</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSelDigit2</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSelDigit3</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSelDigit4</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSelDigit5</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Standby Comm Freq Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSbyDigit1</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSbyDigit2</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSbyDigit3</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSbyDigit4</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>CommSbyDigit5</object-name>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Comm Freq Transfer Button -->
+
+<animation>
+  <type>pick</type>
+  <object-name>CommTFR</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+    </binding>
+  </action>
+</animation>
+
+<!--  Active Nav Freq Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSelDigit1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSelDigit2</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSelDigit3</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSelDigit4</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSelDigit5</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Standby Nav Freq Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSbyDigit1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSbyDigit2</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSbyDigit3</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSbyDigit4</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>NavSbyDigit5</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Nav Freq Transfer Button -->
+
+<animation>
+  <type>pick</type>
+  <object-name>NavTFR</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+    </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>KnobOn</object-name>
+  <property>/controls/switches/kx-155-2</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>-120</dep></entry>
+    <entry><ind>1</ind><dep> 120</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.062</y-m>
+    <z-m>-0.016</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>KnobIdent</object-name>
+  <property>/controls/switches/kx-155-2-ident</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>120</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.018</y-m>
+    <z-m>-0.016</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>
+
+

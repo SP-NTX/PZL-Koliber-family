@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+
+<!-- KN62a DME Hotspots -->
+<!-- Gary R. Neely 'Buckaroo', 2011 -->
+
+
+<PropertyList>
+
+<name>Main Panel</name>
+<background>Aircraft/Velocity-XL-RG/Panels/transparent-bg.rgb</background>
+<w>96</w>
+<h>32</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>48</x>
+    <y>16</y>
+    <w>96</w>
+    <h>32</h>
+    <w-base>96</w-base>
+    <h-base>32</h-base>
+
+    <actions>
+
+      <action>
+        <name>PowerToggle</name>
+        <button>0</button>
+        <x>11</x>
+        <y>-13</y>
+        <w>12</w>
+        <h>10</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/kn-62a</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>FunctionInc</name>
+        <button>0</button>
+        <x>11</x>
+        <y>0</y>
+        <w>12</w>
+        <h>10</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/switches/kn-62a-mode</property>
+          <step>1</step>
+          <min>0</min>
+          <max>2</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>FunctionDec</name>
+        <button>1</button>
+        <x>11</x>
+        <y>0</y>
+        <w>12</w>
+        <h>10</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/switches/kn-62a-mode</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>2</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+      <action>
+        <name>NavInc</name>
+        <button>0</button>
+        <x>29</x>
+        <y>-9</y>
+        <w>9</w>
+        <h>18</h>
+        <binding>
+          <condition>
+            <and>
+            <property>/systems/electrical/outputs/dme</property>
+            <equals>
+              <property>/controls/switches/kn-62a-mode</property>
+              <value>1</value>
+            </equals>
+            </and>
+          </condition>
+          <command>property-adjust</command>
+          <property>/instrumentation/dme/frequencies/selected-mhz</property>
+          <step>1</step>
+          <min>108</min>
+          <max>117.95</max>
+          <wrap>true</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>NavDec</name>
+        <button>1</button>
+        <x>29</x>
+        <y>-9</y>
+        <w>9</w>
+        <h>18</h>
+        <binding>
+          <condition>
+            <and>
+            <property>/systems/electrical/outputs/dme</property>
+            <equals>
+              <property>/controls/switches/kn-62a-mode</property>
+              <value>1</value>
+            </equals>
+            </and>
+          </condition>
+          <command>property-adjust</command>
+          <property>/instrumentation/dme/frequencies/selected-mhz</property>
+          <step>-1</step>
+          <min>108</min>
+          <max>117.95</max>
+          <wrap>true</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>NavSmInc</name>
+        <button>0</button>
+        <x>38</x>
+        <y>-9</y>
+        <w>9</w>
+        <h>18</h>
+        <binding>
+          <condition>
+            <and>
+            <property>/systems/electrical/outputs/dme</property>
+            <equals>
+              <property>/controls/switches/kn-62a-mode</property>
+              <value>1</value>
+            </equals>
+            </and>
+          </condition>
+          <command>property-adjust</command>
+          <property>/instrumentation/dme/frequencies/selected-mhz</property>
+          <step>0.01</step>
+          <min>108</min>
+          <max>117.95</max>
+          <wrap>true</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>NavSmDec</name>
+        <button>1</button>
+        <x>38</x>
+        <y>-9</y>
+        <w>9</w>
+        <h>18</h>
+        <binding>
+          <condition>
+            <and>
+            <property>/systems/electrical/outputs/dme</property>
+            <equals>
+              <property>/controls/switches/kn-62a-mode</property>
+              <value>1</value>
+            </equals>
+            </and>
+          </condition>
+          <command>property-adjust</command>
+          <property>/instrumentation/dme/frequencies/selected-mhz</property>
+          <step>-0.01</step>
+          <min>108</min>
+          <max>117.95</max>
+          <wrap>true</wrap>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

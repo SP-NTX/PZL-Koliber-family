@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+# wersja z PIPER
+##########################################-->
+
+<PropertyList>
+
+  <path>FuelValve.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>FuelValve</object-name>
+    <object-name>FuelSelector</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.15</green>
+      <blue>0.05</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FuelSelector</object-name>
+    <property>controls/fuel-selector</property>
+    <factor>-90</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>FuelSelector</object-name>
+    <object-name>FuelValve</object-name>
+
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel-selector</property>
+        <step>1</step>
+        <min> -1</min>
+        <max>  1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>FuelSelector</object-name>
+    <object-name>FuelValve</object-name>
+
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel-selector</property>
+        <step>-1</step>
+        <min> -1</min>
+        <max>  1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

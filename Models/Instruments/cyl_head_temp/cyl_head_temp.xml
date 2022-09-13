@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- #################################
+autor Mariusz Migut
+PZL Koliber 160A
+#####################################-->
+
+<PropertyList>
+	<path>cyl_head_temp.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>wskazowka</object-name>
+		<object-name>wskazowka-off</object-name>
+		<object-name>tarcza</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+	</animation>
+	
+<animation>
+  <type>select</type>
+  <object-name>wskazowka</object-name>
+  <condition>
+    <property>systems/electrical/outputs/bus-dc</property>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>wskazowka-off</object-name>
+  <condition>
+    <not><property>systems/electrical/outputs/bus-dc</property></not>
+  </condition>
+</animation>	
+	
+	<animation>
+    <type>rotate</type>
+    <object-name>wskazowka</object-name>
+ <!--   <property>engines/engine[0]/oil-temperature-degf</property> -->
+    <property>engines/engine[0]/cht-degf</property>
+    <interpolation>
+	<entry><ind></ind></entry>
+      <entry><ind>1</ind><dep>-48.42</dep></entry>
+      <entry><ind>2</ind><dep>-33.13</dep></entry> 
+      <entry><ind>3</ind><dep>-17.22</dep></entry> 
+      <entry><ind>4</ind><dep>-1.71</dep></entry> 
+      <entry><ind>5</ind><dep>13.87</dep></entry> 
+      <entry><ind>6</ind><dep>29.40</dep></entry> 
+      <entry><ind>7</ind><dep>45.37</dep></entry> 
+    </interpolation>
+    <center>
+      <x-m>-0.00175</x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.00926 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+</PropertyList>

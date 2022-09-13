@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # DR400-dauphin by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+
+  <path>fuelR.ac</path>
+
+  <animation>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
+    <object-name>Bezel</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/DR400-dauphin/Models/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>vitre</object-name>
+    <condition>
+      <property>sim/model/config/glass-reflection-instruments</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>   0.07 </red>
+      <green> 0.04 </green>
+      <blue>  0.04 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Bezel</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>   0.008 </red>
+      <green> 0.008 </green>
+      <blue>  0.008 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle</object-name>
+    <property>consumables/fuel/tank[1]/level-lbs</property>
+    <interpolation>
+      <entry><ind>  0.00 </ind><dep>  5 </dep></entry>
+      <entry><ind> 20.66 </ind><dep> 25 </dep></entry> <!-- 13 litres -->
+      <entry><ind> 38.58 </ind><dep> 45 </dep></entry> <!-- 25 litres -->
+      <entry><ind> 50.93 </ind><dep> 65 </dep></entry> <!-- 33 litres -->
+      <entry><ind> 61.73 </ind><dep> 85 </dep></entry> <!-- 40 litres -->
+    </interpolation>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.014 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+   <!-- TEXT OSG -->
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">Fuel Gauge R</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.06</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+</PropertyList>
+
+
