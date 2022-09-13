@@ -1,0 +1,5 @@
+Primer location PZL Koliber 160
+x = -54.6088cm
+y =   2.402cm
+z =  -1.6cm
+Rad = 10.35

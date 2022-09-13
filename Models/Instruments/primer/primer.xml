@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pompka zastrzykowa PRIMER-->
+
+<PropertyList>
+	<path>primer.ac</path>
+<animation>
+  <type>material</type>
+  <object-name>PrimerKnob</object-name>
+  <object-name>PrimerSupport</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+   <type>translate</type>
+   <object-name>PrimerKnob</object-name>
+   <property>controls/engines/engine/primer-pump</property>
+   <factor>0.02</factor>
+   <axis>
+	<x>1.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<pitch-deg>-11</pitch-deg>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <object-name>PrimerKnob</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/engines/engine/primer-pump</property>
+     </binding>
+   </action>
+ </animation>
+
+</PropertyList>
