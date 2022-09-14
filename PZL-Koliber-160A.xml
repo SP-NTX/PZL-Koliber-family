@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>PZL-Koliber-160A.ac</path>
+ <model>
+	<name>Instruments</name>
+	<path>Aircraft/PZL-Koliber-160A/Models/Koliber-Instruments.xml</path>
+ </model>
+ 
+<effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>PropDisc</object-name>
+        <object-name>NavLightBack</object-name>
+</effect>
+
+ <animation>
+	 <object-name>hstab</object-name>
+	 <object-name>vstab</object-name>
+	 <object-name>joystick1</object-name>
+	 <object-name>joystick2</object-name>
+	 <object-name>throttle.1</object-name>
+	 <object-name>throttle.2</object-name>
+	 <object-name>mixture_control</object-name>	 
+ </animation>
+
+ <animation>
+  <object-name>nose-wheel</object-name>
+    <object-name>nose-wheel.006</object-name>
+	  <object-name>nose-wheel.010</object-name>
+	      <object-name>nwstr_axis_target</object-name>
+  <type>rotate</type>
+  <property>gear/gear/compression-norm</property>
+  <factor>75</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>-1.6649</x-m>
+   <y-m> 0.072788   </y-m>
+   <z-m> -0.403581 </z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>hstab</object-name>
+	 <property>surface-positions/elevator-pos-norm</property>
+	<interpolation>
+		<entry><ind>-1</ind><dep> 20 </dep></entry>
+		<entry><ind>0.00</ind><dep>   0.0 </dep></entry>
+		<entry><ind>1</ind><dep>  -25 </dep></entry>
+		</interpolation>
+	<center>
+		<x-m>3.905559</x-m>
+		<y-m>0</y-m>
+		<z-m>0.405503</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>-3.538605</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vstab</object-name>
+	<property>surface-positions/rudder-pos-norm</property>
+	<interpolation>
+		<entry><ind> -1 </ind><dep> 25.0 </dep></entry>
+		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+		<entry><ind>  1 </ind><dep>  -25.0 </dep></entry>
+	 	 </interpolation>
+
+	<center>
+		<x-m>3.760792</x-m>
+		<y-m>-2e-06</y-m>
+		<z-m>0.998834</z-m>
+	</center>
+	<axis>
+		<x>-0.421161</x>
+		<y>0</y>
+		<z>-1.048952</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>left-aileron</object-name>
+	<property>surface-positions/left-aileron-pos-norm</property>
+	<interpolation>
+		<entry><ind> -1 </ind><dep>  25 </dep></entry>
+		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+		<entry><ind>  1 </ind><dep> -25 </dep></entry>
+	 	 </interpolation>
+	<center>
+		<x-m>0.430355</x-m>
+		<y-m>-3.631251</y-m>
+		<z-m>0.302893</z-m>
+	</center>
+	<axis>
+		<x>0.003486</x>
+		<y>-1.563011</y>
+		<z>0.20051</z>
+	</axis>
+	</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>right-aileron</object-name>
+	<property>surface-positions/right-aileron-pos-norm</property>
+	<interpolation>
+		<entry><ind> -1 </ind><dep>  25 </dep></entry>
+		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+		<entry><ind>  1 </ind><dep> -25 </dep></entry>
+	 	 </interpolation>
+
+<center>
+	<x-m>0.430355</x-m>
+	<y-m>3.631205</y-m>
+	<z-m>0.303461</z-m>
+</center>
+<axis>
+	<x>-0.003486</x>
+	<y>-1.562979</y>
+	<z>-0.200754</z>
+</axis>
+	</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>left-flap</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+	<interpolation>
+		<entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+		<entry><ind> 0.30 </ind><dep>  0 </dep></entry>
+		<entry><ind> 1.0 </ind><dep> 30 </dep></entry>
+	</interpolation>
+	<center>
+		<x-m>0.589688</x-m>
+		<y-m>-1.837062</y-m>
+		<z-m>-0.140113</z-m>
+	</center>
+
+	<axis>
+		<x>0</x>
+		<y>1.329187</y>
+		<z>-0.169964</z>
+	</axis>
+
+</animation>
+
+<animation>
+		<type>translate</type>
+		<object-name>left-flap</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+			<entry><ind> 0.3 </ind><dep>  -0.06 </dep></entry>
+			<entry><ind> 1.0 </ind><dep> -0.095 </dep></entry>
+		</interpolation>
+		<axis>
+			<x>-0.161614</x>
+			<y>0.007624</y>
+			<z>0.059627</z>
+		</axis>
+
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>right-flap</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+	<interpolation>
+		<entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+		<entry><ind> 0.3 </ind><dep>  0 </dep></entry>
+		<entry><ind> 1.0 </ind><dep> 30 </dep></entry>
+	</interpolation>
+	<center>
+		<x-m>0.590302</x-m>
+		<y-m>1.836962</y-m>
+		<z-m>-0.138686</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1.329161</y>
+		<z>0.170172</z>
+	</axis>
+
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>right-flap</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+	<interpolation>
+		<entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+		<entry><ind> 0.3 </ind><dep>  -0.06 </dep></entry>
+		<entry><ind> 1.0 </ind><dep> -0.095 </dep></entry>
+	</interpolation>
+	<axis>
+		<x>-0.210183</x>
+		<y>-0.010288</y>
+		<z>0.080358</z>
+	</axis>
+
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>left-slat</object-name>
+	<object-name>right-slat</object-name>
+	<property>/surface-positions/slats-pos-norm</property>
+	<interpolation>
+		<entry><ind>  0</ind><dep>    0</dep></entry>
+		<entry><ind>  1</ind><dep>    -0.15</dep></entry>
+
+	</interpolation>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>canopy-plexi</object-name>
+	<object-name>canopy-back</object-name>
+	<property>controls/door</property>
+	<interpolation>
+		<entry><ind>  0</ind><dep>    0</dep></entry>
+		<entry><ind>  1</ind><dep>    1.3</dep></entry>
+	</interpolation>
+
+	<axis>
+		<x>1.122178</x>
+		<y>0.033046</y>
+		<z>-0.050565</z>
+	</axis>
+</animation>
+
+<!-- Propeller-->
+<animation>
+	<name>complete-propeller</name>
+	<object-name>PropDisc</object-name>
+	<object-name>propeller</object-name>
+</animation>
+
+
+<animation>
+	<type>select</type>
+	<object-name>PropDisc</object-name>
+	<condition>
+		<greater-than>
+			<property>engines/engine/rpm</property>
+			<value>400</value>
+		</greater-than>
+	</condition>
+</animation>
+<animation>
+        <type>blend</type>
+        <object-name>PropDisc</object-name>
+        <!--  <property alias="/params/engine/rpm"/>-->
+        <property>engines/engine/rpm</property>
+        <factor>0.0004</factor>
+        <max>1.0</max>
+        <min>0.0</min>
+    </animation>
+
+<animation>
+	<type>select</type>
+	<object-name>propeller</object-name>
+	<condition>
+		<less-than>
+			<property>engines/engine/rpm</property>
+			<value>400</value>
+		</less-than>
+	</condition>
+</animation>
+
+<animation>
+	<type>spin</type>
+	<object-name>complete-propeller</object-name>
+	<property>engines/engine/rpm</property>
+	<factor> 1 </factor>
+	<center>
+		<x-m>-2.158049</x-m>
+		<y-m>-0.001715</y-m>
+		<z-m>0.41378</z-m>
+	</center>
+	<axis>
+		<x>-0.330229</x>
+		<y>0</y>
+		<z>0.023092</z>
+		</axis>
+	</animation>
+	
+	<!-- controls PZL Koliber 160A-->
+<!-- ANIMACJA DRĄŻKA LEWY dodac prawy joystick2-->
+<animation>
+	<type>rotate</type>
+    <object-name>joystick1</object-name>
+    <property>/controls/flight/aileron</property>
+    <factor>20</factor>
+    <center>
+      <x-m> -0.3784 </x-m>
+      <y-m> -0.138 </y-m>  
+      <z-m> -0.1343 </z-m>    
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>joystick1</object-name>
+    <property>/controls/flight/elevator</property>
+    <factor>22</factor>
+    <offset-deg>-8</offset-deg>
+    <center>
+      <x-m> -0.3784 </x-m>
+      <y-m> -0.138 </y-m>  
+      <z-m> -0.1343 </z-m>     
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+<!-- END-->
+
+<animation>
+	<type>rotate</type>
+	<object-name>pilot-l-rudder</object-name>
+	<object-name>copilot-l-rudder</object-name>
+	<property>controls/flight/rudder</property>
+	<interpolation>
+		<entry><ind>  -1</ind><dep>    15</dep></entry>
+		<entry><ind>  1</ind><dep>    -15</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.632483</x-m>
+		<y-m>-0.390299</y-m>
+		<z-m>0.24401</z-m>
+	</center>
+	<axis>
+		<x>0</x>controls
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>pilot-r-rudder</object-name>
+	<object-name>copilot-r-rudder</object-name>
+	<property>controls/flight/rudder</property>
+	<interpolation>
+		<entry><ind>  -1</ind><dep>    -15</dep></entry>
+		<entry><ind>  1</ind><dep>    15</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.632483</x-m>
+		<y-m>-0.390299</y-m>
+		<z-m>0.24401</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<!--<animation>
+	<type>rotate</type>
+	<object-name>htrim</object-name>
+	<property>controls/flight/elevator-trim</property>
+	<interpolation>
+		<entry><ind>  -0.5</ind><dep>    -180</dep></entry>
+		<entry><ind>  0.5</ind><dep>    180</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.529529</x-m>
+		<y-m>-0.069232</y-m>
+		<z-m>0.183731</z-m>
+		</center>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>rtrim</object-name>
+	<property>controls/flight/aileron-trim</property>
+	<interpolation>
+		<entry><ind>  -0.5</ind><dep>    -180</dep></entry>
+		<entry><ind>  0.5</ind><dep>    180</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.497233</x-m>
+		<y-m>0.004313</y-m>
+		<z-m>0.1369</z-m>
+	</center>
+	<axis>controls
+		<x>-0.003735</x>
+		<y>0</y>
+		<z>0.005676</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>elev-trim-needle</object-name>
+	<property>controls/flight/elevator-trim</property>
+	<interpolation>
+		<entry><ind>  -0.5</ind><dep>    0.016</dep></entry>
+		<entry><ind>  0.5</ind><dep>    -0.016</dep></entry>
+	</interpolation>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+
+</animation>-->
+
+<!-- ANIMACJA GAZU-->
+
+<animation>
+    <type>translate</type>
+    <object-name>throttle.1</object-name>
+    <property>controls/engines/engine/throttle</property>
+    <factor>0.085</factor>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>   
+  </animation>
+   <animation>
+        <type>slider</type>
+        <object-name>throttle.1</object-name>
+        <visible>true</visible>
+        <drag-direction>vertical</drag-direction>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <factor>0.05</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <label>Throttle: %3d%%</label>
+                <measure-text>Throttle: 100%</measure-text>
+                <tooltip-id>throttle</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine/throttle</property>
+            </binding>
+        </hovered>
+    </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>throttle.2</object-name>
+    <property>controls/engines/engine/throttle</property>
+    <factor>0.085</factor>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>   
+  </animation>
+   <animation>
+        <type>slider</type>
+        <object-name>throttle.2</object-name>
+        <visible>true</visible>
+        <!-- no translation, we handle that seperately -->
+        <drag-direction>vertical</drag-direction>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <factor>0.05</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <label>Throttle: %3d%%</label>
+                <measure-text>Throttle: 100%</measure-text>
+                <tooltip-id>throttle</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine/throttle</property>
+            </binding>
+        </hovered>
+    </animation>
+    
+    <!-- MIXTURE -->
+    
+   <animation>
+   <type>translate</type>
+   <object-name>mixture_control</object-name>
+   <property>controls/engines/engine/mixture</property>
+   <factor>0.04</factor>
+   <axis>
+     <x>-1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+ </animation>
+ <animation>
+        <type>slider</type>
+        <object-name>mixture_control</object-name>
+        <visible>true</visible>
+        <!-- no translation, we handle that seperately -->
+        <drag-direction>vertical</drag-direction>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/mixture</property>
+                <factor>0.05</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <label>Mixture: %3d%%</label>
+                <measure-text>Mixture: 100%</measure-text>
+                <tooltip-id>mixture</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine/mixture</property>
+            </binding>
+        </hovered>
+    </animation>
+
+ <animation>
+	 <object-name>bat-switch</object-name>
+	 <object-name>generator-switch</object-name>
+	 <object-name>switch20</object-name>
+	 <object-name>switch21</object-name>
+	 <object-name>switch22</object-name>
+	 <object-name>switch23</object-name>
+	 <object-name>switch24</object-name>
+	 <object-name>switch25</object-name>
+	 <object-name>switch26</object-name>
+	 <object-name>switch28</object-name>
+         <object-name>switch29</object-name>
+         <object-name>switch30</object-name>
+         <object-name>switch_flap</object-name>
+	 <object-name>carburettor_heat</object-name>
+	 <object-name>ventilation.1</object-name>
+	 <object-name>ventilation.2</object-name>
+	 <object-name>starter-selector</object-name>	 
+	 <object-name>LightAlt</object-name> 
+	 <object-name>LightStarter</object-name>
+ </animation>
+<!-- BATERIA -->
+ 
+ <animation>
+  <type>material</type>
+  <object-name>bat-switch</object-name>
+  <object-name>generator-switch</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+ <animation>
+        <type>pick</type>
+        <object-name>bat-switch</object-name>
+        <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+            <command>property-toggle</command>
+            <property>/controls/switches/battery</property>
+          </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/instrumentation/nav/power-btn</property>
+          </binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>bat-switch</object-name>
+        <property>/controls/switches/battery</property>
+        <factor>-25.0</factor>
+		<center>
+                    <x-m>-0.5872</x-m>
+                    <y-m>-0.4185</y-m>
+                    <z-m>0.2548</z-m>
+                </center>
+<axis>
+	    <x1-m>0.0257256</x1-m>
+            <y1-m>-1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>1</y2-m>
+            <z2-m>0.00112367</z2-m>
+</axis>
+    </animation>
+    
+<!-- ALTERNATOR -->
+
+   <animation>
+        <type>pick</type>
+        <object-name>generator-switch</object-name>
+        <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+            <command>property-toggle</command>
+            <property>/controls/switches/alternator</property>
+          </binding>
+        </action>
+    </animation>
+<animation>
+        <type>rotate</type>
+        <object-name>generator-switch</object-name>
+        <property>/controls/switches/alternator</property>
+ <factor>-25.0</factor>
+<center>
+   <x-m>-0.5872</x-m>
+   <y-m>-0.4092</y-m>
+   <z-m>0.2548</z-m>
+</center>
+<axis>
+    <x1-m>0.0257256</x1-m>
+    <y1-m>-1</y1-m>
+    <z1-m>0.00112367</z1-m>
+    <x2-m>0.0257256</x2-m>
+    <y2-m>1</y2-m>
+    <z2-m>0.00112367</z2-m>
+</axis>
+    </animation>
+    
+     <!-- KONTROLKA ALTERNATOR -->
+    
+ <animation> 
+	<type>material</type>
+	<object-name>LightAlt</object-name>
+	<condition>
+            <property>controls/engines/engine/master-alt</property>
+            <value>1</value>					
+	</condition>
+	<emission>		
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.2</blue>
+	</emission>
+</animation>
+
+<!--WŁĄCZNIK POPMPY PALIWA-->
+<animation>
+  <type>material</type>
+  <object-name>switch21</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch21</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/fuelpump</property>
+	  </binding>
+	</action>
+	<hovered>
+	<binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Fuelpump switch</tooltip-id>
+		<label>Fuelpump: %s</label>
+		<mapping>on-off</mapping>
+		<property>controls/switches/fuelpump</property>
+	</binding>
+</hovered>
+</animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch21</object-name>
+        <property>/controls/switches/fuelpump</property>
+ <factor>30</factor>
+		<center>
+	<x-m>-0.5862</x-m>
+   	<y-m>-0.3852</y-m>
+   	<z-m>0.2542</z-m>
+	</center>
+<axis>
+	    <x1-m>0.0257256</x1-m>
+            <y1-m>1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>-1</y2-m>
+            <z2-m>0.00112367</z2-m>
+</axis>
+    </animation>
+ <!-- WŁĄCZNIK TURN COORD -->   
+<animation>
+  <type>material</type>
+  <object-name>switch22</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation> 
+<animation>
+	<type>pick</type>
+	<object-name>switch22</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property>/controls/switches/turn-coordinator</property>
+	  </binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id>Turn switch</tooltip-id>
+			<label>Turn-coordinator: %s</label>
+			<mapping>on-off</mapping>
+			<property>controls/switches/turn-coordinator</property>
+		</binding>
+	</hovered>
+</animation>
+<animation>
+	<type>rotate</type>
+	<object-name>switch22</object-name>
+	<property>/controls/switches/turn-coordinator</property>
+	<factor>30</factor>
+	<center>
+		<x-m>-0.5862</x-m>
+		<y-m>-0.3660</y-m>
+		<z-m>0.2542</z-m>
+	</center>
+	<axis>
+		<x1-m>0.0257256</x1-m>
+		<y1-m>1</y1-m>
+		<z1-m>0.00112367</z1-m>
+		<x2-m>0.0257256</x2-m>
+		<y2-m>-1</y2-m>
+		<z2-m>0.00112367</z2-m>
+	</axis>
+</animation>
+
+<!--******************* ŚWIATŁA Anti-coll *************************
+do modelu należy dodać plane z teksturą światła
+
+<model> 
+	<path>Aircraft\PZL-Koliber-160A\Models\Lights\Beacon.xml</path>
+	<offsets>
+		<x-m>4.09</x-m>
+		<y-m>-0.00014</y-m>
+		<z-m>1.87</z-m>
+	</offsets>
+</model>
+<animation>
+  <type>material</type>
+  <object-name>switch23</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch23</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+            <command>property-toggle</command>
+
+            <property>controls/switches/beacon</property>
+		</binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id>Anti-coll switch</tooltip-id>
+			<label>Beacon: %s</label>
+			<mapping>on-off</mapping>
+			<property>controls/switches/beacon</property>
+		</binding>
+	</hovered>	
+</animation>
+<animation>
+	<type>rotate</type>
+	<object-name>switch23</object-name>
+	<property>controls/switches/beacon</property>
+	<factor>30</factor>
+	<center>
+		<x-m>-0.5862</x-m>
+		<y-m>-0.3461</y-m>
+		<z-m>0.2542</z-m>
+	</center>
+	<axis>
+		<x1-m>0.0257256</x1-m>
+		<y1-m>1</y1-m>
+		<z1-m>0.00112367</z1-m>
+		<x2-m>0.0257256</x2-m>
+		<y2-m>-1</y2-m>
+		<z2-m>0.00112367</z2-m>
+	</axis>
+</animation>-->
+<!-- ********************************Nav-Light *******************-->
+<animation>
+  <type>material</type>
+  <object-name>switch24</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch24</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+            <command>property-toggle</command>
+            <property>controls/lighting/nav-lights</property>
+		</binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id>Nav switch</tooltip-id>
+			<label>Navigation lights: %s</label>
+			<mapping>on-off</mapping>
+			<property>controls/lighting/nav-lights</property>
+		</binding>
+	</hovered>
+</animation>
+<animation>
+	<type>rotate</type>
+	<object-name>switch24</object-name>
+	<property>controls/lighting/nav-lights</property>
+	<factor>30</factor>
+	<center>
+		<x-m>-0.5862</x-m>
+		<y-m>-0.3265</y-m>
+		<z-m>0.2542</z-m>
+	</center>
+	<axis>
+		<x1-m>0.0257256</x1-m>
+		<y1-m>1</y1-m>
+		<z1-m>0.00112367</z1-m>
+		<x2-m>0.0257256</x2-m>
+		<y2-m>-1</y2-m>
+		<z2-m>0.00112367</z2-m>
+	</axis>
+</animation> 
+
+
+ <!-- TAXI LIGHT*****************************-->
+<animation>
+  <type>material</type>
+  <object-name>switch25</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch25</object-name>
+	<visible>true</visible>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property>controls/lighting/taxi-lights</property>
+	  </binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id>Taxi switch</tooltip-id>
+			<label>Taxi lights: %s</label>
+			<mapping>on-off</mapping>
+			<property>controls/lighting/taxi-lights</property>
+		</binding>
+	</hovered>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch25</object-name>
+        <property>controls/lighting/taxi-lights</property>
+ <factor>30</factor>
+		<center>
+	<x-m>-0.5862</x-m>
+	<y-m>-0.3064</y-m>
+	<z-m>0.2542</z-m>
+
+</center>
+<axis>
+		<x1-m>0.0257256</x1-m>
+		<y1-m>1</y1-m>
+		<z1-m>0.00112367</z1-m>
+		<x2-m>0.0257256</x2-m>
+		<y2-m>-1</y2-m>
+		<z2-m>0.00112367</z2-m>
+</axis>
+</animation>
+<!-- ******************** Landing light *********************-->
+<animation>
+  <type>material</type>
+  <object-name>switch26</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch26</object-name>
+	<visible>true</visible>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property>controls/lighting/landing-lights</property>
+	  </binding>
+	</action>
+		<hovered>
+	<binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Landing switch</tooltip-id>
+		<label>Landing lights: %s</label>
+		<mapping>on-off</mapping>
+		<property>controls/lighting/landing-lights</property>
+	</binding>
+</hovered>
+</animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch26</object-name>
+        <property>controls/lighting/landing-lights</property>
+ <factor>30</factor>
+		<center>
+	<x-m>-0.5862</x-m>
+	<y-m>-0.2872</y-m>
+	<z-m>0.2542</z-m>
+
+</center>
+<axis>
+            <x1-m>0.0257256</x1-m>
+            <y1-m>1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>-1</y2-m>
+            <z2-m>0.00112367</z2-m>
+</axis>
+</animation>
+<!-- ******************** Pitot heat *************************-->
+<animation>
+  <type>material</type>
+  <object-name>switch28</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch28</object-name>
+	<visible>true</visible>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property>controls/anti-ice/pitot-heat</property>
+	  </binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id>Pitot switch</tooltip-id>
+			<label>Pitot heat: %s</label>
+			<mapping>on-off</mapping>
+			<property>controls/anti-ice/pitot-heat</property>
+		</binding>
+	</hovered>
+</animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch28</object-name>
+        <property>controls/anti-ice/pitot-heat</property>
+	<factor>25.0</factor>
+	<center>
+		<x-m>-0.5862</x-m>
+		<y-m>-0.2476</y-m>
+		<z-m>0.2542</z-m>
+	</center>
+<axis>
+			<x1-m>0.0257256</x1-m>
+            <y1-m>1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>-1</y2-m>
+            <z2-m>0.00112367</z2-m>
+</axis>
+</animation>
+<!-- ************ INNE *************** -->
+<animation>
+  <type>material</type>
+  <object-name>switch20</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch20</object-name>
+	<visible>true</visible>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property></property>
+	  </binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id></tooltip-id>
+			<label></label>
+			<mapping>on-off</mapping>
+			<property></property>
+		</binding>
+	</hovered>
+</animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch20</object-name>
+        <property></property>
+	<factor>25.0</factor>
+	<center>
+		<x-m>-0.5862</x-m>
+		<y-m>-0.3874</y-m>
+		<z-m>0.3025</z-m>
+	</center>
+<axis>
+            <x1-m>0.0257256</x1-m>
+            <y1-m>1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>-1</y2-m>
+            <z2-m>0.00112367</z2-m>
+</axis>
+</animation>
+
+<!-- *************** INTERKOM ***************** -->
+<animation>
+  <type>material</type>
+  <object-name>switch29</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>switch29</object-name>
+	<visible>true</visible>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+		<command>property-toggle</command>
+		<property></property>
+	  </binding>
+	</action>
+	<hovered>
+		<binding>
+			<command>set-tooltip</command>
+			<tooltip-id></tooltip-id>
+			<label></label>
+			<mapping>on-off</mapping>
+			<property></property>
+		</binding>
+	</hovered>
+</animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch29</object-name>
+        <property></property>
+	<factor>25.0</factor>
+	<center>
+		<x-m>-0.5862</x-m>
+		<y-m>0.1949</y-m>
+		<z-m>0.5091</z-m>
+	</center>
+<axis>
+            <x1-m>0.0257256</x1-m>
+            <y1-m>1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>-1</y2-m>
+            <z2-m>0.00112367</z2-m>
+</axis>
+</animation>
+    <!-- ********** Podgrzewanie gażnika **** -->
+<animation>
+  <type>material</type>
+  <object-name>carburettor_heat</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+   <type>translate</type>
+   <object-name>carburettor_heat</object-name>
+   <property>controls/anti-ice/engine[0]/carb-heat</property>
+   <factor>0.02</factor>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <object-name>carburettor_heat</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/anti-ice/engine[0]/carb-heat</property>
+     </binding>
+   </action>
+ </animation>
+   <hovered>
+       <binding>
+         <command>set-tooltip</command>
+         <tooltip-id>primer</tooltip-id>
+         <label>OGRZ.GAŹNIKA</label>
+    </binding>
+   </hovered>
+ 
+ <!-- Wentylacja -->
+<animation>
+  <type>material</type>
+  <object-name>ventilation.1</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+   <type>translate</type>
+   <object-name>ventilation.1</object-name>
+   <property>controls/anti-ice/engine[0]/inlet-heat</property>
+   <factor>0.02</factor>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <object-name>ventilation.1</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/anti-ice/engine[0]/inlet-heat</property>
+     </binding>
+   </action>
+ </animation>
+ 
+<animation>
+  <type>material</type>
+  <object-name>ventilation.2</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+   <type>translate</type>
+   <object-name>ventilation.2</object-name>
+   <property>controls/anti-ice/window-heatt</property>
+   <factor>0.02</factor>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>pick</type>
+   <object-name>ventilation.2</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/anti-ice/window-heatt</property>
+     </binding>
+   </action>
+ </animation>
+
+<!-- ********************* TRYMER ************************-->
+    <animation>
+        <type>material</type>
+        <object-name>switch30</object-name>
+        <emission>
+            <red>0.2</red>
+            <green>0.1</green>
+            <blue>0.05</blue>
+            <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+        </emission>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>switch30</object-name>
+        <visible>true</visible>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/elevator-trim</property>
+                <step>0.01</step>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+    <animation>
+    <type>pick</type>
+    <object-name>switch30</object-name>
+    <visible>true</visible>
+    <action>
+        <button>1</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <command>property-adjust</command>
+            <property>controls/flight/elevator-trim</property>
+            <step>-0.01</step>
+            <wrap>false</wrap>
+        </binding>
+    </action>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>switch30</object-name>
+        <property>controls/flight/elevator-trim</property>
+        <factor>30</factor>
+        <center>
+            <x-m>-0.5745</x-m>
+            <y-m>0.0233</y-m>
+            <z-m>0.1612</z-m>
+        </center>
+        <axis>
+            <x1-m>0.0257256</x1-m>
+            <y1-m>1</y1-m>
+            <z1-m>0.00112367</z1-m>
+            <x2-m>0.0257256</x2-m>
+            <y2-m>-1</y2-m>
+            <z2-m>0.00112367</z2-m>
+        </axis>
+    </animation>
+
+
+<!--****************** PODŚWIETLANIE INSTRUMENTÓW ***********************-->
+<animation>
+  <type>material</type>
+  <object-name>InstrLight</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>InstrLight</object-name>
+  <emission>
+    <red>0.2</red>
+    <green>0.1</green>
+    <blue>0.05</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>InstrLight</object-name>
+  <property>controls/lighting/panel-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>  0</dep></entry>
+    <entry><ind>1</ind><dep>280</dep></entry>
+  </interpolation>   
+  <center>
+    <x-m>-0.5898</x-m>
+    <y-m>0.3379</y-m>
+    <z-m>0.2630</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>InstrLight</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/lighting/panel-norm</property>
+      <step>0.1</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/lighting/panel-norm</property>
+      <step>-0.1</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- ****************** ŚWIATŁA *****************************-->	
+
+<animation>
+	<object-name>LandingLight</object-name>
+	<object-name>TaxiLight</object-name>
+	<object-name>beacon-light</object-name>
+	<object-name>NavLightGreen</object-name>
+        <object-name>NavLightBack</object-name>
+	<object-name>NavLightRed</object-name>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LandingLight</object-name>
+	<condition>
+		<and>
+			<property>/controls/switches/battery</property>
+			<property>controls/lighting/landing-lights</property>
+		</and>		
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>TaxiLight</object-name>
+	<condition>
+		<and>
+			<property>/controls/switches/battery</property>
+			<property>controls/lighting/taxi-lights</property>
+		</and>		
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>NavLightGreen</object-name>
+	<object-name>NavLightRed</object-name>
+        <object-name>NavLightBack</object-name>
+	<condition>
+		<and>
+			<property>/controls/switches/battery</property>
+			<property>controls/lighting/nav-lights</property>
+		</and>		
+	</condition>
+</animation>
+
+<!-- Sterowanie przednim kołem -->
+  <animation>
+    <type>rotate</type>
+    <object-name>nose-wheel</object-name>
+    <object-name>nose-wheel.006</object-name>
+    <factor>-30</factor>
+    <property>controls/flight/rudder</property>
+    <axis>
+      <x>0.2</x>
+      <y>0</y>
+      <z>0.8</z>
+    </axis>
+    <center>
+      <x-m>-1.6674</x-m>
+      <y-m>0.0718</y-m>
+      <z-m>-0.5213</z-m>
+    </center>
+  </animation>
+</PropertyList>

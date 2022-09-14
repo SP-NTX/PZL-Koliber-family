@@ -243,6 +243,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
         <unusable-gal_us type="double">0.3</unusable-gal_us>
         <level-gal_us type="double">15.0</level-gal_us>
       </tank>
+
     </fuel>
   </consumables>
   

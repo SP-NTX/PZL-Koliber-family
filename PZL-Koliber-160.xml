@@ -167,7 +167,6 @@
   </tank>
 
  </propulsion>
-
  <ground_reactions>
 
   <contact type="BOGEY" name="NOSE">
