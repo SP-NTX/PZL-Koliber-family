@@ -25,6 +25,27 @@
  </animation>
 
  <animation>
+  <object-name>nose-wheel</object-name>
+    <object-name>nose-wheel.006</object-name>
+	  <object-name>nose-wheel.010</object-name>
+	      <object-name>nwstr_axis_target</object-name>
+  <type>rotate</type>
+  <property>gear/gear/compression-norm</property>
+  <factor>75</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>-1.6649</x-m>
+   <y-m> 0.072788   </y-m>
+   <z-m> -0.403581 </z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
 	 <type>rotate</type>
 	 <object-name>hstab</object-name>
 	 <property>surface-positions/elevator-pos-norm</property>
@@ -592,7 +613,7 @@
         <type>rotate</type>
         <object-name>bat-switch</object-name>
         <property>/controls/switches/battery</property>
-        <factor>25.0</factor>
+        <factor>-25.0</factor>
 		<center>
                     <x-m>-0.5872</x-m>
                     <y-m>-0.4185</y-m>
@@ -626,7 +647,7 @@
         <type>rotate</type>
         <object-name>generator-switch</object-name>
         <property>/controls/switches/alternator</property>
- <factor>25.0</factor>
+ <factor>-25.0</factor>
 <center>
    <x-m>-0.5872</x-m>
    <y-m>-0.4092</y-m>
