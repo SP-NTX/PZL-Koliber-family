@@ -179,8 +179,9 @@
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
     <rolling_friction> 0.02 </rolling_friction>
-    <spring_coeff  unit="N/M">     8205.78 </spring_coeff>
-    <damping_coeff unit="N/M/SEC"> 4102.89 </damping_coeff>
+	<spring_coeff unit="LBS/FT">1850</spring_coeff>
+	<damping_coeff unit="LBS/FT/SEC">1100</damping_coeff>
+	<damping_coeff_rebound unit="LBS/FT/SEC">10</damping_coeff_rebound>
     <max_steer unit="DEG"> 5.00 </max_steer>
     <brake_group> NONE </brake_group>
     <retractable> 0 </retractable>
@@ -195,8 +196,9 @@
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
     <rolling_friction> 0.02 </rolling_friction>
-    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
-    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+	<spring_coeff unit="LBS/FT">2750</spring_coeff>
+	<damping_coeff unit="LBS/FT/SEC">1600</damping_coeff>
+	<damping_coeff_rebound unit="LBS/FT/SEC">10</damping_coeff_rebound>
     <max_steer unit="DEG">0</max_steer>
     <brake_group> LEFT </brake_group>
     <retractable> 0 </retractable>
@@ -211,8 +213,9 @@
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
     <rolling_friction> 0.02 </rolling_friction>
-    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
-    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+	<spring_coeff unit="LBS/FT">2750</spring_coeff>
+	<damping_coeff unit="LBS/FT/SEC">1600</damping_coeff>
+	<damping_coeff_rebound unit="LBS/FT/SEC">10</damping_coeff_rebound>
     <max_steer unit="DEG">0</max_steer>
     <brake_group> RIGHT </brake_group>
     <retractable> 0 </retractable>
@@ -254,7 +257,28 @@
     <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
     <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
   </contact>
-  
+      <contact type="STRUCTURE" name="HSTAB">
+    <location unit="M">
+     <x> 3.76187  </x>
+     <y> 0 </y>
+     <z>  1.756 </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+      <contact type="STRUCTURE" name="CABIN">
+    <location unit="M">
+     <x>-0.346539  </x>
+     <y> 0 </y>
+     <z> 0.88 </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
   
     <contact type="STRUCTURE" name="NOSE_STR">
     <location unit="M">
