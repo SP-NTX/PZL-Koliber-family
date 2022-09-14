@@ -18,7 +18,7 @@
     name:          PZL-Koliber-160
     type:          Single engine Glider, Small Commuter
     stall speed:   80.00 km/h
-    max weight:    850.00 kg
+    max weight:    950.00 kg
     Fuselage: 
      length:        7.37 m
      diameter:      1.37 m
@@ -93,13 +93,36 @@
      <y>     0.00 </y>
      <z>    0.348 </z>
    </location>
-   <pointmass name="Payload">
-    <description> 157.20 kg should bring model up to entered max weight </description>
-    <weight unit="KG"> 78.60 </weight>
+   <pointmass name="Pilot">
+    <weight unit="KG">0</weight>
     <location name="POINTMASS" unit="M">
-     <x>    -0.106109  </x>
-     <y>     0.00 </y>
-     <z>    0.348</z>
+     <x>    -0.068725  </x>
+     <y>  -0.220115</y>
+     <z>  0.418834</z>
+   </location>
+   </pointmass>
+    <pointmass name="Co-pilot">
+    <weight unit="KG"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+     <x>  -0.068725 </x>
+     <y>    0.220115</y>
+     <z>0.418834</z>
+   </location>
+  </pointmass>
+   <pointmass name="Left passanger">
+    <weight unit="KG"> 0</weight>
+    <location name="POINTMASS" unit="M">
+     <x>    0.797793 </x>
+     <y>  -0.220115 </y>
+     <z> 0.418834</z>
+   </location>
+  </pointmass>
+    <pointmass name="Left passanger">
+    <weight unit="KG"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+     <x>  0.797793  </x>
+     <y>   0.220115 </y>
+     <z> 0.418834</z>
    </location>
   </pointmass>
  </mass_balance>
@@ -130,7 +153,7 @@
        <y>   -1.51915 </y>
        <z>   -0.007596  </z>
      </location>
-     <capacity unit="KG"> 62.90 </capacity>
+     <capacity unit="KG"> 63.9 </capacity>
      <contents unit="KG"> 31.45 </contents>
   </tank>
   <tank type="FUEL" number="1">
@@ -139,7 +162,7 @@
        <y>   1.51915  </y>
        <z>   -0.007596  </z>
      </location>
-     <capacity unit="KG"> 62.90 </capacity>
+     <capacity unit="KG"> 63.9 </capacity>
      <contents unit="KG"> 31.45 </contents>
   </tank>
 

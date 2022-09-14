@@ -12,12 +12,14 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
     <cockpit type="int">4</cockpit>
     <model type="int">3</model>
   </rating>
-  <!-- or -->
-  <status></status>
-  <author>Mariusz Migut SP-MMA(3D, Sounds), Patrice Poly "WooT" (FDM )</author>
+  
+  <author>SP-NTX, jakkos98 (FDM, 3D, Data). Original by: Mariusz Migut SP-MMA(3D, Sounds), Patrice Poly "WooT" (FDM)</author>
 
   <flight-model>jsb</flight-model>
   <aero>PZL-Koliber-160</aero>
+
+
+
 
   <startup>
     <splash-texture>Aircraft/PZL-Koliber-family/splash.png</splash-texture>
@@ -195,6 +197,55 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
 </sim>
 
 
+
+
+
+
+
+<payload>
+	<weight n="0">
+		<name type="string">Pilot</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">330.0</max-lb>
+	</weight>
+	<weight n="1">
+		<name type="string">Co-pilot</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">330.0</max-lb>
+	</weight>
+	<weight n="2">
+		<name type="string">Left passanger</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">170.0</max-lb>
+	</weight>
+	<weight n="3">
+		<name type="string">Right passanger</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+		<min-lb type="double">0.0</min-lb>
+		<max-lb type="double">170.0</max-lb>
+	</weight>
+</payload>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <name type="string">Left Wing</name>
+        <capacity-gal_us type="double">21.3</capacity-gal_us>
+        <unusable-gal_us type="double">0.3</unusable-gal_us>
+        <level-gal_us type="double">15.0</level-gal_us>
+      </tank>
+      <tank n="1">
+        <name type="string">Right Wing</name>
+        <capacity-gal_us type="double">21.3</capacity-gal_us>
+        <unusable-gal_us type="double">0.3</unusable-gal_us>
+        <level-gal_us type="double">15.0</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+  
 <controls>	 
   <flight>
     <aileron-trim>0.0025</aileron-trim>   <!-- fixed -->
@@ -217,7 +268,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
     <find-aircraft type="bool">false</find-aircraft>
   </aerotow>
 
-  <lighting>
+  <lighting> <!-- SPNTX: useless? -->
     <beacon type="bool">false</beacon>
     <strobe type="bool">false</strobe>
     <nav-lights type="bool">false</nav-lights>
@@ -229,7 +280,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
   <engine>
     <rpm type="double">700</rpm>
   </engine>
-</engines>
+</engines> <!-- SPNTX: useless? -->
 
 
 <input>
@@ -272,7 +323,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
     <repeatable type="bool">true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/flight/aileron-trim</property>
+      <property>/controls/flight/aileron-trim</property><!-- SPNTX: useless? -->
       <step type="double">-0.001</step>
     </binding>
   </key>
@@ -281,7 +332,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
   <desc>Aileron Trim right</desc>
   <repeatable type="bool">true</repeatable>
   <binding>
-    <command>property-adjust</command>
+    <command>property-adjust</command><!-- SPNTX: useless? -->
     <property>/controls/flight/aileron-trim</property>
     <step type="double">0.001</step>
   </binding>
