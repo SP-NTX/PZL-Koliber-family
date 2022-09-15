@@ -196,7 +196,14 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
 </weight>
 </sim>
 
+<controls>
 
+<fuel-valve>
+<from-tank_0>0</from-tank_0>
+<from-tank_1>0</from-tank_1>
+</fuel-valve>
+
+</controls>
 
 
 
@@ -243,7 +250,12 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
         <unusable-gal_us type="double">0.3</unusable-gal_us>
         <level-gal_us type="double">15.0</level-gal_us>
       </tank>
-
+      <tank n="2">
+        <name type="string">Engine pipe</name>
+        <capacity-gal_us type="double">0.034</capacity-gal_us>
+        <unusable-gal_us type="double">0.004</unusable-gal_us>
+        <level-gal_us type="double">0.0</level-gal_us>
+      </tank>
     </fuel>
   </consumables>
   

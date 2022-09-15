@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!-- based on amazing and good Fuel sys from c172Pp -->
+
+<system name="fuel">
+
+    <channel name="To Tank6">
+        <!-- from Tank 0 (to Collector Tank 4) -->
+        <fcs_function name="propulsion/tank[0]/contents-volume-gal">
+            <function>
+                <quotient>
+                    <p> propulsion/tank[0]/contents-lbs </p>
+                    <p> propulsion/tank[0]/density-lbs_per_gal </p>
+                </quotient>
+            </function>
+        </fcs_function>
+		        <fcs_function name="propulsion/tank[1]/contents-volume-gal">
+            <function>
+                <quotient>
+                    <p> propulsion/tank[1]/contents-lbs </p>
+                    <p> propulsion/tank[1]/density-lbs_per_gal </p>
+                </quotient>
+            </function>
+        </fcs_function>
+        <switch name="fuel/from-tank0-to-tank2">
+            <default value="0"/>
+            <test logic="AND" value="0.1">
+                propulsion/tank[0]/priority EQ 1 
+                propulsion/tank[0]/contents-volume-gal GT propulsion/tank[0]/unusable-volume-gal
+                /consumables/fuel/tank[2]/level-lbs LT 0.22
+                propulsion/tank[2]/priority EQ 1
+                accelerations/Nz GE 0
+				/controls/fuel-valve/from-tank_0 EQ 1
+            </test>
+        </switch>
+
+        <!-- from Tank 1 (to Collector Tank 4) -->
+        <fcs_function name="propulsion/tank[1]/contents-volume-gal">
+            <function>
+                <quotient>
+                    <p> propulsion/tank[1]/contents-lbs </p>
+                    <p> propulsion/tank[1]/density-lbs_per_gal </p>
+                </quotient>
+            </function>
+        </fcs_function>
+        <switch name="fuel/from-tank1-to-tank2">
+            <default value="0"/>
+            <test logic="AND" value="0.1">
+                propulsion/tank[1]/priority EQ 1 
+                propulsion/tank[1]/contents-volume-gal GT propulsion/tank[1]/unusable-volume-gal
+                /consumables/fuel/tank[2]/level-lbs LT 0.22
+                propulsion/tank[2]/priority EQ 1
+                accelerations/Nz GE 0
+				/controls/fuel-valve/from-tank_1 EQ 1
+            </test>
+        </switch>
+    </channel>
+
+    <!-- Total from Tank 0 and Tank 1 to Collector Tank 4 -->
+    <channel name="Total flow rate into tank 4">
+        <summer name="tank0 and 1 to tank2">
+            <input>fuel/from-tank0-to-tank2</input>
+            <input>fuel/from-tank1-to-tank2</input>
+            <output>propulsion/tank[2]/external-flow-rate-pps</output>
+        </summer>
+    </channel>
+
+
+    <!-- ****************************************************** -->
+    <!-- FLOW RATE from each MAIN TANK (consumption)            -->
+    <!-- ****************************************************** -->
+
+    <channel name="Total flow rates">
+        <summer name="fuel/tank0-flow-rate">
+            <input>-fuel/from-tank0-to-tank2</input>
+            <output>propulsion/tank[0]/external-flow-rate-pps</output>
+        </summer>
+        <summer name="fuel/tank1-flow-rate">
+            <input>-fuel/from-tank1-to-tank2</input>
+            <output>propulsion/tank[1]/external-flow-rate-pps</output>
+        </summer>
+    </channel>
+</system>

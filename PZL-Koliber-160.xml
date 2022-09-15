@@ -130,7 +130,7 @@
  <propulsion>
 
    <engine file="Lycoming_O-320">
-    <feed> 0 </feed>
+    <feed>2</feed>
 
     <thruster file="sensenich_propeller">
      <sense> 1 </sense>
@@ -165,8 +165,17 @@
      <capacity unit="KG"> 63.9 </capacity>
      <contents unit="KG"> 31.45 </contents>
   </tank>
-
+  <tank type="FUEL" number="2">
+     <location unit="M">
+       <x> 0.125294</x>
+       <y>     0.00 </y>
+       <z>   0.0503</z>
+     </location>
+     <capacity unit="KG">0.1</capacity>
+     <contents unit="KG">0</contents>
+  </tank>
  </propulsion>
+  <system file="fuel.xml"/>
  <ground_reactions>
 
   <contact type="BOGEY" name="NOSE">
@@ -244,7 +253,7 @@
     <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
   </contact>
   
-  
+   <system file="fuel.xml"/>
     <contact type="STRUCTURE" name="TAIL">
     <location unit="M">
      <x> 4.13963  </x>
