@@ -241,13 +241,13 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
       <tank n="0">
         <name type="string">Left Wing</name>
         <capacity-gal_us type="double">21.3</capacity-gal_us>
-        <unusable-gal_us type="double">0.3</unusable-gal_us>
+        <unusable-gal_us type="double">1.3</unusable-gal_us>
         <level-gal_us type="double">15.0</level-gal_us>
       </tank>
       <tank n="1">
         <name type="string">Right Wing</name>
         <capacity-gal_us type="double">21.3</capacity-gal_us>
-        <unusable-gal_us type="double">0.3</unusable-gal_us>
+        <unusable-gal_us type="double">1.3</unusable-gal_us>
         <level-gal_us type="double">15.0</level-gal_us>
       </tank>
       <tank n="2">
