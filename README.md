@@ -6,7 +6,7 @@ PZL Koliber family for FlightGear
 - PZL-110 Koliber 160A
 
 ### Features
-- Working basic elec sysetm
+- Working basic elec system
 - JSBsim FDM
 - Auto slats (WIP)
 - Realistic sounds
