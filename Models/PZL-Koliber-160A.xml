@@ -28,10 +28,10 @@
   <object-name>nose-wheel</object-name>
     <object-name>nose-wheel.006</object-name>
 	  <object-name>nose-wheel.010</object-name>
-	      <object-name>nwstr_axis_target</object-name>
+	      <object-name>NW_axis</object-name>
   <type>rotate</type>
   <property>gear/gear/compression-norm</property>
-  <factor>75</factor>
+  <factor>80</factor>
   <offset-deg>0</offset-deg>
   <center>
    <x-m>-1.6649</x-m>
@@ -44,6 +44,121 @@
    <z>0</z>
   </axis>
  </animation>
+ 
+  <animation>
+  <object-name>left-wheel</object-name>
+    <object-name>wachaczL</object-name>
+	  <object-name>sworznieL</object-name>
+
+  <type>rotate</type>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>80</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>-0.039102 </x-m>
+   <y-m> -0.7988  </y-m>
+   <z-m> -0.487755 </z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ 
+   <animation>
+  <object-name>right-wheel</object-name>
+    <object-name>wachaczP</object-name>
+	  <object-name>sworznieR</object-name>
+
+  <type>rotate</type>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>80</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>-0.039102 </x-m>
+   <y-m> 0.7988  </y-m>
+   <z-m> -0.487755 </z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>nose-wheel</object-name>
+    <object-name>nose-wheel.006</object-name>
+    <factor>-30</factor>
+    <property>controls/flight/rudder</property>
+    <axis>
+      <x>0.2</x>
+      <y>0</y>
+      <z>0.8</z>
+    </axis>
+    <center>
+      <x-m>-1.6674</x-m>
+      <y-m>0.0718</y-m>
+      <z-m>-0.5213</z-m>
+    </center>
+  </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>nose-wheel</object-name>
+          <property>/gear/gear/rollspeed-ms</property>
+		    <factor>40</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+   <x-m>-1.51973 </x-m>
+   <y-m> 0.0749 </y-m>
+   <z-m> -0.65144 </z-m>
+        </center>
+    </animation>
+
+
+    <animation>
+        <type>spin</type>
+        <object-name>left-wheel</object-name>
+          <property>/gear/gear[1]/rollspeed-ms</property>
+		    <factor>40</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+   <x-m>0.12916 </x-m>
+   <y-m>-0.982575 </y-m>
+   <z-m> -0.628698 </z-m>
+        </center>
+    </animation>
+	
+	
+	    <animation>
+        <type>spin</type>
+        <object-name>right-wheel</object-name>
+          <property>/gear/gear[2]/rollspeed-ms</property>
+		    <factor>40</factor>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+   <x-m>0.12916 </x-m>
+   <y-m>0.982575 </y-m>
+   <z-m> -0.628698 </z-m>
+        </center>
+    </animation>
+
 
  <animation>
 	 <type>rotate</type>
@@ -1458,21 +1573,5 @@ do modelu należy dodać plane z teksturą światła
 </animation>
 
 <!-- Sterowanie przednim kołem -->
-  <animation>
-    <type>rotate</type>
-    <object-name>nose-wheel</object-name>
-    <object-name>nose-wheel.006</object-name>
-    <factor>-30</factor>
-    <property>controls/flight/rudder</property>
-    <axis>
-      <x>0.2</x>
-      <y>0</y>
-      <z>0.8</z>
-    </axis>
-    <center>
-      <x-m>-1.6674</x-m>
-      <y-m>0.0718</y-m>
-      <z-m>-0.5213</z-m>
-    </center>
-  </animation>
+
 </PropertyList>
