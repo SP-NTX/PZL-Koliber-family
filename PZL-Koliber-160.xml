@@ -89,9 +89,9 @@
    <izz unit="KG*M2">   2312.00 </izz>
    <emptywt unit="KG" >    567.00 </emptywt>
    <location name="CG" unit="M">
-     <x>   -0.106109  </x>
+     <x>  -0.189152  </x>
      <y>     0.00 </y>
-     <z>    0.348 </z>
+     <z>    0.1975 </z>
    </location>
    <pointmass name="Pilot">
     <weight unit="KG">0</weight>
@@ -149,18 +149,18 @@
 
   <tank type="FUEL" number="0">
      <location unit="M">
-       <x> 0.17164 </x>
-       <y>   -1.51915 </y>
-       <z>   -0.007596  </z>
+       <x>-0.003296 </x>
+       <y> -1.37903 </y>
+       <z>  0.059237  </z>
      </location>
      <capacity unit="KG"> 63.9 </capacity>
      <contents unit="KG"> 31.45 </contents>
   </tank>
   <tank type="FUEL" number="1">
      <location unit="M">
-       <x>  0.17164</x>
-       <y>   1.51915  </y>
-       <z>   -0.007596  </z>
+       <x> -0.003296</x>
+       <y>  1.37903 </y>
+       <z>  0.059237  </z>
      </location>
      <capacity unit="KG"> 63.9 </capacity>
      <contents unit="KG"> 31.45 </contents>
