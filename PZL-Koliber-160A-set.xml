@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Opisać co i skąd zostało pobrane oraz kto wykonał
- -->
 <PropertyList>
-<sim>
+ <sim>
   <description>PZL Koliber 160A</description>
   <aircraft-version>0.9</aircraft-version>
   <rating>
@@ -25,6 +22,7 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
     <splash-texture>Aircraft/PZL-Koliber-family/splash.png</splash-texture>
     <splash-title>PZL Koliber 160A</splash-title>
   </startup>
+  
   <systems include="Systems/Koliber-electrical.xml"></systems>
 
   <instrumentation>
@@ -55,36 +53,8 @@ Opisać co i skąd zostało pobrane oraz kto wykonał
       <default-field-of-view-deg>55.0</default-field-of-view-deg>
     </config>
 </view>
-   <!-- x/y/z = right/up/back ( Blender/FG equivalent: y/z/x) --> 
-<view n="0">
-  <name>Default</name>
-  <type>lookfrom</type>
-  <internal type="bool">true</internal>
-  <config>
-    <x-offset-m type="double">0.2</x-offset-m> <!--right -->
-    <y-offset-m type="double">0.5</y-offset-m>  <!--up -->
-    <z-offset-m type="double">-0.1</z-offset-m>  <!--back -->	
-    <heading-offset-deg>1.8</heading-offset-deg>
-    <pitch-offset-deg>-0.6</pitch-offset-deg>
-    <default-field-of-view-deg>83.0</default-field-of-view-deg>
-    <limits>
-      <enabled type="bool">true</enabled>
-      <left>
-	<heading-max-deg type="double">140</heading-max-deg>
-	<x-offset-max-m type="double">0.10</x-offset-max-m>
-	<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-      </left>
-      <right>
-	<heading-max-deg type="double">160</heading-max-deg>
-	<x-offset-max-m type="double">0.15</x-offset-max-m>
-	<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-      </right>
-    </limits>
-  </config>
-</view>
-	
 
-<view n="1">
+<view n="0">
   <name>Cockpit</name>
   <type>lookfrom</type>
   <internal type="bool">true</internal>
