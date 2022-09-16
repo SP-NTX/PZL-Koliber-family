@@ -10,7 +10,7 @@
     <model type="int">3</model>
   </rating>
   
-  <author>SP-NTX, jakkos98 (FDM, 3D, Data). Original by: Mariusz Migut SP-MMA(3D, Sounds), Patrice Poly "WooT" (FDM)</author>
+  <author>SP-NTX, jakkos98, TheFGFSEagle (FDM, 3D, Data). Original by: Mariusz Migut SP-MMA(3D, Sounds), Patrice Poly "WooT" (FDM)</author>
 
   <flight-model>jsb</flight-model>
   <aero>PZL-Koliber-160</aero>
