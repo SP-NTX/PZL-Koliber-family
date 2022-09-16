@@ -84,7 +84,7 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">   1070.00 </ixx>
+   <ixx unit="KG*M2">   1270.00 </ixx>
    <iyy unit="KG*M2">   1249.00 </iyy>
    <izz unit="KG*M2">   2312.00 </izz>
    <emptywt unit="KG" >    567.00 </emptywt>
