@@ -16,4 +16,5 @@ At first, thanks a lot @marimigu for letting us to base our plane on his amazing
 Actually developed by:
 - jakkos98
 - SP-NTX
+- TheFGFSEagle
 and others
