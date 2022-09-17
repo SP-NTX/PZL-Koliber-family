@@ -68,10 +68,6 @@
 			<code-repository>https://github.com/SP-NTX/PZL-Koliber-family</code-repository>
 		</urls>
 		
-		<startup>
-			<splash-texture>Aircraft/PZL-Koliber-family/splash.png</splash-texture>
-		</startup>
-		
 		<previews>
 			<preview>
 				<type>exterior</type>
