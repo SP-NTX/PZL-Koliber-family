@@ -68,21 +68,25 @@
 			<code-repository>https://github.com/SP-NTX/PZL-Koliber-family</code-repository>
 		</urls>
 		
+		<startup>
+			<splash-texture>Aircraft/PZL-Koliber-family/splash.png</splash-texture>
+		</startup>
+		
 		<previews>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/exterior-1.png</path>
+				<path>Previews/1.png</path>
+			</preview>
+			<preview>
+				<type>panel</type>
+				<splash type="bool">true</splash>
+				<path>Previews/2.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/exterior-f16a-2.png</path>
-			</preview>
-			<preview>
-				<type>panel</type>
-				<splash type="bool">false</splash>
-				<path>Previews/cockpit.png</path>
+				<path>Previews/3.png</path>
 			</preview>
 		</previews>
 		
