@@ -5,7 +5,7 @@
  <path>PZL-Koliber-160A.ac</path>
  <model>
 	<name>Instruments</name>
-	<path>Aircraft/PZL-Koliber-160A/Models/Koliber-Instruments.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Koliber-Instruments.xml</path>
  </model>
  
 <effect>
@@ -181,19 +181,29 @@
 	</axis>
 </animation>
 
+	<animation>
+		<type>rotate</type>
+		<object-name>RudderTrimTab</object-name>
+		<property>controls/flight/rudder-trim</property>
+		<factor>20</factor>
+		<axis>
+			<x1>4.462</x1>
+			<y1>0</y1>
+			<z1>1.45</z1>
+			<x2>4.117</x2>
+			<y2>0</y2>
+			<z2>0.591</z2>
+		</axis>
+	</animation>
 <animation>
 	<type>rotate</type>
 	<object-name>vstab</object-name>
+	<object-name>RudderTrimTab</object-name>
 	<property>surface-positions/rudder-pos-norm</property>
-	<interpolation>
-		<entry><ind> -1 </ind><dep> 30.0 </dep></entry>
-		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
-		<entry><ind>  1 </ind><dep>  -30.0 </dep></entry>
-	 	 </interpolation>
-
+	<factor>-30</factor>
 	<center>
 		<x-m>3.760792</x-m>
-		<y-m>-2e-06</y-m> <!-- SP-NTX: Oh my... -->
+		<y-m>0</y-m>
 		<z-m>0.998834</z-m>
 	</center>
 	<axis>
@@ -1528,49 +1538,59 @@ do modelu należy dodać plane z teksturą światła
 
 <!-- ****************** ŚWIATŁA *****************************-->	
 
-<animation>
-	<object-name>LandingLight</object-name>
-	<object-name>TaxiLight</object-name>
-	<object-name>beacon-light</object-name>
-	<object-name>NavLightGreen</object-name>
-        <object-name>NavLightBack</object-name>
-	<object-name>NavLightRed</object-name>
-</animation>
+	<model>
+		<path>Lights/nav-light-left.xml</path>
+		<offsets>
+			<x-m>-0.327</x-m>
+			<y-m>-4.9</y-m>
+			<z-m>0.554</z-m>
+		</offsets>
+	</model>
 
-<animation>
-	<type>select</type>
-	<object-name>LandingLight</object-name>
-	<condition>
-		<and>
-			<property>/controls/switches/battery</property>
-			<property>controls/lighting/landing-lights</property>
-		</and>		
-	</condition>
-</animation>
+	<model>
+		<path>Lights/nav-light-right.xml</path>
+		<offsets>
+			<x-m>-0.327</x-m>
+			<y-m>4.9</y-m>
+			<z-m>0.554</z-m>
+		</offsets>
+	</model>
 
-<animation>
-	<type>select</type>
-	<object-name>TaxiLight</object-name>
-	<condition>
-		<and>
-			<property>/controls/switches/battery</property>
-			<property>controls/lighting/taxi-lights</property>
-		</and>		
-	</condition>
-</animation>
+	<model>
+		<path>Lights/nav-light-tail.xml</path>
+		<offsets>
+			<x-m>4.241</x-m>
+			<y-m>0</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+	</model>
 
-<animation>
-	<type>select</type>
-	<object-name>NavLightGreen</object-name>
-	<object-name>NavLightRed</object-name>
-        <object-name>NavLightBack</object-name>
-	<condition>
-		<and>
-			<property>/controls/switches/battery</property>
-			<property>controls/lighting/nav-lights</property>
-		</and>		
-	</condition>
-</animation>
+	<model>
+		<path>Lights/beacon-light.xml</path>
+		<offsets>
+			<x-m>4.09</x-m>
+			<y-m>0</y-m>
+			<z-m>1.87</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Lights/landing-light.xml</path>
+		<offsets>
+			<x-m>0.492</x-m>
+			<y-m>-4.676</y-m>
+			<z-m>0.54</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Lights/taxi-light.xml</path>
+		<offsets>
+			<x-m>0.485</x-m>
+			<y-m>-4.555</y-m>
+			<z-m>0.523</z-m>
+		</offsets>
+	</model>
 
 <!-- Sterowanie przednim kołem -->
 

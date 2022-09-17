@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>procedural-light.ac</path>
+
+	<effect>
+		<inherits-from>Effects/procedural-light</inherits-from>
+		<object-name>Light</object-name>
+		<parameters>
+			<light_color_base_r type="float">1</light_color_base_r>
+			<light_color_base_g type="float">0.2</light_color_base_g>
+			<light_color_base_b type="float">0.2</light_color_base_b>
+			<light_color_center_r type="float">1</light_color_center_r>
+			<light_color_center_g type="float">0.8</light_color_center_g>
+			<light_color_center_b type="float">0.8</light_color_center_b>
+			
+			<pointing_x type="float">0</pointing_x>
+			<pointing_y type="float">0</pointing_y>
+			<pointing_z type="float">-1</pointing_z>
+			
+			<is_directional type="bool">true</is_directional>
+			<is_strobe type="bool">false</is_strobe>
+			
+			<inner_angle type="float">0.9</inner_angle>
+			<outer_angle type="float">0.9</outer_angle>
+			<zero_angle type="float">1</zero_angle>
+			<outer_gain type="float">0.1</outer_gain>
+			
+			<intensity_scale type="float"><use>sim/model/lights/beacon/state</use></intensity_scale>
+		</parameters>
+	</effect>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>Light</object-name>
+	</animation>
+	
+	<animation>
+		<type>dist-scale</type>
+		<object-name>Light</object-name>
+		<factor>0.001</factor>
+		<min>0.5</min>
+		<max>10</max>
+	</animation>
+	
+	<model>
+		<name>LightPlate</name>
+		<path>lights.xml</path>
+		<overlay>
+			<params>
+				<light-used>red</light-used>
+				<show-prop>sim/model/lights/beacon/state</show-prop>
+			</params>
+		</overlay>
+	</model>
+	
+	<light>
+		<name>BeaconLight</name>
+		<type>spot</type>
+		<position>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</position>
+		<direction>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</direction>
+		<ambient>
+			<r>1</r>
+			<g>0</g>
+			<b>0</b>
+			<a>0</a>
+		</ambient>
+		<diffuse>
+			<r>1</r>
+			<g>0</g>
+			<b>0</b>
+			<a>0</a>
+		</diffuse>
+		<specular>
+			<r>1</r>
+			<g>0</g>
+			<b>0</b>
+			<a>0</a>
+		</specular>
+		<attenuation>
+			<c>1</c>
+			<l>1</l>
+			<q>1.5</q>
+		</attenuation>
+		<spot-exponent>1</spot-exponent>
+		<spot-cutoff>89</spot-cutoff>
+		<range-m>10</range-m>
+		<dim-factor>
+			<property>sim/model/lights/beacon/state</property>
+		</dim-factor>
+	</light>
+</PropertyList>

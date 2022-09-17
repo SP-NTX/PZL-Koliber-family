@@ -3,7 +3,7 @@
 <PropertyList>
 <model>
    <name>mag_sw</name>
-   <path>Aircraft/PZL-Koliber-160A/Models/Instruments/magneto/mags.xml</path>
+   <path>Aircraft/PZL-Koliber-family/Models/Instruments/magneto/mags.xml</path>
    <offsets>
      <x-m>-0.5895</x-m>
      <y-m>-0.1903</y-m>
@@ -12,7 +12,7 @@
  </model>
  
 <model>
-<path>Aircraft/PZL-Koliber-160A/Models/Instruments/asi/asi-MS893.xml</path>
+<path>Aircraft/PZL-Koliber-family/Models/Instruments/asi/asi-MS893.xml</path>
 	 <offsets>
 		 <x-m> -0.5910</x-m>
 		 <y-m> -0.338</y-m>
@@ -22,7 +22,7 @@
  </model>
 
  <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/ai/ai.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/ai/ai.xml</path>
 	 <offsets>
 		 <x-m>-0.5895</x-m>
 		 <y-m> -0.2495</y-m>
@@ -33,7 +33,7 @@
  
 <!-- WYSOKOŚCIOMIERZ -->
  <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/alt/alt-1.1.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/alt/alt-1.1.xml</path>
 	 <offsets>
 		 <x-m>-0.5900</x-m>
 		 <y-m> -0.1623</y-m>
@@ -42,7 +42,7 @@
  </model>
 
 <model>
-<path>Aircraft/PZL-Koliber-160A/Models/Instruments/ki206/ki206.xml</path>
+<path>Aircraft/PZL-Koliber-family/Models/Instruments/ki206/ki206.xml</path>
 	 <offsets>
 		 <x-m>-0.5910</x-m>
 		 <y-m> -0.0657</y-m>
@@ -51,7 +51,7 @@
  </model>
  
  <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/tc/tc.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/tc/tc.xml</path>
 	 <offsets>
 		 <x-m>-0.5910</x-m>
 		 <y-m> -0.3374</y-m>
@@ -61,7 +61,7 @@
  </model>
 
  <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/hi/hi.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/hi/hi.xml</path>
 	 <offsets>
 		 <x-m>-0.5910</x-m>
 		 <y-m> -0.2514</y-m>
@@ -70,7 +70,7 @@
  </model>
  
   <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/elementy/oprawa.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/oprawa.xml</path>
 	 <offsets>
 		 <x-m>-0.5920</x-m>
 		 <y-m> -0.2514</y-m>
@@ -79,7 +79,7 @@
  </model>
 
  <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/vsi-1.1/vsi-1.1.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/vsi-1.1/vsi-1.1.xml</path>
 	 <offsets>
 		 <x-m>-0.5910</x-m>
 		 <y-m> -0.1623</y-m>
@@ -88,7 +88,7 @@
 
  </model>
  <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/clock/clock.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/clock/clock.xml</path>
 	 <offsets>
 			<x-m>-0.5950</x-m>
 			<y-m>-0.2456</y-m>
@@ -98,7 +98,7 @@
  
  <!-- Pierścień zegara -->
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/elementy/pierscien_57.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/pierscien_57.xml</path>
 		<offsets>
 			<x-m>-0.5880</x-m>
 			<y-m>-0.2456</y-m>
@@ -107,7 +107,7 @@
 </model>
 
 <model>
-	 <path>Aircraft/PZL-Koliber-160A/Models/Instruments/RPM/RPM.xml</path>
+	 <path>Aircraft/PZL-Koliber-family/Models/Instruments/RPM/RPM.xml</path>
 		 <offsets>
 			 <x-m>-0.5808</x-m>
 			 <y-m> 0.0703</y-m>
@@ -116,7 +116,7 @@
  </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/fuel12/fuel12L.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/fuel12/fuel12L.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>-0.1324</y-m>
@@ -125,7 +125,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/fuel12/fuel12R.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/fuel12/fuel12R.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>-0.0699</y-m>
@@ -134,7 +134,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/fuel_pres/fuel_pres.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/fuel_pres/fuel_pres.xml</path>
 		<offsets>
 			<x-m>-0.5888</x-m>
 			<y-m>0.3534</y-m>
@@ -143,7 +143,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/carb_temp/carb_temp.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/carb_temp/carb_temp.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>0.3527</y-m>
@@ -152,7 +152,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/cyl_head_temp/cyl_head_temp.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/cyl_head_temp/cyl_head_temp.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>0.1420</y-m>
@@ -161,7 +161,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/air_temp/air_temp.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/air_temp/air_temp.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>0.3524</y-m>
@@ -170,7 +170,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/oil_temp/oil_temp.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/oil_temp/oil_temp.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>0.2051</y-m>
@@ -179,7 +179,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/oil/oil_pressure.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/oil/oil_pressure.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>0.2671</y-m>
@@ -188,7 +188,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/AMPS/AMPS.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/AMPS/AMPS.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>0.1086</y-m>
@@ -197,7 +197,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/suction/suction.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/suction/suction.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
 			<y-m>-0.4075</y-m>
@@ -206,7 +206,7 @@
 </model>
 
 <model>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/kma20/kma20.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/kma20/kma20.xml</path>
 	<offsets>
 		<x-m>-0.5894</x-m>
 		<y-m>0.0664</y-m>
@@ -216,7 +216,7 @@
 <!-- patrz c172p -->
 <model>
 	<name>kx165-1</name>
-	<path>Aircraft/PZL-Koliber-160A/Models/Instruments/kx165/kx165-1.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/kx165/kx165-1.xml</path>
 	<!-- <overlay>
             <params>
                 <dimming>/systems/electrical/outputs/panel-norm</dimming>
@@ -233,7 +233,7 @@
 </model>
 
 <model>
-  <path>Aircraft/PZL-Koliber-160A/Models/Instruments/transponder/gtx320a.xml</path>
+  <path>Aircraft/PZL-Koliber-family/Models/Instruments/transponder/gtx320a.xml</path>
     <offsets>
         <x-m>-0.5801</x-m>
         <y-m>0.2346</y-m>
@@ -244,7 +244,7 @@
 <!-- Elementy bierne -->
 
 <model>
-  <path>Aircraft/PZL-Koliber-160A/Models/Instruments/elementy/zaslepka-57.xml</path>
+  <path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-57.xml</path>
     <offsets>
       <x-m>-0.5848</x-m>
       <y-m>-0.4073</y-m>
@@ -253,7 +253,7 @@
 </model>
 
 <model>
-  <path>Aircraft/PZL-Koliber-160A/Models/Instruments/elementy/zaslepka-80.xml</path>
+  <path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-80.xml</path>
     <offsets>
       <x-m>-0.5898</x-m>
       <y-m>-0.0663</y-m>
@@ -262,7 +262,7 @@
 </model>
 
 <model>
-  <path>Aircraft/PZL-Koliber-160A/Models/Instruments/trimmer/trimmer-gauge.xml</path>
+  <path>Aircraft/PZL-Koliber-family/Models/Instruments/trimmer/trimmer-gauge.xml</path>
   <offsets>
     <x-m>-0.5779</x-m>
     <y-m>-0.0207</y-m>
@@ -272,7 +272,7 @@
 </model>
 
 <model>
-  <path>Aircraft/PZL-Koliber-160A/Models/Instruments/FuelValve/FuelValve2.xml</path>
+  <path>Aircraft/PZL-Koliber-family/Models/Instruments/FuelValve/FuelValve2.xml</path>
   <offsets>
     <x-m>-0.5275</x-m>
     <y-m>-0.1336</y-m>
@@ -282,7 +282,7 @@
   
 </model>
 <model>
-    <path>Aircraft/PZL-Koliber-160A/Models/Instruments/fpi/fpi.xml</path>
+    <path>Aircraft/PZL-Koliber-family/Models/Instruments/fpi/fpi.xml</path>
     <offsets>
         <x-m>-0.5611</x-m>
         <y-m>-0.0036</y-m>
@@ -291,7 +291,7 @@
     </offsets>
 </model>
 <model>
-    <path>Aircraft/PZL-Koliber-160A/Models/Instruments/primer/primer.xml</path>
+    <path>Aircraft/PZL-Koliber-family/Models/Instruments/primer/primer.xml</path>
     <offsets>
         <x-m>-0.5460</x-m>
         <y-m>0.0240</y-m>

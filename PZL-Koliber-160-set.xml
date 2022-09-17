@@ -89,7 +89,12 @@
 		<flight-model>jsb</flight-model>
 		<aero>PZL-Koliber-160</aero>
 		
-		<systems include="Systems/Koliber-electrical.xml"/>
+		<systems include="Systems/Koliber-electrical.xml">
+			<property-rule n="100">
+				<name>Light states</name>
+				<path>Systems/lights.xml</path>
+			</property-rule>
+		</systems>
 		
 		<instrumentation>
 			<path>Aircraft/PZL-Koliber-family/Systems/generic-instrumentation.xml</path>
@@ -173,7 +178,7 @@
 		</engine>
 			
 		<gear>
-			<brake-parking>1.0</brake-parking>
+			<brake-parking type="bool">true</brake-parking>
 		</gear>
 	</controls>
 	
@@ -223,6 +228,7 @@
 			<capacity-gal_us type="double">0.034</capacity-gal_us>
 			<unusable-gal_us type="double">0.004</unusable-gal_us>
 			<level-gal_us type="double">0.0</level-gal_us>
+			<hidden type="bool">true</hidden>
 		  </tank>
 		</fuel>
 	</consumables>
