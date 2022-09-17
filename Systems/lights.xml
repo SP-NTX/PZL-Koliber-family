@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<params>
+		<beacon-flash-interval-sec>2</beacon-flash-interval-sec>
+		<beacon-flash-duration-sec>0.2</beacon-flash-duration-sec>
+	</params>
+	
+	<logic>
+		<name>Nav lights brightness</name>
+		<input>
+			<greater-than>
+				<property>/systems/electrical/outputs/lights-nav</property>
+				<value>12</value>
+			</greater-than>
+		</input>
+		<output>/sim/model/lights/nav/state</output>
+	</logic>
+	<logic>
+		<name>Taxi light brightness</name>
+		<input>
+			<greater-than>
+				<property>/systems/electrical/outputs/lights-taxi</property>
+				<value>12</value>
+			</greater-than>
+		</input>
+		<output>/sim/model/lights/taxi/state</output>
+	</logic>
+	<logic>
+		<name>Landing light brightness</name>
+		<input>
+			<greater-than>
+				<property>/systems/electrical/outputs/lights-landing</property>
+				<value>12</value>
+			</greater-than>
+		</input>
+		<output>/sim/model/lights/landing/state</output>
+	</logic>
+	<logic>
+		<name>Beacon light brightness</name>
+		<input>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/beacon</property>
+					<value>12</value>
+				</greater-than>
+				<greater-than>
+					<mod>
+						<property>/sim/time/elapsed-sec</property>
+						<value alias="../../../../../../params/beacon-flash-interval-sec"/>
+					</mod>
+					<difference>
+						<value alias="../../../../../../params/beacon-flash-interval-sec"/>
+						<value alias="../../../../../../params/beacon-flash-duration-sec"/>
+					</difference>
+				</greater-than>
+			</and>
+		</input>
+		<output>/sim/model/lights/beacon/state</output>
+	</logic>
+</PropertyList>
