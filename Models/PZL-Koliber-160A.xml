@@ -92,8 +92,8 @@
     <type>rotate</type>
     <object-name>nose-wheel</object-name>
     <object-name>nose-wheel.006</object-name>
-    <factor>-30</factor>
-    <property>controls/flight/rudder</property>
+    <factor>-360</factor>
+    <property>gear/gear/steering-norm</property>
     <axis>
       <x>0.2</x>
       <y>0</y>
@@ -165,7 +165,7 @@
 	 <object-name>hstab</object-name>
 	 <property>surface-positions/elevator-pos-norm</property>
 	<interpolation>
-		<entry><ind>-1</ind><dep> 20 </dep></entry>
+		<entry><ind>-1</ind><dep> 30 </dep></entry>
 		<entry><ind>0.00</ind><dep>   0.0 </dep></entry>
 		<entry><ind>1</ind><dep>  -25 </dep></entry>
 		</interpolation>
@@ -186,14 +186,14 @@
 	<object-name>vstab</object-name>
 	<property>surface-positions/rudder-pos-norm</property>
 	<interpolation>
-		<entry><ind> -1 </ind><dep> 25.0 </dep></entry>
+		<entry><ind> -1 </ind><dep> -30.0 </dep></entry>
 		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
-		<entry><ind>  1 </ind><dep>  -25.0 </dep></entry>
+		<entry><ind>  1 </ind><dep>  30.0 </dep></entry>
 	 	 </interpolation>
 
 	<center>
 		<x-m>3.760792</x-m>
-		<y-m>-2e-06</y-m>
+		<y-m>-2e-06</y-m> <!-- SP-NTX: Oh my... -->
 		<z-m>0.998834</z-m>
 	</center>
 	<axis>
@@ -208,9 +208,9 @@
 	<object-name>left-aileron</object-name>
 	<property>surface-positions/left-aileron-pos-norm</property>
 	<interpolation>
-		<entry><ind> -1 </ind><dep>  25 </dep></entry>
+		<entry><ind> -1 </ind><dep>  17.5 </dep></entry>
 		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
-		<entry><ind>  1 </ind><dep> -25 </dep></entry>
+		<entry><ind>  1 </ind><dep> -13.5 </dep></entry>
 	 	 </interpolation>
 	<center>
 		<x-m>0.430355</x-m>
@@ -229,9 +229,9 @@
 	<object-name>right-aileron</object-name>
 	<property>surface-positions/right-aileron-pos-norm</property>
 	<interpolation>
-		<entry><ind> -1 </ind><dep>  25 </dep></entry>
+		<entry><ind> -1 </ind><dep>  17.5 </dep></entry>
 		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
-		<entry><ind>  1 </ind><dep> -25 </dep></entry>
+		<entry><ind>  1 </ind><dep> -13.5 </dep></entry>
 	 	 </interpolation>
 
 <center>

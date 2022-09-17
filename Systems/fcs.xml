@@ -122,8 +122,8 @@
    <aerosurface_scale name="Rudder Control">
       <input>fcs/rudder-command-sum</input>
       <range>
-        <min> 0.523598776</min>
-        <max> -0.523598776 </max>
+        <min> -0.523598776</min>
+        <max> 0.523598776 </max>
       </range>
       <output>fcs/rudder-pos-rad</output>
    </aerosurface_scale>
@@ -131,8 +131,8 @@
    <aerosurface_scale name="Rudder Normalization">
       <input>fcs/rudder-pos-rad</input>
       <domain>
-        <min> 0.523598776 </min>
-        <max>  -0.523598776 </max>
+        <min> -0.523598776 </min>
+        <max>  0.523598776 </max>
       </domain>
       <range>
         <min> -1 </min>
