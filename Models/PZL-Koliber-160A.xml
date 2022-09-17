@@ -200,8 +200,7 @@
 	<object-name>vstab</object-name>
 	<object-name>RudderTrimTab</object-name>
 	<property>surface-positions/rudder-pos-norm</property>
-	<factor>30</factor>
-
+	<factor>-30</factor>
 	<center>
 		<x-m>3.760792</x-m>
 		<y-m>0</y-m>
