@@ -186,9 +186,9 @@
 	<object-name>vstab</object-name>
 	<property>surface-positions/rudder-pos-norm</property>
 	<interpolation>
-		<entry><ind> -1 </ind><dep> -30.0 </dep></entry>
+		<entry><ind> -1 </ind><dep> 30.0 </dep></entry>
 		<entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
-		<entry><ind>  1 </ind><dep>  30.0 </dep></entry>
+		<entry><ind>  1 </ind><dep>  -30.0 </dep></entry>
 	 	 </interpolation>
 
 	<center>
