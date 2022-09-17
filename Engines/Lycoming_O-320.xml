@@ -1,33 +1,37 @@
 <?xml version="1.0"?>
 
-<!--
-  File:     Lycoming_O-320.xml
-  Author:   AeromatiC++ v 3.3.20
 
-  See: http://wiki.flightgear.org/JSBSim_Engines#FGPiston
+  <piston_engine name="Lycoming_O-320-D2A">
+  <minmp unit="INHG"> 8.3 </minmp><!--do ustalenia-->
+  <maxmp unit="INHG"> 28.7 </maxmp>
+  <displacement unit="IN3"> 319.8 </displacement>
+  <bore unit="IN"> 5.125 </bore> <!-- Unused -->
+  <stroke unit="IN"> 3.875 </stroke>
+  <cylinders> 4 </cylinders><!-- Unused -->
+  <!--<cylinder-head-mass unit="LBS"> 67 </cylinder-head-mass> --><!--do sprawdzenia-->
+  <compression-ratio> 8.5 </compression-ratio>
+  <sparkfaildrop> 0.1 </sparkfaildrop> <!--do ustalenia eksperymentalnie-->
+  <maxhp unit="HP"> 160 </maxhp>
+  <cycles> 4 </cycles>
+  <idlerpm> 600 </idlerpm>
+  <maxrpm> 2700 </maxrpm>
+<!-- advanced tags! -->
+  <bsfc unit="KG/KW*HR"> 0.3 </bsfc> <!--do sprawdzenia-->
+  <volumetric-efficiency> 0.81 </volumetric-efficiency> <!--do sprawdzenia-->
+  <air-intake-impedance-factor> 0.5 </air-intake-impedance-factor> <!--do sprawdzenia-->
+  <ram-air-factor> 1.2 </ram-air-factor> <!--do sprawdzenia-->
+  <!--><cooling-factor> 0.8 </cooling-factor>--> <!--do sprawdzenia-->
+<!-- Added in FlightGear 2.8 -->
+  <starter-torque> 251.34 </starter-torque> <!--704.31-->
+  <starter-rpm> 550 </starter-rpm><!--180*13.556/4.3-->
+  <static-friction  unit="WATTS"> 1000 </static-friction> <!-- do sprawdzenia-->
+  <man-press-lag> 0.1 </man-press-lag><!--do ustalenia-->
+<!-- Added in FlightGear 2017.2 -->
+  <oil-pressure-relief-valve-psi> 75 </oil-pressure-relief-valve-psi>
+  <design-oil-temp-degK> 355.15 </design-oil-temp-degK>
+  <oil-pressure-rpm-max> 2025 </oil-pressure-rpm-max> <!--do sprawdzenia-->
+  <oil-viscosity-index> 0.30 </oil-viscosity-index> <!--do sprawdzenia-->
 
-  Inputs:
-    name:           Lycoming_O-320
-    type:           Piston Engine
-    power:          160.92 hp
--->
-
-<piston_engine name="Lycoming_O-320">
-  <minmp unit="INHG">           8.3 </minmp>
-  <maxmp unit="INHG">         28.5 </maxmp>
-    <displacement unit="IN3"> 320 </displacement>
-  <maxhp>        160.00 </maxhp>
-  <cycles>         4.0 </cycles>
-  <idlerpm>      600 </idlerpm>
-  <maxrpm>      2800.0 </maxrpm>
-  <maxthrottle>               1.0  </maxthrottle>
-  <minthrottle>               0.1  </minthrottle>
-  <sparkfaildrop>             0.1 </sparkfaildrop>
-  <man-press-lag> 0.1 </man-press-lag>
-  <oil-pressure-rpm-max>1210</oil-pressure-rpm-max>
-  <starter-torque> 128.736 </starter-torque>
-  <starter-rpm> 1400 </starter-rpm>
-  <stroke unit="IN">  4.375 </stroke>
-  <cylinders>        4  </cylinders>
-  <compression-ratio> 7.0 </compression-ratio>
+  <maxthrottle>1.0</maxthrottle>
+  <minthrottle>0.1</minthrottle>
 </piston_engine>
