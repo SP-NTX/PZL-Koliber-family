@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<sim>
+	
+		<description>PZL Koliber 160A</description>
+		
+		<long-description>The PZL-Koliber 160A is the last production version of the Polish PZL-110 Koliber series 
+		developed on the basis of the SOCATA Rallye 100 ST license purchased by PZL in 1976, produced since 1979. 
+		The PZL-Koliber 160A aircraft is a four-seat low-wing aircraft with a take-off weight of up to 950 kg, equipped with a 160 hp (120 kW) Lycoming O-320-D2A engine. 
+		It was produced in the years 1997-2004 at PZL Okęcie in the number of 12 pieces, mainly exported to the USA. 
+		</long-description>
+		
+		<aircraft-version>0.9</aircraft-version>
+		
+		<rating>
+			<FDM type="int">1</FDM>
+			<systems type="int">2</systems>
+			<cockpit type="int">3</cockpit>
+			<model type="int">3</model>
+		</rating>
+			
+		<authors>
+			<author n="0">
+				<name>jakkos</name>
+				<description>3D, Data, FDM</description>
+				<nick>SP-KOS</nick>
+			</author>
+			<author n="1">
+				<name>SP-NTX</name>
+				<description>3D, Systems, FDM, Systems</description>
+			</author>
+			<author n="2">
+				<name>TheFGFSEagle</name>
+				<description>3D, FDM</description>
+			</author>
+			<author n="3">
+				<name>Mariusz Migut</name>
+				<description>Original author</description>
+				<nick>SP-MMA</nick>
+			</author>
+			<author n="4">
+				<name>Patrice Poly</name>
+				<description>Original author; Old Yasim FDM</description>
+				<nick>WooT</nick>
+			</author>
+		</authors>
+			
+		<tags>
+			<tag n="0">PZL</tag>
+			<tag n="1">ga</tag>
+			<tag n="2">glider</tag>
+			<tag n="4">1990s</tag>
+			<tag n="5">2000s</tag>
+			<tag n="6">fixed-gear</tag>
+			<tag n="7">low-wing</tag>
+			<tag n="8">ifr</tag>
+			<tag n="9">tricycle</tag>
+			<tag n="10">tow</tag>
+			<tag n="11">piston</tag>
+			<tag n="12">propeller</tag>
+			<tag n="13">single-engine</tag>
+			<tag n="14">fixed-pitch</tag>
+			<tag n="14">Koliber</tag>
+		</tags>
+		
+		<urls>
+			<support>https://github.com/SP-NTX/PZL-Koliber-family/issues</support>
+			<code-repository>https://github.com/SP-NTX/PZL-Koliber-family</code-repository>
+		</urls>
+		
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/exterior-1.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/exterior-f16a-2.png</path>
+			</preview>
+			<preview>
+				<type>panel</type>
+				<splash type="bool">false</splash>
+				<path>Previews/cockpit.png</path>
+			</preview>
+		</previews>
+		
+		<flight-model>jsb</flight-model>
+		<aero>PZL-Koliber-160</aero>
+		
+		<systems include="Systems/Koliber-electrical.xml"/>
+		
+		<instrumentation>
+			<path>Aircraft/PZL-Koliber-family/Systems/generic-instrumentation.xml</path>
+		</instrumentation>
+		
+		<sound>
+		<path>Aircraft/PZL-Koliber-family/Sounds/PZL-Koliber-160A-sound.xml</path>
+		</sound>
+		
+		<panel>
+			<visibility archive="n">false</visibility>
+		</panel>
+		
+		<model>
+			<path archive="y">Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
+		</model>
+		
+		<view>
+			<internal archive="y">true</internal>
+			<config>
+			  <x-offset-m type="double">-0.253</x-offset-m> 
+			  <y-offset-m type="double">0.6750</y-offset-m> 
+			  <z-offset-m type="double">-0.072</z-offset-m>
+			  <pitch-offset-deg>-7.23</pitch-offset-deg>
+			  <default-field-of-view-deg>55.0</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		<view n="0">
+			<name>Cockpit</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<x-offset-m type="double">-0.253</x-offset-m> <!--right -->
+				<y-offset-m type="double">0.6750</y-offset-m>  <!--up -->
+				<z-offset-m type="double">-0.01</z-offset-m>  <!--back -->
+				<pitch-offset-deg>-7.23</pitch-offset-deg>
+				<default-field-of-view-deg>97.0</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.10</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">160</heading-max-deg>
+						<x-offset-max-m type="double">0.15</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
+		
+		<!--<help include="help.xml">-->
+		
+		<flaps>
+			<setting>0.50</setting> 
+			<setting>1.0</setting>
+		</flaps>
+	</sim>
+	<controls>
+		<fuel-valve>
+			<from-tank_0>0</from-tank_0>
+			<from-tank_1>0</from-tank_1>
+		</fuel-valve>
+		
+		<lighting>
+			<beacon type="bool">false</beacon>
+			<strobe type="bool">false</strobe>
+			<nav-lights type="bool">false</nav-lights>
+			<landing-lights type="bool">false</landing-lights>
+		</lighting>
+		
+		<fuel-selector type="int">0</fuel-selector>
+		
+		<engine n="0">
+			<magnetos>3</magnetos>
+		</engine>
+			
+		<gear>
+			<brake-parking>1.0</brake-parking>
+		</gear>
+	</controls>
+	
+	<payload>
+		<weight n="0">
+			<name type="string">Pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">330.0</max-lb>
+		</weight>
+		<weight n="1">
+			<name type="string">Co-pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">330.0</max-lb>
+		</weight>
+		<weight n="2">
+			<name type="string">Left passanger</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">170.0</max-lb>
+		</weight>
+		<weight n="3">
+			<name type="string">Right passanger</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">170.0</max-lb>
+		</weight>
+	</payload>
+	
+	<consumables>
+		<fuel>
+		  <tank n="0">
+			<name type="string">Left Wing</name>
+			<capacity-gal_us type="double">21.3</capacity-gal_us>
+			<unusable-gal_us type="double">1.3</unusable-gal_us>
+			<level-gal_us type="double">15.0</level-gal_us>
+		  </tank>
+		  <tank n="1">
+			<name type="string">Right Wing</name>
+			<capacity-gal_us type="double">21.3</capacity-gal_us>
+			<unusable-gal_us type="double">1.3</unusable-gal_us>
+			<level-gal_us type="double">15.0</level-gal_us>
+		  </tank>
+		  <tank n="2">
+			<name type="string">Engine feed</name>
+			<capacity-gal_us type="double">0.034</capacity-gal_us>
+			<unusable-gal_us type="double">0.004</unusable-gal_us>
+			<level-gal_us type="double">0.0</level-gal_us>
+		  </tank>
+		</fuel>
+	</consumables>
+
+	
+	<nasal>
+		<PZL-Koliber_160A>
+			<file>Aircraft/PZL-Koliber-family/Nasal/Electrical.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/auto-slats.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/koliber_function.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/Fuel.nas</file>
+		</PZL-Koliber_160A>
+	</nasal>
+</PropertyList>
