@@ -14,9 +14,9 @@
 			<light_color_center_b type="float">1</light_color_center_b>
 			<intensity_scale type="float"><use>sim/model/lights/landing/state</use></intensity_scale>
 
-			<pointing_x type="float">0</pointing_x>
+			<pointing_x type="float">1</pointing_x>
 			<pointing_y type="float">0</pointing_y>
-			<pointing_z type="float">1</pointing_z>
+			<pointing_z type="float">0</pointing_z>
 			
 			<is_directional type="bool">true</is_directional>
 			<is_strobe type="bool">false</is_strobe>
@@ -57,9 +57,6 @@
 				<show-prop>sim/model/lights/landing/state</show-prop>
 			</params>
 		</overlay>
-		<offsets>
-			<pitch-deg>-90</pitch-deg>
-		</offsets>
 	</model>
 
 	<light>
@@ -71,15 +68,15 @@
 			<z-m>0</z-m>
 		</position>
 		<direction>
-			<x>0</x>
+			<x>-1</x>
 			<y>0</y>
-			<z>-1</z>
+			<z>0</z>
 		</direction>
 		<ambient>
-			<r>0</r>
-			<g>0</g>
-			<b>0</b>
-			<a>0</a>
+			<r>0.5</r>
+			<g>0.45</g>
+			<b>0.45</b>
+			<a>1</a>
 		</ambient>
 		<diffuse>
 			<r>1.00</r>
@@ -88,18 +85,18 @@
 			<a>0</a>
 		</diffuse>
 		<specular>
-			<r>1.00</r>
-			<g>0.95</g>
-			<b>0.95</b>
+			<r>0.5</r>
+			<g>0.45</g>
+			<b>0.45</b>
 			<a>0</a>
 		</specular>
 		<attenuation>
-			<c>0.2</c>
+			<c>0.7</c>
 			<l>0</l>
-			<q>0.00001</q>
+			<q>0.0001</q>
 		</attenuation>
-		<spot-exponent>5</spot-exponent>
-		<spot-cutoff>80</spot-cutoff>
+		<spot-exponent>10</spot-exponent>
+		<spot-cutoff>50</spot-cutoff>
 		<range-m>500</range-m>
 		<dim-factor>
 			<property>sim/model/lights/landing/state</property>
