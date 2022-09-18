@@ -44,14 +44,16 @@
 					<value>12</value>
 				</greater-than>
 				<greater-than>
-					<mod>
-						<property>/sim/time/elapsed-sec</property>
-						<value alias="../../../../../../params/beacon-flash-interval-sec"/>
-					</mod>
-					<difference>
-						<value alias="../../../../../../params/beacon-flash-interval-sec"/>
-						<value alias="../../../../../../params/beacon-flash-duration-sec"/>
-					</difference>
+					<expression>
+						<mod>
+							<property>/sim/time/elapsed-sec</property>
+							<value alias="../../../../../../../params/beacon-flash-interval-sec"/>
+						</mod>
+						<difference>
+							<value alias="../../../../../../../params/beacon-flash-interval-sec"/>
+							<value alias="../../../../../../../params/beacon-flash-duration-sec"/>
+						</difference>
+					</expression>
 				</greater-than>
 			</and>
 		</input>
