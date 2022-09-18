@@ -1577,7 +1577,7 @@ do modelu należy dodać plane z teksturą światła
 	<model>
 		<path>Lights/landing-light.xml</path>
 		<offsets>
-			<x-m>0.492</x-m>
+			<x-m>-0.492</x-m>
 			<y-m>-4.676</y-m>
 			<z-m>0.54</z-m>
 		</offsets>
@@ -1586,7 +1586,7 @@ do modelu należy dodać plane z teksturą światła
 	<model>
 		<path>Lights/taxi-light.xml</path>
 		<offsets>
-			<x-m>0.485</x-m>
+			<x-m>-0.485</x-m>
 			<y-m>-4.555</y-m>
 			<z-m>0.523</z-m>
 		</offsets>
