@@ -10,7 +10,7 @@
 		<input>
 			<greater-than>
 				<property>/systems/electrical/outputs/lights-nav</property>
-				<value>12</value>
+				<value>0</value>
 			</greater-than>
 		</input>
 		<output>/sim/model/lights/nav/state</output>
@@ -20,7 +20,7 @@
 		<input>
 			<greater-than>
 				<property>/systems/electrical/outputs/lights-taxi</property>
-				<value>12</value>
+				<value>0</value>
 			</greater-than>
 		</input>
 		<output>/sim/model/lights/taxi/state</output>
@@ -30,7 +30,7 @@
 		<input>
 			<greater-than>
 				<property>/systems/electrical/outputs/lights-landing</property>
-				<value>12</value>
+				<value>0</value>
 			</greater-than>
 		</input>
 		<output>/sim/model/lights/landing/state</output>
@@ -41,17 +41,21 @@
 			<and>
 				<greater-than>
 					<property>/systems/electrical/outputs/beacon</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 				<greater-than>
-					<mod>
-						<property>/sim/time/elapsed-sec</property>
-						<value alias="../../../../../../params/beacon-flash-interval-sec"/>
-					</mod>
-					<difference>
-						<value alias="../../../../../../params/beacon-flash-interval-sec"/>
-						<value alias="../../../../../../params/beacon-flash-duration-sec"/>
-					</difference>
+					<expression>
+						<mod>
+							<property>/sim/time/elapsed-sec</property>
+							<value alias="../../../../../../../params/beacon-flash-interval-sec"/>
+						</mod>
+					</expression>
+					<expression>
+						<difference>
+							<value alias="../../../../../../../params/beacon-flash-interval-sec"/>
+							<value alias="../../../../../../../params/beacon-flash-duration-sec"/>
+						</difference>
+					</expression>
 				</greater-than>
 			</and>
 		</input>
