@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
+
+<model>
+   <path>Aircraft/PZL-Koliber-family/Models/Instruments/safe_flight/stall-warn.ac</path>
+   <offsets>
+     <x-m>0.589722</x-m>
+     <y-m>-0.407615</y-m>
+     <z-m>0.44436</z-m>
+   </offsets>
+ </model>
+ 
 <model>
    <name>mag_sw</name>
    <path>Aircraft/PZL-Koliber-family/Models/Instruments/magneto/mags.xml</path>
@@ -243,23 +253,6 @@
 
 <!-- Elementy bierne -->
 
-<model>
-  <path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-57.xml</path>
-    <offsets>
-      <x-m>-0.5848</x-m>
-      <y-m>-0.4073</y-m>
-      <z-m>0.4435</z-m>
-    </offsets>
-</model>
-
-<model>
-  <path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-80.xml</path>
-    <offsets>
-      <x-m>-0.5898</x-m>
-      <y-m>-0.0663</y-m>
-      <z-m>0.3822</z-m>
-    </offsets>
-</model>
 
 <model>
   <path>Aircraft/PZL-Koliber-family/Models/Instruments/trimmer/trimmer-gauge.xml</path>
