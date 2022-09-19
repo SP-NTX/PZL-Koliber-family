@@ -193,26 +193,9 @@
       <name>stall</name>
       <mode>looped</mode>
       <path>Sounds/stall.wav</path>
-      <condition>
-        <and>
-          <property>controls/electric/battery-switch</property>
-          <less-than>
-            <property>velocities/airspeed-kt</property>
-            <value>49</value>
-          </less-than>
-          <not>
-            <property>gear/gear[0]/wow</property>
-            <property>gear/gear[1]/wow</property>
-            <property>gear/gear[2]/wow</property>
-          </not>
-        </and>
-      </condition>
       <volume>
-        <property>velocities/airspeed-kt</property>
-        <offset>-0.2</offset>
-        <factor>0.03</factor>
-        <min>0.0</min>
-        <max>1.0</max>
+        <property>instrumentation/stall-warn/sound-volume-norm</property>
+      	 <offset>-1</offset>
       </volume>
       <reference-dist>10.0</reference-dist>
       <max-dist>50.0</max-dist>

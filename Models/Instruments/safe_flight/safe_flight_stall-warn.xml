@@ -1,5 +1,17 @@
 <?xml version="1.0"?>
-
 <PropertyList>
- <path>safe-flight.ac</path>
+	<path>safe-flight.ac</path>
+	
+	<animation>
+		<condition>
+			<property>instrumentation/stall-warn/lamp-lit</property>
+		</condition>
+		<type>material</type>
+		<object-name>light_bulb_safe_flight</object-name>
+		<emission>
+			<red>1</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
 </PropertyList>

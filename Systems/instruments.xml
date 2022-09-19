@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<logic>
+		<name>Stall warning lamp</name>
+		<input>
+			<and>
+				<greater-than>
+					<property>/orientation/alpha-deg</property>
+					<value>13</value> <!-- needs tuning -->
+				</greater-than>
+				<not>
+					<property>gear/gear[0]/wow</property>
+					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
+				</not>
+			</and>
+		</input>
+		<output>/instrumentation/stall-warn/lamp-lit</output>
+	</logic>
+	
+	<filter>
+		<type>gain</type>
+		<name>Stall warning sound</name>
+		<input>
+			<expression>
+				<table>
+					<property>/orientation/alpha-deg</property>
+					<entry>
+						<ind>13</ind>
+						<dep>0</dep>
+					</entry>
+					<entry>
+						<ind>15</ind>
+						<dep>1</dep>
+					</entry>
+				</table>
+			</expression>
+		</input>
+		<output>/instrumentation/stall-warn/sound-volume-norm</output>
+	</filter>
+</PropertyList>
+

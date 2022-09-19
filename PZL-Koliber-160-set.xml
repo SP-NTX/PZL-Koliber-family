@@ -94,6 +94,10 @@
 				<name>Light states</name>
 				<path>Systems/lights.xml</path>
 			</property-rule>
+			<property-rule n="101">
+				<name>Instrument indications</name>
+				<path>Systems/instruments.xml</path>
+			</property-rule>
 		</systems>
 		
 		<instrumentation>
