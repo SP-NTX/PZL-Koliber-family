@@ -23,7 +23,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelSelector</object-name>
-    <property>controls/fuel-selector</property>
+    <property>switches/fuel-selector</property>
     <factor>-90</factor>
     <axis>
       <x>0</x>

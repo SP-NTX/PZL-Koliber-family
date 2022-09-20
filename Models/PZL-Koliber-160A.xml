@@ -737,20 +737,20 @@
     <animation>
         <type>rotate</type>
         <object-name>bat-switch</object-name>
-        <property>/controls/switches/battery</property>
-        <factor>-25.0</factor>
-		<center>
-                    <x-m>-0.5872</x-m>
-                    <y-m>-0.4185</y-m>
-                    <z-m>0.2548</z-m>
-                </center>
+        <property>/switches/bat-switch-pos</property>
+        <factor>-30.0</factor>
+<center>
+   <x-m>-0.58867</x-m>
+   <y-m>-0.418436</y-m>
+   <z-m>0.254881 </z-m>
+</center>
 <axis>
-	    <x1-m>0.0257256</x1-m>
-            <y1-m>-1</y1-m>
-            <z1-m>0.00112367</z1-m>
-            <x2-m>0.0257256</x2-m>
-            <y2-m>1</y2-m>
-            <z2-m>0.00112367</z2-m>
+    <x1-m>0.0257256</x1-m>
+    <y1-m>-1</y1-m>
+    <z1-m>0.00112367</z1-m>
+    <x2-m>0.0257256</x2-m>
+    <y2-m>1</y2-m>
+    <z2-m>0.00112367</z2-m>
 </axis>
     </animation>
     
@@ -771,12 +771,12 @@
 <animation>
         <type>rotate</type>
         <object-name>generator-switch</object-name>
-        <property>/controls/switches/alternator</property>
- <factor>-25.0</factor>
+        <property>/switches/alternator-switch-pos</property>
+ <factor>-30.0</factor>
 <center>
-   <x-m>-0.5872</x-m>
-   <y-m>-0.4092</y-m>
-   <z-m>0.2548</z-m>
+   <x-m>-0.58867</x-m>
+   <y-m>-0.418436</y-m>
+   <z-m>0.254881 </z-m>
 </center>
 <axis>
     <x1-m>0.0257256</x1-m>
@@ -790,19 +790,231 @@
     
      <!-- KONTROLKA ALTERNATOR -->
     
- <animation> 
-	<type>material</type>
-	<object-name>LightAlt</object-name>
-	<condition>
-            <property>controls/engines/engine/master-alt</property>
-            <value>1</value>					
-	</condition>
-	<emission>		
+	<animation>
+  <type>textranslate</type>
+  <object-name>alternator_light_bulb_case</object-name>
+    <property>switches/lights/alternator-light</property>
+	  <bias>0.0001</bias>
+  <factor>0.111</factor>
+  <step>0.001</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+  </axis>
+  </animation>
+  
+    <animation>
+        <type>material</type>
+  <object-name>alternator_light_bulb_case</object-name>
+
+        <ambient>
             <red>1.0</red>
             <green>0.0</green>
-            <blue>0.2</blue>
-	</emission>
-</animation>
+            <blue>0.0</blue>
+        </ambient>
+        <diffuse>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </diffuse>
+        <specular>
+            <red>1.0</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+        </specular>
+        <emission>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+            <factor-prop>switches/lights/alternator-light</factor-prop>
+        </emission>
+		<transparency>
+         <alpha>0.70</alpha>
+        </transparency>
+    </animation>
+     <animation>
+        <type>material</type>
+  <object-name>alternator_light_bulb</object-name>
+        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+        <emission>
+            <red>3.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>switches/lights/alternator-light</factor-prop>
+        </emission>
+    </animation>
+	
+    <animation>
+        <type>material</type>
+  <object-name>alternator_light_emmiter</object-name>
+        <emission>
+            <red>21.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>switches/lights/alternator-light</factor-prop>
+        </emission>
+		        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+    </animation>
+	 <animation>
+  <type>noshadow</type>
+  <object-name>alternator_light_bulb_case</object-name>
+ </animation>
+ 
+ 
+	<light>
+  <name>alternator-warn</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.588516</x-m>
+    <y-m>-0.330</y-m>
+    <z-m>0.301851</z-m>
+  </position>
+  <ambient>
+    <r>0.09</r>
+    <g>0.03</g>
+    <b>0.03</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1.0</c>
+    <l>30.5</l>
+    <q>32.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>/switches/lights/alternator-light</property>
+  </dim-factor>
+</light>
+
+	<animation>
+  <type>textranslate</type>
+  <object-name>starter_light_bulb_case</object-name>
+    <property>switches/lights/starter-light</property>
+	  <bias>0.0001</bias>
+  <factor>0.111</factor>
+  <step>0.001</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+  </axis>
+  </animation>
+
+   <animation>
+        <type>material</type>
+  <object-name>starter_light_bulb_case</object-name>
+
+        <ambient>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </ambient>
+        <diffuse>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </diffuse>
+        <specular>
+            <red>1.0</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+        </specular>
+        <emission>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+            <factor-prop>/switches/lights/starter-light</factor-prop>
+        </emission>
+		<transparency>
+         <alpha>0.70</alpha>
+        </transparency>
+    </animation>
+     <animation>
+        <type>material</type>
+  <object-name>starter_light_bulb</object-name>
+        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+        <emission>
+            <red>3.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>/switches/lights/starter-light</factor-prop>
+        </emission>
+    </animation>
+	
+    <animation>
+        <type>material</type>
+  <object-name>starter_light_emmiter</object-name>
+        <emission>
+            <red>21.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>/switches/lights/starter-light</factor-prop>
+        </emission>
+		        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+    </animation>
+	 <animation>
+  <type>noshadow</type>
+  <object-name>starter_light_bulb_case</object-name>
+ </animation>
+ 
+ 
+	<light>
+  <name>starter-warn</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.588516</x-m>
+    <y-m>-0.28965</y-m>
+    <z-m>0.301851</z-m>
+  </position>
+  <ambient>
+    <r>0.09</r>
+    <g>0.03</g>
+    <b>0.03</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1.0</c>
+    <l>30.5</l>
+    <q>32.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>/switches/lights/starter-light</property>
+  </dim-factor>
+</light>
+
+
 
 <!--WŁĄCZNIK POPMPY PALIWA-->
 <animation>
@@ -839,7 +1051,7 @@
     <animation>
         <type>rotate</type>
         <object-name>switch21</object-name>
-        <property>/controls/switches/fuelpump</property>
+        <property>/switches/fuelpump</property>
  <factor>30</factor>
 		<center>
 	<x-m>-0.5862</x-m>
@@ -890,7 +1102,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>switch22</object-name>
-	<property>/controls/switches/turn-coordinator</property>
+	<property>/switches/turn-coord</property>
 	<factor>30</factor>
 	<center>
 		<x-m>-0.5862</x-m>
@@ -907,8 +1119,6 @@
 	</axis>
 </animation>
 
-<!--******************* ŚWIATŁA Anti-coll *************************
-do modelu należy dodać plane z teksturą światła
 
 <model> 
 	<path>Aircraft\PZL-Koliber-160A\Models\Lights\Beacon.xml</path>
@@ -954,7 +1164,7 @@ do modelu należy dodać plane z teksturą światła
 <animation>
 	<type>rotate</type>
 	<object-name>switch23</object-name>
-	<property>controls/switches/beacon</property>
+	<property>/switches/beacon</property>
 	<factor>30</factor>
 	<center>
 		<x-m>-0.5862</x-m>
@@ -969,7 +1179,7 @@ do modelu należy dodać plane z teksturą światła
 		<y2-m>-1</y2-m>
 		<z2-m>0.00112367</z2-m>
 	</axis>
-</animation>-->
+</animation>
 <!-- ********************************Nav-Light *******************-->
 <animation>
   <type>material</type>
@@ -1006,7 +1216,7 @@ do modelu należy dodać plane z teksturą światła
 <animation>
 	<type>rotate</type>
 	<object-name>switch24</object-name>
-	<property>controls/lighting/nav-lights</property>
+	<property>switches/nav-lights</property>
 	<factor>30</factor>
 	<center>
 		<x-m>-0.5862</x-m>
@@ -1060,7 +1270,7 @@ do modelu należy dodać plane z teksturą światła
     <animation>
         <type>rotate</type>
         <object-name>switch25</object-name>
-        <property>controls/lighting/taxi-lights</property>
+        <property>switches/taxi-lights</property>
  <factor>30</factor>
 		<center>
 	<x-m>-0.5862</x-m>
@@ -1113,7 +1323,7 @@ do modelu należy dodać plane z teksturą światła
     <animation>
         <type>rotate</type>
         <object-name>switch26</object-name>
-        <property>controls/lighting/landing-lights</property>
+        <property>switches/landing-lights</property>
  <factor>30</factor>
 		<center>
 	<x-m>-0.5862</x-m>
@@ -1166,7 +1376,7 @@ do modelu należy dodać plane z teksturą światła
     <animation>
         <type>rotate</type>
         <object-name>switch28</object-name>
-        <property>controls/anti-ice/pitot-heat</property>
+        <property>switches/pitot-switch</property>
 	<factor>25.0</factor>
 	<center>
 		<x-m>-0.5862</x-m>

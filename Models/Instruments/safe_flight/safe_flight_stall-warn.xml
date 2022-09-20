@@ -1,17 +1,119 @@
 <?xml version="1.0"?>
 <PropertyList>
+
 	<path>safe-flight.ac</path>
 	
 	<animation>
-		<condition>
-			<property>instrumentation/stall-warn/lamp-lit</property>
-		</condition>
-		<type>material</type>
-		<object-name>light_bulb_safe_flight</object-name>
-		<emission>
-			<red>1</red>
-			<green>0.5</green>
-			<blue>0.5</blue>
-		</emission>
-	</animation>
+  <type>textranslate</type>
+  <object-name>light_bulb_safe_flight</object-name>
+    <property>instrumentation/stall-warn/lamp-lit</property>
+	  <bias>0.0001</bias>
+  <factor>0.85</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+  </axis>
+  </animation>
+  
+    <animation>
+        <type>material</type>
+        <object-name>light_bulb_safe_flight</object-name>
+
+        <ambient>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </ambient>
+        <diffuse>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </diffuse>
+        <specular>
+            <red>1.0</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+        </specular>
+        <emission>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+            <factor-prop>instrumentation/stall-warn/lamp-lit</factor-prop>
+        </emission>
+		<transparency>
+         <alpha>0.90</alpha>
+        </transparency>
+    </animation>
+     <animation>
+        <type>material</type>
+        <object-name>bulb_safe_flight</object-name>
+        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+        <emission>
+            <red>1.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>instrumentation/stall-warn/lamp-lit</factor-prop>
+        </emission>
+    </animation>
+	
+    <animation>
+        <type>material</type>
+        <object-name>light_emmiter_safe_flight</object-name>
+        <emission>
+            <red>21.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>instrumentation/stall-warn/lamp-lit</factor-prop>
+        </emission>
+		        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+    </animation>
+	 <animation>
+  <type>noshadow</type>
+  <object-name>light_bulb_safe_flight</object-name>
+ </animation>
+ 
+ 
+	<light>
+  <name>safe-flight_stall_warn</name>
+  <type>point</type>
+  <position>
+    <x-m>0.011845</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <ambient>
+    <r>0.09</r>
+    <g>0.03</g>
+    <b>0.03</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1.0</c>
+    <l>30.5</l>
+    <q>32.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>instrumentation/stall-warn/lamp-lit</property>
+  </dim-factor>
+</light>
+
+	
 </PropertyList>

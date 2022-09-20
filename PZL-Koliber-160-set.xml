@@ -98,6 +98,14 @@
 				<name>Instrument indications</name>
 				<path>Systems/instruments.xml</path>
 			</property-rule>
+			<property-rule n="102">
+				<name>Switches positions</name>
+				<path>Systems/switches.xml</path>
+			</property-rule>
+			<property-rule n="103">
+				<name>Gauges positions</name>
+				<path>Systems/gauges.xml</path>
+			</property-rule>
 		</systems>
 		
 		<instrumentation>
