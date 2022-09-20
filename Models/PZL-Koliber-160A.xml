@@ -1051,7 +1051,7 @@
     <animation>
         <type>rotate</type>
         <object-name>switch21</object-name>
-        <property>/controls/switches/fuelpump</property>
+        <property>/switches/fuelpump</property>
  <factor>30</factor>
 		<center>
 	<x-m>-0.5862</x-m>
@@ -1102,7 +1102,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>switch22</object-name>
-	<property>/controls/switches/turn-coordinator</property>
+	<property>/switches/turn-coord</property>
 	<factor>30</factor>
 	<center>
 		<x-m>-0.5862</x-m>
@@ -1119,8 +1119,6 @@
 	</axis>
 </animation>
 
-<!--******************* ŚWIATŁA Anti-coll *************************
-do modelu należy dodać plane z teksturą światła
 
 <model> 
 	<path>Aircraft\PZL-Koliber-160A\Models\Lights\Beacon.xml</path>
@@ -1166,7 +1164,7 @@ do modelu należy dodać plane z teksturą światła
 <animation>
 	<type>rotate</type>
 	<object-name>switch23</object-name>
-	<property>controls/switches/beacon</property>
+	<property>/switches/beacon</property>
 	<factor>30</factor>
 	<center>
 		<x-m>-0.5862</x-m>
@@ -1181,7 +1179,7 @@ do modelu należy dodać plane z teksturą światła
 		<y2-m>-1</y2-m>
 		<z2-m>0.00112367</z2-m>
 	</axis>
-</animation>-->
+</animation>
 <!-- ********************************Nav-Light *******************-->
 <animation>
   <type>material</type>
@@ -1218,7 +1216,7 @@ do modelu należy dodać plane z teksturą światła
 <animation>
 	<type>rotate</type>
 	<object-name>switch24</object-name>
-	<property>controls/lighting/nav-lights</property>
+	<property>switches/nav-lights</property>
 	<factor>30</factor>
 	<center>
 		<x-m>-0.5862</x-m>
@@ -1272,7 +1270,7 @@ do modelu należy dodać plane z teksturą światła
     <animation>
         <type>rotate</type>
         <object-name>switch25</object-name>
-        <property>controls/lighting/taxi-lights</property>
+        <property>switches/taxi-lights</property>
  <factor>30</factor>
 		<center>
 	<x-m>-0.5862</x-m>
@@ -1325,7 +1323,7 @@ do modelu należy dodać plane z teksturą światła
     <animation>
         <type>rotate</type>
         <object-name>switch26</object-name>
-        <property>controls/lighting/landing-lights</property>
+        <property>switches/landing-lights</property>
  <factor>30</factor>
 		<center>
 	<x-m>-0.5862</x-m>
@@ -1378,7 +1376,7 @@ do modelu należy dodać plane z teksturą światła
     <animation>
         <type>rotate</type>
         <object-name>switch28</object-name>
-        <property>controls/anti-ice/pitot-heat</property>
+        <property>switches/pitot-switch</property>
 	<factor>25.0</factor>
 	<center>
 		<x-m>-0.5862</x-m>
