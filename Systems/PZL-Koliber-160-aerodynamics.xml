@@ -81,7 +81,7 @@
 					 <property>aero/qbar-psf</property>
 					 <property>metrics/Sw-sqft</property>
 					<property>fcs/flap-pos-rad</property>
-					<value>0.3168579</value>
+					<value>0.5625677</value>
 			 </product>
 		</function>
 	</axis>
@@ -147,8 +147,8 @@
 				 <product>
 					 <property>aero/qbar-psf</property>
 					 <property>metrics/Sw-sqft</property>
-					 <property>fcs/flap-pos-deg</property>
-					 <value> 0.0007 </value>
+					 <property>fcs/flap-pos-rad</property>
+					 <value>0.1226068</value>
 				 </product>
 		</function>
 		
@@ -280,6 +280,17 @@
 						</tableData>
 					</table>
 			 </product>
+		</function>
+		
+		<function name="aero/moment/Pitch_flaps">
+			 <description>Pitch moment due to flaps</description>
+			 <product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/cbarw-ft</property>
+				<property>fcs/flap-pos-rad</property>
+				<value>0.2162358</value>
+			</product>
 		</function>
 		
 		<function name="aero/moment/Pitch_damp">

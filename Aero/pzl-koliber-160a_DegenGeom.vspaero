@@ -17,9 +17,9 @@ FarDist = -1.000000
 NumWakeNodes = 64 
 WakeIters = 10 
 NumberOfControlGroups = 1 
-Rudder
-Rudder_Surf0_Rudder
-1
+Flaps
+Wing_Surf0_Flaps,Wing_Surf1_Flaps
+1, -1
 30
 Preconditioner = Matrix 
 Karman-Tsien Correction = N 
