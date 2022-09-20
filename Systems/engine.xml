@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+   <logic>
+      <input>
+         <equals>
+            <property>/fdm/jsbsim/propulsion/engine/set-running</property>
+            <value>0</value>
+         </equals>
+      </input>
+      <output>/controls/engines/engine/use-primer</output>
+   </logic>
+
+    <filter>
+        <name>Primer</name>
+        <type>gain</type>
+        <input>
+            <condition>
+				 <property>/controls/engines/engine/use-primer</property>
+            </condition>
+				<expression>
+					<div>
+						<property>/controls/engines/engine/primer-pump</property>
+						<value>2</value>
+					</div>
+				</expression>
+        </input>
+        <input>
+            <value>0</value>
+        </input>
+        <output>
+            <property>/controls/engines/engine/primer</property>
+        </output>
+    </filter>
+	
+	<filter>
+        <name>Primer 0</name>
+        <type>gain</type>
+        <input>
+            <condition>
+				 <property>/controls/engines/engine/use-primer</property>
+            </condition>
+			<property>/controls/engines/engine/primer-pump</property>
+        </input>
+        <input>
+            <value>0</value>
+        </input>
+        <output>
+			<property>/controls/engines/engine/primer-pump</property>
+        </output>
+    </filter>
+
+</PropertyList>
