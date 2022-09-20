@@ -156,9 +156,6 @@
 				 <property>aero/qbar-psf</property>
 				 <property>metrics/Sw-sqft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-deg</independentVar>
-					<independentVar lookup="column">aero/beta-deg</independentVar>
-				<table>
 					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
