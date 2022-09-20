@@ -19,7 +19,7 @@ Currently developed by:
 - TheFGFSEagle
 and others
 
-Originally by: Mariusz Migut SP-MMA - 3D, Sounds, Patrice Poly (WooT) - Old FDM
+Originally by: Mariusz Migut SP-MMA - 3D, Sounds; Patrice Poly (WooT) - Old FDM
 
 ### Licence
 
