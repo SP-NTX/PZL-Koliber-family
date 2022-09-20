@@ -1745,6 +1745,78 @@
     </binding>
   </action>
 </animation>
+	<light>
+  <name>fuel_light1</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.573886 </x-m>
+    <y-m>-0.111</y-m>
+    <z-m>0.27525</z-m>
+  </position>
+  <ambient>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.7</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1</c>
+    <l>190.5</l>
+    <q>222.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>controls/lighting/panel-norm</property>
+  </dim-factor>
+</light>
+	<light>
+  <name>fuel_light2</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.573886 </x-m>
+    <y-m>-0.090567 </y-m>
+    <z-m>0.27525</z-m>
+  </position>
+  <ambient>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.7</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1</c>
+    <l>190.5</l>
+    <q>222.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>controls/lighting/panel-norm</property>
+  </dim-factor>
+</light>
 
 <!-- ****************** ŚWIATŁA *****************************-->	
 
