@@ -16,21 +16,21 @@
   <idlerpm> 600 </idlerpm>
   <maxrpm> 2700 </maxrpm>
 <!-- advanced tags! -->
-  <bsfc unit="KG/KW*HR"> 0.3 </bsfc> <!--do sprawdzenia-->
-  <volumetric-efficiency> 0.81 </volumetric-efficiency> <!--do sprawdzenia-->
-  <air-intake-impedance-factor> 0.5 </air-intake-impedance-factor> <!--do sprawdzenia-->
-  <ram-air-factor> 1.2 </ram-air-factor> <!--do sprawdzenia-->
+  <!--><bsfc unit="KG/KW*HR"> 0.3 </bsfc>--> <!--do sprawdzenia-->
+  <!--<volumetric-efficiency> 0.81 </volumetric-efficiency>--> <!--do sprawdzenia-->
+  <!--<air-intake-impedance-factor> 0.5 </air-intake-impedance-factor>--> <!--do sprawdzenia-->
+  <!--<ram-air-factor> 1.2 </ram-air-factor>--> <!--do sprawdzenia-->
   <!--><cooling-factor> 0.8 </cooling-factor>--> <!--do sprawdzenia-->
 <!-- Added in FlightGear 2.8 -->
   <starter-torque> 251.34 </starter-torque> <!--704.31-->
   <starter-rpm> 550 </starter-rpm><!--180*13.556/4.3-->
-  <static-friction  unit="WATTS"> 1000 </static-friction> <!-- do sprawdzenia-->
-  <man-press-lag> 0.1 </man-press-lag><!--do ustalenia-->
+  <!--<static-friction  unit="WATTS"> 1000 </static-friction>--> <!-- do sprawdzenia-->
+  <!--<man-press-lag> 0.1 </man-press-lag>--><!--do ustalenia-->
 <!-- Added in FlightGear 2017.2 -->
   <oil-pressure-relief-valve-psi> 75 </oil-pressure-relief-valve-psi>
   <design-oil-temp-degK> 355.15 </design-oil-temp-degK>
-  <oil-pressure-rpm-max> 2025 </oil-pressure-rpm-max> <!--do sprawdzenia-->
-  <oil-viscosity-index> 0.30 </oil-viscosity-index> <!--do sprawdzenia-->
+  <!--<oil-pressure-rpm-max> 2025 </oil-pressure-rpm-max>--> <!--do sprawdzenia-->
+  <!--<oil-viscosity-index> 0.30 </oil-viscosity-index>--> <!--do sprawdzenia-->
 
   <maxthrottle>1.0</maxthrottle>
   <minthrottle>0.1</minthrottle>

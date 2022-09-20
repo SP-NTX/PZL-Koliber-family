@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ########################################
-# Autor SP-MMA 
+# Autor SP-MMA
+# Jakub Kosakowski "jakkos98" "SP-KOS"
 ##########################################-->
 
 <PropertyList>
@@ -23,31 +24,13 @@
         <object-name>wskazowka</object-name>
         <property>/controls/flight/elevator-trim</property>
         <interpolation>
-            <entry><ind>0.30</ind><dep>-130.68</dep></entry>
-            <entry><ind>0.25</ind><dep>-117.29</dep></entry>
-            <entry><ind>0.20</ind><dep>-103.88</dep></entry>
-            <entry><ind>0.15</ind><dep>-90.85</dep></entry>
-            <entry><ind>0.10</ind><dep>-77.79</dep></entry>
-            <entry><ind>0.05</ind><dep>-50.42</dep></entry>
-            <entry><ind>0.04</ind><dep>-39.55</dep></entry>
-            <entry><ind>0.03</ind><dep>-29.66</dep></entry>
-            <entry><ind>0.02</ind><dep>-19.73</dep></entry>
-            <entry><ind>0.01</ind><dep>-9.65</dep></entry>
+            <entry><ind>1.0</ind><dep>85</dep></entry>
             <entry><ind>0.00</ind><dep>0.00</dep></entry>
-            <entry><ind>-0.01</ind><dep>10.27</dep></entry>
-            <entry><ind>-0.02</ind><dep>20.52</dep></entry>
-            <entry><ind>-0.03</ind><dep>29.90</dep></entry>
-            <entry><ind>-0.04</ind><dep>40.20</dep></entry>
-            <entry><ind>-0.05</ind><dep>50.37</dep></entry>
-            <entry><ind>-0.10</ind><dep>76.64</dep></entry>
-            <entry><ind>-0.15</ind><dep>90.70</dep></entry>
-            <entry><ind>-0.20</ind><dep>104.53</dep></entry>
-            <entry><ind>-0.25</ind><dep>117.38</dep></entry>
-            <entry><ind>-0.30</ind><dep>129.45</dep></entry>
+            <entry><ind>-1.0</ind><dep>-85</dep></entry>
         </interpolation>
         <center>
-            <x-m>-0.003385</x-m>
-            <y-m>0.00</y-m>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
             <z-m>0.00</z-m>
         </center>
         <axis>
@@ -57,4 +40,3 @@
         </axis>
     </animation>
 </PropertyList>
-

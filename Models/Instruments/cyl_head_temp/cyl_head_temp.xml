@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- #################################
 autor Mariusz Migut
+Jakub Kosakowski "jakkos98" "SP-KOS"
 PZL Koliber 160A
 #####################################-->
 
 <PropertyList>
 	<path>cyl_head_temp.ac</path>
-	
+
 	<animation>
 		<type>material</type>
 		<object-name>wskazowka</object-name>
@@ -19,7 +20,7 @@ PZL Koliber 160A
     <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
   </emission>
 	</animation>
-	
+
 <animation>
   <type>select</type>
   <object-name>wskazowka</object-name>
@@ -33,8 +34,8 @@ PZL Koliber 160A
   <condition>
     <not><property>systems/electrical/outputs/bus-dc</property></not>
   </condition>
-</animation>	
-	
+</animation>
+
 	<animation>
     <type>rotate</type>
     <object-name>wskazowka</object-name>
@@ -42,13 +43,16 @@ PZL Koliber 160A
     <property>engines/engine[0]/cht-degf</property>
     <interpolation>
 	<entry><ind></ind></entry>
-      <entry><ind>1</ind><dep>-48.42</dep></entry>
-      <entry><ind>2</ind><dep>-33.13</dep></entry> 
-      <entry><ind>3</ind><dep>-17.22</dep></entry> 
-      <entry><ind>4</ind><dep>-1.71</dep></entry> 
-      <entry><ind>5</ind><dep>13.87</dep></entry> 
-      <entry><ind>6</ind><dep>29.40</dep></entry> 
-      <entry><ind>7</ind><dep>45.37</dep></entry> 
+      <entry><ind>0</ind><dep>-60.00</dep></entry>
+      <entry><ind>100</ind><dep>-55.00</dep></entry>
+			<entry><ind>200</ind><dep>-39.00</dep></entry>
+      <entry><ind>300</ind><dep>-23.00</dep></entry>
+			<entry><ind>400</ind><dep>-8.00</dep></entry>
+      <entry><ind>500</ind><dep>8.00</dep></entry>
+			<entry><ind>600</ind><dep>24.00</dep></entry>
+      <entry><ind>700</ind><dep>40.00</dep></entry>
+			<entry><ind>750</ind><dep>45.00</dep></entry>
+			<entry><ind>1000</ind><dep>45.00</dep></entry>
     </interpolation>
     <center>
       <x-m>-0.00175</x-m>

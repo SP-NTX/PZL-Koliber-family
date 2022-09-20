@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim>
-	
+
 		<description>PZL Koliber 160A</description>
-		
-		<long-description>The PZL-Koliber 160A is the last production version of the Polish PZL-110 Koliber series 
-		developed on the basis of the SOCATA Rallye 100 ST license purchased by PZL in 1976, produced since 1979. 
-		The PZL-Koliber 160A aircraft is a four-seat low-wing aircraft with a take-off weight of up to 950 kg, equipped with a 160 hp (120 kW) Lycoming O-320-D2A engine. 
-		It was produced in the years 1997-2004 at PZL Okęcie in the number of 12 pieces, mainly exported to the USA. 
+
+		<long-description>The PZL-Koliber 160A is the last production version of the Polish PZL-110 Koliber series
+		developed on the basis of the SOCATA Rallye 100 ST license purchased by PZL in 1976, produced since 1979.
+		The PZL-Koliber 160A aircraft is a four-seat low-wing aircraft with a take-off weight of up to 950 kg, equipped with a 160 hp (120 kW) Lycoming O-320-D2A engine.
+		It was produced in the years 1997-2004 at PZL Okęcie in the number of 12 pieces, mainly exported to the USA.
 		</long-description>
-		
+
 		<aircraft-version>0.9</aircraft-version>
-		
+
+		<status>beta</status>
 		<rating>
 			<FDM type="int">1</FDM>
 			<systems type="int">2</systems>
 			<cockpit type="int">3</cockpit>
 			<model type="int">3</model>
 		</rating>
-			
+
 		<authors>
 			<author n="0">
-				<name>jakkos</name>
+				<name>Jakub Kosakowski</name>
 				<description>3D, Data, FDM</description>
-				<nick>SP-KOS</nick>
+				<nick>jakkos98, SP-KOS</nick>
 			</author>
 			<author n="1">
 				<name>SP-NTX</name>
@@ -35,7 +36,7 @@
 			</author>
 			<author n="3">
 				<name>Mariusz Migut</name>
-				<description>Original author</description>
+				<description>Original autho; (3D, Sounds...)</description>
 				<nick>SP-MMA</nick>
 			</author>
 			<author n="4">
@@ -44,30 +45,33 @@
 				<nick>WooT</nick>
 			</author>
 		</authors>
-			
+
 		<tags>
-			<tag n="0">PZL</tag>
+			<tag n="0">aerobatic</tag>
 			<tag n="1">ga</tag>
-			<tag n="2">glider</tag>
+			<tag n="2">trainer</tag>
 			<tag n="4">1990s</tag>
 			<tag n="5">2000s</tag>
-			<tag n="6">fixed-gear</tag>
-			<tag n="7">low-wing</tag>
-			<tag n="8">ifr</tag>
+			<tag n="6">vfr</tag>
+			<tag n="7">ifr</tag>
+			<tag n="8">low-wing</tag>
 			<tag n="9">tricycle</tag>
-			<tag n="10">tow</tag>
+			<tag n="10">single-engine</tag>
 			<tag n="11">piston</tag>
 			<tag n="12">propeller</tag>
-			<tag n="13">single-engine</tag>
-			<tag n="14">fixed-pitch</tag>
-			<tag n="14">Koliber</tag>
+			<tag n="13">fixed-pitch</tag>
+			<tag n="14">PZL</tag>
+			<tag n="15">Koliber</tag>
+		  <!--<tag n="16">tow</tag>--> <!--temporary until Koliber 235 will be made -->
 		</tags>
-		
+
 		<urls>
+			<home-page>https://wiki.flightgear.org/PZL-Koliber-family</home-page>
 			<support>https://github.com/SP-NTX/PZL-Koliber-family/issues</support>
+			<wikipedia>https://en.wikipedia.org/wiki/SOCATA_Rallye_family#Polish_production</wikipedia>
 			<code-repository>https://github.com/SP-NTX/PZL-Koliber-family</code-repository>
 		</urls>
-		
+
 		<previews>
 			<preview>
 				<type>exterior</type>
@@ -85,11 +89,13 @@
 				<path>Previews/3.png</path>
 			</preview>
 		</previews>
-		
+
 		<flight-model>jsb</flight-model>
-		<aero>Systems/PZL-Koliber-160-fdm</aero>
-		
-		<systems include="Systems/Koliber-electrical.xml">
+		<aero>PZL-Koliber-160</aero>
+
+		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml"/>
+
+		<systems include="Systems/PZL-Koliber-160A-electrical.xml">
 			<property-rule n="100">
 				<name>Light states</name>
 				<path>Systems/lights.xml</path>
@@ -107,34 +113,34 @@
 				<path>Systems/gauges.xml</path>
 			</property-rule>
 		</systems>
-		
+
 		<instrumentation>
 			<path>Aircraft/PZL-Koliber-family/Systems/generic-instrumentation.xml</path>
 		</instrumentation>
-		
+
 		<sound>
 		<path>Aircraft/PZL-Koliber-family/Sounds/PZL-Koliber-160A-sound.xml</path>
 		</sound>
-		
+
 		<panel>
 			<visibility archive="n">false</visibility>
 		</panel>
-		
+
 		<model>
 			<path archive="y">Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
 		</model>
-		
+
 		<view>
 			<internal archive="y">true</internal>
 			<config>
-			  <x-offset-m type="double">-0.253</x-offset-m> 
-			  <y-offset-m type="double">0.6750</y-offset-m> 
+			  <x-offset-m type="double">-0.253</x-offset-m>
+			  <y-offset-m type="double">0.6750</y-offset-m>
 			  <z-offset-m type="double">-0.072</z-offset-m>
 			  <pitch-offset-deg>-7.23</pitch-offset-deg>
 			  <default-field-of-view-deg>55.0</default-field-of-view-deg>
 			</config>
 		</view>
-		
+
 		<view n="0">
 			<name>Cockpit</name>
 			<type>lookfrom</type>
@@ -162,38 +168,39 @@
 				</limits>
 			</config>
 		</view>
-		
+
 		<!--<help include="help.xml">-->
-		
+
 		<flaps>
-			<setting>0.50</setting> 
-			<setting>1.0</setting>
+			<setting>0.50</setting>
+			<setting>1.00</setting>
 		</flaps>
 	</sim>
+
 	<controls>
 		<fuel-valve>
 			<from-tank_0>0</from-tank_0>
 			<from-tank_1>0</from-tank_1>
 		</fuel-valve>
-		
+
 		<lighting>
 			<beacon type="bool">false</beacon>
 			<strobe type="bool">false</strobe>
 			<nav-lights type="bool">false</nav-lights>
 			<landing-lights type="bool">false</landing-lights>
 		</lighting>
-		
+
 		<fuel-selector type="int">0</fuel-selector>
-		
+
 		<engine n="0">
 			<magnetos>3</magnetos>
 		</engine>
-			
+
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
 		</gear>
 	</controls>
-	
+
 	<payload>
 		<weight n="0">
 			<name type="string">Pilot</name>
@@ -220,7 +227,7 @@
 			<max-lb type="double">170.0</max-lb>
 		</weight>
 	</payload>
-	
+
 	<consumables>
 		<fuel>
 		  <tank n="0">
@@ -245,13 +252,13 @@
 		</fuel>
 	</consumables>
 
-	
+
 	<nasal>
-		<PZL-Koliber_160A>
-			<file>Aircraft/PZL-Koliber-family/Nasal/Electrical.nas</file>
+		<PZL-Koliber-160A>
+			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/auto-slats.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/koliber_function.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/Fuel.nas</file>
-		</PZL-Koliber_160A>
+		</PZL-Koliber-160A>
 	</nasal>
 </PropertyList>
