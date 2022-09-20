@@ -151,6 +151,16 @@
 					 <value> 0.0007 </value>
 				 </product>
 		</function>
+		
+		<function name="aero/force/Drag_rudder">
+			<description>Drag due to rudder</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>fcs/rudder-pos-rad</property>
+				<value>0.2678540</value>
+			</product>
+		</function>
 	</axis>
 	
 	<axis name="SIDE">
@@ -205,7 +215,7 @@
 					 <property>aero/qbar-psf</property>
 					 <property>metrics/Sw-sqft</property>
 					 <property>fcs/rudder-pos-rad</property>
-					 <value> 0.1997 </value>
+					 <value>0.1924163</value>
 			 </product>
 		</function>
 	</axis>
@@ -382,7 +392,7 @@
 				 <property>metrics/Sw-sqft</property>
 				 <property>metrics/bw-ft</property>
 				 <property>fcs/rudder-pos-rad</property>
-				 <value> 0.0100 </value>
+				 <value>0.0214626</value>
 			 </product>
 		</function>
 	</axis>
@@ -443,7 +453,7 @@
 				 <property>metrics/Sw-sqft</property>
 				 <property>metrics/bw-ft</property>
 				 <property>fcs/rudder-pos-rad</property>
-				 <value>-0.0801</value>
+				 <value>-0.0813419 </value>
 			 </product>
 		</function>
 		

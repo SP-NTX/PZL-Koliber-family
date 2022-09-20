@@ -5,8 +5,8 @@ X_cg = -1.250000
 Y_cg = 0.000001 
 Z_cg = -0.300000 
 Mach = 0.150000 
-AoA = -10.000000, -5.000000, 0.000000, 5.000000, 10.000000, 15.000000, 20.000000 
-Beta = -30.000000, -15.000000, 0.000000, 15.000000, 30.000000 
+AoA = 0.000000 
+Beta = 0.000000 
 Vinf = 100.000000 
 Rho = 0.002377 
 ReCref = 10000000.000000 
@@ -16,7 +16,11 @@ Symmetry = NO
 FarDist = -1.000000 
 NumWakeNodes = 64 
 WakeIters = 10 
-NumberOfControlGroups = 0 
+NumberOfControlGroups = 1 
+Rudder
+Rudder_Surf0_Rudder
+1
+30
 Preconditioner = Matrix 
 Karman-Tsien Correction = N 
 Stability Type = 1 
