@@ -171,4 +171,5 @@
     <output>fcs/flap-pos-norm</output>
    </aerosurface_scale>
   </channel>
+
 </flight_control>
