@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+
+<fdm_config name="PZL-Koliber-160" version="2.0" release="ALPHA"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
+
+ <fileheader>
+  <author> AeromatiC++ version 3.3.20 </author>
+  <filecreationdate> 16 Sep 2022 </filecreationdate>
+  <version>$Revision: 1.80 $</version>
+  <description> Models a PZL-Koliber-160. </description>
+ </fileheader>
+
+<!--
+  File:     PZL-Koliber-160.xml
+  Inputs:
+    name:          PZL-Koliber-160
+    type:          No engine Glider, Small Commuter
+    stall speed:   80.00 km/h
+    max weight:    950.00 kg
+    Fuselage: 
+     length:        7.37 m
+     diameter:      0.84 m
+     finess ratio:  8.79
+    wing: 
+     span:         9.47 m
+     area:         12.68 m2
+     mean chord:   1.31 m
+     aspect ratio: 7.00:1
+     taper ratio:  1.00:1
+     incidence:    7.00 degrees
+     dihedral:     7.50 degrees
+     sweep:        0.00 degrees
+     t/c:          6.58 %
+
+    no. engines:   0
+    engine type:   Piston Engine
+    engine layout: forward fuselage
+
+    gear type:     tricycle
+    steering type: steering
+    retractable?:  no
+
+  Outputs:
+    wing loading:       734.85 N/m2
+     - thickness ratio: 6.58%
+    payload:            383.00 kg
+    CL-alpha:           5.31 per radian
+    CL-0:               0.61
+    CL-max:             2.43
+    CD-0:               0.01
+    K:                  0.02
+    Mcrit:              0.70
+
+    min. turn radius    27.80 m
+    max. turn rate:     0.88 deg/s
+-->
+
+ <metrics>
+   <wingarea  unit="M2">    12.68 </wingarea>
+   <wingspan  unit="M" >     9.47 </wingspan>
+   <wing_incidence unit="DEG">-7</wing_incidence>
+   <chord unit="M">1.339</chord>
+   <htailarea unit="M2">     3.48 </htailarea>
+   <htailarm  unit="M" >     3.80 </htailarm>
+   <vtailarea  unit="M2">    1.80 </vtailarea>
+   <vtailarm  unit="M" >     3.80 </vtailarm>
+   <location name="AERORP" unit="M">
+     <x>    0.137371  </x>
+     <y>     0.00 </y>
+     <z>     0.1736 </z>
+   </location>
+   <location name="EYEPOINT" unit="M">
+     <x>     0.96 </x>
+     <y> 0.0  </y>
+     <z>     1.14 </z>
+   </location>
+   <location name="VRP" unit="M">
+     <x>     0.0 </x>
+     <y>     0.0 </y>
+     <z>     0.0 </z>
+   </location>
+ </metrics>
+
+ <mass_balance>
+   <ixx unit="KG*M2">   1468.61 </ixx>
+   <iyy unit="KG*M2">    837.93 </iyy>
+   <izz unit="KG*M2">   2218.54 </izz>
+   <emptywt unit="KG" >    567.00 </emptywt>
+   <location name="CG" unit="M">
+     <x>  -0.189152  </x>
+     <y>     0.00 </y>
+     <z>    0.1975 </z>
+   </location>
+ <pointmass name="Pilot">
+    <weight unit="KG">0</weight>
+    <location name="POINTMASS" unit="M">
+     <x>    -0.068725  </x>
+     <y>  -0.220115</y>
+     <z>  0.418834</z>
+   </location>
+   </pointmass>
+    <pointmass name="Co-pilot">
+    <weight unit="KG"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+     <x>  -0.068725 </x>
+     <y>    0.220115</y>
+     <z>0.418834</z>
+   </location>
+  </pointmass>
+   <pointmass name="Left passanger">
+    <weight unit="KG"> 0</weight>
+    <location name="POINTMASS" unit="M">
+     <x>    0.797793 </x>
+     <y>  -0.220115 </y>
+     <z> 0.418834</z>
+   </location>
+  </pointmass>
+    <pointmass name="Right passanger">
+    <weight unit="KG"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+     <x>  0.797793  </x>
+     <y>   0.220115 </y>
+     <z> 0.418834</z>
+   </location>
+  </pointmass>
+ </mass_balance>
+
+ <propulsion>
+ 
+
+ <engine file="Lycoming_O-320">
+    <feed>2</feed>
+
+    <thruster file="sensenich_propeller">
+     <sense> 1 </sense>
+     <location unit="M">
+       <x> 0.225294</x>
+       <y>     0.00 </y>
+       <z>   0.0503</z>
+     </location>
+     <orient unit="DEG">
+       <pitch>     0.00 </pitch>
+        <roll>     0.00 </roll>
+         <yaw>     0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
+
+  <tank type="FUEL" number="0">
+     <location unit="M">
+       <x>-0.003296 </x>
+       <y> -1.37903 </y>
+       <z>  0.059237  </z>
+     </location>
+     <capacity unit="KG"> 63.9 </capacity>
+     <contents unit="KG"> 31.45 </contents>
+  </tank>
+  <tank type="FUEL" number="1">
+     <location unit="M">
+       <x> -0.003296</x>
+       <y>  1.37903 </y>
+       <z>  0.059237  </z>
+     </location>
+     <capacity unit="KG"> 63.9 </capacity>
+     <contents unit="KG"> 31.45 </contents>
+  </tank>
+  <tank type="FUEL" number="2"> <!-- carb tank -->
+     <location unit="M">
+       <x> 0.125294</x>
+       <y>     0.00 </y>
+       <z>   0.0503</z>
+     </location>
+     <capacity unit="KG">0.1</capacity>
+     <contents unit="KG">0</contents>
+  </tank>
+  
+
+ </propulsion>
+  <system file="fuel.xml"/>
+
+
+ <ground_reactions>
+  <contact type="BOGEY" name="NOSE">
+    <location unit="M">
+      <x>     -1.51674 </x>
+      <y>   0.074282 </y>
+      <z>   -0.798493  </z>
+    </location>
+    <static_friction>  0.80 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <rolling_friction> 0.02 </rolling_friction>
+	<spring_coeff unit="LBS/FT">1850</spring_coeff>
+	<damping_coeff unit="LBS/FT/SEC">1100</damping_coeff>
+	<damping_coeff_rebound unit="LBS/FT/SEC">10</damping_coeff_rebound>
+    <brake_group> NONE </brake_group>
+	<max_steer unit="DEG">360</max_steer>
+    <retractable> 0 </retractable>
+  </contact>
+
+  <contact type="BOGEY" name="LEFT_MAIN">
+    <location unit="M">
+      <x> 0.128909  </x>
+      <y>  -0.919246  </y>
+      <z>  -0.820845  </z>
+    </location>
+    <static_friction>  0.80 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <rolling_friction> 0.02 </rolling_friction>
+	<spring_coeff unit="LBS/FT">2750</spring_coeff>
+	<damping_coeff unit="LBS/FT/SEC">1600</damping_coeff>
+	<damping_coeff_rebound unit="LBS/FT/SEC">10</damping_coeff_rebound>
+    <max_steer unit="DEG">0</max_steer>
+    <brake_group> LEFT </brake_group>
+    <retractable> 0 </retractable>
+  </contact>
+
+  <contact type="BOGEY" name="RIGHT_MAIN">
+    <location unit="M">
+      <x> 0.128909  </x>
+      <y>  0.919246  </y>
+      <z>  -0.820845  </z>
+    </location>
+    <static_friction>  0.80 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <rolling_friction> 0.02 </rolling_friction>
+	<spring_coeff unit="LBS/FT">2750</spring_coeff>
+	<damping_coeff unit="LBS/FT/SEC">1600</damping_coeff>
+	<damping_coeff_rebound unit="LBS/FT/SEC">10</damping_coeff_rebound>
+    <max_steer unit="DEG">0</max_steer>
+    <brake_group> RIGHT </brake_group>
+    <retractable> 0 </retractable>
+  </contact>
+
+  <contact type="STRUCTURE" name="LEFT_WING">
+    <location unit="M">
+     <x>  0.176815  </x>
+     <y> -4.86388  </y>
+     <z>  0.396997  </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+
+  <contact type="STRUCTURE" name="RIGHT_WING">
+    <location unit="M">
+     <x>  0.176815  </x>
+     <y> 4.86388  </y>
+     <z>  0.396997  </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+  
+   <system file="fuel.xml"/>
+    <contact type="STRUCTURE" name="TAIL">
+    <location unit="M">
+     <x> 4.13963  </x>
+     <y> 0 </y>
+     <z>  -0.046462  </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+      <contact type="STRUCTURE" name="HSTAB">
+    <location unit="M">
+     <x> 3.76187  </x>
+     <y> 0 </y>
+     <z>  1.756 </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+      <contact type="STRUCTURE" name="CABIN">
+    <location unit="M">
+     <x>-0.346539  </x>
+     <y> 0 </y>
+     <z> 0.88 </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+  
+    <contact type="STRUCTURE" name="NOSE_STR">
+    <location unit="M">
+     <x>-1.94565  </x>
+     <y>0</y>
+     <z> 0.1249  </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+  
+      <contact type="STRUCTURE" name="aft_fuselage">
+    <location unit="M">
+     <x>  3.41196   </x>
+     <y>0</y>
+     <z> -0.1522 </z>
+    </location>
+   <static_friction>  1 </static_friction>
+   <dynamic_friction> 1 </dynamic_friction>
+    <spring_coeff  unit="N/M">     27352.62 </spring_coeff>
+    <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
+  </contact>
+
+ </ground_reactions>
+
+ <flight_control file="Systems/PZL-Koliber-160-fcs.xml"/>
+
+ <aerodynamics file="Systems/PZL-Koliber-160-aerodynamics.xml"/>
+
+ <external_reactions/>
+</fdm_config>
