@@ -60,7 +60,7 @@
  <metrics>
    <wingarea  unit="M2">    12.68 </wingarea>
    <wingspan  unit="M" >     9.47 </wingspan>
-   <wing_incidence unit="DEG">-7</wing_incidence>
+   <wing_incidence unit="DEG">0</wing_incidence>
    <chord unit="M">1.339</chord>
    <htailarea unit="M2">     3.48 </htailarea>
    <htailarm  unit="M" >     3.80 </htailarm>

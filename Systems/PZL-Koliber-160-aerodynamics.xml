@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
-	<function name="aero/alpha-wing-deg">
-		<description>Wing angle of attack (degrees)</description>
-		<toradians>
-			<property>aero/alpha-wing-rad</property>
-		</toradians>
-	</function>
-	
 	<axis name="LIFT">
 		<function name="aero/force/Lift_propwash">
 			<description>Delta lift due to propeller induced velocity</description>
@@ -34,7 +27,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-90		-30.0		-15.0		0.0			15.0		30.0		90
@@ -87,8 +80,9 @@
 			 <product>
 					 <property>aero/qbar-psf</property>
 					 <property>metrics/Sw-sqft</property>
-					 <property>fcs/flap-pos-deg</property>
-					 <value> 0.0061 </value>
+					<property>fcs/flap-pos-rad</property>
+					<property>aero/function/Alpha_Beta_Csurf_Reversal</property>
+					<value>0.3168579</value>
 			 </product>
 		</function>
 	</axis>
@@ -101,7 +95,7 @@
 				<property>metrics/Sw-sqft</property>
 				<sum>
 					<table>
-						<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+						<independentVar lookup="row">aero/alpha-deg</independentVar>
 						<independentVar lookup="column">aero/beta-deg</independentVar>
 						<tableData>
 									-30.0		-15.0		0.0		15.0		30.0
@@ -156,7 +150,7 @@
 				 <property>aero/qbar-psf</property>
 				 <property>metrics/Sw-sqft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0		15.0		30.0
@@ -242,7 +236,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0		15.0		30.0
@@ -320,7 +314,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0		15.0		30.0
@@ -406,7 +400,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30			-15		0		15			30
