@@ -1120,14 +1120,6 @@
 </animation>
 
 
-<model>
-	<path>Aircraft\PZL-Koliber-160A\Models\Lights\Beacon.xml</path>
-	<offsets>
-		<x-m>4.09</x-m>
-		<y-m>-0.00014</y-m>
-		<z-m>1.87</z-m>
-	</offsets>
-</model>
 <animation>
   <type>material</type>
   <object-name>switch23</object-name>
