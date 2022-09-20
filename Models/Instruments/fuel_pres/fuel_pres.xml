@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<PropertyList>
+	<path>fuel_pres.ac</path>
+	<animation>
+		<type>material</type>
+		<object-name>wskazowka</object-name>
+		<object-name>tarcza</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+  </emission>
+	</animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>wskazowka</object-name>
+		<property>engines/engine/fuel-flow-gph</property>
+		<interpolation>
+			<entry><ind>0.00</ind><dep>-48.09</dep></entry>
+			<entry><ind>18.23</ind><dep>-18.71</dep></entry>
+		</interpolation>
+    <center>
+      <x-m> -0.0017 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.0092 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

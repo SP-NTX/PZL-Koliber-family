@@ -5,9 +5,9 @@
  <path>PZL-Koliber-160A.ac</path>
  <model>
 	<name>Instruments</name>
-	<path>Aircraft/PZL-Koliber-family/Models/Koliber-Instruments.xml</path>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
  </model>
- 
+
 <effect>
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>PropDisc</object-name>
@@ -21,7 +21,7 @@
 	 <object-name>joystick2</object-name>
 	 <object-name>throttle.1</object-name>
 	 <object-name>throttle.2</object-name>
-	 <object-name>mixture_control</object-name>	 
+	 <object-name>mixture_control</object-name>
  </animation>
 
  <animation>
@@ -44,7 +44,7 @@
    <z>0</z>
   </axis>
  </animation>
- 
+
   <animation>
   <object-name>left-wheel</object-name>
     <object-name>wachaczL</object-name>
@@ -65,8 +65,8 @@
    <z>0</z>
   </axis>
  </animation>
- 
- 
+
+
    <animation>
   <object-name>right-wheel</object-name>
     <object-name>wachaczP</object-name>
@@ -87,7 +87,7 @@
    <z>0</z>
   </axis>
  </animation>
- 
+
   <animation>
     <type>rotate</type>
     <object-name>nose-wheel</object-name>
@@ -140,8 +140,8 @@
    <z-m> -0.628698 </z-m>
         </center>
     </animation>
-	
-	
+
+
 	    <animation>
         <type>spin</type>
         <object-name>right-wheel</object-name>
@@ -425,7 +425,7 @@
 		<z>0.023092</z>
 		</axis>
 	</animation>
-	
+
 	<!-- controls PZL Koliber 160A-->
 <!-- ANIMACJA DRĄŻKA LEWY dodac prawy joystick2-->
 <animation>
@@ -435,8 +435,8 @@
     <factor>20</factor>
     <center>
       <x-m> -0.3784 </x-m>
-      <y-m> -0.138 </y-m>  
-      <z-m> -0.1343 </z-m>    
+      <y-m> -0.138 </y-m>
+      <z-m> -0.1343 </z-m>
     </center>
     <axis>
       <x> -1 </x>
@@ -453,8 +453,8 @@
     <offset-deg>-8</offset-deg>
     <center>
       <x-m> -0.3784 </x-m>
-      <y-m> -0.138 </y-m>  
-      <z-m> -0.1343 </z-m>     
+      <y-m> -0.138 </y-m>
+      <z-m> -0.1343 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -573,7 +573,7 @@
       <x>-1</x>
       <y> 0</y>
       <z> 0</z>
-    </axis>   
+    </axis>
   </animation>
    <animation>
         <type>slider</type>
@@ -601,7 +601,7 @@
             </binding>
         </hovered>
     </animation>
-  
+
   <animation>
     <type>translate</type>
     <object-name>throttle.2</object-name>
@@ -611,7 +611,7 @@
       <x>-1</x>
       <y> 0</y>
       <z> 0</z>
-    </axis>   
+    </axis>
   </animation>
    <animation>
         <type>slider</type>
@@ -640,9 +640,9 @@
             </binding>
         </hovered>
     </animation>
-    
+
     <!-- MIXTURE -->
-    
+
    <animation>
    <type>translate</type>
    <object-name>mixture_control</object-name>
@@ -699,12 +699,12 @@
 	 <object-name>carburettor_heat</object-name>
 	 <object-name>ventilation.1</object-name>
 	 <object-name>ventilation.2</object-name>
-	 <object-name>starter-selector</object-name>	 
-	 <object-name>LightAlt</object-name> 
+	 <object-name>starter-selector</object-name>
+	 <object-name>LightAlt</object-name>
 	 <object-name>LightStarter</object-name>
  </animation>
 <!-- BATERIA -->
- 
+
  <animation>
   <type>material</type>
   <object-name>bat-switch</object-name>
@@ -733,7 +733,7 @@
           </binding>
         </action>
     </animation>
-    
+
     <animation>
         <type>rotate</type>
         <object-name>bat-switch</object-name>
@@ -753,7 +753,7 @@
     <z2-m>0.00112367</z2-m>
 </axis>
     </animation>
-    
+
 <!-- ALTERNATOR -->
 
    <animation>
@@ -787,9 +787,9 @@
     <z2-m>0.00112367</z2-m>
 </axis>
     </animation>
-    
+
      <!-- KONTROLKA ALTERNATOR -->
-    
+
 	<animation>
   <type>textranslate</type>
   <object-name>alternator_light_bulb_case</object-name>
@@ -802,7 +802,7 @@
    <y>-1</y>
   </axis>
   </animation>
-  
+
     <animation>
         <type>material</type>
   <object-name>alternator_light_bulb_case</object-name>
@@ -845,7 +845,7 @@
             <factor-prop>switches/lights/alternator-light</factor-prop>
         </emission>
     </animation>
-	
+
     <animation>
         <type>material</type>
   <object-name>alternator_light_emmiter</object-name>
@@ -863,8 +863,8 @@
   <type>noshadow</type>
   <object-name>alternator_light_bulb_case</object-name>
  </animation>
- 
- 
+
+
 	<light>
   <name>alternator-warn</name>
   <type>point</type>
@@ -957,7 +957,7 @@
             <factor-prop>/switches/lights/starter-light</factor-prop>
         </emission>
     </animation>
-	
+
     <animation>
         <type>material</type>
   <object-name>starter_light_emmiter</object-name>
@@ -975,8 +975,8 @@
   <type>noshadow</type>
   <object-name>starter_light_bulb_case</object-name>
  </animation>
- 
- 
+
+
 	<light>
   <name>starter-warn</name>
   <type>point</type>
@@ -1067,7 +1067,7 @@
             <z2-m>0.00112367</z2-m>
 </axis>
     </animation>
- <!-- WŁĄCZNIK TURN COORD -->   
+ <!-- WŁĄCZNIK TURN COORD -->
 <animation>
   <type>material</type>
   <object-name>switch22</object-name>
@@ -1077,7 +1077,7 @@
     <blue>0.05</blue>
     <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
   </emission>
-</animation> 
+</animation>
 <animation>
 	<type>pick</type>
 	<object-name>switch22</object-name>
@@ -1120,7 +1120,7 @@
 </animation>
 
 
-<model> 
+<model>
 	<path>Aircraft\PZL-Koliber-160A\Models\Lights\Beacon.xml</path>
 	<offsets>
 		<x-m>4.09</x-m>
@@ -1159,7 +1159,7 @@
 			<mapping>on-off</mapping>
 			<property>controls/switches/beacon</property>
 		</binding>
-	</hovered>	
+	</hovered>
 </animation>
 <animation>
 	<type>rotate</type>
@@ -1231,7 +1231,7 @@
 		<y2-m>-1</y2-m>
 		<z2-m>0.00112367</z2-m>
 	</axis>
-</animation> 
+</animation>
 
 
  <!-- TAXI LIGHT*****************************-->
@@ -1540,7 +1540,7 @@
          <label>OGRZ.GAŹNIKA</label>
     </binding>
    </hovered>
- 
+
  <!-- Wentylacja -->
 <animation>
   <type>material</type>
@@ -1577,7 +1577,7 @@
      </binding>
    </action>
  </animation>
- 
+
 <animation>
   <type>material</type>
   <object-name>ventilation.2</object-name>
@@ -1705,7 +1705,7 @@
   <interpolation>
     <entry><ind>0</ind><dep>  0</dep></entry>
     <entry><ind>1</ind><dep>280</dep></entry>
-  </interpolation>   
+  </interpolation>
   <center>
     <x-m>-0.5898</x-m>
     <y-m>0.3379</y-m>
@@ -1745,8 +1745,80 @@
     </binding>
   </action>
 </animation>
+	<light>
+  <name>fuel_light1</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.573886 </x-m>
+    <y-m>-0.111</y-m>
+    <z-m>0.27525</z-m>
+  </position>
+  <ambient>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.7</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1</c>
+    <l>190.5</l>
+    <q>222.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>controls/lighting/panel-norm</property>
+  </dim-factor>
+</light>
+	<light>
+  <name>fuel_light2</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.573886 </x-m>
+    <y-m>-0.090567 </y-m>
+    <z-m>0.27525</z-m>
+  </position>
+  <ambient>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.5</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.7</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1</c>
+    <l>190.5</l>
+    <q>222.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>controls/lighting/panel-norm</property>
+  </dim-factor>
+</light>
 
-<!-- ****************** ŚWIATŁA *****************************-->	
+<!-- ****************** ŚWIATŁA *****************************-->
 
 	<model>
 		<path>Lights/nav-light-left.xml</path>
@@ -1783,7 +1855,7 @@
 			<z-m>1.87</z-m>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Lights/landing-light.xml</path>
 		<offsets>
@@ -1792,7 +1864,7 @@
 			<z-m>0.54</z-m>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Lights/taxi-light.xml</path>
 		<offsets>
