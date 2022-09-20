@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
+	<function name="aero/alpha-wing-deg">
+		<description>Wing angle of attack (degrees)</description>
+		<rad2deg>
+			<property>aero/alpha-wing-rad</property>
+		</rad2deg>
+	</function>
+	
 	<axis name="LIFT">
 		<function name="aero/force/Lift_propwash">
 			<description>Delta lift due to propeller induced velocity</description>
@@ -27,17 +34,17 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
-							-90		-30			-15			0			15			30		90
-						-10	0	-0.128842	-0.188244	-0.213195	-0.188192	-0.128649	0
-						-5	0	0.221599	0.246682	0.253207	0.246689	0.221259	0
-						0	0	0.566941	0.680777	0.720472	0.680791	0.566756	0
-						5	0	0.911863	1.045912	0.972269	1.045910	0.911981	0
-						10	0	1.044061	0.897656	0.808974	0.897334	1.045938	0
-						15	0	0.970400	0.629940	0.442571	0.630196	0.971617	0
-						20	0	0.828542	0.369125	0.328041	0.369373	0.823869	0
+								-90		-30.0		-15.0		0.0			15.0		30.0		90
+						-10.0	0		-0.217370	-0.239970	-0.251050	-0.240020	-0.216130	0
+						-5.0	0		0.143020	0.205060	0.222370	0.205090	0.143920	0
+						0.0		0		0.496860	0.648110	0.696290	0.648120	0.497580	0
+						5.0		0		0.862690	0.968780	0.746620	0.968720	0.863220	0
+						10.0	0		0.931770	0.526960	0.381850	0.526940	0.932170	0
+						15.0	0		0.541910	0.311440	0.170110	0.311550	0.542260	0
+						20.0	0		0.305900	0.142680	0.211580	0.143560	0.309090	0
 					</tableData>
 				</table>
 			</product>
@@ -94,17 +101,17 @@
 				<property>metrics/Sw-sqft</property>
 				<sum>
 					<table>
-						<independentVar lookup="row">aero/alpha-deg</independentVar>
+						<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
 						<independentVar lookup="column">aero/beta-deg</independentVar>
 						<tableData>
-								-30			-15			0			15			30
-							-10	0.125453	0.060103	0.021393	0.060198	0.125716
-							-5	0.124837	0.055135	0.015800	0.055186	0.125989
-							0	0.140275	0.071032	0.033591	0.071039	0.140256
-							5	0.168554	0.122706	0.123970	0.122756	0.169368
-							10	0.249484	0.307519	0.328598	0.307790	0.248254
-							15	0.378832	0.529603	0.592015	0.529842	0.394383
-							20	0.582029	0.746421	0.801753	0.748943	0.582511
+									-30.0		-15.0		0.0		15.0		30.0
+							-10.0	0.110280	0.031890	0.022270	0.031900	0.105120
+							-5.0	0.104870	0.024210	0.014900	0.024220	0.100490
+							0.0		0.115530	0.038920	0.031950	0.038930	0.112190
+							5.0		0.146400	0.103210	0.171730	0.103200	0.144190
+							10.0	0.259210	0.367090	0.429370	0.367090	0.257410
+							15.0	0.495960	0.588820	0.661740	0.588860	0.490270
+							20.0	0.704850	0.807930	0.843950	0.807990	0.699900
 						</tableData>
 					</table>
 					<value>0.01128</value> <!-- correction value -->
@@ -151,15 +158,18 @@
 				<table>
 					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
+				<table>
+					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
-								-30		-15			0		15			30
-						-10	0.125069	0.108293	0	-0.108267	-0.124920
-						-5	0.113501	0.112338	0	-0.112320	-0.112832
-						0	0.106302	0.110653	0	-0.110652	-0.106308
-						5	0.092519	0.110815	0	-0.110793	-0.092024
-						10	0.072788	0.094667	0	-0.094603	-0.073401
-						15	0.073099	0.085734	0	-0.085687	-0.064578
-						20	0.041702	0.093109	0	-0.092258	-0.041360
+								-30.0		-15.0		0.0		15.0		30.0
+						-10.0	0.020490	0.146330	0	-0.146340	-0.040770
+						-5.0	0.024600	0.152290	0	-0.152290	-0.041630
+						0.0		0.021000	0.152640	0	-0.152550	-0.034120
+						5.0		0.009040	0.161130	0	-0.161040	-0.016590
+						10.0	-0.006030	0.133490	0	-0.133670	-0.002260
+						15.0	-0.026280	0.129850	0	-0.129170	0.008430
+						20.0	-0.027350	0.145160	0	-0.145260	-0.000560
 					</tableData>
 				</table>
 			 </product>
@@ -235,17 +245,17 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
-								-30			-15			0			15			30
-						-10	-0.001077	0.223552	0.311801	0.223476	-0.001465
-						-5	-0.105835	0.106003	0.192960	0.106013	-0.104107
-						0	-0.206262	-0.017097	0.062069	-0.017137	-0.205725
-						5	-0.323712	-0.145556	-0.082232	-0.145556	-0.323981
-						10	-0.369406	-0.284947	-0.240091	-0.284063	-0.374473
-						15	-0.576133	-0.421566	-0.399504	-0.422559	-0.591112
-						20	-0.788488	-0.520831	-0.559086	-0.523700	-0.775483
+								-30.0		-15.0		0.0		15.0		30.0
+						-10.0	0.224250	0.240420	0.294760	0.240520	0.216080
+						-5.0	0.118200	0.129810	0.183120	0.129740	0.113370
+						0.0		0.029240	0.019500	0.063410	0.019480	0.025910
+						5.0		-0.116940	-0.098530	-0.055300	-0.098380	-0.118840
+						10.0	-0.150080	-0.252820	-0.217370	-0.252710	-0.151350
+						15.0	-0.294310	-0.413890	-0.377780	-0.414060	-0.294590
+						20.0	-0.350950	-0.321550	-0.545620	-0.324240	-0.358170
 					</tableData>
 				</table>
 			 </product>
@@ -313,17 +323,17 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
-								-30			-15		0		15			30
-						-10	-0.049701	-0.033290	0	0.033290	0.049703
-						-5	-0.046405	-0.032598	0	0.032597	0.046396
-						0	-0.044309	-0.031677	0	0.031678	0.044313
-						5	-0.042061	-0.033815	0	0.033815	0.042071
-						10	-0.022476	-0.004381	0	0.004384	0.022440
-						15	-0.010373	0.019190	0	-0.019191	0.010347
-						20	0.009130	-0.005927	0	0.005919	-0.009128
+								-30.0		-15.0		0.0		15.0		30.0
+						-10.0	-0.032080	-0.037710	0	0.037710	0.034000
+						-5.0	-0.029490	-0.036740	0	0.036740	0.030990
+						0.0		-0.026460	-0.035460	0	0.035450	0.027660
+						5.0		-0.024310	-0.039680	0	0.039670	0.024930
+						10.0	-0.003310	-0.016020	0	0.016020	0.003960
+						15.0	-0.033780	-0.039770	0	0.039830	0.032400
+						20.0	-0.051260	-0.015540	0	0.015610	0.048910
 					</tableData>
 				</table>
 				<value>-1</value>
@@ -399,7 +409,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="row">aero/alpha-wing-deg</independentVar>
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30			-15		0		15			30
