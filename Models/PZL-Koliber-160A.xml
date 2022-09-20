@@ -737,7 +737,7 @@
     <animation>
         <type>rotate</type>
         <object-name>bat-switch</object-name>
-        <property>/controls/switches/battery</property>
+        <property>/switches/bat-switch-pos</property>
         <factor>-30.0</factor>
 <center>
    <x-m>-0.58867</x-m>
@@ -771,7 +771,7 @@
 <animation>
         <type>rotate</type>
         <object-name>generator-switch</object-name>
-        <property>/controls/switches/alternator</property>
+        <property>/switches/alternator-switch-pos</property>
  <factor>-30.0</factor>
 <center>
    <x-m>-0.58867</x-m>
@@ -793,10 +793,10 @@
 	<animation>
   <type>textranslate</type>
   <object-name>alternator_light_bulb_case</object-name>
-    <property>controls/engines/engine/master-alt</property>
+    <property>switches/lights/alternator-light</property>
 	  <bias>0.0001</bias>
-  <factor>0.85</factor>
-  <step>1.0</step>
+  <factor>0.111</factor>
+  <step>0.001</step>
   <axis>
    <x>0</x>
    <y>-1</y>
@@ -826,7 +826,7 @@
             <red>1.0</red>
             <green>0.0</green>
             <blue>0.0</blue>
-            <factor-prop>controls/engines/engine/master-alt</factor-prop>
+            <factor-prop>switches/lights/alternator-light</factor-prop>
         </emission>
 		<transparency>
          <alpha>0.70</alpha>
@@ -842,7 +842,7 @@
             <red>3.5</red>
             <green>0.5</green>
             <blue>0.5</blue>
-            <factor-prop>controls/engines/engine/master-alt</factor-prop>
+            <factor-prop>switches/lights/alternator-light</factor-prop>
         </emission>
     </animation>
 	
@@ -853,7 +853,7 @@
             <red>21.5</red>
             <green>0.5</green>
             <blue>0.5</blue>
-            <factor-prop>controls/engines/engine/master-alt</factor-prop>
+            <factor-prop>switches/lights/alternator-light</factor-prop>
         </emission>
 		        <transparency>
             <alpha>0.4</alpha>
@@ -869,7 +869,7 @@
   <name>alternator-warn</name>
   <type>point</type>
   <position>
-    <x-m>-0.582569</x-m>
+    <x-m>-0.588516</x-m>
     <y-m>-0.330</y-m>
     <z-m>0.301851</z-m>
   </position>
@@ -898,9 +898,123 @@
   </attenuation>
   <range-m>1.0</range-m>
   <dim-factor>
-    <property>controls/engines/engine/master-alt</property>
+    <property>/switches/lights/alternator-light</property>
   </dim-factor>
 </light>
+
+	<animation>
+  <type>textranslate</type>
+  <object-name>starter_light_bulb_case</object-name>
+    <property>switches/lights/starter-light</property>
+	  <bias>0.0001</bias>
+  <factor>0.111</factor>
+  <step>0.001</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+  </axis>
+  </animation>
+
+   <animation>
+        <type>material</type>
+  <object-name>starter_light_bulb_case</object-name>
+
+        <ambient>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </ambient>
+        <diffuse>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+        </diffuse>
+        <specular>
+            <red>1.0</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+        </specular>
+        <emission>
+            <red>1.0</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+            <factor-prop>/switches/lights/starter-light</factor-prop>
+        </emission>
+		<transparency>
+         <alpha>0.70</alpha>
+        </transparency>
+    </animation>
+     <animation>
+        <type>material</type>
+  <object-name>starter_light_bulb</object-name>
+        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+        <emission>
+            <red>3.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>/switches/lights/starter-light</factor-prop>
+        </emission>
+    </animation>
+	
+    <animation>
+        <type>material</type>
+  <object-name>starter_light_emmiter</object-name>
+        <emission>
+            <red>21.5</red>
+            <green>0.5</green>
+            <blue>0.5</blue>
+            <factor-prop>/switches/lights/starter-light</factor-prop>
+        </emission>
+		        <transparency>
+            <alpha>0.4</alpha>
+        </transparency>
+    </animation>
+	 <animation>
+  <type>noshadow</type>
+  <object-name>starter_light_bulb_case</object-name>
+ </animation>
+ 
+ 
+	<light>
+  <name>starter-warn</name>
+  <type>point</type>
+  <position>
+    <x-m>-0.588516</x-m>
+    <y-m>-0.28965</y-m>
+    <z-m>0.301851</z-m>
+  </position>
+  <ambient>
+    <r>0.09</r>
+    <g>0.03</g>
+    <b>0.03</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>1.0</r>
+    <g>0.0</g>
+    <b>0.0</b>
+    <a>1</a>
+  </specular>
+  <attenuation>
+    <c>1.0</c>
+    <l>30.5</l>
+    <q>32.8</q>
+  </attenuation>
+  <range-m>1.0</range-m>
+  <dim-factor>
+    <property>/switches/lights/starter-light</property>
+  </dim-factor>
+</light>
+
+
 
 <!--WŁĄCZNIK POPMPY PALIWA-->
 <animation>
