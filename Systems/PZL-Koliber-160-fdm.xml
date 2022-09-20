@@ -60,8 +60,8 @@
  <metrics>
    <wingarea  unit="M2">    12.68 </wingarea>
    <wingspan  unit="M" >     9.47 </wingspan>
-   <wing_incidence unit="DEG"> 7.00 </wing_incidence>
-   <chord     unit="M" >     1.31 </chord>
+   <wing_incidence unit="DEG">-7</wing_incidence>
+   <chord unit="M">1.339</chord>
    <htailarea unit="M2">     3.48 </htailarea>
    <htailarm  unit="M" >     3.80 </htailarm>
    <vtailarea  unit="M2">    1.80 </vtailarea>
@@ -318,9 +318,9 @@
 
  </ground_reactions>
 
- <flight_control file="PZL-Koliber-160-fcs.xml"/>
+ <flight_control file="Systems/PZL-Koliber-160-fcs.xml"/>
 
- <aerodynamics file="PZL-Koliber-160-aerodynamics.xml"/>
+ <aerodynamics file="Systems/PZL-Koliber-160-aerodynamics.xml"/>
 
  <external_reactions/>
 </fdm_config>

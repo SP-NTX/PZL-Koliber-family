@@ -5015,9 +5015,9 @@
         <m_ConvergenceXMaxIsManual Value="0.000000000000000000e+00" ID="GRFYIDAROKI"/>
         <m_ConvergenceXMin Value="1.000000000000000000e+00" ID="OZVAQWPDOWJ"/>
         <m_ConvergenceXMinIsManual Value="0.000000000000000000e+00" ID="HPFWHHZPQGT"/>
-        <m_ConvergenceYMax Value="1.000000000000000000e+00" ID="FFOUFVLRATP"/>
+        <m_ConvergenceYMax Value="4.000000000000000000e+00" ID="FFOUFVLRATP"/>
         <m_ConvergenceYMaxIsManual Value="0.000000000000000000e+00" ID="WDJWWIMISUZ"/>
-        <m_ConvergenceYMin Value="-4.000000000000000000e+00" ID="GQCDQUKZNSB"/>
+        <m_ConvergenceYMin Value="-7.000000000000000000e+00" ID="GQCDQUKZNSB"/>
         <m_ConvergenceYMinIsManual Value="0.000000000000000000e+00" ID="IFKRJYXMVWC"/>
         <m_CpSliceXMax Value="1.000000000000000000e+00" ID="YRMTFNOCHFI"/>
         <m_CpSliceXMaxIsManual Value="0.000000000000000000e+00" ID="DNEGOVCRVXD"/>
@@ -5035,13 +5035,13 @@
         <m_LoadDistYMaxIsManual Value="0.000000000000000000e+00" ID="VMYTVFMXRPS"/>
         <m_LoadDistYMin Value="-1.000000000000000000e+01" ID="LCMBLODCPUD"/>
         <m_LoadDistYMinIsManual Value="0.000000000000000000e+00" ID="YXEXXQMCVUD"/>
-        <m_SweepXMax Value="2.000000000000000111e-01" ID="OMMFVKGDDAM"/>
+        <m_SweepXMax Value="1.000000000000000000e+00" ID="OMMFVKGDDAM"/>
         <m_SweepXMaxIsManual Value="0.000000000000000000e+00" ID="XXTLXGGVDHT"/>
-        <m_SweepXMin Value="1.000000000000000056e-01" ID="CSIQWTTPDFW"/>
+        <m_SweepXMin Value="0.000000000000000000e+00" ID="CSIQWTTPDFW"/>
         <m_SweepXMinIsManual Value="0.000000000000000000e+00" ID="GHBRJRBTOPF"/>
-        <m_SweepYMax Value="-0.000000000000000000e+00" ID="FDZRGNEMVWI"/>
+        <m_SweepYMax Value="2.000000000000000000e+00" ID="FDZRGNEMVWI"/>
         <m_SweepYMaxIsManual Value="0.000000000000000000e+00" ID="SIIZHUTHESG"/>
-        <m_SweepYMin Value="-2.000000000000000111e-01" ID="PIBPGBIWGZD"/>
+        <m_SweepYMin Value="-1.000000000000000000e+00" ID="PIBPGBIWGZD"/>
         <m_SweepYMinIsManual Value="0.000000000000000000e+00" ID="LYRISJBTWLM"/>
         <m_UnsteadyXMax Value="1.000000000000000000e+00" ID="EDHSGRZCGMD"/>
         <m_UnsteadyXMaxIsManual Value="0.000000000000000000e+00" ID="ETJVFGNIHGN"/>
