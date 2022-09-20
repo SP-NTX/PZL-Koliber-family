@@ -93,7 +93,7 @@
 		</previews>
 
 		<flight-model>jsb</flight-model>
-		<aero>PZL-Koliber-160</aero>
+		<aero>Systems/PZL-Koliber-160-fdm.xml</aero>
 
 		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml"/>
 
