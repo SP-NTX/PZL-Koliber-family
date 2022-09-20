@@ -87,7 +87,7 @@
 		</previews>
 		
 		<flight-model>jsb</flight-model>
-		<aero>PZL-Koliber-160</aero>
+		<aero>Systems/PZL-Koliber-160-fdm</aero>
 		
 		<systems include="Systems/Koliber-electrical.xml">
 			<property-rule n="100">

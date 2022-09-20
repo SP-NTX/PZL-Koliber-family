@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<system name="Conventional Controls">
+<flight_control>
 	<channel name="Controls lag-filter">
 		<lag_filter name="fcs/aileron-lag-filter">
 			<input>/controls/flight/aileron</input>
@@ -142,4 +142,34 @@
    </aerosurface_scale>
   </channel>
 
-</system>
+  <channel name="Flaps">
+   <kinematic name="Flaps Control">
+    <input>fcs/flap-cmd-norm</input>
+    <traverse>
+      <setting>
+         <position> 15 </position>   <!-- the 950kg MTOW version have always flaps -->
+         <time>      0 </time>
+      </setting>
+      <setting>
+         <position> 30 </position>
+         <time>      5 </time>
+      </setting>
+    </traverse>
+    <output>fcs/flap-pos-deg</output>
+   </kinematic>
+
+   <aerosurface_scale name="Flap Normalization">
+    <input>fcs/flap-pos-deg</input>
+    <domain>
+      <min>  15 </min>
+      <max> 30 </max>
+    </domain>
+    <range>
+      <min> 0 </min>
+      <max> 1 </max>
+    </range>
+    <output>fcs/flap-pos-norm</output>
+   </aerosurface_scale>
+  </channel>
+
+</flight_control>
