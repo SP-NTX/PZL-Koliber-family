@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>aircraft-dialog</name>
+  <layout>vbox</layout>
+  <resizable>false</resizable>
+  <modal>false</modal>
+  <draggable>true</draggable>
+</PropertyList>

@@ -3,7 +3,7 @@
 
 <PropertyList>
 	<path>oil_temp.ac</path>
-	
+
 	<animation>
 		<type>material</type>
 		<object-name>wskazowka</object-name>
@@ -16,7 +16,7 @@
     <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
   </emission>
 	</animation>
-        
+
 <animation>
   <type>select</type>
   <object-name>wskazowka</object-name>
@@ -31,15 +31,26 @@
     <not><property>systems/electrical/outputs/bus-dc</property></not>
   </condition>
 </animation>
-	
+
 <animation>
   <type>rotate</type>
   <object-name>wskazowka</object-name>
   <property>engines/engine[0]/oil-temperature-degf</property>
   <interpolation>
+	 <entry><ind>0</ind><dep>0.00</dep></entry>
    <entry><ind>100</ind><dep>0.00</dep></entry>
+	 <entry><ind>120</ind><dep>11.00</dep></entry>
+	 <entry><ind>140</ind><dep>23.00</dep></entry>
+	 <entry><ind>160</ind><dep>35.00</dep></entry>
    <entry><ind>180</ind><dep>49.64</dep></entry>
-   <entry><ind>260</ind><dep>95.06</dep></entry>
+	 <entry><ind>200</ind><dep>64.50</dep></entry>
+	 <entry><ind>220</ind><dep>79</dep></entry>
+	 <entry><ind>230</ind><dep>83</dep></entry>
+	 <entry><ind>240</ind><dep>87.50</dep></entry>
+	 <entry><ind>250</ind><dep>91.50</dep></entry>
+   <entry><ind>260</ind><dep>95.75</dep></entry>
+	 <entry><ind>270</ind><dep>99</dep></entry>
+	 <entry><ind>1000</ind><dep>99</dep></entry>
   </interpolation>
   <center>
    <x-m>-0.00178</x-m>
