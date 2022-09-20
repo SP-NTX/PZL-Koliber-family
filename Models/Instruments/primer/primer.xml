@@ -18,7 +18,7 @@
 <animation>
    <type>translate</type>
    <object-name>PrimerKnob</object-name>
-   <property>controls/engines/engine/primer-pump</property>
+   <property>controls/engines/engine/primer-pump-pos</property>
    <factor>0.02</factor>
    <axis>
 	<x>1.0</x>
@@ -36,8 +36,13 @@
      <button>0</button>
      <repeatable>false</repeatable>
      <binding>
-       <command>property-toggle</command>
+       <command>property-adjust</command>
        <property>controls/engines/engine/primer-pump</property>
+	   <step>1</step>
+     </binding>
+	    <binding>
+       <command>property-toggle</command>
+       <property>controls/engines/engine/primer-pump-pos</property>
      </binding>
    </action>
  </animation>

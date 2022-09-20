@@ -171,5 +171,38 @@
     <output>fcs/flap-pos-norm</output>
    </aerosurface_scale>
   </channel>
+        <channel name="Mixture"> <!-- Inspired on Cessna172P -->
+            <fcs_function name="fcs/mixture-primer-cmd">
+                <function>
+                    <table>
+                        <independentVar lookup="row">/controls/engines/engine/primer</independentVar>
+                        <independentVar lookup="column">/controls/engines/engine/throttle</independentVar>
+                        <tableData>
+                                 0.09    0.1    0.5    0.51
+                            2    0       0      0      0
+                            3    0       1      1      0
+                            4    0       1      1      0
+                            5    0       1      1      0
+                            6    0       1      1      0
+                            7    0       0      0      0
+                        </tableData>
+                    </table>
+                </function>
+            </fcs_function>
 
+            <pure_gain name="fcs/mixture-primer">
+                <input>fcs/mixture-cmd-norm</input>
+                <gain>fcs/mixture-primer-cmd</gain>
+            </pure_gain>
+
+            <switch name="Mixture Position">
+                <default value="fcs/mixture-cmd-norm"/>
+                <output>fcs/mixture-pos-norm</output>
+                <test logic="AND" value="fcs/mixture-primer">
+                    /controls/engines/engine/use-primer eq 1
+                    /engines/engine[0]/oil-temperature-degf le 75
+                </test>
+            </switch>
+
+        </channel>
 </flight_control>

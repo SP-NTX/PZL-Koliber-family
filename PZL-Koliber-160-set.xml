@@ -114,6 +114,10 @@
 				<name>Gauges positions</name>
 				<path>Systems/gauges.xml</path>
 			</property-rule>
+			<property-rule n="104">
+				<name>Engine system</name>
+				<path>Systems/engine.xml</path>
+			</property-rule>
 		</systems>
 
 		<instrumentation>
@@ -201,6 +205,15 @@
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
 		</gear>
+		
+		<engines>
+			<engine>
+				<primer>0</primer>
+				<primer-pump>0</primer-pump>
+				<primer-pump-pos>false</primer-pump-pos>
+				<use-primer>1</use-primer>
+			</engine>
+		</engines>
 	</controls>
 
 	<payload>
