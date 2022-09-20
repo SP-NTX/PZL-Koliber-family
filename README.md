@@ -14,11 +14,12 @@ PZL Koliber family for FlightGear
 ### Developers
 At first, thanks a lot @marimigu for letting us to base our plane on his amazing PZL 110.
 Currently developed by:
-- Jakub Kosakowski "jakkos98" "SP-KOS"
+- Jakub Kosakowski (jakkos98) (SP-KOS)
 - SP-NTX
 - TheFGFSEagle
 and others
-Originaly by: Mariusz Migut SP-MMA(3D, Sounds), Patrice Poly "WooT" (FDM)
+
+Originally by: Mariusz Migut SP-MMA - 3D, Sounds, Patrice Poly (WooT) - Old FDM
 
 ### Licence
 
