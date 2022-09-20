@@ -89,7 +89,7 @@
   <name>mags-key</name>
   <type>rotate</type>
   <object-name>key</object-name>
-  <property>/controls/engines/engine/magnetos</property>
+  <property>/switches/magnetos</property>
   <factor>30</factor>
   <center>
    <x-m>0</x-m>

@@ -140,6 +140,32 @@
 
         <output>/switches/pitot-switch</output>
     </filter>
+	
+	<filter>
+        <name>fuel lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>/controls/fuel-selector</property>
+        </input>
+
+        <output>/switches/fuel-selector</output>
+    </filter>
+	
+		<filter>
+        <name>magnetos lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>/controls/engines/engine/magnetos</property>
+        </input>
+
+        <output>/switches/magnetos</output>
+    </filter>
 
 
 
