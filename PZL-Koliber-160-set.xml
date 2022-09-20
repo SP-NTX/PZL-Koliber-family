@@ -10,9 +10,11 @@
 		It was produced in the years 1997-2004 at PZL Okęcie in the number of 12 pieces, mainly exported to the USA.
 		</long-description>
 
-		<aircraft-version>0.9</aircraft-version>
-
-		<status>beta</status>
+		
+		<aircraft-version>0.20</aircraft-version>
+    
+    <status>beta</status>
+		
 		<rating>
 			<FDM type="int">1</FDM>
 			<systems type="int">2</systems>
