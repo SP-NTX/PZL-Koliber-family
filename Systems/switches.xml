@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	    <filter>
+        <name>battery lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.25</filter-time>
+
+        <input>
+            <property>/controls/switches/battery</property>
+        </input>
+
+        <output>/switches/bat-switch-pos</output>
+    </filter>
+		    <filter>
+        <name>alternator lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.25</filter-time>
+
+        <input>
+            <property>/controls/switches/alternator</property>
+        </input>
+
+        <output>/switches/alternator-switch-pos</output>
+    </filter>
+
+	<filter>
+        <name>alternator light lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.15</filter-time>
+
+        <input>
+            <property>/controls/engines/engine/master-alt</property>
+        </input>
+
+        <output>/switches/lights/alternator-light</output>
+    </filter>
+	
+	<filter>
+        <name>starter light lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.15</filter-time>
+
+        <input>
+            <property>/controls/engines/engine/starter</property>
+        </input>
+
+        <output>/switches/lights/starter-light</output>
+    </filter>
+	
+	    
+		<filter>
+        <name>fuel pump lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>/controls/switches/fuelpump</property>
+        </input>
+
+        <output>/switches/fuelpump</output>
+    </filter>
+	
+			<filter>
+        <name>turn coord lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>/controls/switches/turn-coordinator</property>
+        </input>
+
+        <output>/switches/turn-coord</output>
+    </filter>
+	
+		<filter>
+        <name>beacon lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>/controls/switches/beacon</property>
+        </input>
+
+        <output>/switches/beacon</output>
+    </filter>
+	
+
+		<filter>
+        <name>navlight lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>controls/lighting/nav-lights</property>
+        </input>
+
+        <output>/switches/nav-lights</output>
+    </filter>
+			<filter>
+        <name>taxi lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>controls/lighting/taxi-lights</property>
+        </input>
+
+        <output>/switches/taxi-lights</output>
+    </filter>
+			<filter>
+        <name>landing lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>controls/lighting/landing-lights</property>
+        </input>
+
+        <output>/switches/landing-lights</output>
+    </filter>
+			<filter>
+        <name>pitot lowpass</name>
+        <debug>false</debug>
+        <type>exponential</type>
+        <filter-time>0.1</filter-time>
+
+        <input>
+            <property>controls/anti-ice/pitot-heat</property>
+        </input>
+
+        <output>/switches/pitot-switch</output>
+    </filter>
+
+
+
+</PropertyList>
