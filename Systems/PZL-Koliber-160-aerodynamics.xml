@@ -2,9 +2,9 @@
 <aerodynamics>
 	<function name="aero/alpha-wing-deg">
 		<description>Wing angle of attack (degrees)</description>
-		<toradians>
+		<todegrees>
 			<property>aero/alpha-wing-rad</property>
-		</toradians>
+		</todegrees>
 	</function>
 	
 	<axis name="LIFT">
