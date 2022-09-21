@@ -318,7 +318,6 @@
 
  </ground_reactions>
  
- <system file="engine"/>
 
  <flight_control file="Systems/PZL-Koliber-160-fcs.xml"/>
 

@@ -17,7 +17,7 @@
 	<animation>
 		<type>slider</type>
 		<object-name>PrimerKnob</object-name>
-		<property>controls/engines/engine/primer-pos</property>
+		<property>controls/engines/engine/primer-pump-pos</property>
 		<factor>0.02</factor>
 		<axis>
 			<x>1.0</x>
@@ -27,14 +27,14 @@
 		<action>
 			<binding>
 				<command>property-adjust</command>
-				<property>controls/engines/engine/primer</property>
+				<property>controls/engines/engine/primer-pump</property>
 				<step>1</step>
 				<min>0</min>
-				<max>9999</max>
+				<max>12</max> <!-- Placeholder; till nasal primer system -->
 			</binding>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/engines/engine/primer-pos</property>
+				<property>controls/engines/engine/primer-pump-pos</property>
 			</binding>
 		</action>
 	</animation>

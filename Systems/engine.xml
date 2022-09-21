@@ -1,60 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<system name="Engine">
-	<channel name="Primer">
-		<switch name="propulsion/engine/priming-enabled">
-			<default value="1"/>
-			<test value="0">
-				propulsion/engine/set-running == 1
-			</test>
-		</switch>
-	
-		<fcs_function name="propulsion/engine/primer">
-			<function>
-				<product>
-					<floor>
-						<quotient>
-							<property>/controls/engines/engine/primer</property>
-							<value>2</value>
-						</quotient>
-					</floor>
-					<property>propulsion/engine/priming-enabled</property>
-				</product>
-			</function>
-		</fcs_function>
+<PropertyList>
 
-		<switch name="/controls/engines/engine/primer">
-			<default value="/controls/engines/engine/primer"/>
-			<test value="0">
-				propulsion/engine/priming-enabled == 0
-			</test>
-		</switch>
-	</channel>
-	
-	<channel name="Mixture"> <!-- Inspired from Cessna 172P -->
-		<fcs_function name="fcs/mixture-primer-cmd">
-			<function>
-				<product>
-					<property>fcs/mixture-cmd-norm</property>
-					<table>
-						<independentVar lookup="row">propulsion/engine/primer</independentVar>
-						<independentVar lookup="column">fcs/throttle-pos-norm</independentVar>
-						<tableData>
-								0.09	0.1	0.5	0.51
-							2	0		0	0	0
-							3	0		1	1	0
-							6	0		1	1	0
-							7	0		0	0	0
-						</tableData>
-					</table>
-				</product>
-			</function>
-		</fcs_function>
-		
-		<switch name="fcs/mixture-pos-norm">
-			<default value="fcs/mixture-cmd-norm"/>
-			<test logic="AND" value="fcs/mixture-primer-cmd">
-				propulsion/engine/priming-enabled eq 1
-			</test>
-		</switch>
-	</channel>
-</system>
+   <logic>
+      <input>
+         <equals>
+            <property>/fdm/jsbsim/propulsion/engine/set-running</property>
+            <value>0</value>
+         </equals>
+      </input>
+      <output>/controls/engines/engine/use-primer</output>
+   </logic>
+
+    <filter>
+        <name>Primer</name>
+        <type>gain</type>
+        <input>
+            <condition>
+				 <property>/controls/engines/engine/use-primer</property>
+            </condition>
+				<expression>
+					<div>
+						<property>/controls/engines/engine/primer-pump</property>
+						<value>2</value>
+					</div>
+				</expression>
+        </input>
+        <input>
+            <value>0</value>
+        </input>
+        <output>
+            <property>/controls/engines/engine/primer</property>
+        </output>
+    </filter>
+
+	<filter>
+        <name>Primer 0</name>
+        <type>gain</type>
+        <input>
+            <condition>
+				 <property>/controls/engines/engine/use-primer</property>
+            </condition>
+			<property>/controls/engines/engine/primer-pump</property>
+        </input>
+        <input>
+            <value>0</value>
+        </input>
+        <output>
+			<property>/controls/engines/engine/primer-pump</property>
+        </output>
+    </filter>
+
+</PropertyList>

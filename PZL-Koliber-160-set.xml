@@ -111,6 +111,10 @@
 				<name>Switch positions</name>
 				<path>Systems/switches.xml</path>
 			</property-rule>
+			<property-rule n="103">
+				<name>Engine system</name>
+				<path>Systems/engine.xml</path>
+			</property-rule>
 		</systems>
 
 		<instrumentation>
@@ -200,7 +204,7 @@
 		<engines>
 			<engine>
 				<primer>0</primer>
-				<primer-pump>0</primer-pump>
+				<primer-pump type='int'>0</primer-pump>
 				<primer-pump-pos>false</primer-pump-pos>
 				<use-primer>1</use-primer>
 			</engine>
