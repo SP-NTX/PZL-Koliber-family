@@ -30,15 +30,16 @@
 			</author>
 			<author n="1">
 				<name>SP-NTX</name>
-				<description>3D, Systems, FDM, Systems</description>
+				<description>3D, Systems, FDM</description>
 			</author>
 			<author n="2">
 				<name>TheFGFSEagle</name>
-				<description>3D, FDM</description>
+				<nick>TheEagle</nick>
+				<description>3D, FDM, Systems, Nasal</description>
 			</author>
 			<author n="3">
 				<name>Mariusz Migut</name>
-				<description>Original autho; (3D, Sounds...)</description>
+				<description>Original author; (3D, Sounds...)</description>
 				<nick>SP-MMA</nick>
 			</author>
 			<author n="4">
@@ -117,25 +118,21 @@
 		</instrumentation>
 
 		<sound>
-		<path>Aircraft/PZL-Koliber-family/Sounds/PZL-Koliber-160A-sound.xml</path>
+			<path>Aircraft/PZL-Koliber-family/Sounds/PZL-Koliber-160A-sound.xml</path>
 		</sound>
 
-		<panel>
-			<visibility archive="n">false</visibility>
-		</panel>
-
 		<model>
-			<path archive="y">Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
+			<path>Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
 		</model>
 
 		<view>
-			<internal archive="y">true</internal>
+			<internal type="bool">true</internal>
 			<config>
-			  <x-offset-m type="double">-0.253</x-offset-m>
-			  <y-offset-m type="double">0.6750</y-offset-m>
-			  <z-offset-m type="double">-0.072</z-offset-m>
-			  <pitch-offset-deg>-7.23</pitch-offset-deg>
-			  <default-field-of-view-deg>55.0</default-field-of-view-deg>
+				<x-offset-m type="double">-0.253</x-offset-m>
+				<y-offset-m type="double">0.6750</y-offset-m>
+				<z-offset-m type="double">-0.072</z-offset-m>
+				<pitch-offset-deg>-7.23</pitch-offset-deg>
+				<default-field-of-view-deg>55.0</default-field-of-view-deg>
 			</config>
 		</view>
 
@@ -188,7 +185,9 @@
 			<landing-lights type="bool">false</landing-lights>
 		</lighting>
 
-		<fuel-selector type="int">0</fuel-selector>
+		<fuel>
+			<selector type="int">0</selector>
+		</fuel>
 
 		<engine n="0">
 			<magnetos>3</magnetos>
@@ -264,8 +263,8 @@
 		<PZL-Koliber-160A>
 			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/auto-slats.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/koliber_function.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/Fuel.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/fuel.nas</file>
 		</PZL-Koliber-160A>
 	</nasal>
 </PropertyList>

@@ -5,7 +5,6 @@
 ##########################################-->
 
 <PropertyList>
-
   <path>FuelValve.ac</path>
 
   <animation>
@@ -30,51 +29,15 @@
       <y>0</y>
       <z>1</z>
     </axis>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
   </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>FuelSelector</object-name>
-    <object-name>FuelValve</object-name>
-
     <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel-selector</property>
-        <step>1</step>
-        <min> -1</min>
-        <max>  1</max>
-        <wrap>false</wrap>
+        <property>controls/fuel/selector</property>
+        <factor>1</factor>
+        <min>-1</min>
+        <max>1</max>
       </binding>
     </action>
   </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>FuelSelector</object-name>
-    <object-name>FuelValve</object-name>
-
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel-selector</property>
-        <step>-1</step>
-        <min> -1</min>
-        <max>  1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-
 </PropertyList>

@@ -148,7 +148,7 @@
         <filter-time>0.1</filter-time>
 
         <input>
-            <property>/controls/fuel-selector</property>
+            <property>/controls/fuel/selector</property>
         </input>
 
         <output>/switches/fuel-selector</output>
