@@ -20,7 +20,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>FuelSelector</object-name>
     <property>switches/fuel-selector</property>
     <factor>-90</factor>
@@ -29,10 +29,6 @@
       <y>0</y>
       <z>1</z>
     </axis>
-  </animation>
-  <animation>
-     <object-name>FuelSelector</object-name>
-     <type>knob</type>
     <action>
       <binding>
         <command>property-adjust</command>
