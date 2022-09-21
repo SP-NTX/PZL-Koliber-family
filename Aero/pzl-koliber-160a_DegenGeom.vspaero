@@ -17,10 +17,10 @@ FarDist = -1.000000
 NumWakeNodes = 64 
 WakeIters = 10 
 NumberOfControlGroups = 1 
-Flaps
-Wing_Surf0_Flaps,Wing_Surf1_Flaps
-1, -1
-30
+Ailerons
+Wing_Surf0_Ailerons,Wing_Surf1_Ailerons
+1, 1
+17.5
 Preconditioner = Matrix 
 Karman-Tsien Correction = N 
 Stability Type = 1 
