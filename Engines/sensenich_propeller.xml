@@ -48,6 +48,8 @@ Trailing edge thickness: 0.5
   <gearratio> 1.00 </gearratio>
   <ct_factor> 1.00 </ct_factor>
   <cp_factor> 1.00 </cp_factor>
+  <minpitch>18.4</minpitch>
+  <maxpitch>18.4</maxpitch>
 
   <table name="C_THRUST" type="internal">
      <tableData>

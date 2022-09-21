@@ -107,16 +107,8 @@
 				<path>Systems/instruments.xml</path>
 			</property-rule>
 			<property-rule n="102">
-				<name>Switches positions</name>
+				<name>Switch positions</name>
 				<path>Systems/switches.xml</path>
-			</property-rule>
-			<property-rule n="103">
-				<name>Gauges positions</name>
-				<path>Systems/gauges.xml</path>
-			</property-rule>
-			<property-rule n="104">
-				<name>Engine system</name>
-				<path>Systems/engine.xml</path>
 			</property-rule>
 		</systems>
 

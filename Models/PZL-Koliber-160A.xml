@@ -1528,8 +1528,8 @@
    <hovered>
        <binding>
          <command>set-tooltip</command>
-         <tooltip-id>primer</tooltip-id>
-         <label>OGRZ.GAŹNIKA</label>
+         <tooltip-id>carb-heat</tooltip-id>
+         <label>Carb heat</label>
     </binding>
    </hovered>
 
@@ -1810,6 +1810,16 @@
   </dim-factor>
 </light>
 
+	<model>
+		<path>Instruments/primer/primer.xml</path>
+		<offsets>
+			<x-m>-0.546</x-m>
+			<y-m>0.024</y-m>
+			<z-m>-0.016</z-m>
+			<pitch-deg>-11</pitch-deg>
+		</offsets>
+	</model>	
+	
 <!-- ****************** ŚWIATŁA *****************************-->
 
 	<model>
