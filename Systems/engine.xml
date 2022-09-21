@@ -11,10 +11,12 @@
 		<fcs_function name="propulsion/engine/primer">
 			<function>
 				<product>
-					<quotient>
-						<property>/controls/engines/engine/primer</property>
-						<value>2</value>
-					</quotient>
+					<floor>
+						<quotient>
+							<property>/controls/engines/engine/primer</property>
+							<value>2</value>
+						</quotient>
+					</floor>
 					<property>propulsion/engine/priming-enabled</property>
 				</product>
 			</function>
@@ -34,7 +36,7 @@
 				<product>
 					<property>fcs/mixture-cmd-norm</property>
 					<table>
-						<independentVar lookup="row">/controls/engines/engine/primer</independentVar>
+						<independentVar lookup="row">propulsion/engine/primer</independentVar>
 						<independentVar lookup="column">fcs/throttle-pos-norm</independentVar>
 						<tableData>
 								0.09	0.1	0.5	0.51

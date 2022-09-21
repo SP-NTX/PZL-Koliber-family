@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
+	<function name="aero/alpha-wing-deg">
+		<degrees>
+			<property>aero/alpha-wing-rad</property>
+		</degrees>
+	</function>
+	<function name="/orientation/alpha-wing-deg">
+		<degrees>
+			<property>aero/alpha-wing-rad</property>
+		</degrees>
+	</function>
+	
 	<axis name="LIFT">
 		<function name="aero/force/Lift_propwash">
 			<description>Delta lift due to propeller induced velocity</description>
@@ -231,7 +242,7 @@
 	</axis>
 	
 	<axis name="PITCH">
-		 <function name="aero/moment/Pitch_propwash">
+		 <!--<function name="aero/moment/Pitch_propwash">
 			<description>Pitch moment due to propeller induced velocity</description>
 			<product>
 					<property>propulsion/engine[0]/thrust-coefficient</property>
@@ -250,7 +261,7 @@
 						</tableData>
 					</table>
 			</product>
-		</function>
+		</function>-->
 		
 		<function name="aero/moment/Pitch_alpha">
 			 <description>Pitch moment due to alpha</description>
