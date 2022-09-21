@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
 	<function name="aero/alpha-wing-deg">
-		<degrees>
+		<todegrees>
 			<property>aero/alpha-wing-rad</property>
-		</degrees>
+		</todegrees>
 	</function>
 	<function name="/orientation/alpha-wing-deg">
-		<degrees>
+		<todegrees>
 			<property>aero/alpha-wing-rad</property>
-		</degrees>
+		</todegrees>
 	</function>
 	
 	<axis name="LIFT">
