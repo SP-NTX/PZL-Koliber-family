@@ -2,15 +2,15 @@
 <flight_control>
 	<channel name="Controls lag-filter">
 		<lag_filter name="fcs/aileron-lag-filter">
-			<input>/controls/flight/aileron</input>
+			<input>fcs/aileron-cmd-norm</input>
 			<c1>25</c1>
 		</lag_filter>
 		<lag_filter name="fcs/elevator-lag-filter">
-			<input>/controls/flight/elevator</input>
+			<input>fcs/elevator-cmd-norm</input>
 			<c1>25</c1>
 		</lag_filter>
 		<lag_filter name="fcs/rudder-lag-filter">
-			<input>/controls/flight/rudder</input>
+			<input>fcs/rudder-cmd-norm</input>
 			<c1>25</c1>
 		</lag_filter>
 	</channel>
@@ -61,53 +61,113 @@
 		<aerosurface_scale name="Left Aileron Control">
 			<input>fcs/roll-trim-sum</input>
 			<range>
-				<min> -0.235619449 </min>
-				<max>	0.305432619 </max>
+				<min>-13.5</min>
+				<max>17.5</max>
 			</range>
-			<output>fcs/left-aileron-pos-rad</output>
+			<output>fcs/left-aileron-pos-deg</output>
 		</aerosurface_scale>
 
 		<aerosurface_scale name="Right Aileron Control">
 			<input>-fcs/roll-trim-sum</input>
 			<range>
-				<min> -0.235619449 </min>
-				<max>	0.305432619 </max>
+				<min>-13.5</min>
+				<max>17.5</max>
 			</range>
-			<output>fcs/right-aileron-pos-rad</output>
+			<output>fcs/right-aileron-pos-deg</output>
 		</aerosurface_scale>
 
 		<aerosurface_scale name="Left Aileron Normalization">
-			<input>fcs/left-aileron-pos-rad</input>
+			<input>fcs/left-aileron-pos-deg</input>
 			<domain>
-				<min> -0.235619449 </min>
-				<max>	0.305432619 </max>
+				<min>-13.5</min>
+				<max>17.5</max>
 			</domain>
 			<range>
-				<min> -1 </min>
-				<max>	1 </max>
+				<min>-1</min>
+				<max>1</max>
 			</range>
 			<output>fcs/left-aileron-pos-norm</output>
 		</aerosurface_scale>
 
 		<aerosurface_scale name="Right Aileron Normalization">
-			<input>fcs/right-aileron-pos-rad</input>
+			<input>fcs/right-aileron-pos-deg</input>
 			<domain>
-				<min> -0.235619449 </min>
-				<max>	0.305432619 </max>
+				<min>-13.5</min>
+				<max>17.5</max>
 			</domain>
 			<range>
-				<min> -1 </min>
-				<max>	1 </max>
+				<min>-1</min>
+				<max>1</max>
 			</range>
 			<output>fcs/right-aileron-pos-norm</output>
 		</aerosurface_scale>
 		
 		<fcs_function>
+			<function>
+				<quotient>
+					<sum>
+						<property>fcs/left-aileron-pos-deg</property>
+						<property>-fcs/right-aileron-pos-deg</property>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+			<output>fcs/aileron-pos-deg</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<toradians>
+					<property>fcs/aileron-pos-deg</property>
+				</toradians>
+			</function>
+			<output>fcs/aileron-pos-rad</output>
+		</fcs_function>
+		
+		<aerosurface_scale>
+			<input>fcs/aileron-pos-deg</input>
+			<domain>
+				<min>-15.5</min>
+				<max>15.5</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/aileron-pos-norm</output>
+		</aerosurface_scale>
+		
+		<fcs_function>
+			<function>
+				<abs>
+					<property>fcs/aileron-pos-deg</property>
+				</abs>
+			</function>
+			<output>fcs/mag-aileron-pos-deg</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<abs>
+					<property>fcs/aileron-pos-rad</property>
+				</abs>
+			</function>
+			<output>fcs/mag-aileron-pos-rad</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<abs>
+					<property>fcs/aileron-pos-norm</property>
+				</abs>
+			</function>
+			<output>fcs/mag-aileron-pos-norm</output>
+		</fcs_function>
 	</channel>
 
 	<channel name="Yaw">
 		<summer name="Rudder Command Sum">
-			<input>-fcs/rudder-lag-filter</input>
+			<input>fcs/rudder-lag-filter</input>
 			<input>fcs/yaw-trim-cmd-norm</input>
 			<clipto>
 				<min> -1 </min>

@@ -137,10 +137,10 @@
 		<function name="aero/force/Drag_elevator">
 			 <description>Drag due to Elevator Deflection</description>
 			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <abs><property>fcs/elevator-pos-rad</property></abs>
-					 <value>0.1032179</value>
+					<property>aero/qbar-psf</property>
+					<property>metrics/Sw-sqft</property>
+					<property>fcs/mag-elevator-pos-rad</property>
+					<value>0.1032179</value>
 			 </product>
 		</function>
 		
@@ -168,7 +168,7 @@
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<abs><property>fcs/rudder-pos-rad</property></abs>
+				<property>fcs/mag-rudder-pos-rad</property>
 				<value>0.2678540</value>
 			</product>
 		</function>
@@ -178,7 +178,7 @@
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<abs><property>fcs/left-aileron-pos-rad</property></abs>
+				<property>fcs/mag-aileron-pos-rad</property>
 				<value>0.0498461</value>
 			</product>
 		</function>
@@ -400,7 +400,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
-				<property>fcs/left-aileron-pos-rad</property>
+				<property>fcs/aileron-pos-rad</property>
 				<value>0.1496594</value>
 			 </product>
 		</function>
@@ -483,7 +483,7 @@
 				 <property>aero/qbar-psf</property>
 				 <property>metrics/Sw-sqft</property>
 				 <property>metrics/bw-ft</property>
-				 <property>fcs/left-aileron-pos-rad</property>
+				 <property>fcs/aileron-pos-rad</property>
 				 <value>-0.0052027</value>
 			 </product>
 		</function>

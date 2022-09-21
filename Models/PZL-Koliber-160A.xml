@@ -183,6 +183,24 @@
 	
 	<animation>
 		<type>rotate</type>
+		<object-name>vstab</object-name>
+		<object-name>RudderTrimTab</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>-30</factor>
+		<center>
+			<x-m>3.760792</x-m>
+			<y-m>0</y-m>
+			<z-m>0.998834</z-m>
+		</center>
+		<axis>
+			<x>-0.421161</x>
+			<y>0</y>
+			<z>-1.048952</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
 		<object-name>RudderTrimTab</object-name>
 		<axis>
 			<object-name>RudderTrimTabAxis</object-name>
@@ -190,24 +208,6 @@
 		<property>controls/flight/rudder-trim</property>
 		<factor>20</factor>
 	</animation>
-	
-<animation>
-	<type>rotate</type>
-	<object-name>vstab</object-name>
-	<object-name>RudderTrimTab</object-name>
-	<property>surface-positions/rudder-pos-norm</property>
-	<factor>-30</factor>
-	<center>
-		<x-m>3.760792</x-m>
-		<y-m>0</y-m>
-		<z-m>0.998834</z-m>
-	</center>
-	<axis>
-		<x>-0.421161</x>
-		<y>0</y>
-		<z>-1.048952</z>
-	</axis>
-</animation>
 
 <animation>
 	<type>rotate</type>
