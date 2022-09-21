@@ -180,21 +180,17 @@
 		<z>0</z>
 	</axis>
 </animation>
-
+	
 	<animation>
 		<type>rotate</type>
 		<object-name>RudderTrimTab</object-name>
+		<axis>
+			<object-name>RudderTrimTabAxis</object-name>
+		</axis>
 		<property>controls/flight/rudder-trim</property>
 		<factor>20</factor>
-		<axis>
-			<x1>4.462</x1>
-			<y1>0</y1>
-			<z1>1.45</z1>
-			<x2>4.117</x2>
-			<y2>0</y2>
-			<z2>0.591</z2>
-		</axis>
 	</animation>
+	
 <animation>
 	<type>rotate</type>
 	<object-name>vstab</object-name>
