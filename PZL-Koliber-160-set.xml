@@ -264,11 +264,11 @@
 
 
 	<nasal>
-		<PZL-Koliber-160A>
+		<pzl_koliber_160a>
 			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/auto-slats.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/fuel.nas</file>
-		</PZL-Koliber-160A>
+		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>
