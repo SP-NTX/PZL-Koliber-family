@@ -5,10 +5,6 @@
 # CHT Cylinder Head Temperature - temperatura głowic silnika
 # GPH Gallons Per Hour - spalanie galonów na godzinę
 
-# initial settings
-setprop("instrumentation/nav/power-btn", 0);
-setprop("controls/engines/engine/magnetos", 0);
-
 var autostart = func {
 	props.globals.setBoolValue("/controls/electric/battery-switch", 1);
 	props.globals.setBoolValue("/controls/engines/engine/master-alt", 1);
