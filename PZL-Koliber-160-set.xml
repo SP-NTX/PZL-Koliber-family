@@ -175,6 +175,12 @@
 			<setting>1.00</setting>
 		</flaps>
 	</sim>
+	
+	<instrumentation>
+		<nav>
+			<power-btn type="bool">false</power-btn>
+		</nav>
+	</instrumentation>
 
 	<controls>
 		<fuel-valve>
