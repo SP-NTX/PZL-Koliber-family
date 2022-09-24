@@ -5,11 +5,10 @@
 		<input>
 			<and>
 				<greater-than>
-					<property>/orientation/alpha-deg</property>
-					<value>7</value> <!-- needs tuning -->
+					<property>/orientation/alpha-wing-deg</property>
+					<value>12</value> <!-- needs tuning -->
 				</greater-than>
 				<not>
-					<property>gear/gear[0]/wow</property>
 					<property>gear/gear[1]/wow</property>
 					<property>gear/gear[2]/wow</property>
 				</not>
@@ -24,13 +23,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/orientation/alpha-deg</property>
+					<property>/orientation/alpha-wing-deg</property>
 					<entry>
-						<ind>7</ind>
+						<ind>12</ind>
 						<dep>0</dep>
 					</entry>
 					<entry>
-						<ind>15</ind>
+						<ind>14</ind>
 						<dep>1</dep>
 					</entry>
 				</table>
