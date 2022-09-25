@@ -10,11 +10,11 @@
 		It was produced in the years 1997-2004 at PZL Okęcie in the number of 12 pieces, mainly exported to the USA.
 		</long-description>
 
-		
+
 		<aircraft-version>0.20</aircraft-version>
-    
+
     <status>beta</status>
-		
+
 		<rating>
 			<FDM type="int">1</FDM>
 			<systems type="int">2</systems>
@@ -127,6 +127,9 @@
 
 		<model>
 			<path>Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
+			<livery>
+			      <file type="string"/>
+			</livery>
 		</model>
 
 		<view>
@@ -174,8 +177,10 @@
 			<setting>0.50</setting>
 			<setting>1.00</setting>
 		</flaps>
+
+
 	</sim>
-	
+
 	<instrumentation>
 		<nav>
 			<power-btn type="bool">false</power-btn>
@@ -206,7 +211,7 @@
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
 		</gear>
-		
+
 		<engines>
 			<engine>
 				<primer>0</primer>
@@ -275,6 +280,7 @@
 			<file>Aircraft/PZL-Koliber-family/Nasal/auto-slats.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/fuel.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
 		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>

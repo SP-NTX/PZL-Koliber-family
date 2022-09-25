@@ -13,7 +13,7 @@
 					<dialog-name>aircraft-dialog</dialog-name>
 				</binding>
 			</item>
-			
+
 			<item>
 				<label>Autostart</label>
 				<binding>
@@ -21,6 +21,15 @@
 					<script>pzl_koliber_160a.autostart();</script>
 				</binding>
 			</item>
+			<item>
+				<label>Select Livery</label>
+				<binding>
+					<command>nasal</command>
+					<script>aircraft.livery.dialog.open()</script>
+				</binding>
+			</item>
 		</menu>
+
 	</default>
+
 </PropertyList>

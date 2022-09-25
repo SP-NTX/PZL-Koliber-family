@@ -180,7 +180,7 @@
 		<z>0</z>
 	</axis>
 </animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>vstab</object-name>
@@ -1814,8 +1814,8 @@
 			<z-m>-0.016</z-m>
 			<pitch-deg>-11</pitch-deg>
 		</offsets>
-	</model>	
-	
+	</model>
+
 <!-- ****************** ŚWIATŁA *****************************-->
 
 	<model>
@@ -1871,6 +1871,44 @@
 			<z-m>0.523</z-m>
 		</offsets>
 	</model>
+
+#liveries
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>hstab</object-name>
+    <object-name>vstab</object-name>
+    <object-name>RudderTrimTab</object-name>
+    <object-name>left-aileron</object-name>
+    <object-name>right-aileron</object-name>
+    <object-name>left-flap</object-name>
+    <object-name>right-flap</object-name>
+    <object-name>left-slat</object-name>
+    <object-name>right-slat</object-name>
+    <object-name>wing</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Liveries/160A.red.png</texture>
+  </animation>
+
+  <nasal>
+    <load>
+      <!--
+        ##############################################################################
+        # The on-load Nasal is not executed when this file is loaded as the user
+        # aircraft. The code is only executed if the file is loaded for a remote
+        # aircraft in Multi-Player mode (MP)
+        ##############################################################################
+      -->
+      <![CDATA[
+        var livery_update = aircraft.livery_update.new("Aircraft/PZL-Koliber-family/Models/Liveries");
+      ]]>
+      </load>
+
+    <unload><![CDATA[
+      livery_update.stop();
+    ]]></unload>
+  </nasal>
 
 <!-- Sterowanie przednim kołem -->
 
