@@ -1,36 +1,59 @@
 <?xml version="1.0"?>
+<!--
+  Lycoming O-320-D2A
 
+  Secification from engine manual
+Rated horsepower: 160
+Rated speed, RPM: 2700
+Bore, inches: 5.1235
+Stroke, inches: 3.875
+Displacement, cubic inches: 319.8
+Compression ratio: 8.5:1
+Propeller drive ratio: 1:1
+Propeller drive rotation viewed from rear: Clockwise
+
+xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
+-->
 
   <piston_engine name="Lycoming_O-320-D2A">
-  <minmp unit="INHG"> 8.3 </minmp><!--do ustalenia-->
+  <minmp unit="INHG"> 8.3 </minmp><!--for checking taken from C172-->
   <maxmp unit="INHG"> 28.7 </maxmp>
   <displacement unit="IN3"> 319.8 </displacement>
   <bore unit="IN"> 5.125 </bore> <!-- Unused -->
   <stroke unit="IN"> 3.875 </stroke>
   <cylinders> 4 </cylinders><!-- Unused -->
-  <!--<cylinder-head-mass unit="LBS"> 67 </cylinder-head-mass> --><!--do sprawdzenia-->
+  <cylinder-head-mass unit="LBS"> 37.48 </cylinder-head-mass> <!--Part no. LW-12416 -->
   <compression-ratio> 8.5 </compression-ratio>
-  <sparkfaildrop> 0.1 </sparkfaildrop> <!--do ustalenia eksperymentalnie-->
+  <sparkfaildrop> 0.1 </sparkfaildrop> <!--for checking taken from C172-->
   <maxhp unit="HP"> 160 </maxhp>
   <cycles> 4 </cycles>
   <idlerpm> 600 </idlerpm>
   <maxrpm> 2700 </maxrpm>
-<!-- advanced tags! -->
-  <!--><bsfc unit="KG/KW*HR"> 0.3 </bsfc>--> <!--do sprawdzenia-->
-  <!--<volumetric-efficiency> 0.81 </volumetric-efficiency>--> <!--do sprawdzenia-->
-  <!--<air-intake-impedance-factor> 0.5 </air-intake-impedance-factor>--> <!--do sprawdzenia-->
-  <!--<ram-air-factor> 1.2 </ram-air-factor>--> <!--do sprawdzenia-->
+  <bsfc unit="LBS/HP*HR"> 0.51 </bsfc> <!-- (8.8 Gal/h * 6.02 lbs/Gal) / 120HP from engine manual-->
+  <volumetric-efficiency> 0.81 </volumetric-efficiency> <!--for checking-->
+  <air-intake-impedance-factor> 0.18 </air-intake-impedance-factor> <!--for checking taken from C182-->
+  <ram-air-factor> 0.1 </ram-air-factor> <!--for checking taken from C182-->
   <!--><cooling-factor> 0.8 </cooling-factor>--> <!--do sprawdzenia-->
-<!-- Added in FlightGear 2.8 -->
-  <starter-torque> 251.34 </starter-torque> <!--704.31-->
-  <starter-rpm> 550 </starter-rpm><!--180*13.556/4.3-->
-  <!--<static-friction  unit="WATTS"> 1000 </static-friction>--> <!-- do sprawdzenia-->
-  <!--<man-press-lag> 0.1 </man-press-lag>--><!--do ustalenia-->
-<!-- Added in FlightGear 2017.2 -->
+  <!--
+  starter engine part no. LW-15571
+  12V
+  3.38:1 internal reduction
+  replacment part 149-NL
+  12 volt
+  120-140RPM at 11V
+  125-220A 11V at 140RPM
+  Gear reduction 6.5:1
+
+  Starter drive ratio from engine manual 13.556:1 or 16.556:1
+  -->
+  <starter-torque> 391.36 </starter-torque>
+  <starter-rpm> 561.49 </starter-rpm>
+  <static-friction  unit="WATTS"> 1000 </static-friction><!--for checking-->
+  <man-press-lag> 0.1 </man-press-lag><!--for checking-->
   <oil-pressure-relief-valve-psi> 75 </oil-pressure-relief-valve-psi>
   <design-oil-temp-degK> 355.15 </design-oil-temp-degK>
-  <!--<oil-pressure-rpm-max> 2025 </oil-pressure-rpm-max>--> <!--do sprawdzenia-->
-  <!--<oil-viscosity-index> 0.30 </oil-viscosity-index>--> <!--do sprawdzenia-->
+  <oil-pressure-rpm-max> 1215 </oil-pressure-rpm-max> <!--for checking taken from C172-->
+  <oil-viscosity-index> 0.2403 </oil-viscosity-index>
 
   <maxthrottle>1.0</maxthrottle>
   <minthrottle>0.1</minthrottle>
