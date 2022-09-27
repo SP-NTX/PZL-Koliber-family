@@ -3,7 +3,7 @@
 PZL Koliber family for FlightGear
 
 
-[Forum topic](https://forum.flightgear.org/viewtopic.php?f=4&t=40849)
+[Forum thread](https://forum.flightgear.org/viewtopic.php?f=4&t=40849)
 
 [Discord](https://discord.gg/beADn2sWM6)
 
