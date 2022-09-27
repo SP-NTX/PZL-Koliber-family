@@ -1,0 +1,3 @@
+*.nas linguist-detectable=true
+*.xml linguist-detectable=true
+*.1 linguist-detectable=false
