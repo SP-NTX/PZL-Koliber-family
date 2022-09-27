@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
+	<property value="-5.58">metrics/left-flap-arm-y-ft</property>	
+	<property value="5.58">metrics/right-flap-arm-y-ft</property>
+	<property value="-8.12">metrics/left-slat-arm-y-ft</property>
+	<property value="8.12">metrics/right-slat-arm-y-ft</property>
+	
 	<function name="aero/alpha-wing-deg">
 		<todegrees>
 			<property>aero/alpha-wing-rad</property>
@@ -12,26 +17,6 @@
 	</function>
 	
 	<axis name="LIFT">
-		<function name="aero/force/Lift_propwash">
-			<description>Delta lift due to propeller induced velocity</description>
-			<product>
-				 <property>propulsion/engine[0]/thrust-coefficient</property>
-				<property>aero/qbar-psf</property>
-				<property>metrics/Sw-sqft</property>
-				<table>
-					<independentVar lookup="row">aero/alpha-rad</independentVar>
-					<independentVar lookup="column">fcs/flap-pos-deg</independentVar>
-					<tableData>
-									 0.0		 60.0
-						-0.65	0.000	 0.000
-						 0.00	0.286	 0.762
-						 0.44	1.353	 3.608
-						 0.88	0.000	 0.000
-					</tableData>
-				</table>
-			</product>
-		</function>
-		
 		<function name="aero/force/Lift_alpha">
 			<description>Lift due to alpha</description>
 			<product>
@@ -61,7 +46,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>velocities/q-aero-rad_sec</property>
 				<property>aero/ci2vel</property>
-				<value>10.6386397</value>
+				<value>10.5766937</value>
 			</product>
 		</function>
 		
@@ -86,14 +71,135 @@
 			 </product>
 		</function>
 		
-		<function name="aero/force/Lift_flap">
-			 <description>Delta Lift due to flaps</description>
+		<function name="aero/force/Lift_left_flap">
+			 <description>Delta lift due to left flap</description>
 			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					<property>fcs/flap-pos-rad</property>
-					<value>0.5625677</value>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/left-flap-pos-deg</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="15">
+								-90.0	-30.0		-15.0		0.0			15.0		30.0		90.0
+						-15.0	0		0.162303	0.187710	0.191756	0.187710	0.162303	0
+						-10.0	0		0.140227	0.171369	0.175319	0.171369	0.140227	0
+						-5.0	0		0.179339	0.174892	0.166589	0.174892	0.179339	0
+						0.0		0		0.116074	0.150900	0.155767	0.150900	0.116074	0
+						5.0		0		0.071248	0.135674	0.130158	0.135674	0.071248	0
+						10.0	0		-0.004667	0.079205	0.078404	0.079205	-0.004667	0
+						15.0	0		-0.053185	0.002170	0.027497	0.002170	-0.053185	0
+					</tableData>
+					<tableData breakPoint="30">
+								-90.0	-30.0		-15.0		0.0			15.0		30.0		90.0
+						-15.0	0.0		0.371758	0.391971	0.408966	0.391971	0.371758	0.0
+						-10.0	0.0		0.309658	0.336687	0.361974	0.336687	0.309658	0.0
+						-5.0	0.0		0.375467	0.336771	0.330269	0.336771	0.375467	0.0
+						0.0		0.0		0.221248	0.289629	0.303571	0.289629	0.221248	0.0
+						5.0		0.0		0.142525	0.234989	0.257062	0.234989	0.142525	0.0
+						10.0	0.0		0.066598	0.118686	0.094798	0.118686	0.066598	0.0
+						15.0	0.0		-0.162721	-0.029576	0.028807	-0.029576	-0.162721	0.0
+					</tableData>
+				</table>
 			 </product>
+		</function>
+		
+		<function name="aero/force/Lift_right_flap">
+			 <description>Delta lift due to right flap</description>
+			 <product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/right-flap-pos-deg</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="15">
+								-90.0	-30.0		-15.0		0.0			15.0		30.0		90.0
+						-15.0	0		0.162303	0.187710	0.191756	0.187710	0.162303	0
+						-10.0	0		0.140227	0.171369	0.175319	0.171369	0.140227	0
+						-5.0	0		0.179339	0.174892	0.166589	0.174892	0.179339	0
+						0.0		0		0.116074	0.150900	0.155767	0.150900	0.116074	0
+						5.0		0		0.071248	0.135674	0.130158	0.135674	0.071248	0
+						10.0	0		-0.004667	0.079205	0.078404	0.079205	-0.004667	0
+						15.0	0		-0.053185	0.002170	0.027497	0.002170	-0.053185	0
+					</tableData>
+					<tableData breakPoint="30">
+								-90.0	-30.0		-15.0		0.0			15.0		30.0		90.0
+						-15.0	0.0		0.371758	0.391971	0.408966	0.391971	0.371758	0.0
+						-10.0	0.0		0.309658	0.336687	0.361974	0.336687	0.309658	0.0
+						-5.0	0.0		0.375467	0.336771	0.330269	0.336771	0.375467	0.0
+						0.0		0.0		0.221248	0.289629	0.303571	0.289629	0.221248	0.0
+						5.0		0.0		0.142525	0.234989	0.257062	0.234989	0.142525	0.0
+						10.0	0.0		0.066598	0.118686	0.094798	0.118686	0.066598	0.0
+						15.0	0.0		-0.162721	-0.029576	0.028807	-0.029576	-0.162721	0.0
+					</tableData>
+				</table>
+			 </product>
+		</function>
+		
+		<function name="aero/force/Lift_left_slat">
+			 <description>Delta lift due to left slat</description>
+			 <product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/left-slat-pos-norm</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="1">
+								-90.0	-30.0		-15.0		0.0			15.0		30.0		90.0
+						-15.0	0		-0.032097	-0.028611	-0.032128	-0.028611	-0.032097	0
+						-10.0	0		-0.038241	-0.023356	-0.023481	-0.023356	-0.038241	0
+						-5.0	0		-0.015382	0.013715	0.029892	0.013715	-0.015382	0
+						0.0		0		0.009467	0.019562	0.052707	0.019562	0.009467	0
+						5.0		0		0.017447	0.036100	0.127560	0.036100	0.017447	0
+						10.0	0		0.111888	0.209760	0.275249	0.209760	0.111888	0
+						15.0	0		0.188013	0.202437	0.325030	0.202437	0.188013	0
+					</tableData>
+				</table>
+			</product>
+		</function>
+		<function name="aero/force/Lift_right_slat">
+			 <description>Delta lift due to right slat</description>
+			 <product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/right-slat-pos-norm</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="1">
+								-90.0	-30.0		-15.0		0.0			15.0		30.0		90.0
+						-15.0	0		-0.032097	-0.028611	-0.032128	-0.028611	-0.032097	0
+						-10.0	0		-0.038241	-0.023356	-0.023481	-0.023356	-0.038241	0
+						-5.0	0		-0.015382	0.013715	0.029892	0.013715	-0.015382	0
+						0.0		0		0.009467	0.019562	0.052707	0.019562	0.009467	0
+						5.0		0		0.017447	0.036100	0.127560	0.036100	0.017447	0
+						10.0	0		0.111888	0.209760	0.275249	0.209760	0.111888	0
+						15.0	0		0.188013	0.202437	0.325030	0.202437	0.188013	0
+					</tableData>
+				</table>
+			</product>
 		</function>
 	</axis>
 	
@@ -103,23 +209,20 @@
 			 <product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<sum>
-					<table>
-						<independentVar lookup="row">aero/alpha-deg</independentVar>
-						<independentVar lookup="column">aero/beta-deg</independentVar>
-						<tableData>
-									-30.0		-15.0		0.0		15.0		30.0
-							-15.0	0.289067	0.257782	0.054462	0.257782	0.289067
-							-10.0	0.348402	0.261072	0.026672	0.261072	0.348402
-							-5.0	0.521274	0.266642	0.017418	0.266642	0.521274
-							0.0		0.354093	0.235348	0.028079	0.235348	0.354093
-							5.0		0.495578	0.227590	0.059030	0.227590	0.495578
-							10.0	0.570819	0.386695	0.108217	0.386695	0.570819
-							15.0	0.572505	0.304922	0.219524	0.304922	0.572505
-						</tableData>
-					</table>
-					<value>0.01128</value> <!-- correction value -->
-				</sum>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<tableData>
+								-30.0		-15.0		0.0		15.0		30.0
+						-15.0	0.289067	0.257782	0.054462	0.257782	0.289067
+						-10.0	0.348402	0.261072	0.026672	0.261072	0.348402
+						-5.0	0.521274	0.266642	0.017418	0.266642	0.521274
+						0.0		0.354093	0.235348	0.028079	0.235348	0.354093
+						5.0		0.495578	0.227590	0.059030	0.227590	0.495578
+						10.0	0.570819	0.386695	0.108217	0.386695	0.570819
+						15.0	0.572505	0.304922	0.219524	0.304922	0.572505
+					</tableData>
+				</table>
 			</product>
 		</function>
 		
@@ -130,8 +233,19 @@
 				<property>metrics/Sw-sqft</property>
 				<property>velocities/q-aero-rad_sec</property>
 				<property>aero/ci2vel</property>
-				<value>0.0234552</value>
+				<value>0.1569272</value>
 			</product>
+		</function>
+		
+		<function name="aero/force/Drag_yaw_rate">
+			 <description>Drag due to yaw rate</description>
+			 <product>
+					 <property>aero/qbar-psf</property>
+					 <property>metrics/Sw-sqft</property>
+					 <property>aero/bi2vel</property>
+					 <property>velocities/r-aero-rad_sec</property>
+					 <value>0.3186522</value>
+			 </product>
 		</function>
 		
 		<function name="aero/force/Drag_elevator">
@@ -146,21 +260,138 @@
 		
 		<function name="aero/force/Drag_gear">
 			 <description>Drag due to gear</description>
-				 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <value> 0.0020 </value>
-				 </product>
+			 <product>
+				 <property>aero/qbar-psf</property>
+				 <property>metrics/Sw-sqft</property>
+				 <value> 0.0020 </value>
+			 </product>
 		</function>
 		
-		<function name="aero/force/Drag_flap">
-			 <description>Drag due to flaps</description>
-				 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>fcs/flap-pos-rad</property>
-					 <value>0.1226068</value>
-				 </product>
+		<function name="aero/force/Drag_left_flap">
+			 <description>Drag due to left flap</description>
+			 <product>
+				 <property>aero/qbar-psf</property>
+				 <property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/left-flap-pos-deg</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="15">
+								-30.0		-15.0		0.0			15.0		30.0
+						-15.0	0.023188	0.019639	0.007087	0.019639	0.023188
+						-10.0	0.045012	0.009404	0.007650	0.009404	0.045012
+						-5.0	0.139137	0.020044	0.008302	0.020044	0.139137
+						0.0		0.112441	0.036374	0.015119	0.036374	0.112441
+						5.0		0.107352	0.033378	0.021456	0.033378	0.107352
+						10.0	0.253497	0.031606	0.053114	0.031606	0.253497
+						15.0	0.194380	0.029850	0.030795	0.029850	0.194380
+					</tableData>
+					<tableData breakPoint="30">
+								-30.0		-15.0		0.0			15.0		30.0
+						-15.0	0.011501	0.013222	0.018748	0.013222	0.011501
+						-10.0	0.069778	0.064621	0.037219	0.064621	0.069778
+						-5.0	0.119276	0.011664	0.050433	0.011664	0.119276
+						0.0		0.153535	0.047969	0.063438	0.047969	0.153535
+						5.0		0.099812	0.130304	0.074457	0.130304	0.099812
+						10.0	0.280979	0.048933	0.120987	0.048933	0.280979
+						15.0	0.241783	0.047045	0.107393	0.047045	0.241783
+					</tableData>
+				</table>
+			 </product>
+		</function>
+		
+		<function name="aero/force/Drag_right_flap">
+			 <description>Drag due to right flap</description>
+			 <product>
+				 <property>aero/qbar-psf</property>
+				 <property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/right-flap-pos-deg</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="15">
+								-30.0		-15.0		0.0			15.0		30.0
+						-15.0	0.023188	0.019639	0.007087	0.019639	0.023188
+						-10.0	0.045012	0.009404	0.007650	0.009404	0.045012
+						-5.0	0.139137	0.020044	0.008302	0.020044	0.139137
+						0.0		0.112441	0.036374	0.015119	0.036374	0.112441
+						5.0		0.107352	0.033378	0.021456	0.033378	0.107352
+						10.0	0.253497	0.031606	0.053114	0.031606	0.253497
+						15.0	0.194380	0.029850	0.030795	0.029850	0.194380
+					</tableData>
+					<tableData breakPoint="30">
+								-30.0		-15.0		0.0			15.0		30.0
+						-15.0	0.011501	0.013222	0.018748	0.013222	0.011501
+						-10.0	0.069778	0.064621	0.037219	0.064621	0.069778
+						-5.0	0.119276	0.011664	0.050433	0.011664	0.119276
+						0.0		0.153535	0.047969	0.063438	0.047969	0.153535
+						5.0		0.099812	0.130304	0.074457	0.130304	0.099812
+						10.0	0.280979	0.048933	0.120987	0.048933	0.280979
+						15.0	0.241783	0.047045	0.107393	0.047045	0.241783
+					</tableData>
+				</table>
+			 </product>
+		</function>
+		
+		<function name="aero/force/Drag_left_slat">
+			 <description>Drag due to left slat</description>
+			 <product>
+				 <property>aero/qbar-psf</property>
+				 <property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/left-slat-pos-norm</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="1">
+								-30		0		30
+						-15		0.003	0.005	0.003
+						-5		0.0012	0.002	0.0012
+						5		0.003	0.005	0.003
+						10		0.006	0.01	0.006
+						15		0.03	0.05	0.03
+					</tableData>
+				</table>
+			 </product>
+		</function>
+		<function name="aero/force/Drag_right_slat">
+			 <description>Drag due to right slat</description>
+			 <product>
+				 <property>aero/qbar-psf</property>
+				 <property>metrics/Sw-sqft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="table">fcs/right-slat-pos-norm</independentVar>
+					<tableData breakPoint="0">
+							-30	30
+						-15	0	0
+						15	0	0
+					</tableData>
+					<tableData breakPoint="1">
+								-30		0		30
+						-15		0.003	0.005	0.003
+						-5		0.0012	0.002	0.0012
+						5		0.003	0.005	0.003
+						10		0.006	0.01	0.006
+						15		0.03	0.05	0.03
+					</tableData>
+				</table>
+			 </product>
 		</function>
 		
 		<function name="aero/force/Drag_rudder">
@@ -214,7 +445,7 @@
 					 <property>metrics/Sw-sqft</property>
 					 <property>aero/bi2vel</property>
 					 <property>velocities/p-aero-rad_sec</property>
-					 <value>-0.5566593</value>
+					 <value>-0.2265104</value>
 					 <value>-1</value>
 			 </product>
 		</function>
@@ -226,7 +457,7 @@
 					 <property>metrics/Sw-sqft</property>
 					 <property>aero/bi2vel</property>
 					 <property>velocities/r-aero-rad_sec</property>
-					 <value>0.4049094</value>
+					 <value>0.5951852</value>
 			 </product>
 		</function>
 		
@@ -275,8 +506,8 @@
 						-15.0	0.111494
 						-10.0	0.075040
 						-5.0	0.018288
-						0.0	-0.071309
-						5.0	-0.399068
+						0.0		-0.071309
+						5.0		-0.399068
 						10.0	-2.241494
 						15.0	-0.837137
 					</tableData>
@@ -292,6 +523,17 @@
 						180	0.5
 					</tableData>
 				</table>
+				<!-- add 5% of the moment for each slat extended -->
+				<sum>
+					<value>1</value>
+					<product>
+						<sum>
+							<property>fcs/left-slat-pos-norm</property>
+							<property>fcs/right-slat-pos-norm</property>
+						</sum>
+						<value>0.05</value>
+					</product>
+				</sum>
 			 </product>
 		</function>
 		
@@ -306,14 +548,71 @@
 			 </product>
 		</function>
 		
-		<function name="aero/moment/Pitch_flaps">
-			 <description>Pitch moment due to flaps</description>
+		<function name="aero/moment/Pitch_left_flap">
+			 <description>Pitch moment due to left flap</description>
 			 <product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
-				<property>fcs/flap-pos-rad</property>
-				<value>0.2162358</value>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">fcs/left-flap-pos-deg</independentVar>
+					<tableData>
+								0	15			30
+						-15.0	0	0.045688	0.077292
+						-10.0	0	0.051513	0.095401
+						-5.0	0	0.043254	0.095113
+						0.0		0	0.010039	0.056189
+						5.0		0	-0.060556	-0.022682
+						10.0	0	-0.271283	-0.206004
+						15.0	0	-1.960893	-1.241956
+					</tableData>
+				</table>
+				<!-- hack to give less pitch moment in a strong sideslip -->
+				<table>
+					<independentVar lookup="row">aero/beta-deg</independentVar>
+					<tableData>
+						-180	-0.5
+						-90		0
+						0		1
+						90		0
+						180	0.5
+					</tableData>
+				</table>
+			</product>
+		</function>
+		
+		<function name="aero/moment/Pitch_right_flap">
+			 <description>Pitch moment due to right flap</description>
+			 <product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/cbarw-ft</property>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">fcs/left-flap-pos-deg</independentVar>
+					<tableData>
+								0	15			30
+						-15.0	0	0.045688	0.077292
+						-10.0	0	0.051513	0.095401
+						-5.0	0	0.043254	0.095113
+						0.0		0	0.010039	0.056189
+						5.0		0	-0.060556	-0.022682
+						10.0	0	-0.271283	-0.206004
+						15.0	0	-1.960893	-1.241956
+					</tableData>
+				</table>
+				<!-- hack to give less pitch moment in a strong sideslip -->
+				<table>
+					<independentVar lookup="row">aero/beta-deg</independentVar>
+					<tableData>
+						-180	-0.5
+						-90		0
+						0		1
+						90		0
+						180	0.5
+					</tableData>
+				</table>
 			</product>
 		</function>
 		
@@ -325,7 +624,7 @@
 					 <property>metrics/cbarw-ft</property>
 					 <property>aero/ci2vel</property>
 					 <property>velocities/q-aero-rad_sec</property>
-					 <value>-24.0545652</value>
+					 <value>-24.7403661</value>
 			 </product>
 		</function>
 		
@@ -387,7 +686,7 @@
 				 <property>metrics/bw-ft</property>
 				 <property>aero/bi2vel</property>
 				 <property>velocities/p-aero-rad_sec</property>
-				 <value>-0.8083334</value>
+				 <value>-0.5132866</value>
 			 </product>
 		</function>
 		
@@ -399,7 +698,7 @@
 				 <property>metrics/bw-ft</property>
 				 <property>aero/bi2vel</property>
 				 <property>velocities/r-aero-rad_sec</property>
-				 <value>0.2087421</value>
+				 <value>0.1734559</value>
 			 </product>
 		</function>
 		
@@ -411,6 +710,42 @@
 				<property>metrics/bw-ft</property>
 				<property>fcs/aileron-pos-rad</property>
 				<value>0.1496594</value>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Roll_left_flap">
+			 <description>Roll moment due to left flap</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Lift_left_flap</property>
+			 	<property>metrics/left-flap-arm-y-ft</property>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Roll_right_flap">
+			 <description>Roll moment due to right flap</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Lift_right_flap</property>
+			 	<property>metrics/right-flap-arm-y-ft</property>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Roll_left_slat">
+			 <description>Roll moment due to left slat</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Lift_left_slat</property>
+			 	<property>metrics/left-slat-arm-y-ft</property>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Roll_right_slat">
+			 <description>Roll moment due to right slat</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Lift_right_slat</property>
+			 	<property>metrics/right-slat-arm-y-ft</property>
 			 </product>
 		</function>
 		
@@ -459,7 +794,7 @@
 				 <property>metrics/bw-ft</property>
 				 <property>aero/bi2vel</property>
 				 <property>velocities/p-rad_sec</property>
-				 <value>-0.0510684</value>
+				 <value>-0.0216014</value>
 			 </product>
 		</function>
 		
@@ -471,7 +806,7 @@
 				 <property>metrics/bw-ft</property>
 				 <property>aero/bi2vel</property>
 				 <property>velocities/r-aero-rad_sec</property>
-				 <value>-0.2198178</value>
+				 <value>-0.2306988</value>
 			 </product>
 		</function>
 		
@@ -483,6 +818,42 @@
 				 <property>metrics/bw-ft</property>
 				 <property>fcs/rudder-pos-rad</property>
 				 <value>-0.0813419 </value>
+			 </product>
+		</function>
+		
+	<function name="aero/moment/Yaw_left_flap">
+			 <description>Yaw moment due to left flap</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Drag_left_flap</property>
+			 	<property>metrics/left-flap-arm-y-ft</property>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Yaw_right_flap">
+			 <description>Yaw moment due to right flap</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Drag_right_flap</property>
+			 	<property>metrics/right-flap-arm-y-ft</property>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Yaw_left_slat">
+			 <description>Yaw moment due to left slat</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Drag_left_slat</property>
+			 	<property>metrics/left-slat-arm-y-ft</property>
+			 </product>
+		</function>
+		
+		<function name="aero/moment/Yaw_right_slat">
+			 <description>Yaw moment due to right slat</description>
+			 <product>
+				<property>metrics/bw-ft</property>
+			 	<property>aero/force/Drag_right_slat</property>
+			 	<property>metrics/right-slat-arm-y-ft</property>
 			 </product>
 		</function>
 		

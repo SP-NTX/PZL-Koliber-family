@@ -335,7 +335,7 @@
 	<type>translate</type>
 	<object-name>left-slat</object-name>
 	<object-name>right-slat</object-name>
-	<property>/surface-positions/slats-pos-norm</property>
+	<property>/surface-positions/slat-pos-norm</property>
 	<factor>0.12</factor>
 	<axis>
 		<x>-1</x>

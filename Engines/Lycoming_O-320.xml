@@ -29,7 +29,7 @@ xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
   <cycles> 4 </cycles>
   <idlerpm> 600 </idlerpm>
   <maxrpm> 2700 </maxrpm>
-  <bsfc unit="LBS/HP*HR"> 0.51 </bsfc> <!-- (8.8 Gal/h * 6.02 lbs/Gal) / 120HP from engine manual-->
+  <bsfc unit="LBS/HP*HR">0.3311</bsfc> <!-- (8.8 Gal/h * 6.02 lbs/Gal) / 120HP from engine manual-->
   <volumetric-efficiency> 0.81 </volumetric-efficiency> <!--for checking-->
   <air-intake-impedance-factor> 0.18 </air-intake-impedance-factor> <!--for checking taken from C182-->
   <ram-air-factor> 0.1 </ram-air-factor> <!--for checking taken from C182-->
@@ -48,13 +48,10 @@ xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
   -->
   <starter-torque> 391.36 </starter-torque>
   <starter-rpm> 561.49 </starter-rpm>
-  <static-friction  unit="WATTS"> 1000 </static-friction><!--for checking-->
-  <man-press-lag> 0.1 </man-press-lag><!--for checking-->
+  <static-friction unit="HP">1.5</static-friction><!--for checking-->
+  <man-press-lag>0.1</man-press-lag><!--for checking-->
   <oil-pressure-relief-valve-psi> 75 </oil-pressure-relief-valve-psi>
   <design-oil-temp-degK> 355.15 </design-oil-temp-degK>
   <oil-pressure-rpm-max> 1215 </oil-pressure-rpm-max> <!--for checking taken from C172-->
   <oil-viscosity-index> 0.2403 </oil-viscosity-index>
-
-  <maxthrottle>1.0</maxthrottle>
-  <minthrottle>0.1</minthrottle>
 </piston_engine>

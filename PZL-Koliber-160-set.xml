@@ -172,13 +172,12 @@
 		</view>
 
 		<!--<help include="help.xml">-->
-
+		
 		<flaps>
-			<setting>0.50</setting>
-			<setting>1.00</setting>
+			<setting>0</setting>
+			<setting>0.5</setting>
+			<setting>1</setting>
 		</flaps>
-
-
 	</sim>
 
 	<instrumentation>
@@ -277,7 +276,6 @@
 	<nasal>
 		<pzl_koliber_160a>
 			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/auto-slats.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/fuel.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>

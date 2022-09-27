@@ -219,6 +219,8 @@
 						<time>10</time>
 				</setting>
 			</traverse>
+			<output>fcs/left-flap-pos-deg</output>
+			<output>fcs/right-flap-pos-deg</output>
 		</kinematic>
 
 		<aerosurface_scale name="fcs/flap-pos-norm">
@@ -232,6 +234,37 @@
 				<max>1</max>
 			</range>
 		</aerosurface_scale>
+	</channel>
+	
+	<channel name="Slats">
+		<fcs_function name="fcs/slat-cmd-norm">
+			<function>
+				<table>
+					<independentVar lookup="row">velocities/ve-kts</independentVar>
+					<tableData>
+						64	1
+						68	0
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
+		<kinematic name="fcs/slat-pos-norm">
+			<input>fcs/slat-cmd-norm</input>
+			<traverse>
+				<setting>
+					<position>0</position>
+					<time>0</time>
+				</setting>
+				<setting>
+					<position>1</position>
+					<time>3</time>
+				</setting>
+			</traverse>
+			<output>fcs/left-slat-pos-norm</output>
+			<output>fcs/right-slat-pos-norm</output>
+			<output>/surface-positions/slat-pos-norm</output>
+		</kinematic>
 	</channel>
 	
         <channel name="Mixture"> <!-- Inspired on Cessna172P -->
