@@ -336,17 +336,12 @@
 	<object-name>left-slat</object-name>
 	<object-name>right-slat</object-name>
 	<property>/surface-positions/slats-pos-norm</property>
-	<interpolation>
-		<entry><ind>  0</ind><dep>    0</dep></entry>
-		<entry><ind>  1</ind><dep>    -0.15</dep></entry>
-
-	</interpolation>
+	<factor>0.12</factor>
 	<axis>
-		<x>1</x>
+		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
 	</axis>
-
 </animation>
 
 <animation>
