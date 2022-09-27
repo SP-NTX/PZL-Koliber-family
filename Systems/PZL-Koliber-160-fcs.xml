@@ -199,32 +199,38 @@
 	</channel>
 
 	<channel name="Flaps">
-		<kinematic name="Flaps Control">
+		<switch>
+			<description>Set minimum flap extension = 6° for 950 kg MTOW version</description>
+			<default value="fcs/flap-cmd-norm"/>
+			<test value="0.2">
+				fcs/flap-cmd-norm LT 0.2
+			</test>
+		</switch>
+		
+		<kinematic name="fcs/flap-pos-deg">
 			<input>fcs/flap-cmd-norm</input>
 			<traverse>
 				<setting>
-						<position> 15 </position>		<!-- the 950kg MTOW version have always flaps -->
-						<time>			0 </time>
+						<position>0</position>
+						<time>0</time>
 				</setting>
 				<setting>
-						<position> 30 </position>
-						<time>			5 </time>
+						<position>30</position>
+						<time>10</time>
 				</setting>
 			</traverse>
-			<output>fcs/flap-pos-deg</output>
 		</kinematic>
 
-		<aerosurface_scale name="Flap Normalization">
+		<aerosurface_scale name="fcs/flap-pos-norm">
 			<input>fcs/flap-pos-deg</input>
 			<domain>
-				<min>	15 </min>
-				<max> 30 </max>
+				<min>0</min>
+				<max>30</max>
 			</domain>
 			<range>
-				<min> 0 </min>
-				<max> 1 </max>
+				<min>0</min>
+				<max>1</max>
 			</range>
-			<output>fcs/flap-pos-norm</output>
 		</aerosurface_scale>
 	</channel>
 	
