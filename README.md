@@ -2,7 +2,13 @@
 ![obraz](https://user-images.githubusercontent.com/72032903/190264836-66ec08f8-5351-4bb5-bd48-a179c9de8aa5.png)
 PZL Koliber family for FlightGear
 
-https://forum.flightgear.org/viewtopic.php?f=4&t=40849
+
+[Forum topic](https://forum.flightgear.org/viewtopic.php?f=4&t=40849)
+
+[Discord](https://discord.gg/beADn2sWM6)
+
+[FlightGear wiki](https://wiki.flightgear.org/PZL-Koliber-family)
+
 
 ### This model includes
 - PZL-110 Koliber 160A
