@@ -29,7 +29,7 @@ xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
   <cycles> 4 </cycles>
   <idlerpm> 600 </idlerpm>
   <maxrpm> 2700 </maxrpm>
-  <bsfc unit="LBS/HP*HR"> 0.51 </bsfc> <!-- (8.8 Gal/h * 6.02 lbs/Gal) / 120HP from engine manual-->
+  <bsfc unit="LBS/HP*HR">0.3311</bsfc> <!-- (8.8 Gal/h * 6.02 lbs/Gal) / 120HP from engine manual-->
   <volumetric-efficiency> 0.81 </volumetric-efficiency> <!--for checking-->
   <air-intake-impedance-factor> 0.18 </air-intake-impedance-factor> <!--for checking taken from C182-->
   <ram-air-factor> 0.1 </ram-air-factor> <!--for checking taken from C182-->
