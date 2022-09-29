@@ -58,8 +58,8 @@
 -->
 
  <metrics>
-   <wingarea  unit="M2">    12.68 </wingarea>
-   <wingspan  unit="M" >     9.47 </wingspan>
+   <wingarea unit="M2">12.68</wingarea>
+   <wingspan unit="M" >9.74</wingspan>
    <wing_incidence unit="DEG">4</wing_incidence>
    <chord unit="M">1.339</chord>
    <htailarea unit="M2">     3.48 </htailarea>
@@ -67,9 +67,9 @@
    <vtailarea  unit="M2">    1.80 </vtailarea>
    <vtailarm  unit="M" >     3.80 </vtailarm>
    <location name="AERORP" unit="M">
-     <x>    0.137371  </x>
-     <y>     0.00 </y>
-     <z>     0.1736 </z>
+     <x>-0.08</x>
+     <y>0</y>
+     <z>0.15</z>
    </location>
    <location name="EYEPOINT" unit="M">
      <x>     0.96 </x>
@@ -84,14 +84,14 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">   1468.61 </ixx>
-   <iyy unit="KG*M2">    837.93 </iyy>
-   <izz unit="KG*M2">   2218.54 </izz>
-   <emptywt unit="KG" >    567.00 </emptywt>
+   <ixx unit="KG*M2">1468.61</ixx>
+   <iyy unit="KG*M2">837.93</iyy>
+   <izz unit="KG*M2">2218.54</izz>
+   <emptywt unit="KG">605.5</emptywt>
    <location name="CG" unit="M">
-     <x>  -0.189152  </x>
-     <y>     0.00 </y>
-     <z>    0.1975 </z>
+     <x>-0.2145</x>
+     <y>0</y>
+     <z>0.2</z>
    </location>
  <pointmass name="Pilot">
     <weight unit="KG">0</weight>
