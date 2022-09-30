@@ -7111,7 +7111,7 @@
           <JointRotMaxFlag Value="1.000000000000000000e+00" ID="CRLVCGYYYGP"/>
           <JointRotMin Value="0.000000000000000000e+00" ID="LCWCXYHYNXG"/>
           <JointRotMinFlag Value="1.000000000000000000e+00" ID="KJLUBRBAPUW"/>
-          <JointRotate Value="0.000000000000000000e+00" ID="CIMVGYENKPW"/>
+          <JointRotate Value="8.570000000000000284e+00" ID="CIMVGYENKPW"/>
           <JointRotateFlag Value="1.000000000000000000e+00" ID="JSBYDVJAGJM"/>
           <JointTransMax Value="0.000000000000000000e+00" ID="IZGVCGNAHGV"/>
           <JointTransMaxFlag Value="0.000000000000000000e+00" ID="HSYBTGUIHCP"/>
@@ -7275,7 +7275,7 @@
           <JointTransMaxFlag Value="1.000000000000000000e+00" ID="AKXUDFQZVDY"/>
           <JointTransMin Value="0.000000000000000000e+00" ID="FFWOCVVKFQR"/>
           <JointTransMinFlag Value="1.000000000000000000e+00" ID="YTTNYTGKTSE"/>
-          <JointTranslate Value="0.000000000000000000e+00" ID="CEVCMALMUKH"/>
+          <JointTranslate Value="7.000000000000000666e-02" ID="CEVCMALMUKH"/>
           <JointTranslateFlag Value="1.000000000000000000e+00" ID="YBGGONBRLPY"/>
           <OrientRotFlag Value="0.000000000000000000e+00" ID="EFIKAKLEBBR"/>
           <PrimOffAbsRelFlag Value="1.000000000000000000e+00" ID="GPKBOBQTXMM"/>
@@ -7285,15 +7285,15 @@
           <PrimWLoc Value="0.000000000000000000e+00" ID="EJMATRHLFDL"/>
           <PrimXOff Value="0.000000000000000000e+00" ID="RFTAAEOMCXW"/>
           <PrimXOffRel Value="0.000000000000000000e+00" ID="GEQNQKLBGMA"/>
-          <PrimXVec Value="1.000000000000000000e+00" ID="HWEPOSCLYII"/>
+          <PrimXVec Value="9.888345420295792110e-01" ID="HWEPOSCLYII"/>
           <PrimXVecRel Value="6.123233995736766036e-17" ID="FUQFQDHJOVL"/>
           <PrimYOff Value="0.000000000000000000e+00" ID="QAEOAEDZYTE"/>
           <PrimYOffRel Value="0.000000000000000000e+00" ID="HDZLVMNGAVT"/>
-          <PrimYVec Value="0.000000000000000000e+00" ID="XHWMCMOMGOI"/>
+          <PrimYVec Value="-1.816067844967552553e-02" ID="XHWMCMOMGOI"/>
           <PrimYVecRel Value="-1.000000000000000000e+00" ID="EIAJEVRVOGX"/>
           <PrimZOff Value="0.000000000000000000e+00" ID="IUFILQNFVIP"/>
           <PrimZOffRel Value="0.000000000000000000e+00" ID="VBIPZAHMNSU"/>
-          <PrimZVec Value="0.000000000000000000e+00" ID="LUIHZTCKWLQ"/>
+          <PrimZVec Value="-1.479068566612100899e-01" ID="LUIHZTCKWLQ"/>
           <PrimZVecRel Value="0.000000000000000000e+00" ID="SXHPRRWLZKF"/>
           <PrimaryDir Value="0.000000000000000000e+00" ID="UJDSHNGATRS"/>
           <SecVecAbsRelFlag Value="1.000000000000000000e+00" ID="RAZKQYMKOFM"/>
@@ -7345,11 +7345,11 @@
           <X_Location Value="5.896000000000000130e-01" ID="AZQAQFNCEHE"/>
           <X_Rel_Location Value="0.000000000000000000e+00" ID="MTBEANHNNOU"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="FGTJWHXUIKS"/>
-          <X_Rotation Value="-7.000000000000000000e+00" ID="SCBVLYDKOAH"/>
+          <X_Rotation Value="-6.999999999999999112e+00" ID="SCBVLYDKOAH"/>
           <Y_Location Value="-1.830000000000000071e+00" ID="LJLMHJHGEOF"/>
           <Y_Rel_Location Value="0.000000000000000000e+00" ID="LUSFMSIQBGV"/>
           <Y_Rel_Rotation Value="0.000000000000000000e+00" ID="ORBSIWUFGZL"/>
-          <Y_Rotation Value="0.000000000000000000e+00" ID="HKXZZWPCTFY"/>
+          <Y_Rotation Value="8.570000000000002061e+00" ID="HKXZZWPCTFY"/>
           <Z_Location Value="-1.400000000000000133e-01" ID="RRTUARGOFQG"/>
           <Z_Rel_Location Value="0.000000000000000000e+00" ID="FFRDPCULLBQ"/>
           <Z_Rel_Rotation Value="-9.000000000000000000e+01" ID="ISTCBSJRCVB"/>
@@ -7402,12 +7402,12 @@
           <V_Attach_Location Value="9.999999999999999547e-07" ID="MVZHIIDWUTL"/>
         </Attach>
         <BBox>
-          <X_Len Value="4.297007319034551465e-01" ID="UMLRVWGBNBB"/>
-          <X_Min Value="3.945816120494899382e-01" ID="HUXPWBEJKGC"/>
-          <Y_Len Value="2.117806022523309739e+00" ID="NZQJNILNQNB"/>
-          <Y_Min Value="-3.034869993751163619e+00" ID="HSIZBOJNKCJ"/>
-          <Z_Len Value="3.681716585805175357e-01" ID="JLLLBAXAGHY"/>
-          <Z_Min Value="-3.627083118935081618e-02" ID="LLBJKONFRUU"/>
+          <X_Len Value="4.213539107384043358e-01" ID="UMLRVWGBNBB"/>
+          <X_Min Value="5.040824980988771742e-01" ID="HUXPWBEJKGC"/>
+          <Y_Len Value="2.121750328562951537e+00" ID="NZQJNILNQNB"/>
+          <Y_Min Value="-3.038309949733786652e+00" ID="HSIZBOJNKCJ"/>
+          <Z_Len Value="4.007268891106868236e-01" ID="JLLLBAXAGHY"/>
+          <Z_Min Value="-6.471052882728367539e-02" ID="LLBJKONFRUU"/>
         </BBox>
         <EndCap>
           <CapUMaxLength Value="1.000000000000000000e+00" ID="BCZBDIRYBKE"/>
@@ -7483,18 +7483,18 @@
           <Last_Scale Value="1.000000000000000000e+00" ID="GSEEJPXPWKR"/>
           <Origin Value="0.000000000000000000e+00" ID="BBHNOUPYEKH"/>
           <Scale Value="1.000000000000000000e+00" ID="AUVGLSFYDBT"/>
-          <X_Location Value="3.796000000000000485e-01" ID="FCABZMBQVBX"/>
+          <X_Location Value="4.887156021732623756e-01" ID="FCABZMBQVBX"/>
           <X_Rel_Location Value="-2.099999999999999922e-01" ID="FYJVYAKJEIE"/>
           <X_Rel_Rotation Value="-1.499999999999999944e-01" ID="NCQNMPNMFVJ"/>
-          <X_Rotation Value="-7.150000000000000355e+00" ID="ZVCEILPMQLE"/>
-          <Y_Location Value="-3.030046153497142125e+00" ID="NXQAVNSOKBC"/>
+          <X_Rotation Value="-7.151693722095659567e+00" ID="ZVCEILPMQLE"/>
+          <Y_Location Value="-3.027846561726168950e+00" ID="NXQAVNSOKBC"/>
           <Y_Rel_Location Value="-1.239999999999999991e+00" ID="IGLWUNKQXEN"/>
           <Y_Rel_Rotation Value="0.000000000000000000e+00" ID="LVOXJVAUHQC"/>
-          <Y_Rotation Value="0.000000000000000000e+00" ID="ZSHSFPIROVX"/>
-          <Z_Location Value="2.612396160359959918e-01" ID="SWDZKYNETCR"/>
+          <Y_Rotation Value="8.569970410093429081e+00" ID="ZSHSFPIROVX"/>
+          <Z_Location Value="2.791538534189221266e-01" ID="SWDZKYNETCR"/>
           <Z_Rel_Location Value="2.520000000000000018e-01" ID="FRGMVBGVXFH"/>
           <Z_Rel_Rotation Value="0.000000000000000000e+00" ID="HOJHXJVSOKQ"/>
-          <Z_Rotation Value="-0.000000000000000000e+00" ID="NALZYXZQMMK"/>
+          <Z_Rotation Value="2.260501029973318102e-02" ID="NALZYXZQMMK"/>
         </XForm>
       </ParmContainer>
       <GeomBase>
@@ -8258,7 +8258,7 @@
           <JointRotMaxFlag Value="1.000000000000000000e+00" ID="HAOXBOZVRZP"/>
           <JointRotMin Value="0.000000000000000000e+00" ID="YCTVPKIPWTA"/>
           <JointRotMinFlag Value="1.000000000000000000e+00" ID="CRFAZIASIUS"/>
-          <JointRotate Value="0.000000000000000000e+00" ID="IVHEEORRZRV"/>
+          <JointRotate Value="8.570000000000000284e+00" ID="IVHEEORRZRV"/>
           <JointRotateFlag Value="1.000000000000000000e+00" ID="TRZYWXIECIQ"/>
           <JointTransMax Value="0.000000000000000000e+00" ID="HCNEMTJVSFM"/>
           <JointTransMaxFlag Value="0.000000000000000000e+00" ID="SSHBOLJPXIA"/>
@@ -8422,7 +8422,7 @@
           <JointTransMaxFlag Value="1.000000000000000000e+00" ID="GWXLOETXHDW"/>
           <JointTransMin Value="0.000000000000000000e+00" ID="RNVFZCHETPD"/>
           <JointTransMinFlag Value="1.000000000000000000e+00" ID="OVCEOCQRSFO"/>
-          <JointTranslate Value="0.000000000000000000e+00" ID="CHYZQXPZLUI"/>
+          <JointTranslate Value="7.000000000000000666e-02" ID="CHYZQXPZLUI"/>
           <JointTranslateFlag Value="1.000000000000000000e+00" ID="PMVOJLMHTXZ"/>
           <OrientRotFlag Value="0.000000000000000000e+00" ID="WQUTZZHTTWU"/>
           <PrimOffAbsRelFlag Value="1.000000000000000000e+00" ID="XBCZBQQDAOY"/>
@@ -8432,15 +8432,15 @@
           <PrimWLoc Value="0.000000000000000000e+00" ID="GJXOULKRTIL"/>
           <PrimXOff Value="0.000000000000000000e+00" ID="QGTDUIVXVCE"/>
           <PrimXOffRel Value="0.000000000000000000e+00" ID="EJJAQVTARXK"/>
-          <PrimXVec Value="1.000000000000000000e+00" ID="CGCGRKBOMNE"/>
+          <PrimXVec Value="9.888345420295792110e-01" ID="CGCGRKBOMNE"/>
           <PrimXVecRel Value="6.123233995736766036e-17" ID="TPZQYZASTKM"/>
           <PrimYOff Value="0.000000000000000000e+00" ID="TSHASCSOFRN"/>
           <PrimYOffRel Value="0.000000000000000000e+00" ID="LPYQXIKQOXH"/>
-          <PrimYVec Value="0.000000000000000000e+00" ID="UBBTZTPJAGV"/>
+          <PrimYVec Value="1.816067844967553246e-02" ID="UBBTZTPJAGV"/>
           <PrimYVecRel Value="-1.000000000000000000e+00" ID="AVZXYTPAAOP"/>
           <PrimZOff Value="0.000000000000000000e+00" ID="BWGKOBCVJVW"/>
           <PrimZOffRel Value="0.000000000000000000e+00" ID="NYZGCXCMEYL"/>
-          <PrimZVec Value="0.000000000000000000e+00" ID="EZZDTTYUFSR"/>
+          <PrimZVec Value="-1.479068566612100899e-01" ID="EZZDTTYUFSR"/>
           <PrimZVecRel Value="0.000000000000000000e+00" ID="ZTGHECTBCTL"/>
           <PrimaryDir Value="0.000000000000000000e+00" ID="AZBMXBAKFGA"/>
           <SecVecAbsRelFlag Value="1.000000000000000000e+00" ID="MWMUADFOKUS"/>
@@ -8492,11 +8492,11 @@
           <X_Location Value="5.896000000000000130e-01" ID="MWVJZMRCPCE"/>
           <X_Rel_Location Value="0.000000000000000000e+00" ID="JNLFMWOVBWS"/>
           <X_Rel_Rotation Value="0.000000000000000000e+00" ID="SDWAQXPGNMX"/>
-          <X_Rotation Value="7.000000000000000000e+00" ID="ZIZYOZIEGNK"/>
+          <X_Rotation Value="7.000000000000000888e+00" ID="ZIZYOZIEGNK"/>
           <Y_Location Value="1.830000000000000071e+00" ID="JBQRJJQNLPR"/>
           <Y_Rel_Location Value="0.000000000000000000e+00" ID="FCGGGELNXHJ"/>
           <Y_Rel_Rotation Value="0.000000000000000000e+00" ID="KAEFAFKFNEC"/>
-          <Y_Rotation Value="0.000000000000000000e+00" ID="FWTFXBDAGFE"/>
+          <Y_Rotation Value="8.570000000000002061e+00" ID="FWTFXBDAGFE"/>
           <Z_Location Value="-1.400000000000000133e-01" ID="QJOOBRQBUJS"/>
           <Z_Rel_Location Value="0.000000000000000000e+00" ID="OVFSEOIVOPG"/>
           <Z_Rel_Rotation Value="-9.000000000000000000e+01" ID="RFSRDAQYVLZ"/>
@@ -8549,12 +8549,12 @@
           <V_Attach_Location Value="9.999999999999999547e-07" ID="ICRDKXCHBXN"/>
         </Attach>
         <BBox>
-          <X_Len Value="4.297007319034551465e-01" ID="HXSWZUQGMFG"/>
-          <X_Min Value="3.945816120494899382e-01" ID="LMRDFPMUGWW"/>
-          <Y_Len Value="2.117404516955423421e+00" ID="NYTDKHJXBUB"/>
-          <Y_Min Value="9.451457591495614485e-01" ID="SNKOJYFEWHU"/>
-          <Z_Len Value="3.668572287962999501e-01" ID="FIWJRZOBJTA"/>
-          <Z_Min Value="-3.219025564033310000e-02" ID="SYHDLZADVFN"/>
+          <X_Len Value="4.213539107384042803e-01" ID="HXSWZUQGMFG"/>
+          <X_Min Value="5.040824980988772852e-01" ID="LMRDFPMUGWW"/>
+          <Y_Len Value="2.121451306914044821e+00" ID="NYTDKHJXBUB"/>
+          <Y_Min Value="9.446404352505068935e-01" ID="SNKOJYFEWHU"/>
+          <Z_Len Value="3.993842524151902662e-01" ID="FIWJRZOBJTA"/>
+          <Z_Min Value="-6.060967767389757732e-02" ID="SYHDLZADVFN"/>
         </BBox>
         <EndCap>
           <CapUMaxLength Value="1.000000000000000000e+00" ID="XHFTJIFCULY"/>
@@ -8630,18 +8630,18 @@
           <Last_Scale Value="1.000000000000000000e+00" ID="UXVKYUVPERI"/>
           <Origin Value="0.000000000000000000e+00" ID="OPARNGMHVWB"/>
           <Scale Value="1.000000000000000000e+00" ID="HTGIWOKMCSY"/>
-          <X_Location Value="3.796000000000000485e-01" ID="PUKQOOWWWXJ"/>
+          <X_Location Value="4.887156021732623756e-01" ID="PUKQOOWWWXJ"/>
           <X_Rel_Location Value="-2.099999999999999922e-01" ID="RIHXLNNKAPH"/>
           <X_Rel_Rotation Value="-1.499999999999999944e-01" ID="ORMLKLIVVGN"/>
-          <X_Rotation Value="6.850000000000000533e+00" ID="VZRJBIZONBO"/>
-          <Y_Location Value="9.536396042634965875e-01" ID="NLOYTZYRAHB"/>
+          <X_Rotation Value="6.848306277904342210e+00" ID="VZRJBIZONBO"/>
+          <Y_Location Value="9.514400124925236346e-01" ID="NLOYTZYRAHB"/>
           <Y_Rel_Location Value="-8.519999999999999796e-01" ID="CYPCDZUKWTB"/>
           <Y_Rel_Rotation Value="0.000000000000000000e+00" ID="MNXDAZHYUTN"/>
-          <Y_Rotation Value="0.000000000000000000e+00" ID="IYLLBFQRBCV"/>
-          <Z_Location Value="6.288949632427487391e-03" ID="TSECAUVHIXD"/>
+          <Y_Rotation Value="8.569970410093429081e+00" ID="IYLLBFQRBCV"/>
+          <Z_Location Value="2.420318701535364991e-02" ID="TSECAUVHIXD"/>
           <Z_Rel_Location Value="2.520000000000000018e-01" ID="KWNDKFQBVRZ"/>
           <Z_Rel_Rotation Value="0.000000000000000000e+00" ID="KGUMLCHGZPB"/>
-          <Z_Rotation Value="-0.000000000000000000e+00" ID="QGEYSWRJAZM"/>
+          <Z_Rotation Value="2.260501029973318102e-02" ID="QGEYSWRJAZM"/>
         </XForm>
       </ParmContainer>
       <GeomBase>
@@ -9408,7 +9408,7 @@
         <BetaEnd Value="3.000000000000000000e+01" ID="CZKJXMWDTBX"/>
         <BetaNpts Value="5.000000000000000000e+00" ID="BOQBGJXICKY"/>
         <BetaStart Value="-3.000000000000000000e+01" ID="BSIONLJNZAY"/>
-        <Clmax Value="-9.990000000000000000e+02" ID="NAPPSDJWLGJ"/>
+        <Clmax Value="-1.000000000000000000e+00" ID="NAPPSDJWLGJ"/>
         <ClmaxToggle Value="2.000000000000000000e+00" ID="ZZOEZXYEHBU"/>
         <CpSliceFlag Value="1.000000000000000000e+00" ID="BDWQOQQHPTN"/>
         <CpSlicePlotLinesFlag Value="1.000000000000000000e+00" ID="KKBLFXSLQJW"/>
@@ -9783,6 +9783,52 @@
     </ParmContainer>
   </CFDGridDensity>
   <StructureMgr>
+    <FeaPropertyInfo>
+      <ParmContainer>
+        <ID>SSQURPRRDU</ID>
+        <Name>DefaultShell</Name>
+        <FeaProperty>
+          <CrossSecArea Value="1.000000000000000056e-01" ID="KHWGXZCLKJQ"/>
+          <CrossSectType Value="0.000000000000000000e+00" ID="AYCJULSBKJT"/>
+          <Dim1 Value="0.000000000000000000e+00" ID="MOZZGVIRECQ"/>
+          <Dim2 Value="0.000000000000000000e+00" ID="OBDVZRWRYWE"/>
+          <Dim3 Value="0.000000000000000000e+00" ID="OMGFWBPLOXO"/>
+          <Dim4 Value="0.000000000000000000e+00" ID="BTUKMQQSVMR"/>
+          <Dim5 Value="0.000000000000000000e+00" ID="SNSFNPJRXHI"/>
+          <Dim6 Value="0.000000000000000000e+00" ID="UPFRJVGBAVG"/>
+          <FeaMaterialIndex Value="0.000000000000000000e+00" ID="OGAMHYWZJJL"/>
+          <FeaPropertyType Value="0.000000000000000000e+00" ID="FFZOEIDJEUZ"/>
+          <Ixx Value="0.000000000000000000e+00" ID="VTVRMKGQKFB"/>
+          <Iyy Value="1.000000000000000056e-01" ID="ONKYNTKTKJJ"/>
+          <Izy Value="0.000000000000000000e+00" ID="XZOUFDNMKVX"/>
+          <Izz Value="1.000000000000000056e-01" ID="TZQRRYPLUUZ"/>
+          <Thickness Value="1.000000000000000056e-01" ID="MZCIYTLAMOR"/>
+        </FeaProperty>
+      </ParmContainer>
+    </FeaPropertyInfo>
+    <FeaPropertyInfo>
+      <ParmContainer>
+        <ID>AEQZPVYOAG</ID>
+        <Name>DefaultBeam</Name>
+        <FeaProperty>
+          <CrossSecArea Value="1.000000000000000056e-01" ID="WILNRINRECX"/>
+          <CrossSectType Value="0.000000000000000000e+00" ID="HTXLDQIKHZR"/>
+          <Dim1 Value="0.000000000000000000e+00" ID="HCYSOEFVMKE"/>
+          <Dim2 Value="0.000000000000000000e+00" ID="RGIABLLMYVH"/>
+          <Dim3 Value="0.000000000000000000e+00" ID="DOAILCKMVJD"/>
+          <Dim4 Value="0.000000000000000000e+00" ID="OOAGGNNDCNF"/>
+          <Dim5 Value="0.000000000000000000e+00" ID="IDTHQYUMYQY"/>
+          <Dim6 Value="0.000000000000000000e+00" ID="GHBIFSDZBPT"/>
+          <FeaMaterialIndex Value="0.000000000000000000e+00" ID="BLJYXFHISGZ"/>
+          <FeaPropertyType Value="1.000000000000000000e+00" ID="MUUSOTWRHGD"/>
+          <Ixx Value="0.000000000000000000e+00" ID="TERLGPMXZAE"/>
+          <Iyy Value="1.000000000000000056e-01" ID="FIJNAIYIWTJ"/>
+          <Izy Value="0.000000000000000000e+00" ID="LSSEFFPTNAW"/>
+          <Izz Value="1.000000000000000056e-01" ID="ARPUEBDFXTL"/>
+          <Thickness Value="1.000000000000000056e-01" ID="OGGYILPLKFG"/>
+        </FeaProperty>
+      </ParmContainer>
+    </FeaPropertyInfo>
     <FeaPropertyInfo>
       <ParmContainer>
         <ID>WMILNUYZTD</ID>
