@@ -627,18 +627,6 @@
 	</axis>
 	
 	<axis name="ROLL">
-		<function name="aero/moment/Roll_differential_propwash">
-			 <description>Roll moment due to differential propwash</description>
-			 <product>
-				 <property>propulsion/engine[0]/thrust-coefficient</property>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>aero/alpha-rad</property>
-				 <value> 0.2352 </value>
-			 </product>
-		</function>
-		
 		<function name="aero/moment/Roll_beta">
 			 <description>Roll moment due to beta</description>
 			 <product>
