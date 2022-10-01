@@ -6,7 +6,7 @@
 			<and>
 				<greater-than>
 					<property>/orientation/alpha-wing-deg</property>
-					<value>12</value> <!-- needs tuning -->
+					<value>16</value> <!-- needs tuning -->
 				</greater-than>
 				<not>
 					<property>gear/gear[1]/wow</property>
@@ -25,11 +25,11 @@
 				<table>
 					<property>/orientation/alpha-wing-deg</property>
 					<entry>
-						<ind>12</ind>
+						<ind>16</ind>
 						<dep>0</dep>
 					</entry>
 					<entry>
-						<ind>14</ind>
+						<ind>20</ind>
 						<dep>1</dep>
 					</entry>
 				</table>
