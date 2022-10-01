@@ -202,7 +202,7 @@
 		<switch>
 			<description>Set minimum flap extension = 6° for 950 kg MTOW version</description>
 			<default value="fcs/flap-cmd-norm"/>
-			<test value="0.2">
+			<test value="0.2" logic="AND">
 				fcs/flap-cmd-norm LT 0.2
 			</test>
 		</switch>
