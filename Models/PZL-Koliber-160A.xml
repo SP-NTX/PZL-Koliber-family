@@ -1867,25 +1867,6 @@
 		</offsets>
 	</model>
 
-#liveries
-  <animation>
-    <type>material</type>
-    <object-name>fuselage</object-name>
-    <object-name>hstab</object-name>
-    <object-name>vstab</object-name>
-    <object-name>RudderTrimTab</object-name>
-    <object-name>left-aileron</object-name>
-    <object-name>right-aileron</object-name>
-    <object-name>left-flap</object-name>
-    <object-name>right-flap</object-name>
-    <object-name>left-slat</object-name>
-    <object-name>right-slat</object-name>
-    <object-name>wing</object-name>
-    <property-base>sim/model/livery</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>Liveries/160A.red.png</texture>
-  </animation>
-
   <nasal>
     <load>
       <!--
