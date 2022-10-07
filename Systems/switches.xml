@@ -4,7 +4,7 @@
         <name>battery lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.25</filter-time>
+        <filter-time>0.15</filter-time>
 
         <input>
             <property>/controls/switches/battery</property>
@@ -16,7 +16,7 @@
         <name>alternator lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.25</filter-time>
+        <filter-time>0.15</filter-time>
 
         <input>
             <property>/controls/switches/alternator</property>
@@ -56,7 +56,7 @@
         <name>fuel pump lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
+        <filter-time>0.05</filter-time>
 
         <input>
             <property>/controls/switches/fuelpump</property>
@@ -69,8 +69,7 @@
         <name>turn coord lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
-
+        <filter-time>0.05</filter-time>
         <input>
             <property>/controls/switches/turn-coordinator</property>
         </input>
@@ -82,8 +81,7 @@
         <name>beacon lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
-
+        <filter-time>0.05</filter-time>
         <input>
             <property>/controls/switches/beacon</property>
         </input>
@@ -108,8 +106,7 @@
         <name>taxi lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
-
+        <filter-time>0.05</filter-time>
         <input>
             <property>controls/lighting/taxi-lights</property>
         </input>
@@ -120,7 +117,7 @@
         <name>landing lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
+        <filter-time>0.05</filter-time>
 
         <input>
             <property>controls/lighting/landing-lights</property>
@@ -132,7 +129,7 @@
         <name>pitot lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
+        <filter-time>0.05</filter-time>
 
         <input>
             <property>controls/anti-ice/pitot-heat</property>
@@ -145,8 +142,7 @@
         <name>fuel lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
-
+        <filter-time>0.05</filter-time>
         <input>
             <property>/controls/fuel/selector</property>
         </input>
@@ -158,7 +154,7 @@
         <name>magnetos lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
-        <filter-time>0.1</filter-time>
+        <filter-time>0.05</filter-time>
 
         <input>
             <property>/controls/engines/engine/magnetos</property>
