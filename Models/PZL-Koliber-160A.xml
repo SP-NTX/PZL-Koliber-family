@@ -9,7 +9,7 @@
  </model>
 
 <effect>
-    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/Koliber-eff</inherits-from>
+    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-opaque</inherits-from>
         <object-name>fuselage</object-name>
     <object-name>hstab</object-name>
     <object-name>vstab</object-name>
