@@ -21,8 +21,7 @@
     <object-name>left-slat</object-name>
     <object-name>right-slat</object-name>
     <object-name>wing</object-name>
-	<object-name>canopy-back</object-name>
-    <object-name>canopy-front</object-name>
+
 </effect>
 <effect>
     <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-glass</inherits-from>
