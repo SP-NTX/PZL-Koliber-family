@@ -9,6 +9,30 @@
  </model>
 
 <effect>
+    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/Koliber-eff</inherits-from>
+        <object-name>fuselage</object-name>
+    <object-name>hstab</object-name>
+    <object-name>vstab</object-name>
+    <object-name>RudderTrimTab</object-name>
+    <object-name>left-aileron</object-name>
+    <object-name>right-aileron</object-name>
+    <object-name>left-flap</object-name>
+    <object-name>right-flap</object-name>
+    <object-name>left-slat</object-name>
+    <object-name>right-slat</object-name>
+    <object-name>wing</object-name>
+	<object-name>canopy-back</object-name>
+    <object-name>canopy-front</object-name>
+</effect>
+<effect>
+    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-glass</inherits-from>
+        <object-name>fuselage</object-name>
+    <object-name>okno.lewe</object-name>
+    <object-name>okno.prawe</object-name>
+    <object-name>owiewka_przod</object-name>
+    <object-name>canopy-plexi</object-name>
+</effect>
+<effect>
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>PropDisc</object-name>
         <object-name>NavLightBack</object-name>
