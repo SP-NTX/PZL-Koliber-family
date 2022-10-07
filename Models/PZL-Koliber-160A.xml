@@ -35,7 +35,6 @@
 <effect>
         <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>PropDisc</object-name>
-        <object-name>NavLightBack</object-name>
 </effect>
 
  <animation>
