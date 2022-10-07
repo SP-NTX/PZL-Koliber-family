@@ -444,8 +444,8 @@
 <animation>
 	<type>rotate</type>
     <object-name>joystick1</object-name>
-    <property>/controls/flight/aileron</property>
-    <factor>20</factor>
+    <property>/fdm/jsbsim/fcs/aileron-lag-filter</property>
+    <factor>14</factor>
     <center>
       <x-m> -0.3784 </x-m>
       <y-m> -0.138 </y-m>
@@ -461,12 +461,46 @@
 <animation>
     <type>rotate</type>
     <object-name>joystick1</object-name>
-    <property>/controls/flight/elevator</property>
-    <factor>22</factor>
+    <property>/fdm/jsbsim/fcs/elevator-lag-filter</property>
+    <factor>15</factor>
     <offset-deg>-8</offset-deg>
     <center>
       <x-m> -0.3784 </x-m>
       <y-m> -0.138 </y-m>
+      <z-m> -0.1343 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  <animation>
+	<type>rotate</type>
+    <object-name>joystick2</object-name>
+    <property>/fdm/jsbsim/fcs/aileron-lag-filter</property>
+    <factor>14</factor>
+    <center>
+      <x-m> -0.3784 </x-m>
+      <y-m> 0.138 </y-m>
+      <z-m> -0.1343 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>joystick2</object-name>
+    <property>/fdm/jsbsim/fcs/elevator-lag-filter</property>
+    <factor>15</factor>
+    <offset-deg>-8</offset-deg>
+    <center>
+      <x-m> -0.3784 </x-m>
+      <y-m> 0.138 </y-m>
       <z-m> -0.1343 </z-m>
     </center>
     <axis>
@@ -481,7 +515,7 @@
 	<type>rotate</type>
 	<object-name>pilot-l-rudder</object-name>
 	<object-name>copilot-l-rudder</object-name>
-	<property>controls/flight/rudder</property>
+	<property>/fdm/jsbsim/fcs/rudder-lag-filter</property>
 	<interpolation>
 		<entry><ind>  -1</ind><dep>    15</dep></entry>
 		<entry><ind>  1</ind><dep>    -15</dep></entry>
@@ -502,7 +536,7 @@
 	<type>rotate</type>
 	<object-name>pilot-r-rudder</object-name>
 	<object-name>copilot-r-rudder</object-name>
-	<property>controls/flight/rudder</property>
+	<property>/fdm/jsbsim/fcs/rudder-lag-filter</property>
 	<interpolation>
 		<entry><ind>  -1</ind><dep>    -15</dep></entry>
 		<entry><ind>  1</ind><dep>    15</dep></entry>
