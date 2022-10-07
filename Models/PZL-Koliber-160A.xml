@@ -13,6 +13,10 @@
         <object-name>PropDisc</object-name>
         <object-name>NavLightBack</object-name>
 </effect>
+	<effect>
+		<inherits-from>Effects/model-combined</inherits-from>
+		<object-name>fuselage</object-name>
+	</effect>
 
  <animation>
 	 <object-name>hstab</object-name>
