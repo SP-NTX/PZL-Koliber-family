@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name>exterior-opaque</name>
-	<inherits-from>Effects/model-combined</inherits-from>
+	<name>exterior-glass</name>
+	<inherits-from>Effects/model-transparent</inherits-from>
 	<parameters>
 		<splash-x><use>/environment/aircraft-effects/splash-vector-x</use></splash-x>
 		<splash-y><use>/environment/aircraft-effects/splash-vector-y</use></splash-y>
@@ -16,7 +16,7 @@
 		<reflection-type type="int">2</reflection-type>
 		<reflection-dynamic type="int">1</reflection-dynamic>
 		<ambient-correction type="float">0.1</ambient-correction>
-		<reflection-correction type="float">-0.5</reflection-correction>
+		<reflection-correction type="float">1</reflection-correction>
 		<reflection-fresnel type="float">1.0</reflection-fresnel>
 		<reflection-fresnel-factor type="float">0.8</reflection-fresnel-factor>
 		<reflection-noise type="float">0.0</reflection-noise>
@@ -33,5 +33,11 @@
 			</images>
 		</texture>
 		<rain-enabled>2</rain-enabled>
+		<rendering-hint>transparent</rendering-hint>
+		<transparent>true</transparent>
+		<render-bin>
+			<bin-number>111</bin-number>
+			<bin-name>DepthSortedBin</bin-name>
+		</render-bin>
 	</parameters>
 </PropertyList>
