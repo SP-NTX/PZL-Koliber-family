@@ -1066,7 +1066,7 @@
 <!--WŁĄCZNIK POPMPY PALIWA-->
 <animation>
   <type>material</type>
-  <object-name>switch21</object-name>
+  <object-name>fpump.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1076,7 +1076,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch21</object-name>
+	<object-name>fpump.switch</object-name>
 	<action>
 	  <button>0</button>
 	  <repeatable>false</repeatable>
@@ -1097,13 +1097,13 @@
 </animation>
     <animation>
         <type>rotate</type>
-        <object-name>switch21</object-name>
+        <object-name>fpump.switch</object-name>
         <property>/switches/fuelpump</property>
  <factor>30</factor>
 		<center>
-	<x-m>-0.5862</x-m>
-   	<y-m>-0.3852</y-m>
-   	<z-m>0.2542</z-m>
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 	</center>
 <axis>
 	    <x1-m>0.0257256</x1-m>
@@ -1117,7 +1117,7 @@
  <!-- WŁĄCZNIK TURN COORD -->
 <animation>
   <type>material</type>
-  <object-name>switch22</object-name>
+  <object-name>tcoord.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1127,7 +1127,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch22</object-name>
+	<object-name>tcoord.switch</object-name>
 	<action>
 	  <button>0</button>
 	  <repeatable>false</repeatable>
@@ -1148,13 +1148,13 @@
 </animation>
 <animation>
 	<type>rotate</type>
-	<object-name>switch22</object-name>
+	<object-name>tcoord.switch</object-name>
 	<property>/switches/turn-coord</property>
 	<factor>30</factor>
 	<center>
-		<x-m>-0.5862</x-m>
-		<y-m>-0.3660</y-m>
-		<z-m>0.2542</z-m>
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 	</center>
 	<axis>
 		<x1-m>0.0257256</x1-m>
@@ -1169,7 +1169,7 @@
 
 <animation>
   <type>material</type>
-  <object-name>switch23</object-name>
+  <object-name>acoll.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1179,7 +1179,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch23</object-name>
+  <object-name>acoll.switch</object-name>
 	<visible>true</visible>
 	<action>
 		<button>0</button>
@@ -1202,13 +1202,13 @@
 </animation>
 <animation>
 	<type>rotate</type>
-	<object-name>switch23</object-name>
+  <object-name>acoll.switch</object-name>
 	<property>/switches/beacon</property>
 	<factor>30</factor>
 	<center>
-		<x-m>-0.5862</x-m>
-		<y-m>-0.3461</y-m>
-		<z-m>0.2542</z-m>
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 	</center>
 	<axis>
 		<x1-m>0.0257256</x1-m>
@@ -1222,7 +1222,7 @@
 <!-- ********************************Nav-Light *******************-->
 <animation>
   <type>material</type>
-  <object-name>switch24</object-name>
+  <object-name>navlt.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1232,7 +1232,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch24</object-name>
+  <object-name>navlt.switch</object-name>
 	<visible>true</visible>
 	<action>
 		<button>0</button>
@@ -1254,13 +1254,13 @@
 </animation>
 <animation>
 	<type>rotate</type>
-	<object-name>switch24</object-name>
+  <object-name>navlt.switch</object-name>
 	<property>switches/nav-lights</property>
 	<factor>30</factor>
 	<center>
-		<x-m>-0.5862</x-m>
-		<y-m>-0.3265</y-m>
-		<z-m>0.2542</z-m>
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 	</center>
 	<axis>
 		<x1-m>0.0257256</x1-m>
@@ -1276,7 +1276,7 @@
  <!-- TAXI LIGHT*****************************-->
 <animation>
   <type>material</type>
-  <object-name>switch25</object-name>
+  <object-name>tlt.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1286,7 +1286,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch25</object-name>
+  <object-name>tlt.switch</object-name>
 	<visible>true</visible>
 	<action>
 	  <button>0</button>
@@ -1308,13 +1308,13 @@
     </animation>
     <animation>
         <type>rotate</type>
-        <object-name>switch25</object-name>
+  <object-name>tlt.switch</object-name>
         <property>switches/taxi-lights</property>
  <factor>30</factor>
 		<center>
-	<x-m>-0.5862</x-m>
-	<y-m>-0.3064</y-m>
-	<z-m>0.2542</z-m>
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 
 </center>
 <axis>
@@ -1329,7 +1329,7 @@
 <!-- ******************** Landing light *********************-->
 <animation>
   <type>material</type>
-  <object-name>switch26</object-name>
+  <object-name>llt.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1339,7 +1339,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch26</object-name>
+  <object-name>llt.switch</object-name>
 	<visible>true</visible>
 	<action>
 	  <button>0</button>
@@ -1361,14 +1361,13 @@
 </animation>
     <animation>
         <type>rotate</type>
-        <object-name>switch26</object-name>
+  <object-name>llt.switch</object-name>
         <property>switches/landing-lights</property>
  <factor>30</factor>
 		<center>
-	<x-m>-0.5862</x-m>
-	<y-m>-0.2872</y-m>
-	<z-m>0.2542</z-m>
-
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 </center>
 <axis>
             <x1-m>0.0257256</x1-m>
@@ -1382,7 +1381,7 @@
 <!-- ******************** Pitot heat *************************-->
 <animation>
   <type>material</type>
-  <object-name>switch28</object-name>
+  <object-name>ptheat.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1392,7 +1391,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch28</object-name>
+  <object-name>ptheat.switch</object-name>
 	<visible>true</visible>
 	<action>
 	  <button>0</button>
@@ -1414,13 +1413,13 @@
 </animation>
     <animation>
         <type>rotate</type>
-        <object-name>switch28</object-name>
+  <object-name>ptheat.switch</object-name>
         <property>switches/pitot-switch</property>
 	<factor>25.0</factor>
 	<center>
-		<x-m>-0.5862</x-m>
-		<y-m>-0.2476</y-m>
-		<z-m>0.2542</z-m>
+	<x-m>-0.585775</x-m>
+   	<y-m>-0.385237</y-m>
+   	<z-m>0.254316</z-m>
 	</center>
 <axis>
 			<x1-m>0.0257256</x1-m>
@@ -1434,7 +1433,7 @@
 <!-- ************ INNE *************** -->
 <animation>
   <type>material</type>
-  <object-name>switch20</object-name>
+  <object-name>emgtrim.switch</object-name>
   <emission>
     <red>0.2</red>
     <green>0.1</green>
@@ -1444,7 +1443,7 @@
 </animation>
 <animation>
 	<type>pick</type>
-	<object-name>switch20</object-name>
+  <object-name>emgtrim.switch</object-name>
 	<visible>true</visible>
 	<action>
 	  <button>0</button>
@@ -1459,14 +1458,14 @@
 			<command>set-tooltip</command>
 			<tooltip-id></tooltip-id>
 			<label></label>
-			<mapping>on-off</mapping>
+			<mapping>INOP.</mapping>
 			<property></property>
 		</binding>
 	</hovered>
 </animation>
     <animation>
         <type>rotate</type>
-        <object-name>switch20</object-name>
+  <object-name>emgtrim.switch</object-name>
         <property></property>
 	<factor>25.0</factor>
 	<center>
@@ -1656,7 +1655,7 @@
 <!-- ********************* TRYMER ************************-->
     <animation>
         <type>material</type>
-        <object-name>switch30</object-name>
+        <object-name>trim.switch</object-name>
         <emission>
             <red>0.2</red>
             <green>0.1</green>
@@ -1666,7 +1665,7 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>switch30</object-name>
+        <object-name>trim.switch</object-name>
         <visible>true</visible>
         <action>
             <button>0</button>
@@ -1681,7 +1680,7 @@
     </animation>
     <animation>
     <type>pick</type>
-    <object-name>switch30</object-name>
+        <object-name>trim.switch</object-name>
     <visible>true</visible>
     <action>
         <button>1</button>
@@ -1696,13 +1695,13 @@
     </animation>
     <animation>
         <type>rotate</type>
-        <object-name>switch30</object-name>
+        <object-name>trim.switch</object-name>
         <property>controls/flight/elevator-trim</property>
         <factor>30</factor>
         <center>
-            <x-m>-0.5745</x-m>
-            <y-m>0.0233</y-m>
-            <z-m>0.1612</z-m>
+            <x-m>-0.574845 </x-m>
+            <y-m>0.02343</y-m>
+            <z-m>0.16177</z-m>
         </center>
         <axis>
             <x1-m>0.0257256</x1-m>

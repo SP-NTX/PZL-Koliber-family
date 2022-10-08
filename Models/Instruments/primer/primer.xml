@@ -17,7 +17,7 @@
 	<animation>
 		<type>slider</type>
 		<object-name>PrimerKnob</object-name>
-		<property>controls/engines/engine/primer-pump-pos</property>
+		<property>switches/primer-pump</property>
 		<factor>0.02</factor>
 		<axis>
 			<x>1.0</x>
