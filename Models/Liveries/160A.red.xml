@@ -2,13 +2,13 @@
 
 <PropertyList>
 
-<sim>
-  <model>
-    <livery>
-      <name type="string">160A Red</name>
-      <texture>Liveries/160A.red.png</texture>
-    </livery>
-  </model>
-</sim>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">160A Red</name>
+        <texture>Liveries/160A.red.png</texture>
+      </livery>
+    </model>
+  </sim>
 
 </PropertyList>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
-	<property value="-5.58">metrics/left-flap-arm-y-ft</property>	
+	<property value="-5.58">metrics/left-flap-arm-y-ft</property>
 	<property value="5.58">metrics/right-flap-arm-y-ft</property>
 	<property value="-8.12">metrics/left-slat-arm-y-ft</property>
 	<property value="8.12">metrics/right-slat-arm-y-ft</property>
-	
+
 	<function name="aero/alpha-wing-deg">
 		<todegrees>
 			<property>aero/alpha-wing-rad</property>
@@ -15,7 +15,7 @@
 			<property>aero/alpha-wing-rad</property>
 		</todegrees>
 	</function>
-	
+
 	<axis name="LIFT">
 		<function name="aero/force/Lift_alpha">
 			<description>Lift due to alpha</description>
@@ -39,7 +39,7 @@
 				</table>
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Lift_pitch_rate">
 			<description>Lift due to pitch rate</description>
 			<product>
@@ -50,31 +50,31 @@
 				<value>11.0067269</value>
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Lift_alpha_rate">
 			<description>Lift due to alpha rate</description>
 			<product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>aero/alphadot-rad_sec</property>
-				 <property>aero/ci2vel</property>
-				 <value> 2.9180 </value>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>aero/alphadot-rad_sec</property>
+				<property>aero/ci2vel</property>
+				<value> 2.9180 </value>
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Lift_elevator">
-			 <description>Lift due to Elevator Deflection</description>
-			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>fcs/elevator-pos-rad</property>
-					 <value>0.3640748</value>
-			 </product>
+			<description>Lift due to Elevator Deflection</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>fcs/elevator-pos-rad</property>
+				<value>0.3640748</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/force/Lift_flaps">
-			 <description>Delta lift due to flaps</description>
-			 <product>
+			<description>Delta lift due to flaps</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<sum>
@@ -133,9 +133,9 @@
 						</tableData>
 					</table>
 				</sum>
-			 </product>
+			</product>
 		</function>
-		
+
 		<!--<function name="aero/force/Lift_left_slat">
 			 <description>Delta lift due to left slat</description>
 			 <product>
@@ -191,11 +191,11 @@
 			</product>
 		</function>-->
 	</axis>
-	
+
 	<axis name="DRAG">
 		<function name="aero/force/Drag_base">
-			 <description>Base drag</description>
-			 <product>
+			<description>Base drag</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
@@ -216,10 +216,10 @@
 				<value>1.94</value> <!-- correction value -->
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Drag_induced">
-			 <description>Induced drag and drag due to sideslip</description>
-			 <product>
+			<description>Induced drag and drag due to sideslip</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
@@ -239,7 +239,7 @@
 				</table>
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Drag_pitch_rate">
 			<description>Drag due to pitch rate</description>
 			<product>
@@ -250,29 +250,29 @@
 				<value>0.0200187</value>
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Drag_elevator">
-			 <description>Drag due to Elevator Deflection</description>
-			 <product>
-					<property>aero/qbar-psf</property>
-					<property>metrics/Sw-sqft</property>
-					<property>fcs/mag-elevator-pos-rad</property>
-					<value>0.1032179</value>
-			 </product>
+			<description>Drag due to Elevator Deflection</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>fcs/mag-elevator-pos-rad</property>
+				<value>0.1032179</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/force/Drag_gear">
-			 <description>Drag due to gear</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <value> 0.0020 </value>
-			 </product>
+			<description>Drag due to gear</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<value> 0.0020 </value>
+			</product>
 		</function>
-		
+
 		<function name="aero/force/Drag_flaps">
-			 <description>Drag due to flaps</description>
-			 <product>
+			<description>Drag due to flaps</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<sum>
@@ -331,9 +331,9 @@
 						</tableData>
 					</table>
 				</sum>
-			 </product>
+			</product>
 		</function>
-		
+
 		<!--<function name="aero/force/Drag_left_slat">
 			 <description>Drag due to left slat</description>
 			 <product>
@@ -384,7 +384,7 @@
 				</table>
 			 </product>
 		</function>-->
-		
+
 		<function name="aero/force/Drag_rudder">
 			<description>Drag due to rudder</description>
 			<product>
@@ -394,7 +394,7 @@
 				<value>0.2678540</value>
 			</product>
 		</function>
-		
+
 		<function name="aero/force/Drag_ailerons">
 			<description>Drag due to aileron deflection</description>
 			<product>
@@ -405,11 +405,11 @@
 			</product>
 		</function>
 	</axis>
-	
+
 	<axis name="SIDE">
 		<function name="aero/force/Side_beta">
-			 <description>Side force due to beta</description>
-			 <product>
+			<description>Side force due to beta</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
@@ -427,45 +427,45 @@
 						20.0	0.048991	0.037595	0	-0.037595	-0.048991
 					</tableData>
 				</table>
-			 </product>
+			</product>
 		</function>
-		
+
 		<function name="aero/force/Side_roll_rate">
-			 <description>Side force due to roll rate</description>
-			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>aero/bi2vel</property>
-					 <property>velocities/p-aero-rad_sec</property>
-					 <value>-0.2076146</value>
-					 <value>-1</value>
-			 </product>
+			<description>Side force due to roll rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>aero/bi2vel</property>
+				<property>velocities/p-aero-rad_sec</property>
+				<value>-0.2076146</value>
+				<value>-1</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/force/Side_yaw_rate">
-			 <description>Side force due to yaw rate</description>
-			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>aero/bi2vel</property>
-					 <property>velocities/r-aero-rad_sec</property>
-					 <value>0.3062364</value>
-			 </product>
+			<description>Side force due to yaw rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>aero/bi2vel</property>
+				<property>velocities/r-aero-rad_sec</property>
+				<value>0.3062364</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/force/Side_rudder">
-			 <description>Side force due to rudder</description>
-			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>fcs/rudder-pos-rad</property>
-					 <value>0.1924163</value>
-			 </product>
+			<description>Side force due to rudder</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>fcs/rudder-pos-rad</property>
+				<value>0.1924163</value>
+			</product>
 		</function>
 	</axis>
-	
+
 	<axis name="PITCH">
-		 <!--<function name="aero/moment/Pitch_propwash">
+		<!--<function name="aero/moment/Pitch_propwash">
 			<description>Pitch moment due to propeller induced velocity</description>
 			<product>
 					<property>propulsion/engine[0]/thrust-coefficient</property>
@@ -485,10 +485,10 @@
 					</table>
 			</product>
 		</function>-->
-		
+
 		<function name="aero/moment/Pitch_alpha">
-			 <description>Pitch moment due to alpha</description>
-			 <product>
+			<description>Pitch moment due to alpha</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
@@ -518,23 +518,23 @@
 						<value>0.05</value>
 					</product>
 				</sum>-->
-			 </product>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Pitch_elevator">
-			 <description>Pitch moment due to elevator</description>
-			 <product>
-					<property>aero/qbar-psf</property>
-					<property>metrics/Sw-sqft</property>
-					<property>metrics/cbarw-ft</property>
-					<property>fcs/elevator-pos-rad</property>
-					<value>-1.0137362</value>
-			 </product>
+			<description>Pitch moment due to elevator</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/cbarw-ft</property>
+				<property>fcs/elevator-pos-rad</property>
+				<value>-1.0137362</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Pitch_flaps">
-			 <description>Pitch moment due to flaps</description>
-			 <product>
+			<description>Pitch moment due to flaps</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
@@ -596,36 +596,36 @@
 				</sum>
 			</product>
 		</function>
-		
+
 		<function name="aero/moment/Pitch_damp">
-			 <description>Pitch moment due to pitch rate</description>
-			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>metrics/cbarw-ft</property>
-					 <property>aero/ci2vel</property>
-					 <property>velocities/q-aero-rad_sec</property>
-					 <value>-20.3093991</value>
-			 </product>
+			<description>Pitch moment due to pitch rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/cbarw-ft</property>
+				<property>aero/ci2vel</property>
+				<property>velocities/q-aero-rad_sec</property>
+				<value>-20.3093991</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Pitch_alphadot">
-			 <description>Pitch moment due to alpha rate</description>
-			 <product>
-					 <property>aero/qbar-psf</property>
-					 <property>metrics/Sw-sqft</property>
-					 <property>metrics/cbarw-ft</property>
-					 <property>aero/ci2vel</property>
-					 <property>aero/alphadot-rad_sec</property>
-					 <value> -8.4644 </value>
-			 </product>
+			<description>Pitch moment due to alpha rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/cbarw-ft</property>
+				<property>aero/ci2vel</property>
+				<property>aero/alphadot-rad_sec</property>
+				<value> -8.4644 </value>
+			</product>
 		</function>
 	</axis>
-	
+
 	<axis name="ROLL">
 		<function name="aero/moment/Roll_beta">
-			 <description>Roll moment due to beta</description>
-			 <product>
+			<description>Roll moment due to beta</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
@@ -645,44 +645,44 @@
 					</tableData>
 				</table>
 				<value>-1</value>
-			 </product>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Roll_damp">
-			 <description>Roll moment due to roll rate</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>aero/bi2vel</property>
-				 <property>velocities/p-aero-rad_sec</property>
-				 <value>-0.5134129</value>
-			 </product>
+			<description>Roll moment due to roll rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>aero/bi2vel</property>
+				<property>velocities/p-aero-rad_sec</property>
+				<value>-0.5134129</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Roll_yaw">
-			 <description>Roll moment due to yaw rate</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>aero/bi2vel</property>
-				 <property>velocities/r-aero-rad_sec</property>
-				 <value>0.1496102</value>
-			 </product>
+			<description>Roll moment due to yaw rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>aero/bi2vel</property>
+				<property>velocities/r-aero-rad_sec</property>
+				<value>0.1496102</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Roll_aileron">
-			 <description>Roll moment due to aileron</description>
-			 <product>
+			<description>Roll moment due to aileron</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/aileron-pos-rad</property>
 				<value>0.1496594</value>
-			 </product>
+			</product>
 		</function>
-		
+
 		<!--<function name="aero/moment/Roll_left_flap">
 			 <description>Roll moment due to left flap</description>
 			 <product>
@@ -718,23 +718,23 @@
 			 	<property>metrics/right-slat-arm-y-ft</property>
 			 </product>
 		</function>-->
-		
+
 		<function name="aero/moment/Roll_rudder">
-			 <description>Roll moment due to rudder</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>fcs/rudder-pos-rad</property>
-				 <value>0.0214626</value>
-			 </product>
+			<description>Roll moment due to rudder</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>fcs/rudder-pos-rad</property>
+				<value>0.0214626</value>
+			</product>
 		</function>
 	</axis>
-	
+
 	<axis name="YAW">
 		<function name="aero/moment/Yaw_beta">
-			 <description>Yaw moment due to beta</description>
-			 <product>
+			<description>Yaw moment due to beta</description>
+			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
@@ -754,45 +754,45 @@
 					</tableData>
 				</table>
 				<value>-1</value>
-			 </product>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Yaw_roll_rate">
-			 <description>Yaw moment due to roll rate</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>aero/bi2vel</property>
-				 <property>velocities/p-rad_sec</property>
-				 <value>-0.0240228</value>
-			 </product>
+			<description>Yaw moment due to roll rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>aero/bi2vel</property>
+				<property>velocities/p-rad_sec</property>
+				<value>-0.0240228</value>
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Yaw_damp">
-			 <description>Yaw moment due to yaw rate</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>aero/bi2vel</property>
-				 <property>velocities/r-aero-rad_sec</property>
-				 <value>-0.0963779</value>
-				 <value>2.5</value> <!-- tuning factor -->
-			 </product>
+			<description>Yaw moment due to yaw rate</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>aero/bi2vel</property>
+				<property>velocities/r-aero-rad_sec</property>
+				<value>-0.0963779</value>
+				<value>2.5</value> <!-- tuning factor -->
+			</product>
 		</function>
-		
+
 		<function name="aero/moment/Yaw_rudder">
-			 <description>Yaw moment due to rudder</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>fcs/rudder-pos-rad</property>
-				 <value>-0.0813419 </value>
-			 </product>
+			<description>Yaw moment due to rudder</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>fcs/rudder-pos-rad</property>
+				<value>-0.0813419 </value>
+			</product>
 		</function>
-		
+
 		<!--<function name="aero/moment/Yaw_left_flap">
 			 <description>Yaw moment due to left flap</description>
 			 <product>
@@ -828,17 +828,16 @@
 			 	<property>metrics/right-slat-arm-y-ft</property>
 			 </product>
 		</function>-->
-		
+
 		<function name="aero/moment/Yaw_aileron">
-			 <description>Adverse yaw</description>
-			 <product>
-				 <property>aero/qbar-psf</property>
-				 <property>metrics/Sw-sqft</property>
-				 <property>metrics/bw-ft</property>
-				 <property>fcs/aileron-pos-rad</property>
-				 <value>-0.0052027</value>
-			 </product>
+			<description>Adverse yaw</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>fcs/aileron-pos-rad</property>
+				<value>-0.0052027</value>
+			</product>
 		</function>
 	</axis>
- </aerodynamics>
-
+</aerodynamics>

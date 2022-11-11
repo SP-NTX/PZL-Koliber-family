@@ -16,35 +16,35 @@
 	</channel>
 
 	<channel name="Pitch">
-			<summer name="Pitch Trim Sum">
-				<input>fcs/elevator-lag-filter</input>
-				<input>fcs/pitch-trim-cmd-norm</input>
-				<clipto>
-					<min> -1 </min>
-					<max>	1 </max>
-				</clipto>
-			</summer>
+		<summer name="Pitch Trim Sum">
+			<input>fcs/elevator-lag-filter</input>
+			<input>fcs/pitch-trim-cmd-norm</input>
+			<clipto>
+				<min> -1 </min>
+				<max>	1 </max>
+			</clipto>
+		</summer>
 
-			<aerosurface_scale name="Elevator Control">
-				<input>fcs/pitch-trim-sum</input>
-				<range>
-					<min> -0.436332313 </min>
-					<max>	0.523598776 </max>
-				</range>
-				<output>fcs/elevator-pos-rad</output>
-			</aerosurface_scale>
+		<aerosurface_scale name="Elevator Control">
+			<input>fcs/pitch-trim-sum</input>
+			<range>
+				<min> -0.436332313 </min>
+				<max>	0.523598776 </max>
+			</range>
+			<output>fcs/elevator-pos-rad</output>
+		</aerosurface_scale>
 
-			<aerosurface_scale name="Elevator Normalization">
-				<input>fcs/elevator-pos-rad</input>
-				<domain>
-					<min> -0.436332313</min>
-					<max> 0.523598776 </max>
-				</domain>
-				<range>
-					<min> -1 </min>
-					<max>	1 </max>
-				</range>
-				<output>fcs/elevator-pos-norm</output>
+		<aerosurface_scale name="Elevator Normalization">
+			<input>fcs/elevator-pos-rad</input>
+			<domain>
+				<min> -0.436332313</min>
+				<max> 0.523598776 </max>
+			</domain>
+			<range>
+				<min> -1 </min>
+				<max>	1 </max>
+			</range>
+			<output>fcs/elevator-pos-norm</output>
 		</aerosurface_scale>
 	</channel>
 
@@ -101,7 +101,7 @@
 			</range>
 			<output>fcs/right-aileron-pos-norm</output>
 		</aerosurface_scale>
-		
+
 		<fcs_function>
 			<function>
 				<quotient>
@@ -114,7 +114,7 @@
 			</function>
 			<output>fcs/aileron-pos-deg</output>
 		</fcs_function>
-		
+
 		<fcs_function>
 			<function>
 				<toradians>
@@ -123,7 +123,7 @@
 			</function>
 			<output>fcs/aileron-pos-rad</output>
 		</fcs_function>
-		
+
 		<aerosurface_scale>
 			<input>fcs/aileron-pos-deg</input>
 			<domain>
@@ -136,7 +136,7 @@
 			</range>
 			<output>fcs/aileron-pos-norm</output>
 		</aerosurface_scale>
-		
+
 		<fcs_function>
 			<function>
 				<abs>
@@ -145,7 +145,7 @@
 			</function>
 			<output>fcs/mag-aileron-pos-deg</output>
 		</fcs_function>
-		
+
 		<fcs_function>
 			<function>
 				<abs>
@@ -154,7 +154,7 @@
 			</function>
 			<output>fcs/mag-aileron-pos-rad</output>
 		</fcs_function>
-		
+
 		<fcs_function>
 			<function>
 				<abs>
@@ -201,22 +201,22 @@
 	<channel name="Flaps">
 		<switch>
 			<description>Set minimum flap extension = 6° for 950 kg MTOW version</description>
-			<default value="fcs/flap-cmd-norm"/>
+			<default value="fcs/flap-cmd-norm" />
 			<test value="0.2" logic="AND">
 				fcs/flap-cmd-norm LT 0.2
 			</test>
 		</switch>
-		
+
 		<kinematic name="fcs/flap-pos-deg">
 			<input>fcs/flap-cmd-norm</input>
 			<traverse>
 				<setting>
-						<position>0</position>
-						<time>0</time>
+					<position>0</position>
+					<time>0</time>
 				</setting>
 				<setting>
-						<position>30</position>
-						<time>10</time>
+					<position>30</position>
+					<time>10</time>
 				</setting>
 			</traverse>
 			<output>fcs/left-flap-pos-deg</output>
@@ -235,7 +235,7 @@
 			</range>
 		</aerosurface_scale>
 	</channel>
-	
+
 	<channel name="Slats">
 		<fcs_function name="fcs/slat-cmd-norm">
 			<function>
@@ -248,7 +248,7 @@
 				</table>
 			</function>
 		</fcs_function>
-		
+
 		<kinematic name="fcs/slat-pos-norm">
 			<input>fcs/slat-cmd-norm</input>
 			<traverse>
@@ -266,14 +266,15 @@
 			<output>/surface-positions/slat-pos-norm</output>
 		</kinematic>
 	</channel>
-	
-        <channel name="Mixture"> <!-- Inspired on Cessna172P -->
-            <fcs_function name="fcs/mixture-primer-cmd">
-                <function>
-                    <table>
-                        <independentVar lookup="row">/controls/engines/engine/primer</independentVar>
-                        <independentVar lookup="column">/controls/engines/engine/throttle</independentVar>
-                        <tableData>
+
+	<channel name="Mixture">
+		<!-- Inspired on Cessna172P -->
+		<fcs_function name="fcs/mixture-primer-cmd">
+			<function>
+				<table>
+					<independentVar lookup="row">/controls/engines/engine/primer</independentVar>
+					<independentVar lookup="column">/controls/engines/engine/throttle</independentVar>
+					<tableData>
                                  0.00    0.1    0.25    0.5
                             2    0       0      0      0
                             3    1       1      1      0
@@ -282,23 +283,23 @@
                             6    1       0      0      0
                             7    0       0      0      0
                         </tableData>
-                    </table>
-                </function>
-            </fcs_function>
+				</table>
+			</function>
+		</fcs_function>
 
-            <pure_gain name="fcs/mixture-primer">
-                <input>fcs/mixture-cmd-norm</input>
-                <gain>fcs/mixture-primer-cmd</gain>
-            </pure_gain>
+		<pure_gain name="fcs/mixture-primer">
+			<input>fcs/mixture-cmd-norm</input>
+			<gain>fcs/mixture-primer-cmd</gain>
+		</pure_gain>
 
-            <switch name="Mixture Position">
-                <default value="fcs/mixture-cmd-norm"/>
-                <output>fcs/mixture-pos-norm</output>
-                <test logic="AND" value="fcs/mixture-primer">
+		<switch name="Mixture Position">
+			<default value="fcs/mixture-cmd-norm" />
+			<output>fcs/mixture-pos-norm</output>
+			<test logic="AND" value="fcs/mixture-primer">
                     /controls/engines/engine/use-primer eq 1
                     /engines/engine[0]/oil-temperature-degf le 75
                 </test>
-            </switch>
+		</switch>
 
-        </channel>
+	</channel>
 </flight_control>

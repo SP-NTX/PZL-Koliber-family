@@ -4,7 +4,7 @@
 		<beacon-flash-interval-sec>2</beacon-flash-interval-sec>
 		<beacon-flash-duration-sec>0.2</beacon-flash-duration-sec>
 	</params>
-	
+
 	<logic>
 		<name>Nav lights brightness</name>
 		<input>
@@ -47,13 +47,13 @@
 					<expression>
 						<mod>
 							<property>/sim/time/elapsed-sec</property>
-							<value alias="../../../../../../../params/beacon-flash-interval-sec"/>
+							<value alias="../../../../../../../params/beacon-flash-interval-sec" />
 						</mod>
 					</expression>
 					<expression>
 						<difference>
-							<value alias="../../../../../../../params/beacon-flash-interval-sec"/>
-							<value alias="../../../../../../../params/beacon-flash-duration-sec"/>
+							<value alias="../../../../../../../params/beacon-flash-interval-sec" />
+							<value alias="../../../../../../../params/beacon-flash-duration-sec" />
 						</difference>
 					</expression>
 				</greater-than>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <PropertyList>
 
   <!--
@@ -54,9 +54,9 @@
     <object-name>NavUse</object-name>
     <object-name>NavStby</object-name>
     <condition>
-      <property alias="../../../params/comm-serviceable"/>
-      <property alias="../../../params/nav-serviceable"/>
-      <property alias="../../../params/power"/>
+      <property alias="../../../params/comm-serviceable" />
+      <property alias="../../../params/nav-serviceable" />
+      <property alias="../../../params/power" />
     </condition>
   </animation>
 
@@ -64,12 +64,12 @@
     <type>material</type>
     <object-name>CommToggle</object-name>
     <object-name>NavToggle</object-name>
-  <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>
+    <emission>
+      <red>0.8</red>
+      <green>0.4</green>
+      <blue>0.2</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
   </animation>
 
   <animation>
@@ -82,7 +82,7 @@
       <red>-1.0</red>
       <green>-1.0</green>
       <blue>-1.0</blue>
-      <factor-prop alias="../../../params/dimming"/>
+      <factor-prop alias="../../../params/dimming" />
       <offset>1</offset>
     </emission>
   </animation>
@@ -92,7 +92,7 @@
   <animation>
     <type>translate</type>
     <object-name>CommToggle</object-name>
-    <property alias="../../params/comm-frq-swp"/>
+    <property alias="../../params/comm-frq-swp" />
     <factor>-0.004</factor>
     <axis>
       <x>1</x>
@@ -104,7 +104,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommUse100M</object-name>
-    <property alias="../../params/comm-frq-selected"/>
+    <property alias="../../params/comm-frq-selected" />
     <step>100</step>
     <factor>0.001</factor>
     <bias>0.0001</bias>
@@ -118,7 +118,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommUse10M</object-name>
-    <property alias="../../params/comm-frq-selected"/>
+    <property alias="../../params/comm-frq-selected" />
     <step>10</step>
     <factor>0.01</factor>
     <bias>0.0001</bias>
@@ -132,7 +132,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommUse1M</object-name>
-    <property alias="../../params/comm-frq-selected"/>
+    <property alias="../../params/comm-frq-selected" />
     <step>1</step>
     <factor>0.1</factor>
     <bias>0.0001</bias>
@@ -146,7 +146,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommUse100K</object-name>
-    <property alias="../../params/comm-frq-selected"/>
+    <property alias="../../params/comm-frq-selected" />
     <step>0.1</step>
     <factor>1</factor>
     <bias>0.0001</bias>
@@ -160,7 +160,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommUse10K</object-name>
-    <property alias="../../params/comm-frq-selected"/>
+    <property alias="../../params/comm-frq-selected" />
     <step>0.01</step>
     <factor>10</factor>
     <bias>0.0001</bias>
@@ -174,7 +174,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommStby100M</object-name>
-    <property alias="../../params/comm-frq-standby"/>
+    <property alias="../../params/comm-frq-standby" />
     <step>100</step>
     <factor>0.001</factor>
     <bias>0.0001</bias>
@@ -188,7 +188,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommStby10M</object-name>
-    <property alias="../../params/comm-frq-standby"/>
+    <property alias="../../params/comm-frq-standby" />
     <step>10</step>
     <factor>0.01</factor>
     <bias>0.0001</bias>
@@ -202,7 +202,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommStby1M</object-name>
-    <property alias="../../params/comm-frq-standby"/>
+    <property alias="../../params/comm-frq-standby" />
     <step>1</step>
     <factor>0.1</factor>
     <bias>0.0001</bias>
@@ -216,7 +216,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommStby100K</object-name>
-    <property alias="../../params/comm-frq-standby"/>
+    <property alias="../../params/comm-frq-standby" />
     <step>0.1</step>
     <factor>1</factor>
     <bias>0.0001</bias>
@@ -230,7 +230,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>CommStby10K</object-name>
-    <property alias="../../params/comm-frq-standby"/>
+    <property alias="../../params/comm-frq-standby" />
     <step>0.01</step>
     <factor>10</factor>
     <bias>0.0001</bias>
@@ -246,7 +246,7 @@
   <animation>
     <type>translate</type>
     <object-name>NavToggle</object-name>
-    <property alias="../../params/nav-frq-swp"/>
+    <property alias="../../params/nav-frq-swp" />
     <factor>-0.004</factor>
     <axis>
       <x>1</x>
@@ -258,7 +258,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavUse100M</object-name>
-    <property alias="../../params/nav-frq-selected"/>
+    <property alias="../../params/nav-frq-selected" />
     <step>100</step>
     <factor>0.001</factor>
     <bias>0.0001</bias>
@@ -272,7 +272,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavUse10M</object-name>
-    <property alias="../../params/nav-frq-selected"/>
+    <property alias="../../params/nav-frq-selected" />
     <step>10</step>
     <factor>0.01</factor>
     <bias>0.0001</bias>
@@ -286,7 +286,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavUse1M</object-name>
-    <property alias="../../params/nav-frq-selected"/>
+    <property alias="../../params/nav-frq-selected" />
     <step>1</step>
     <factor>0.1</factor>
     <bias>0.0001</bias>
@@ -300,7 +300,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavUse100K</object-name>
-    <property alias="../../params/nav-frq-selected"/>
+    <property alias="../../params/nav-frq-selected" />
     <step>0.1</step>
     <factor>1</factor>
     <bias>0.0001</bias>
@@ -314,7 +314,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavUse10K</object-name>
-    <property alias="../../params/nav-frq-selected"/>
+    <property alias="../../params/nav-frq-selected" />
     <step>0.01</step>
     <factor>10</factor>
     <bias>0.0001</bias>
@@ -328,7 +328,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavStby100M</object-name>
-    <property alias="../../params/nav-frq-standby"/>
+    <property alias="../../params/nav-frq-standby" />
     <step>100</step>
     <factor>0.001</factor>
     <bias>0.0001</bias>
@@ -342,7 +342,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavStby10M</object-name>
-    <property alias="../../params/nav-frq-standby"/>
+    <property alias="../../params/nav-frq-standby" />
     <step>10</step>
     <factor>0.01</factor>
     <bias>0.0001</bias>
@@ -356,7 +356,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavStby1M</object-name>
-    <property alias="../../params/nav-frq-standby"/>
+    <property alias="../../params/nav-frq-standby" />
     <step>1</step>
     <factor>0.1</factor>
     <bias>0.0001</bias>
@@ -370,7 +370,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavStby100K</object-name>
-    <property alias="../../params/nav-frq-standby"/>
+    <property alias="../../params/nav-frq-standby" />
     <step>0.1</step>
     <factor>1</factor>
     <bias>0.0001</bias>
@@ -384,7 +384,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>NavStby10K</object-name>
-    <property alias="../../params/nav-frq-standby"/>
+    <property alias="../../params/nav-frq-standby" />
     <step>0.01</step>
     <factor>10</factor>
     <bias>0.0001</bias>
@@ -400,7 +400,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CommVolume</object-name>
-    <property alias="../../params/comm-volume"/>
+    <property alias="../../params/comm-volume" />
     <factor>-270</factor>
     <axis>
       <x>1</x>
@@ -417,7 +417,7 @@
   <animation>
     <type>translate</type>
     <object-name>CommVolume</object-name>
-    <property alias="../../params/comm-test"/>
+    <property alias="../../params/comm-test" />
     <factor>0.002</factor>
     <axis>
       <x>1</x>
@@ -429,7 +429,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CommKHz</object-name>
-    <property alias="../../params/comm-frq-standby"/>
+    <property alias="../../params/comm-frq-standby" />
     <factor>-360</factor>
     <axis>
       <x>1</x>
@@ -446,7 +446,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NavKHz</object-name>
-    <property alias="../../params/nav-frq-standby"/>
+    <property alias="../../params/nav-frq-standby" />
     <factor>-360</factor>
     <axis>
       <x>1</x>
@@ -459,45 +459,45 @@
       <z-m>-0.012</z-m>
     </center>
   </animation>
-  
+
   <animation>
-	  <type>rotate</type>
-	  <object-name>CommMHz</object-name>
-	  <property alias="../../params/comm-frq-standby"/>
-	  <factor>-3.60</factor>
-	  <axis>
-		  <x>1</x>
-		  <y>0</y>
-		  <z>0</z>
-	  </axis>
-	  <center>
-		  <x-m>0.0320882</x-m>
-		  <y-m>-0.022</y-m>
-		  <z-m>-0.012</z-m>
-	  </center>
+    <type>rotate</type>
+    <object-name>CommMHz</object-name>
+    <property alias="../../params/comm-frq-standby" />
+    <factor>-3.60</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.0320882</x-m>
+      <y-m>-0.022</y-m>
+      <z-m>-0.012</z-m>
+    </center>
   </animation>
-  
+
   <animation>
-	  <type>rotate</type>
-	  <object-name>NavMHz</object-name>
-	  <property alias="../../params/nav-frq-standby"/>
-	  <factor>-3.60</factor>
-	  <axis>
-		  <x>1</x>
-		  <y>0</y>
-		  <z>0</z>
-	  </axis>
-	  <center>
-		  <x-m>0.0320882</x-m>
-		  <y-m>0.058</y-m>
-		  <z-m>-0.012</z-m>
-	  </center>
+    <type>rotate</type>
+    <object-name>NavMHz</object-name>
+    <property alias="../../params/nav-frq-standby" />
+    <factor>-3.60</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.0320882</x-m>
+      <y-m>0.058</y-m>
+      <z-m>-0.012</z-m>
+    </center>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>NavVolume</object-name>
-    <property alias="../../params/nav-volume"/>
+    <property alias="../../params/nav-volume" />
     <factor>-270</factor>
     <axis>
       <x>1</x>
@@ -514,7 +514,7 @@
   <animation>
     <type>translate</type>
     <object-name>NavVolume</object-name>
-    <property alias="../../params/nav-audio"/>
+    <property alias="../../params/nav-audio" />
     <factor>0.002</factor>
     <axis>
       <x>1</x>
@@ -534,7 +534,7 @@
       <interval-sec>0.15</interval-sec>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/comm-volume"/>
+        <property alias="../../../../params/comm-volume" />
         <step>-0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -542,11 +542,11 @@
       </binding>
       <binding>
         <command>property-assign</command>
-        <property alias="../../../../params/power"/>
+        <property alias="../../../../params/power" />
         <value>0</value>
         <condition>
           <less-than>
-            <property alias="../../../../../../params/comm-volume"/>
+            <property alias="../../../../../../params/comm-volume" />
             <value>0.05</value>
           </less-than>
         </condition>
@@ -564,7 +564,7 @@
       <interval-sec>0.15</interval-sec>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/comm-volume"/>
+        <property alias="../../../../params/comm-volume" />
         <step>0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -572,11 +572,11 @@
       </binding>
       <binding>
         <command>property-assign</command>
-        <property alias="../../../../params/power"/>
+        <property alias="../../../../params/power" />
         <value>1</value>
         <condition>
           <greater-than>
-            <property alias="../../../../../../params/comm-volume"/>
+            <property alias="../../../../../../params/comm-volume" />
             <value>0.05</value>
           </greater-than>
         </condition>
@@ -593,7 +593,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property alias="../../../../params/comm-test"/>
+        <property alias="../../../../params/comm-test" />
       </binding>
     </action>
     <action>
@@ -601,7 +601,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/comm-volume"/>
+        <property alias="../../../../params/comm-volume" />
         <step>-0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -609,11 +609,11 @@
       </binding>
       <binding>
         <command>property-assign</command>
-        <property alias="../../../../params/power"/>
+        <property alias="../../../../params/power" />
         <value>0</value>
         <condition>
           <less-than>
-            <property alias="../../../../../../params/comm-volume"/>
+            <property alias="../../../../../../params/comm-volume" />
             <value>0.05</value>
           </less-than>
         </condition>
@@ -624,7 +624,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/comm-volume"/>
+        <property alias="../../../../params/comm-volume" />
         <step>0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -632,11 +632,11 @@
       </binding>
       <binding>
         <command>property-assign</command>
-        <property alias="../../../../params/power"/>
+        <property alias="../../../../params/power" />
         <value>1</value>
         <condition>
           <greater-than>
-            <property alias="../../../../../../params/comm-volume"/>
+            <property alias="../../../../../../params/comm-volume" />
             <value>0.05</value>
           </greater-than>
         </condition>
@@ -654,7 +654,7 @@
       <interval-sec>0.15</interval-sec>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/comm-frq-standby"/>
+        <property alias="../../../../params/comm-frq-standby" />
         <step>-0.025</step>
         <min>118.0</min>
         <max>140.0</max>
@@ -662,63 +662,63 @@
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>pick</type>
     <object-name>CommFreqPickLeftCRS</object-name>
     <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>true</repeatable>
-    <interval-sec>0.15</interval-sec>
-    <binding>
-	  <command>property-adjust</command>
-	  <property alias="../../../../params/comm-frq-standby"/>
-	  <step>-1</step>
-	  <min>118.0</min>
-	  <max>140.0</max>
-	  <wrap>true</wrap>
-    </binding>
-   </action>
-</animation>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/comm-frq-standby" />
+        <step>-1</step>
+        <min>118.0</min>
+        <max>140.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
 
-<animation>
-	<type>pick</type>
-	<object-name>CommFreqPickRightFI</object-name>
-	<visible>false</visible>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.15</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property alias="../../../../params/comm-frq-standby"/>
-			<step>0.025</step>
-			<min>118.0</min>
-			<max>140.0</max>
-			<wrap>true</wrap>
-		</binding>
-	</action>
-</animation>
+  <animation>
+    <type>pick</type>
+    <object-name>CommFreqPickRightFI</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/comm-frq-standby" />
+        <step>0.025</step>
+        <min>118.0</min>
+        <max>140.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
 
-<animation>
-	<type>pick</type>
-	<object-name>CommFreqPickRightCRS</object-name>
-	<visible>false</visible>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.15</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property alias="../../../../params/comm-frq-standby"/>
-			<step>1</step>
-			<min>118.0</min>
-			<max>140.0</max>
-			<wrap>true</wrap>
-		</binding>
-	</action>
-</animation>
+  <animation>
+    <type>pick</type>
+    <object-name>CommFreqPickRightCRS</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/comm-frq-standby" />
+        <step>1</step>
+        <min>118.0</min>
+        <max>140.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
 
   <animation>
     <type>pick</type>
@@ -730,7 +730,7 @@
       <interval-sec>0.15</interval-sec>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav-volume"/>
+        <property alias="../../../../params/nav-volume" />
         <step>-0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -749,7 +749,7 @@
       <interval-sec>0.15</interval-sec>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav-volume"/>
+        <property alias="../../../../params/nav-volume" />
         <step>0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -767,7 +767,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property alias="../../../../params/nav-audio"/>
+        <property alias="../../../../params/nav-audio" />
       </binding>
     </action>
     <action>
@@ -775,7 +775,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav-volume"/>
+        <property alias="../../../../params/nav-volume" />
         <step>-0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -787,7 +787,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav-volume"/>
+        <property alias="../../../../params/nav-volume" />
         <step>0.1</step>
         <min>0.0</min>
         <max>1.0</max>
@@ -797,79 +797,79 @@
   </animation>
 
   <animation>
-	  <type>pick</type>
-	  <object-name>NavFreqPickLeftFI</object-name>
-	  <visible>false</visible>
-	  <action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.15</interval-sec>
-		  <binding>
-			  <command>property-adjust</command>
-			  <property alias="../../../../params/nav-frq-standby"/>
-			  <step>-0.025</step>
-			  <min>108.0</min>
-			  <max>118.0</max>
-			  <wrap>true</wrap>
-		  </binding>
-	  </action>
+    <type>pick</type>
+    <object-name>NavFreqPickLeftFI</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/nav-frq-standby" />
+        <step>-0.025</step>
+        <min>108.0</min>
+        <max>118.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
   </animation>
-  
+
   <animation>
-	  <type>pick</type>
-	  <object-name>NavFreqPickLeftCRS</object-name>
-	  <visible>false</visible>
-	  <action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.15</interval-sec>
-		  <binding>
-			  <command>property-adjust</command>
-			  <property alias="../../../../params/nav-frq-standby"/>
-			  <step>-1</step>
-			  <min>108.0</min>
-			  <max>118.0</max>
-			  <wrap>true</wrap>
-		  </binding>
-	  </action>
+    <type>pick</type>
+    <object-name>NavFreqPickLeftCRS</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/nav-frq-standby" />
+        <step>-1</step>
+        <min>108.0</min>
+        <max>118.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
   </animation>
-  
+
   <animation>
-	  <type>pick</type>
-	  <object-name>NavFreqPickRightFI</object-name>
-	  <visible>false</visible>
-	  <action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.15</interval-sec>
-		  <binding>
-			  <command>property-adjust</command>
-			  <property alias="../../../../params/nav-frq-standby"/>
-			  <step>0.025</step>
-			  <min>108.0</min>
-			  <max>118.0</max>
-			  <wrap>true</wrap>
-		  </binding>
-	  </action>
+    <type>pick</type>
+    <object-name>NavFreqPickRightFI</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/nav-frq-standby" />
+        <step>0.025</step>
+        <min>108.0</min>
+        <max>118.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
   </animation>
-  
+
   <animation>
-	  <type>pick</type>
-	  <object-name>NavFreqPickRightCRS</object-name>
-	  <visible>false</visible>
-	  <action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.15</interval-sec>
-		  <binding>
-			  <command>property-adjust</command>
-			  <property alias="../../../../params/nav-frq-standby"/>
-			  <step>1</step>
-			  <min>108.0</min>
-			  <max>118.0</max>
-			  <wrap>true</wrap>
-		  </binding>
-	  </action>
+    <type>pick</type>
+    <object-name>NavFreqPickRightCRS</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.15</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/nav-frq-standby" />
+        <step>1</step>
+        <min>108.0</min>
+        <max>118.0</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
   </animation>
 
   <animation>
@@ -881,18 +881,18 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property alias="../../../../params/comm-frq-swp"/>
+        <property alias="../../../../params/comm-frq-swp" />
         <value type="int">1</value>
       </binding>
       <binding>
         <command>property-swap</command>
-        <property alias="../../../../params/comm-frq-selected"/>
-        <property alias="../../../../params/comm-frq-standby"/>
+        <property alias="../../../../params/comm-frq-selected" />
+        <property alias="../../../../params/comm-frq-standby" />
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property alias="../../../../../params/comm-frq-swp"/>
+          <property alias="../../../../../params/comm-frq-swp" />
           <value type="int">0</value>
         </binding>
       </mod-up>
@@ -908,18 +908,18 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property alias="../../../../params/nav-frq-swp"/>
+        <property alias="../../../../params/nav-frq-swp" />
         <value type="int">1</value>
       </binding>
       <binding>
         <command>property-swap</command>
-        <property alias="../../../../params/nav-frq-selected"/>
-        <property alias="../../../../params/nav-frq-standby"/>
+        <property alias="../../../../params/nav-frq-selected" />
+        <property alias="../../../../params/nav-frq-standby" />
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property alias="../../../../../params/nav-frq-swp"/>
+          <property alias="../../../../../params/nav-frq-swp" />
           <value type="int">0</value>
         </binding>
       </mod-up>

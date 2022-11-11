@@ -20,34 +20,34 @@ FlapsSwitch
     <path>fpi.ac</path>
 
     <animation>
-    <type>material</type>
-    <object-name>FlapsCockpitIndictor</object-name>
-    <object-name>FlapsCockpitShield</object-name>
-    <emission>
-        <red>0.8</red>
-        <green>0.4</green>
-        <blue>0.2</blue>
-        <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-    </emission>
+        <type>material</type>
+        <object-name>FlapsCockpitIndictor</object-name>
+        <object-name>FlapsCockpitShield</object-name>
+        <emission>
+            <red>0.8</red>
+            <green>0.4</green>
+            <blue>0.2</blue>
+            <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+        </emission>
     </animation>
 
     <animation>
-    <type>material</type>
-    <object-name>FlapsCockpitGauge</object-name>
-    <object-name>FlapsScrew1</object-name>
-    <object-name>FlapsScrew2</object-name>
-    <object-name>FlapsSwitch</object-name>
-    <object-name>FlapsPlate</object-name>
-    <object-name>FlapsScrew3</object-name>
-    <object-name>FlapsScrew4</object-name>
-    <emission>
-        <red>0.4</red>
-        <green>0.2</green>
-        <blue>0.1</blue>
-        <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-    </emission>
+        <type>material</type>
+        <object-name>FlapsCockpitGauge</object-name>
+        <object-name>FlapsScrew1</object-name>
+        <object-name>FlapsScrew2</object-name>
+        <object-name>FlapsSwitch</object-name>
+        <object-name>FlapsPlate</object-name>
+        <object-name>FlapsScrew3</object-name>
+        <object-name>FlapsScrew4</object-name>
+        <emission>
+            <red>0.4</red>
+            <green>0.2</green>
+            <blue>0.1</blue>
+            <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+        </emission>
     </animation>
-        <!--************************************** -->
+    <!--************************************** -->
     <animation>
         <type>rotate</type>
         <object-name>FlapsSwitch</object-name>
@@ -62,7 +62,7 @@ FlapsSwitch
             <x-m>-0.0</x-m>
             <y-m>0.01532</y-m>
             <z-m>0.0</z-m>
-            </center>
+        </center>
     </animation>
     <animation>
         <type>pick</type>
@@ -71,12 +71,12 @@ FlapsSwitch
             <button>0</button>
             <repeatable>true</repeatable>
             <binding>
-            <command>property-adjust</command>
-            <property>/controls/flight/flaps</property>
-            <step>0.5</step>
-            <min>0</min>
-            <max>1</max>
-            <wrap>false</wrap>
+                <command>property-adjust</command>
+                <property>/controls/flight/flaps</property>
+                <step>0.5</step>
+                <min>0</min>
+                <max>1</max>
+                <wrap>false</wrap>
             </binding>
         </action>
     </animation>
@@ -87,31 +87,37 @@ FlapsSwitch
             <button>1</button>
             <repeatable>true</repeatable>
             <binding>
-            <command>property-adjust</command>
-            <property>/controls/flight/flaps</property>
-            <step>-0.5</step>
-            <min>0</min>
-            <max>1</max>
-            <wrap>false</wrap>
+                <command>property-adjust</command>
+                <property>/controls/flight/flaps</property>
+                <step>-0.5</step>
+                <min>0</min>
+                <max>1</max>
+                <wrap>false</wrap>
             </binding>
         </action>
     </animation>
-        <!--***************************************-->
+    <!--***************************************-->
     <animation>
         <type>translate</type>
         <object-name>FlapsCockpitIndictor</object-name>
         <property>surface-positions/flap-pos-norm</property>
         <interpolation>
-            <entry><ind>0.0</ind><dep>0.004</dep></entry>
-            <entry><ind>0.8</ind><dep>0.08</dep></entry>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.004</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>0.08</dep>
+            </entry>
         </interpolation>
         <axis>
             <x1-m>-0.1</x1-m>
-        	  <y1-m>0.0</y1-m>
-        	  <z1-m>0.0</z1-m>
-        	  <x2-m>-0.1</x2-m>
-        	  <y2-m>0.0</y2-m>
-        	  <z2-m>-0.5</z2-m>
+            <y1-m>0.0</y1-m>
+            <z1-m>0.0</z1-m>
+            <x2-m>-0.1</x2-m>
+            <y2-m>0.0</y2-m>
+            <z2-m>-0.5</z2-m>
         </axis>
     </animation>
 </PropertyList>

@@ -29,11 +29,11 @@ file, these values will be used (they are hardcoded).
     <name>adf</name>
     <number>0</number>
   </adf>
-  
+
   <KR-87>
-	  <name>kr-87</name>
-	  <number>0</number>
-    </KR-87>
+    <name>kr-87</name>
+    <number>0</number>
+  </KR-87>
 
   <airspeed-indicator>
     <name>airspeed-indicator</name>
@@ -132,7 +132,7 @@ file, these values will be used (they are hardcoded).
     <number>0</number>
   </gps>
 
-<!--  <radar>
+  <!--  <radar>
     <name>wxradar</name>
     <number>0</number>
   </radar>
@@ -143,8 +143,8 @@ file, these values will be used (they are hardcoded).
   </tacan>
 -->
   <mk-viii>
-   <name>mk-viii</name>
-   <number>0</number>
+    <name>mk-viii</name>
+    <number>0</number>
   </mk-viii>
 
 </PropertyList>
