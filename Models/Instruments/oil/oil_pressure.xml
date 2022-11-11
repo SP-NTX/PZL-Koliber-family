@@ -2,40 +2,74 @@
 
 
 <PropertyList>
-	<path>oil_pressure.ac</path>
-	<animation>
-		<type>material</type>
-		<object-name>wskazowka</object-name>
-		<object-name>tarcza</object-name>
-  <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>
-	</animation>
+  <path>oil_pressure.ac</path>
+  <animation>
+    <type>material</type>
+    <object-name>wskazowka</object-name>
+    <object-name>tarcza</object-name>
+    <emission>
+      <red>0.8</red>
+      <green>0.4</green>
+      <blue>0.2</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
+  </animation>
 
 
-<animation>
+  <animation>
     <type>rotate</type>
     <object-name>wskazowka</object-name>
     <property>/engines/engine/oil-pressure-psi</property>
     <interpolation>
-		<entry><ind>0.00</ind><dep>0</dep></entry>
-    <entry><ind>10</ind><dep>11</dep></entry>
-		<entry><ind>20</ind><dep>21.50</dep></entry>
-    <entry><ind>30</ind><dep>32</dep></entry>
-		<entry><ind>40</ind><dep>42.25</dep></entry>
-		<entry><ind>50</ind><dep>53.25</dep></entry>
-		<entry><ind>60</ind><dep>64.50</dep></entry>
-		<entry><ind>70</ind><dep>75</dep></entry>
-		<entry><ind>80</ind><dep>86</dep></entry>
-		<entry><ind>85</ind><dep>90</dep></entry>
-		<entry><ind>1000</ind><dep>90</dep></entry>
+      <entry>
+        <ind>0.00</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>10</ind>
+        <dep>11</dep>
+      </entry>
+      <entry>
+        <ind>20</ind>
+        <dep>21.50</dep>
+      </entry>
+      <entry>
+        <ind>30</ind>
+        <dep>32</dep>
+      </entry>
+      <entry>
+        <ind>40</ind>
+        <dep>42.25</dep>
+      </entry>
+      <entry>
+        <ind>50</ind>
+        <dep>53.25</dep>
+      </entry>
+      <entry>
+        <ind>60</ind>
+        <dep>64.50</dep>
+      </entry>
+      <entry>
+        <ind>70</ind>
+        <dep>75</dep>
+      </entry>
+      <entry>
+        <ind>80</ind>
+        <dep>86</dep>
+      </entry>
+      <entry>
+        <ind>85</ind>
+        <dep>90</dep>
+      </entry>
+      <entry>
+        <ind>1000</ind>
+        <dep>90</dep>
+      </entry>
     </interpolation>
     <center>
       <x-m> -0.00178 </x-m>
-      <y-m>  0.000 </y-m>x
+      <y-m>  0.000 </y-m>
+      x
       <z-m> -0.0127 </z-m>
     </center>
     <axis>

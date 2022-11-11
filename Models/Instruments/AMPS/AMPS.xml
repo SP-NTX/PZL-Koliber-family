@@ -2,29 +2,38 @@
 
 
 <PropertyList>
-	<path>AMPS.ac</path>
-	
-	<animation>
-		<type>material</type>
-		<object-name>wskazowka</object-name>
-		<object-name>tarcza</object-name>
-  <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>
-	</animation>
-	
-	<animation>
+  <path>AMPS.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>wskazowka</object-name>
+    <object-name>tarcza</object-name>
+    <emission>
+      <red>0.8</red>
+      <green>0.4</green>
+      <blue>0.2</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>wskazowka</object-name>
     <property>systems/electrical/suppliers/alternator</property>
- <interpolation>
-   <entry><ind>-40</ind><dep>-30</dep></entry>
-   <entry><ind>0</ind><dep>0</dep></entry>
-   <entry><ind>40</ind><dep>33</dep></entry>
-  </interpolation>
+    <interpolation>
+      <entry>
+        <ind>-40</ind>
+        <dep>-30</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>40</ind>
+        <dep>33</dep>
+      </entry>
+    </interpolation>
     <center>
       <x-m> -0.0017</x-m>
       <y-m>  0.000 </y-m>

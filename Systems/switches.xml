@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	    <filter>
+    <filter>
         <name>battery lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -12,7 +12,7 @@
 
         <output>/switches/bat-switch-pos</output>
     </filter>
-		    <filter>
+    <filter>
         <name>alternator lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -25,7 +25,7 @@
         <output>/switches/alternator-switch-pos</output>
     </filter>
 
-	<filter>
+    <filter>
         <name>alternator light lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -37,8 +37,8 @@
 
         <output>/switches/lights/alternator-light</output>
     </filter>
-	
-	<filter>
+
+    <filter>
         <name>starter light lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -50,9 +50,9 @@
 
         <output>/switches/lights/starter-light</output>
     </filter>
-	
-	    
-		<filter>
+
+
+    <filter>
         <name>fuel pump lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -64,8 +64,8 @@
 
         <output>/switches/fuelpump</output>
     </filter>
-	
-			<filter>
+
+    <filter>
         <name>turn coord lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -76,8 +76,8 @@
 
         <output>/switches/turn-coord</output>
     </filter>
-	
-		<filter>
+
+    <filter>
         <name>beacon lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -88,9 +88,9 @@
 
         <output>/switches/beacon</output>
     </filter>
-	
 
-		<filter>
+
+    <filter>
         <name>navlight lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -102,7 +102,7 @@
 
         <output>/switches/nav-lights</output>
     </filter>
-			<filter>
+    <filter>
         <name>taxi lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -113,7 +113,7 @@
 
         <output>/switches/taxi-lights</output>
     </filter>
-			<filter>
+    <filter>
         <name>landing lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -125,7 +125,7 @@
 
         <output>/switches/landing-lights</output>
     </filter>
-			<filter>
+    <filter>
         <name>pitot lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -137,8 +137,8 @@
 
         <output>/switches/pitot-switch</output>
     </filter>
-	
-	<filter>
+
+    <filter>
         <name>fuel lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -149,8 +149,8 @@
 
         <output>/switches/fuel-selector</output>
     </filter>
-	
-		<filter>
+
+    <filter>
         <name>magnetos lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -163,7 +163,7 @@
         <output>/switches/magnetos</output>
     </filter>
 
-	<filter>
+    <filter>
         <name>primer lowpass</name>
         <debug>false</debug>
         <type>exponential</type>
@@ -174,8 +174,6 @@
 
         <output>/switches/primer-pump</output>
     </filter>
-
-
 
 
 </PropertyList>

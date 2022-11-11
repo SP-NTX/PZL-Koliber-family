@@ -12,7 +12,7 @@
 
   <path>gtx320a.ac</path>
 
- <params>
+  <params>
     <serviceable>instrumentation/transponder/serviceable</serviceable>
 
     <knob-mode>instrumentation/transponder/inputs/knob-mode</knob-mode>
@@ -58,16 +58,16 @@
 
   <animation>
     <type>noshadow</type>
-          <object-name>vitre</object-name>
+    <object-name>vitre</object-name>
   </animation>
 
-    <effect>
-       <inherits-from>Effects/model-transparent</inherits-from>
-          <object-name>vitre</object-name>
-      <condition>
-          <property>sim/rendering/rembrandt/enabled</property>
-      </condition>
-   </effect> 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitre</object-name>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+  </effect>
 
   <animation>
     <type>material</type>
@@ -76,14 +76,16 @@
     <object-name>Dial100</object-name>
     <object-name>Dial1000</object-name>
     <condition>
-     <not><property>/sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
-  <emission>
-    <red>0.2</red>
-    <green>0.1</green>
-    <blue>0.05</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>
+    <emission>
+      <red>0.2</red>
+      <green>0.1</green>
+      <blue>0.05</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
   </animation>
 
   <animation>
@@ -97,7 +99,9 @@
     <object-name>face</object-name>
     <object-name>face-int</object-name>
     <condition>
-      <not><property>/sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
     <emission>
       <red>   0.01 </red>
@@ -108,10 +112,10 @@
   </animation>
 
 
- <animation> 
+  <animation>
     <type>rotate</type>
     <object-name>Dial1</object-name>
-    <property alias="../../params/digit3"/>
+    <property alias="../../params/digit3" />
     <factor>-45</factor>
     <offset-deg>-45</offset-deg>
     <center>
@@ -119,13 +123,13 @@
       <y-m> -0.06267 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
   </animation>
-<!--
+  <!--
   <animation> 
     <type>rotate</type>
     <object-name>Knob1000</object-name>
@@ -146,14 +150,14 @@
   <animation>
     <type>knob</type>
     <object-name>Knob1000</object-name>
-    <property alias="../../params/digit3"/>
+    <property alias="../../params/digit3" />
     <factor>45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m> -0.06267 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -163,7 +167,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/digit3"/>
+        <property alias="../../../../params/digit3" />
         <factor>1</factor>
         <min>0</min>
         <max>8</max>
@@ -184,17 +188,17 @@
     </hovered>
   </animation>
 
-  <animation> 
+  <animation>
     <type>rotate</type>
     <object-name>Dial10</object-name>
-    <property alias="../../params/digit2"/>
+    <property alias="../../params/digit2" />
     <factor>-45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m> -0.0355 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -221,14 +225,14 @@
   <animation>
     <type>knob</type>
     <object-name>Knob100</object-name>
-    <property alias="../../params/digit2"/>
+    <property alias="../../params/digit2" />
     <factor>45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m> -0.0355 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -237,8 +241,8 @@
     <drag-scale-px>20</drag-scale-px>
     <action>
       <binding>
-        <command>property-adjust</command>        
-        <property alias="../../../../params/digit2"/>
+        <command>property-adjust</command>
+        <property alias="../../../../params/digit2" />
         <factor>1</factor>
         <min>0</min>
         <max>8</max>
@@ -259,17 +263,17 @@
     </hovered>
   </animation>
 
-  <animation> 
+  <animation>
     <type>rotate</type>
     <object-name>Dial100</object-name>
-    <property alias="../../params/digit1"/>
+    <property alias="../../params/digit1" />
     <factor>-45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m> -0.0085 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -296,14 +300,14 @@
   <animation>
     <type>knob</type>
     <object-name>Knob10</object-name>
-    <property alias="../../params/digit1"/>
+    <property alias="../../params/digit1" />
     <factor>45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m> -0.0085 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -313,7 +317,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/digit1"/>
+        <property alias="../../../../params/digit1" />
         <factor>1</factor>
         <min>0</min>
         <max>8</max>
@@ -334,17 +338,17 @@
     </hovered>
   </animation>
 
-  <animation> 
+  <animation>
     <type>rotate</type>
     <object-name>Dial1000</object-name>
-    <property alias="../../params/digit0"/>
+    <property alias="../../params/digit0" />
     <factor>-45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m>  0.0185 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -371,14 +375,14 @@
   <animation>
     <type>knob</type>
     <object-name>Knob1</object-name>
-    <property alias="../../params/digit0"/>
+    <property alias="../../params/digit0" />
     <factor>45</factor>
     <center>
       <x-m>  0.01453 </x-m>
       <y-m>  0.0185 </y-m>
       <z-m> -0.004312 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -388,7 +392,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/digit0"/>
+        <property alias="../../../../params/digit0" />
         <factor>1</factor>
         <min>0</min>
         <max>8</max>
@@ -409,26 +413,31 @@
     </hovered>
   </animation>
 
-  <animation> 
+  <animation>
     <type>rotate</type>
     <object-name>KnobMode</object-name>
-    <property alias="../../params/knob-mode"/>
+    <property alias="../../params/knob-mode" />
     <factor>1</factor>
     <interpolation>
       <entry>
-        <ind>0</ind><dep>0</dep>
+        <ind>0</ind>
+        <dep>0</dep>
       </entry>
       <entry>
-        <ind>1</ind><dep>45</dep>
+        <ind>1</ind>
+        <dep>45</dep>
       </entry>
       <entry>
-        <ind>4</ind><dep>90</dep>
+        <ind>4</ind>
+        <dep>90</dep>
       </entry>
       <entry>
-        <ind>5</ind><dep>135</dep>
+        <ind>5</ind>
+        <dep>135</dep>
       </entry>
       <entry>
-        <ind>2</ind><dep>180</dep>
+        <ind>2</ind>
+        <dep>180</dep>
       </entry>
     </interpolation>
     <center>
@@ -436,13 +445,13 @@
       <y-m>  0.05766 </y-m>
       <z-m> -0.005701	 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
-  </animation>-->
-
+  </animation>
+  -->
   <animation>
     <type>pick</type>
     <visible>true</visible>
@@ -452,13 +461,13 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-         <property alias="../../../../params/ident-btn"/>
+        <property alias="../../../../params/ident-btn" />
         <value type="bool">true</value>
-      </binding>          
+      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-         <property alias="../../../../../params/ident-btn"/>
+          <property alias="../../../../../params/ident-btn" />
           <value type="bool">false</value>
         </binding>
       </mod-up>
@@ -475,7 +484,7 @@
   <animation>
     <type>translate</type>
     <object-name>Ident</object-name>
-    <property alias="../../params/ident-btn"/>
+    <property alias="../../params/ident-btn" />
     <factor> 0.0018 </factor>
     <axis>
       <x> -1 </x>
@@ -490,23 +499,23 @@
     <visible>true</visible>
     <drag-scale-px>20</drag-scale-px>
     <action>
-       <binding>
-         <command>property-cycle</command>
-         <property alias="../../../../params/knob-mode"/>
-         <wrap>0</wrap>
-         <value>0</value> <!-- OFF -->
-         <value>1</value> <!-- SBY -->
-         <value>4</value> <!-- ON  -->
-         <value>5</value> <!-- ALT -->
-         <value>2</value> <!-- TST -->
-       </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property alias="../../../../params/knob-mode" />
+        <wrap>0</wrap>
+        <value>0</value> <!-- OFF -->
+        <value>1</value> <!-- SBY -->
+        <value>4</value> <!-- ON  -->
+        <value>5</value> <!-- ALT -->
+        <value>2</value> <!-- TST -->
+      </binding>
     </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
         <tooltip-id>transponder-mode-btn</tooltip-id>
         <label>Mode: %s</label>
-        <property alias="../../../../params/knob-mode"/>
+        <property alias="../../../../params/knob-mode" />
         <mapping>nasal</mapping>
         <script>
           var m = arg[0];

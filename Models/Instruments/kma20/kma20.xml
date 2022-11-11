@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <PropertyList>
 
   <!--
@@ -52,8 +52,8 @@
       <red>1.0</red>
       <green>1.0</green>
       <blue>1.0</blue>
-      <factor-prop alias="../../../params/outer"/>
-      <offset-prop alias="../../../params/test"/>
+      <factor-prop alias="../../../params/outer" />
+      <offset-prop alias="../../../params/test" />
     </emission>
   </animation>
 
@@ -64,8 +64,8 @@
       <red>1.0</red>
       <green>1.0</green>
       <blue>1.0</blue>
-      <factor-prop alias="../../../params/middle"/>
-      <offset-prop alias="../../../params/test"/>
+      <factor-prop alias="../../../params/middle" />
+      <offset-prop alias="../../../params/test" />
     </emission>
   </animation>
 
@@ -76,15 +76,15 @@
       <red>1.0</red>
       <green>1.0</green>
       <blue>1.0</blue>
-      <factor-prop alias="../../../params/inner"/>
-      <offset-prop alias="../../../params/test"/>
+      <factor-prop alias="../../../params/inner" />
+      <offset-prop alias="../../../params/test" />
     </emission>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>AUTO</object-name>
-    <property alias="../../params/auto"/>
+    <property alias="../../params/auto" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -104,7 +104,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/auto"/>
+        <property alias="../../../../params/auto" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -122,7 +122,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/auto"/>
+        <property alias="../../../../params/auto" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -134,7 +134,7 @@
   <animation>
     <type>rotate</type>
     <object-name>COM1</object-name>
-    <property alias="../../params/com1"/>
+    <property alias="../../params/com1" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -154,7 +154,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/com1"/>
+        <property alias="../../../../params/com1" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -172,7 +172,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/com1"/>
+        <property alias="../../../../params/com1" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -184,7 +184,7 @@
   <animation>
     <type>rotate</type>
     <object-name>COM2</object-name>
-    <property alias="../../params/com2"/>
+    <property alias="../../params/com2" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -204,7 +204,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/com2"/>
+        <property alias="../../../../params/com2" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -222,7 +222,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/com2"/>
+        <property alias="../../../../params/com2" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -234,7 +234,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NAV1</object-name>
-    <property alias="../../params/nav1"/>
+    <property alias="../../params/nav1" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -254,7 +254,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav1"/>
+        <property alias="../../../../params/nav1" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -272,7 +272,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav1"/>
+        <property alias="../../../../params/nav1" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -284,7 +284,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NAV2</object-name>
-    <property alias="../../params/nav2"/>
+    <property alias="../../params/nav2" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -304,7 +304,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav2"/>
+        <property alias="../../../../params/nav2" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -322,7 +322,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/nav2"/>
+        <property alias="../../../../params/nav2" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -334,7 +334,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ADF</object-name>
-    <property alias="../../params/adf"/>
+    <property alias="../../params/adf" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -354,7 +354,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/adf"/>
+        <property alias="../../../../params/adf" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -372,7 +372,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/adf"/>
+        <property alias="../../../../params/adf" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -384,7 +384,7 @@
   <animation>
     <type>rotate</type>
     <object-name>DME</object-name>
-    <property alias="../../params/dme"/>
+    <property alias="../../params/dme" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -404,7 +404,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/dme"/>
+        <property alias="../../../../params/dme" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -422,7 +422,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/dme"/>
+        <property alias="../../../../params/dme" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -434,7 +434,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MKR</object-name>
-    <property alias="../../params/mkr"/>
+    <property alias="../../params/mkr" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -454,7 +454,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/mkr"/>
+        <property alias="../../../../params/mkr" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -472,7 +472,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/mkr"/>
+        <property alias="../../../../params/mkr" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -484,7 +484,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SENS</object-name>
-    <property alias="../../params/sens"/>
+    <property alias="../../params/sens" />
     <factor>30</factor>
     <axis>
       <y>1</y>
@@ -504,7 +504,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/sens"/>
+        <property alias="../../../../params/sens" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -522,7 +522,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/sens"/>
+        <property alias="../../../../params/sens" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>
@@ -532,36 +532,36 @@
         <binding>
           <condition>
             <equals>
-              <property alias="../../../../../../../params/sens"/>
+              <property alias="../../../../../../../params/sens" />
               <value>1</value>
             </equals>
           </condition>
           <command>property-assign</command>
-          <property alias="../../../../../params/sens"/>
+          <property alias="../../../../../params/sens" />
           <value>0</value>
         </binding>
         <binding>
           <condition>
             <equals>
-              <property alias="../../../../../../../params/sens"/>
+              <property alias="../../../../../../../params/sens" />
               <value>0</value>
             </equals>
           </condition>
           <command>property-assign</command>
-          <property alias="../../../../../params/test"/>
+          <property alias="../../../../../params/test" />
           <value>0</value>
         </binding>
       </mod-up>
       <binding>
         <condition>
           <greater-than>
-            <property alias="../../../../../../params/sens"/>
+            <property alias="../../../../../../params/sens" />
             <value>-1</value>
           </greater-than>
         </condition>
         <command>property-assign</command>
-        <property alias="../../../../params/test"/>
-        <property alias="../../../../params/sens"/>
+        <property alias="../../../../params/test" />
+        <property alias="../../../../params/sens" />
       </binding>
     </action>
   </animation>
@@ -569,7 +569,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Knob</object-name>
-    <property alias="../../params/knob"/>
+    <property alias="../../params/knob" />
     <factor>-30</factor>
     <axis>
       <x>1</x>
@@ -589,7 +589,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/knob"/>
+        <property alias="../../../../params/knob" />
         <step>-1</step>
         <min>-1</min>
         <max>1</max>
@@ -607,7 +607,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property alias="../../../../params/knob"/>
+        <property alias="../../../../params/knob" />
         <step>1</step>
         <min>-1</min>
         <max>1</max>

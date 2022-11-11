@@ -45,7 +45,9 @@
     <object-name>Face</object-name>
     <object-name>Needle</object-name>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
     <emission>
       <red>   0.07 </red>
@@ -59,7 +61,9 @@
     <type>material</type>
     <object-name>Bezel</object-name>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
     <emission>
       <red>   0.008 </red>
@@ -74,11 +78,26 @@
     <object-name>Needle</object-name>
     <property>consumables/fuel/tank[1]/level-lbs</property>
     <interpolation>
-      <entry><ind>  0.00 </ind><dep>  5 </dep></entry>
-      <entry><ind> 20.66 </ind><dep> 25 </dep></entry> <!-- 13 litres -->
-      <entry><ind> 38.58 </ind><dep> 45 </dep></entry> <!-- 25 litres -->
-      <entry><ind> 50.93 </ind><dep> 65 </dep></entry> <!-- 33 litres -->
-      <entry><ind> 61.73 </ind><dep> 85 </dep></entry> <!-- 40 litres -->
+      <entry>
+        <ind>  0.00 </ind>
+        <dep>  5 </dep>
+      </entry>
+      <entry>
+        <ind> 20.66 </ind>
+        <dep> 25 </dep>
+      </entry> <!-- 13 litres -->
+      <entry>
+        <ind> 38.58 </ind>
+        <dep> 45 </dep>
+      </entry> <!-- 25 litres -->
+      <entry>
+        <ind> 50.93 </ind>
+        <dep> 65 </dep>
+      </entry> <!-- 33 litres -->
+      <entry>
+        <ind> 61.73 </ind>
+        <dep> 85 </dep>
+      </entry> <!-- 40 litres -->
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
@@ -91,8 +110,8 @@
       <z>  0 </z>
     </axis>
   </animation>
-  
-   <!-- TEXT OSG -->
+
+  <!-- TEXT OSG -->
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
@@ -135,5 +154,3 @@
   </animation>
 
 </PropertyList>
-
-

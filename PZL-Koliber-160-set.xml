@@ -13,7 +13,7 @@
 
 		<aircraft-version>0.11</aircraft-version>
 
-    <status>beta</status>
+		<status>beta</status>
 
 		<rating>
 			<FDM type="int">1</FDM>
@@ -65,7 +65,8 @@
 			<tag n="13">fixed-pitch</tag>
 			<tag n="14">PZL</tag>
 			<tag n="15">Koliber</tag>
-		  <!--<tag n="16">tow</tag>--> <!--temporary until Koliber 235 will be made -->
+			<!--<tag n="16">tow</tag>-->
+			<!--temporary until Koliber 235 will be made -->
 		</tags>
 
 		<urls>
@@ -96,7 +97,7 @@
 		<flight-model>jsb</flight-model>
 		<aero>Systems/PZL-Koliber-160-fdm</aero>
 
-		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml"/>
+		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml">
 			<property-rule n="100">
@@ -128,7 +129,7 @@
 		<model>
 			<path>Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
 			<livery>
-			      <file type="string"/>
+				<file type="string" />
 			</livery>
 		</model>
 
@@ -151,8 +152,8 @@
 				<from-model type="bool">true</from-model>
 				<from-model-idx type="int">0</from-model-idx>
 				<x-offset-m type="double">-0.253</x-offset-m> <!--right -->
-				<y-offset-m type="double">0.6750</y-offset-m>  <!--up -->
-				<z-offset-m type="double">-0.01</z-offset-m>  <!--back -->
+				<y-offset-m type="double">0.6750</y-offset-m> <!--up -->
+				<z-offset-m type="double">-0.01</z-offset-m> <!--back -->
 				<pitch-offset-deg>-7.23</pitch-offset-deg>
 				<default-field-of-view-deg>97.0</default-field-of-view-deg>
 				<limits>
@@ -172,7 +173,7 @@
 		</view>
 
 		<!--<help include="help.xml">-->
-		
+
 		<flaps>
 			<setting>0</setting>
 			<setting>0.5</setting>
@@ -224,25 +225,25 @@
 	<payload>
 		<weight n="0">
 			<name type="string">Pilot</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">330.0</max-lb>
 		</weight>
 		<weight n="1">
 			<name type="string">Co-pilot</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">330.0</max-lb>
 		</weight>
 		<weight n="2">
 			<name type="string">Left passanger</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">170.0</max-lb>
 		</weight>
 		<weight n="3">
 			<name type="string">Right passanger</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">170.0</max-lb>
 		</weight>
@@ -250,25 +251,25 @@
 
 	<consumables>
 		<fuel>
-		  <tank n="0">
-			<name type="string">Left Wing</name>
-			<capacity-gal_us type="double">21.3</capacity-gal_us>
-			<unusable-gal_us type="double">1.3</unusable-gal_us>
-			<level-gal_us type="double">15.0</level-gal_us>
-		  </tank>
-		  <tank n="1">
-			<name type="string">Right Wing</name>
-			<capacity-gal_us type="double">21.3</capacity-gal_us>
-			<unusable-gal_us type="double">1.3</unusable-gal_us>
-			<level-gal_us type="double">15.0</level-gal_us>
-		  </tank>
-		  <tank n="2">
-			<name type="string">Engine feed</name>
-			<capacity-gal_us type="double">0.034</capacity-gal_us>
-			<unusable-gal_us type="double">0.004</unusable-gal_us>
-			<level-gal_us type="double">0.0</level-gal_us>
-			<hidden type="bool">true</hidden>
-		  </tank>
+			<tank n="0">
+				<name type="string">Left Wing</name>
+				<capacity-gal_us type="double">21.3</capacity-gal_us>
+				<unusable-gal_us type="double">1.3</unusable-gal_us>
+				<level-gal_us type="double">15.0</level-gal_us>
+			</tank>
+			<tank n="1">
+				<name type="string">Right Wing</name>
+				<capacity-gal_us type="double">21.3</capacity-gal_us>
+				<unusable-gal_us type="double">1.3</unusable-gal_us>
+				<level-gal_us type="double">15.0</level-gal_us>
+			</tank>
+			<tank n="2">
+				<name type="string">Engine feed</name>
+				<capacity-gal_us type="double">0.034</capacity-gal_us>
+				<unusable-gal_us type="double">0.004</unusable-gal_us>
+				<level-gal_us type="double">0.0</level-gal_us>
+				<hidden type="bool">true</hidden>
+			</tank>
 		</fuel>
 	</consumables>
 

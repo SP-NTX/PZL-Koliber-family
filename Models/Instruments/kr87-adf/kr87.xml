@@ -16,12 +16,12 @@ Syd Adams
         <object-name>KR87.flt</object-name>
         <object-name>KR87.set</object-name>
         <object-name>KR87.volume</object-name>
-  <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>
+        <emission>
+            <red>0.8</red>
+            <green>0.4</green>
+            <blue>0.2</blue>
+            <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+        </emission>
     </animation>
 
     <animation>
@@ -65,7 +65,7 @@ Syd Adams
                     <property>systems/electrical/outputs/adf</property>
                     <value>1</value>
                 </greater-than>
-                 <greater-than>
+                <greater-than>
                     <property>instrumentation/kr-87/outputs/selected-khz</property>
                     <value>999</value>
                 </greater-than>
@@ -102,7 +102,7 @@ Syd Adams
         <object-name>stby</object-name>
         <condition>
             <and>
-                    <property>instrumentation/kr-87/inputs/power-btn</property>
+                <property>instrumentation/kr-87/inputs/power-btn</property>
                 <greater-than>
                     <property>instrumentation/kr-87/modes/stby</property>
                     <value>0</value>
@@ -120,8 +120,14 @@ Syd Adams
         <object-name>KR87.volume</object-name>
         <property>instrumentation/kr-87/inputs/volume</property>
         <interpolation>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>1.0</ind><dep>300</dep></entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>300</dep>
+            </entry>
         </interpolation>
         <center>
             <x-m>0.00</x-m>
@@ -151,7 +157,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
-<!--    FREQUENCIES    -->
+    <!--    FREQUENCIES    -->
 
     <animation>
         <type>textranslate</type>
@@ -165,7 +171,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>textranslate</type>
         <object-name>freq.002</object-name>
@@ -178,7 +184,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>textranslate</type>
         <object-name>freq.003</object-name>
@@ -191,7 +197,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>textranslate</type>
         <object-name>freq.004</object-name>
@@ -204,7 +210,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
-<!--    Standby -->
+    <!--    Standby -->
     <animation>
         <type>textranslate</type>
         <object-name>stby.001</object-name>
@@ -217,7 +223,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>textranslate</type>
         <object-name>stby.002</object-name>
@@ -230,7 +236,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>textranslate</type>
         <object-name>stby.003</object-name>
@@ -243,7 +249,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>textranslate</type>
         <object-name>stby.004</object-name>
@@ -261,7 +267,7 @@ Syd Adams
         <type>select</type>
         <object-name>ant.annun</object-name>
         <condition>
-                <property>instrumentation/kr-87/annunciators/ant</property>
+            <property>instrumentation/kr-87/annunciators/ant</property>
         </condition>
     </animation>
 
@@ -269,7 +275,7 @@ Syd Adams
         <type>select</type>
         <object-name>adf.annun</object-name>
         <condition>
-                <property>instrumentation/kr-87/annunciators/adf</property>
+            <property>instrumentation/kr-87/annunciators/adf</property>
         </condition>
     </animation>
 
@@ -277,7 +283,7 @@ Syd Adams
         <type>select</type>
         <object-name>bfo.annun</object-name>
         <condition>
-                <property>instrumentation/kr-87/annunciators/bfo</property>
+            <property>instrumentation/kr-87/annunciators/bfo</property>
         </condition>
     </animation>
 
@@ -285,7 +291,7 @@ Syd Adams
         <type>select</type>
         <object-name>et.annun</object-name>
         <condition>
-                <property>instrumentation/kr-87/annunciators/et</property>
+            <property>instrumentation/kr-87/annunciators/et</property>
         </condition>
     </animation>
 
@@ -293,7 +299,7 @@ Syd Adams
         <type>select</type>
         <object-name>flt.annun</object-name>
         <condition>
-                <property>instrumentation/kr-87/annunciators/flt</property>
+            <property>instrumentation/kr-87/annunciators/flt</property>
         </condition>
     </animation>
 
@@ -301,11 +307,11 @@ Syd Adams
         <type>select</type>
         <object-name>frq.annun</object-name>
         <condition>
-                <property>instrumentation/kr-87/annunciators/frq</property>
+            <property>instrumentation/kr-87/annunciators/frq</property>
         </condition>
     </animation>
 
-<!--    OSG Hotspots    -->
+    <!--    OSG Hotspots    -->
 
     <animation>
         <type>pick</type>

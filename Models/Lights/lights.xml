@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>lights.ac</path>
-	
+
 	<params>
 		<light-used></light-used>
 		<show-prop>controls/lighting/landing-lights</show-prop>
 	</params>
-	
+
 	<animation>
 		<condition>
 			<equals>
-				<value alias="../../../../params/light-used"/>
+				<value alias="../../../../params/light-used" />
 				<value>red</value>
 			</equals>
 		</condition>
@@ -20,7 +20,7 @@
 	<animation>
 		<condition>
 			<equals>
-				<value alias="../../../../params/light-used"/>
+				<value alias="../../../../params/light-used" />
 				<value>green</value>
 			</equals>
 		</condition>
@@ -30,7 +30,7 @@
 	<animation>
 		<condition>
 			<equals>
-				<value alias="../../../../params/light-used"/>
+				<value alias="../../../../params/light-used" />
 				<value>white</value>
 			</equals>
 		</condition>
@@ -40,7 +40,7 @@
 	<animation>
 		<condition>
 			<equals>
-				<value alias="../../../../params/light-used"/>
+				<value alias="../../../../params/light-used" />
 				<value>blue</value>
 			</equals>
 		</condition>
@@ -50,7 +50,7 @@
 	<animation>
 		<condition>
 			<equals>
-				<value alias="../../../../params/light-used"/>
+				<value alias="../../../../params/light-used" />
 				<value>landing</value>
 			</equals>
 		</condition>
@@ -98,12 +98,21 @@
 		<object-name>Blue</object-name>
 		<object-name>Landing</object-name>
 		<interpolation>
-			<entry><ind>0</ind><dep>0.25</dep></entry>
-			<entry><ind>20</ind><dep>0.50</dep></entry>
-			<entry><ind>1500</ind><dep>5.00</dep></entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0.25</dep>
+			</entry>
+			<entry>
+				<ind>20</ind>
+				<dep>0.50</dep>
+			</entry>
+			<entry>
+				<ind>1500</ind>
+				<dep>5.00</dep>
+			</entry>
 		</interpolation>
 	</animation>
-	
+
 	<animation>
 		<type>scale</type>
 		<object-name>Landing</object-name>
@@ -111,7 +120,7 @@
 		<y-offset>1.5</y-offset>
 		<z-offset>1.5</z-offset>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>Red</object-name>
@@ -124,7 +133,7 @@
 				<not>
 					<property>/sim/rendering/shaders/skydome</property>
 				</not>
-				<property alias="../../../../params/show-prop"/>
+				<property alias="../../../../params/show-prop" />
 			</and>
 		</condition>
 	</animation>

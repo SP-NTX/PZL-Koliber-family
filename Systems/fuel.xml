@@ -13,7 +13,7 @@
                 </quotient>
             </function>
         </fcs_function>
-		        <fcs_function name="propulsion/tank[1]/contents-volume-gal">
+        <fcs_function name="propulsion/tank[1]/contents-volume-gal">
             <function>
                 <quotient>
                     <p> propulsion/tank[1]/contents-lbs </p>
@@ -22,7 +22,7 @@
             </function>
         </fcs_function>
         <switch name="fuel/from-tank0-to-tank2">
-            <default value="0"/>
+            <default value="0" />
             <test logic="AND" value="0.1">
                 propulsion/tank[0]/priority EQ 1 
                 propulsion/tank[0]/contents-volume-gal GT propulsion/tank[0]/unusable-volume-gal
@@ -43,7 +43,7 @@
             </function>
         </fcs_function>
         <switch name="fuel/from-tank1-to-tank2">
-            <default value="0"/>
+            <default value="0" />
             <test logic="AND" value="0.1">
                 propulsion/tank[1]/priority EQ 1 
                 propulsion/tank[1]/contents-volume-gal GT propulsion/tank[1]/unusable-volume-gal
