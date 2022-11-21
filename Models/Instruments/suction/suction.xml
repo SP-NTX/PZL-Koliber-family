@@ -5,28 +5,34 @@ PZL Koliber 160A
 #####################################-->
 
 <PropertyList>
-	<path>suction.ac</path>
-	
-	<animation>
-		<type>material</type>
-		<object-name>wskazowka2</object-name>
-		<object-name>szklo</object-name>
-		<object-name>tarcza</object-name>
-  <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>
-	</animation>
-	
-	<animation>
+  <path>suction.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>wskazowka2</object-name>
+    <object-name>szklo</object-name>
+    <object-name>tarcza</object-name>
+    <emission>
+      <red>0.8</red>
+      <green>0.4</green>
+      <blue>0.2</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>wskazowka2</object-name>
     <property>systems/vacuum/suction-inhg</property>
     <interpolation>
-      <entry><ind>0.00</ind><dep>20</dep></entry>
-      <entry><ind>6</ind><dep>160</dep></entry> 
+      <entry>
+        <ind>0.00</ind>
+        <dep>20</dep>
+      </entry>
+      <entry>
+        <ind>6</ind>
+        <dep>160</dep>
+      </entry>
     </interpolation>
     <center>
       <x-m>-0.0021</x-m>

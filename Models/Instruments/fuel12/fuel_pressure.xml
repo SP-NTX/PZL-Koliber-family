@@ -2,32 +2,38 @@
 <!-- Autor Mariusz Migut -->
 
 <PropertyList>
-	<path>fuel_pressure.ac</path>
-	<animation>
-		<object-name>wskazowka</object-name>
-		<object-name>tarcza</object-name>
-  <emission>
-    <red>0.8</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-    <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
-  </emission>		
-	</animation>
-  
-  <animation> 
+  <path>fuel_pressure.ac</path>
+  <animation>
+    <object-name>wskazowka</object-name>
+    <object-name>tarcza</object-name>
+    <emission>
+      <red>0.8</red>
+      <green>0.4</green>
+      <blue>0.2</blue>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>wskazowka</object-name>
     <property>/engines/engine[0]/fuel-pressure-psi</property>
     <interpolation>
-      <entry><ind>0</ind><dep>-75</dep></entry>
-      <entry><ind>5</ind><dep>-50</dep></entry>
+      <entry>
+        <ind>0</ind>
+        <dep>-75</dep>
+      </entry>
+      <entry>
+        <ind>5</ind>
+        <dep>-50</dep>
+      </entry>
     </interpolation>
     <center>
       <x-m> -0.001 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.015 </z-m>  
+      <z-m> -0.015 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>

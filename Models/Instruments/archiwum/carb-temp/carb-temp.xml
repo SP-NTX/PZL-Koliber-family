@@ -44,7 +44,9 @@
     <object-name>Face</object-name>
     <object-name>Needle</object-name>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
     <emission>
       <red>   0.07 </red>
@@ -58,7 +60,9 @@
     <type>material</type>
     <object-name>Bezel.001</object-name>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
     <emission>
       <red>   0.015 </red>
@@ -68,25 +72,46 @@
     </emission>
   </animation>
 
-  <animation> 
+  <animation>
     <type>rotate</type>
     <object-name>Needle</object-name>
     <property>engines/engine[0]/carb-temp-degc</property>
     <interpolation>
-      <entry><ind> -30 </ind><dep> -64 </dep></entry> <!-- -30 deg C -->
-      <entry><ind> -20 </ind><dep> -40 </dep></entry> <!-- -20 deg C -->
-      <entry><ind> -10 </ind><dep> -22 </dep></entry> <!-- -10 deg C -->
-      <entry><ind>   0 </ind><dep>   0 </dep></entry> <!--   0 deg C -->
-      <entry><ind>  10 </ind><dep>  22 </dep></entry> <!--  10 deg C -->
-      <entry><ind>  20 </ind><dep>  40 </dep></entry> <!--  20 deg C -->
-      <entry><ind>  30 </ind><dep>  64 </dep></entry> <!--  30 deg C -->
+      <entry>
+        <ind> -30 </ind>
+        <dep> -64 </dep>
+      </entry> <!-- -30 deg C -->
+      <entry>
+        <ind> -20 </ind>
+        <dep> -40 </dep>
+      </entry> <!-- -20 deg C -->
+      <entry>
+        <ind> -10 </ind>
+        <dep> -22 </dep>
+      </entry> <!-- -10 deg C -->
+      <entry>
+        <ind>   0 </ind>
+        <dep>   0 </dep>
+      </entry> <!--   0 deg C -->
+      <entry>
+        <ind>  10 </ind>
+        <dep>  22 </dep>
+      </entry> <!--  10 deg C -->
+      <entry>
+        <ind>  20 </ind>
+        <dep>  40 </dep>
+      </entry> <!--  20 deg C -->
+      <entry>
+        <ind>  30 </ind>
+        <dep>  64 </dep>
+      </entry> <!--  30 deg C -->
     </interpolation>
     <center>
       <x-m> -0.002 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.005 </z-m>  
+      <z-m> -0.005 </z-m>
     </center>
-    <axis> 
+    <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
@@ -136,5 +161,3 @@
   </animation>
 
 </PropertyList>
-
-

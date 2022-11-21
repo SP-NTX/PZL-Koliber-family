@@ -15,13 +15,13 @@ Propeller drive rotation viewed from rear: Clockwise
 xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
 -->
 
-  <piston_engine name="Lycoming_O-320-D2A">
-  <minmp unit="INHG"> 8.3 </minmp><!--for checking taken from C172-->
+<piston_engine name="Lycoming_O-320-D2A">
+  <minmp unit="INHG"> 8.3 </minmp> <!--for checking taken from C172-->
   <maxmp unit="INHG"> 28.7 </maxmp>
   <displacement unit="IN3"> 319.8 </displacement>
   <bore unit="IN"> 5.125 </bore> <!-- Unused -->
   <stroke unit="IN"> 3.875 </stroke>
-  <cylinders> 4 </cylinders><!-- Unused -->
+  <cylinders> 4 </cylinders> <!-- Unused -->
   <cylinder-head-mass unit="LBS"> 37.48 </cylinder-head-mass> <!--Part no. LW-12416 -->
   <compression-ratio> 8.5 </compression-ratio>
   <sparkfaildrop> 0.1 </sparkfaildrop> <!--for checking taken from C172-->
@@ -33,7 +33,8 @@ xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
   <volumetric-efficiency> 0.81 </volumetric-efficiency> <!--for checking-->
   <air-intake-impedance-factor> 0.18 </air-intake-impedance-factor> <!--for checking taken from C182-->
   <ram-air-factor> 0.1 </ram-air-factor> <!--for checking taken from C182-->
-  <!--><cooling-factor> 0.8 </cooling-factor>--> <!--do sprawdzenia-->
+  <!--><cooling-factor> 0.8 </cooling-factor>-->
+  <!--do sprawdzenia-->
   <!--
   starter engine part no. LW-15571
   12V
@@ -48,8 +49,8 @@ xml file by Jakub Kosakowski "jakkos98" "SP-KOS" for Koliber 160A for FlightGear
   -->
   <starter-torque> 391.36 </starter-torque>
   <starter-rpm> 561.49 </starter-rpm>
-  <static-friction unit="HP">1.5</static-friction><!--for checking-->
-  <man-press-lag>0.1</man-press-lag><!--for checking-->
+  <static-friction unit="HP">1.5</static-friction> <!--for checking-->
+  <man-press-lag>0.1</man-press-lag> <!--for checking-->
   <oil-pressure-relief-valve-psi> 75 </oil-pressure-relief-valve-psi>
   <design-oil-temp-degK> 355.15 </design-oil-temp-degK>
   <oil-pressure-rpm-max> 1215 </oil-pressure-rpm-max> <!--for checking taken from C172-->

@@ -33,7 +33,7 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
- 
+
     <animation>
         <type>rotate</type>
         <object-name>KI227.needle</object-name>
@@ -46,4 +46,3 @@ Syd Adams
     </animation>
 
 </PropertyList>
-

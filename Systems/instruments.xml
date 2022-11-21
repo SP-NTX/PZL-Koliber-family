@@ -16,7 +16,7 @@
 		</input>
 		<output>/instrumentation/stall-warn/lamp-lit</output>
 	</logic>
-	
+
 	<filter>
 		<type>gain</type>
 		<name>Stall warning sound</name>
@@ -37,7 +37,7 @@
 		</input>
 		<output>/instrumentation/stall-warn/sound-volume-norm</output>
 	</filter>
-	
+
 	<filter>
 		<name>RPM lowpass</name>
 		<type>exponential</type>
@@ -48,4 +48,3 @@
 		<output>/gauges/RPM-pos</output>
 	</filter>
 </PropertyList>
-

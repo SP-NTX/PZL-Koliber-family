@@ -14,16 +14,16 @@
         <z> 0.0</z>
       </position>
       <pitch>
-	<property>engines/engine[0]/rpm</property>
-	<factor>0.0004</factor>
-	<min>0.3</min>
-	<max>1000.0</max>
-	<offset>0.1</offset>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.3</min>
+        <max>1000.0</max>
+        <offset>0.1</offset>
       </pitch>
       <volume>
-	<property>sim/current-view/internal</property>
-	<factor>-0.25</factor>
-	<offset>0.8</offset>
+        <property>sim/current-view/internal</property>
+        <factor>-0.25</factor>
+        <offset>0.8</offset>
       </volume>
       <reference-dist>10.0</reference-dist>
       <max-dist>10000.0</max-dist>
@@ -58,9 +58,9 @@
         </and>
       </condition>
       <volume>
-	<property>sim/current-view/internal</property>
-	<factor>-0.2</factor>
-	<offset>0.9</offset>
+        <property>sim/current-view/internal</property>
+        <factor>-0.2</factor>
+        <offset>0.9</offset>
       </volume>
       <pitch>
         <property>engines/engine/rpm</property>
@@ -73,7 +73,7 @@
       <max-dist>10000.0</max-dist>
     </engine>
 
- <propeller>
+    <propeller>
       <name>propeller</name>
       <mode>looped</mode>
       <path>Sounds/wasp.wav</path>
@@ -102,44 +102,44 @@
       </pitch>
     </propeller>
 
-<wind>
-	<name>wind</name>
-	<mode>looped</mode>
-	<path>Sounds/wind.wav</path>
-	<volume>
-		<property>velocities/airspeed-kt</property>
-		<factor>0.0005</factor>
-		<min>0.01</min>
-		<max>0.4</max>
-	</volume>
-</wind>
-<!-- touchdown to lądowanie -->
-        <rumble>
-            <name>rumble</name>
-            <mode>looped</mode>
-            <path>Sounds/rumble.wav</path>
-            <condition>
-                <or>
-                    <property>gear/gear[0]/wow</property>
-                    <property>gear/gear[1]/wow</property>
-                    <property>gear/gear[2]/wow</property>
-                </or>
-                <!-- <property>sim/current-view/internal</property> -->
-            </condition>
-            <position>
-                <x>1.0</x>
-                <y>0.0</y>
-                <z>-1.5</z>
-            </position>
-            <volume>
-                <property>velocities/groundspeed-kt</property>
-                <type>log</type>
-                <factor>0.25</factor>
-            </volume>
-        </rumble>
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.0005</factor>
+        <min>0.01</min>
+        <max>0.4</max>
+      </volume>
+    </wind>
+    <!-- touchdown to lądowanie -->
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
+        <!-- <property>sim/current-view/internal</property> -->
+      </condition>
+      <position>
+        <x>1.0</x>
+        <y>0.0</y>
+        <z>-1.5</z>
+      </position>
+      <volume>
+        <property>velocities/groundspeed-kt</property>
+        <type>log</type>
+        <factor>0.25</factor>
+      </volume>
+    </rumble>
 
 
-      <squeal>
+    <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
       <condition>
@@ -171,151 +171,151 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
-         <flap>
-            <name>flaps</name>
-            <mode>in-transit</mode>
-            <path>Sounds/flaps.wav</path>
-            <property>surface-positions/flap-pos-norm</property>
-            <position>
-                <x>0.5</x>
-                <y>0.0</y>
-                <z>0.5</z>
-            </position>
-            <volume>
-                <factor>0.8</factor>
-            </volume>
-            <reference-dist>10.0</reference-dist>
-            <max-dist>20.0</max-dist>
-        </flap>
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Sounds/flaps.wav</path>
+      <property>surface-positions/flap-pos-norm</property>
+      <position>
+        <x>0.5</x>
+        <y>0.0</y>
+        <z>0.5</z>
+      </position>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>20.0</max-dist>
+    </flap>
 
 
-     <stall>
+    <stall>
       <name>stall</name>
       <mode>looped</mode>
       <path>Sounds/stall.wav</path>
       <volume>
         <property>instrumentation/stall-warn/sound-volume-norm</property>
-      	 <offset>-1</offset>
+        <offset>-1</offset>
       </volume>
       <reference-dist>10.0</reference-dist>
       <max-dist>50.0</max-dist>
     </stall>
 
-<pump>
-	<name>FuelPump</name>
-	<type>avionics</type>
-	<mode>looped</mode>
-	<path>Aircraft/PZL-Koliber-160A/Sounds/FuelPump.wav</path>
-	<condition>
-		<and>
-		<property>/controls/switches/battery</property>
-		<property>/controls/switches/fuelpump</property>
-		</and>
-	</condition>
-	<volume>
-		<factor>0.5</factor>
-	</volume>
-</pump>
+    <pump>
+      <name>FuelPump</name>
+      <type>avionics</type>
+      <mode>looped</mode>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/FuelPump.wav</path>
+      <condition>
+        <and>
+          <property>/controls/switches/battery</property>
+          <property>/controls/switches/fuelpump</property>
+        </and>
+      </condition>
+      <volume>
+        <factor>0.5</factor>
+      </volume>
+    </pump>
 
-<gyro>
-	<name>Gyro</name>
-	<type>avionics</type>
-	<mode>looped</mode>
-	<path>Aircraft/PZL-Koliber-160A/Sounds/gyro.wav</path>
-	<condition>
-		<and>
-		<property>/controls/switches/battery</property>
-		<property>/controls/switches/turn-coordinator</property>
-		</and>
-		<volume>
-			<factor>1.0</factor>
-		</volume>
-	</condition>
-</gyro>
+    <gyro>
+      <name>Gyro</name>
+      <type>avionics</type>
+      <mode>looped</mode>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/gyro.wav</path>
+      <condition>
+        <and>
+          <property>/controls/switches/battery</property>
+          <property>/controls/switches/turn-coordinator</property>
+        </and>
+        <volume>
+          <factor>1.0</factor>
+        </volume>
+      </condition>
+    </gyro>
 
     <!--                  Toggle Switches                  -->
-<click>
-  <name>Battery on</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
-  <condition>
-	<property>/controls/switches/battery</property>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Battery on</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <condition>
+        <property>/controls/switches/battery</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
-<click>
-  <name>Battery off</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
-  <condition>
-	<not>
-	  <property>controls/switches/battery</property>
-	</not>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Battery off</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/battery</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
-<click>
-  <name>Generator on</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
-  <condition>
-	<property>controls/switches/alternator</property>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Generator on</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <condition>
+        <property>controls/switches/alternator</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
-<click>
-  <name>Generator off</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
-  <condition>
-	<not>
-	  <property>controls/switches/alternator</property>
-	</not>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Generator off</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/alternator</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
-<click>
-  <name>Fuel Pump on</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
-  <condition>
-	<property>/controls/switches/fuelpump</property>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Fuel Pump on</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <condition>
+        <property>/controls/switches/fuelpump</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
-<click>
-  <name>Fuel Pump off</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
-  <condition>
-	<not>
-	  <property>/controls/switches/fuelpump</property>
-	</not>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Fuel Pump off</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <condition>
+        <not>
+          <property>/controls/switches/fuelpump</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
-<click>
-  <name>Nav Light On</name>
-  <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
-  <condition>
-	<property>controls/lighting/nav-lights</property>
-  </condition>
-  <volume>
-	<factor>1.0</factor>
-  </volume>
-</click>
+    <click>
+      <name>Nav Light On</name>
+      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <condition>
+        <property>controls/lighting/nav-lights</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
 
     <click>
       <name>Nav Light Off</name>
@@ -426,7 +426,7 @@
       </volume>
     </click>
 
-   <click>
+    <click>
       <name>Magnetos-off</name>
       <path>Sounds/click.wav</path>
       <condition>
@@ -487,7 +487,7 @@
       <max-dist>5.0</max-dist>
     </click>
 
-     <click>
+    <click>
       <name>Taxi Light On</name>
       <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
       <condition>

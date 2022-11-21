@@ -52,7 +52,7 @@ Trailing edge thickness: 0.5
   <maxpitch>18.4</maxpitch>
 
   <table name="C_THRUST" type="internal">
-     <tableData>
+    <tableData>
       0.00	0.1235
       0.05	0.1216
       0.10	0.1192
@@ -89,7 +89,7 @@ Trailing edge thickness: 0.5
 
 
   <table name="C_POWER" type="internal">
-     <tableData>
+    <tableData>
        0.00	0.0685
        0.05	0.0707
        0.10	0.0722

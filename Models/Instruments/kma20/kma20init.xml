@@ -18,9 +18,9 @@ to your aircraft-set.xml
   <com2 type="int" archive="y">0</com2>
   <nav1 type="int" archive="y">0</nav1>
   <nav2 type="int" archive="y">0</nav2>
-  <adf  type="int" archive="y">0</adf>
-  <dme  type="int" archive="y">0</dme>
-  <mkr  type="int" archive="y">-1</mkr>
+  <adf type="int" archive="y">0</adf>
+  <dme type="int" archive="y">0</dme>
+  <mkr type="int" archive="y">-1</mkr>
   <sens type="int" archive="y">0</sens>
 
   <!-- flag for marker lights test -->
