@@ -3,6 +3,11 @@
 <PropertyList>
 
   <path>vsi-1.1.ac</path>
+  
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>szkło.80</object-name>
+	</effect>
 
   <animation>
     <type>material</type>
