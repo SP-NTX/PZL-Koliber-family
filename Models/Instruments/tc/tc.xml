@@ -7,6 +7,8 @@
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Glass</object-name>
+    <object-name>Airplane</object-name>
+    <object-name>Ball</object-name>
   </effect>
 
   <animation>

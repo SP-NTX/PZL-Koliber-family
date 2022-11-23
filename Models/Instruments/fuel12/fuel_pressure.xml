@@ -3,6 +3,12 @@
 
 <PropertyList>
   <path>fuel_pressure.ac</path>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass</object-name>
+  </effect>
+
   <animation>
     <object-name>wskazowka</object-name>
     <object-name>tarcza</object-name>
