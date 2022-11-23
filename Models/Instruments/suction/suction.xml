@@ -7,6 +7,11 @@ PZL Koliber 160A
 <PropertyList>
   <path>suction.ac</path>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass</object-name>
+  </effect>
+
   <animation>
     <type>material</type>
     <object-name>wskazowka2</object-name>
