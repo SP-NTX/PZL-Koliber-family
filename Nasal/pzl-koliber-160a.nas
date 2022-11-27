@@ -14,6 +14,10 @@ var autostart = func {
 	props.globals.setDoubleValue("/controls/engines/engine/mixture", 1);
 	props.globals.setIntValue("/controls/fuel/selector", 1);
 	props.globals.setBoolValue("/controls/engines/engine/starter", 1);
+	var MagnetoTimer = func {
+		props.globals.setBoolValue("/controls/engines/engine/starter", 0)
+	}
+	settimer(MagnetoTimer, 2)
 }
 
 #*********** KONTROLKA ALTERNATORA *******************
