@@ -4,7 +4,7 @@
 # EGT Exhaust Gas Temperature - temperatura gazów spalinowych
 # CHT Cylinder Head Temperature - temperatura głowic silnika
 # GPH Gallons Per Hour - spalanie galonów na godzinę
-var disengage_starter_timer = maketimer(func { props.globals.setBoolValue("/controls/engines/engine/starter", 0); }, 2);
+var disengage_starter_timer = maketimer(2, func { props.globals.setBoolValue("/controls/engines/engine/starter", 0); });
 disengage_starter_timer.singleShot = 1;
 
 var autostart = func {
