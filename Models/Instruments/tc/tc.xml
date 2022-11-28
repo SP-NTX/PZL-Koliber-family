@@ -9,6 +9,7 @@
     <object-name>Glass</object-name>
     <object-name>Airplane</object-name>
     <object-name>Ball</object-name>
+    <object-name>Face</object-name>
   </effect>
 
   <animation>
