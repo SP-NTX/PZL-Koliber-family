@@ -5,6 +5,11 @@
   <!--<name>asi-MS893</name>-->
   <path>asi-1.1.ac</path>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass</object-name>
+  </effect>
+
   <animation>
     <type>material</type>
     <object-name>ASIface</object-name>

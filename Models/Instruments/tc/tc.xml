@@ -4,6 +4,14 @@
 
   <path>tc-1.1.ac</path>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass</object-name>
+    <object-name>Airplane</object-name>
+    <object-name>Ball</object-name>
+    <object-name>Face</object-name>
+  </effect>
+
   <animation>
     <type>material</type>
     <object-name>Ball</object-name>

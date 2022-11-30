@@ -12,6 +12,11 @@
 
   <path>alt-1.1.ac</path>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass</object-name>
+  </effect>
+
   <animation>
     <object-name>face</object-name>
     <object-name>needle100</object-name>
@@ -23,8 +28,6 @@
     <object-name>inhgknob</object-name>
     <object-name>scrollwheel-inhg</object-name>
     <object-name>mount</object-name>
-
-    <object-name>szkło.80</object-name>
   </animation>
 
   <animation>

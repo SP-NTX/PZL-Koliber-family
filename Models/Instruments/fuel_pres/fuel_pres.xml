@@ -3,6 +3,12 @@
 
 <PropertyList>
   <path>fuel_pres.ac</path>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass</object-name>
+  </effect>
+
   <animation>
     <type>material</type>
     <object-name>wskazowka</object-name>

@@ -3,6 +3,16 @@
 <PropertyList>
 
   <path>ai-1.1.ac</path>
+  
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+		<object-name>Face</object-name>
+		<object-name>Pitch</object-name>
+		<object-name>Bezel</object-name>
+		<object-name>Ring</object-name>
+		<object-name>Front</object-name>
+	</effect>
 
   <animation>
     <type>material</type>

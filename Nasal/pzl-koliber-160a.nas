@@ -4,6 +4,8 @@
 # EGT Exhaust Gas Temperature - temperatura gazów spalinowych
 # CHT Cylinder Head Temperature - temperatura głowic silnika
 # GPH Gallons Per Hour - spalanie galonów na godzinę
+var disengage_starter_timer = maketimer(2, func { props.globals.setBoolValue("/controls/engines/engine/starter", 0); });
+disengage_starter_timer.singleShot = 1;
 
 var autostart = func {
 	props.globals.setBoolValue("/controls/electric/battery-switch", 1);
@@ -14,6 +16,7 @@ var autostart = func {
 	props.globals.setDoubleValue("/controls/engines/engine/mixture", 1);
 	props.globals.setIntValue("/controls/fuel/selector", 1);
 	props.globals.setBoolValue("/controls/engines/engine/starter", 1);
+	disengage_starter_timer.start();
 }
 
 #*********** KONTROLKA ALTERNATORA *******************
