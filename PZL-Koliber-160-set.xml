@@ -92,6 +92,21 @@
 				<splash type="bool">true</splash>
 				<path>Previews/3.png</path>
 			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/4.png</path>
+			</preview>
+			<preview>
+				<type>panel</type>
+				<splash type="bool">true</splash>
+				<path>Previews/5.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/6.png</path>
+			</preview>
 		</previews>
 
 		<flight-model>jsb</flight-model>
