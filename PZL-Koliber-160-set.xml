@@ -98,7 +98,7 @@
 				<path>Previews/4.png</path>
 			</preview>
 			<preview>
-				<type>panel</type>
+				<type>exterior</type>
 				<splash type="bool">true</splash>
 				<path>Previews/5.png</path>
 			</preview>
