@@ -28,6 +28,7 @@ Currently developed by:
 - Jakub Kosakowski (jakkos98) (SP-KOS)
 - SP-NTX
 - TheFGFSEagle
+- sryu1
 and others
 
 Originally by: Mariusz Migut SP-MMA - 3D, Sounds; Patrice Poly (WooT) - Old FDM
