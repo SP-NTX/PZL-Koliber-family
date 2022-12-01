@@ -38,11 +38,15 @@
 				<description>3D, FDM, Systems, Nasal</description>
 			</author>
 			<author n="3">
+				<name>sryu1</name>
+				<description>3D, Textures</description>
+			</author>
+			<author n="4">
 				<name>Mariusz Migut</name>
 				<description>Original author; (3D, Sounds...)</description>
 				<nick>SP-MMA</nick>
 			</author>
-			<author n="4">
+			<author n="5">
 				<name>Patrice Poly</name>
 				<description>Original author; Old Yasim FDM</description>
 				<nick>WooT</nick>
@@ -91,6 +95,21 @@
 				<type>exterior</type>
 				<splash type="bool">true</splash>
 				<path>Previews/3.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/4.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/5.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/6.png</path>
 			</preview>
 		</previews>
 
