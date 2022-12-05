@@ -7,8 +7,8 @@
       <livery>
         <name type="string">Default Red</name>
         <texture>Liveries/160A.red.png</texture>
-		<livery-change>1</livery-change>
-	  </livery>
+        <livery-change>1</livery-change>
+      </livery>
     </model>
   </sim>
 
