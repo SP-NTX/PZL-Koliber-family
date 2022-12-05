@@ -164,6 +164,7 @@
 			<path>Aircraft/PZL-Koliber-family/Models/PZL-Koliber-160A.xml</path>
 			<livery>
 				<file type="string" />
+				<livery-change type=int>0</livery-change>
 			</livery>
 		</model>
 
