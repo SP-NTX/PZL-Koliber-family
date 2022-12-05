@@ -314,6 +314,7 @@
 			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/fuel.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
 		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>

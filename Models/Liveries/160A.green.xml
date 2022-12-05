@@ -5,7 +5,7 @@
   <sim>
     <model>
       <livery>
-        <name type="string">160A Green</name>
+        <name type="string">Default Green</name>
         <texture>Liveries/160A.green.png</texture>
       </livery>
     </model>
