@@ -9,7 +9,7 @@
   </model>
 
   <effect>
-    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-opaque</inherits-from>
+    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-normal-map</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>fuselage.011</object-name>
     <object-name>hstab</object-name>
@@ -37,16 +37,6 @@
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>PropDisc</object-name>
   </effect>
-
-  <animation>
-    <object-name>hstab</object-name>
-    <object-name>vstab</object-name>
-    <object-name>joystick1</object-name>
-    <object-name>joystick2</object-name>
-    <object-name>throttle.1</object-name>
-    <object-name>throttle.2</object-name>
-    <object-name>mixture_control</object-name>
-  </animation>
 
   <animation>
     <object-name>nose-wheel</object-name>
