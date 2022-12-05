@@ -6,7 +6,7 @@ PZL Koliber 160A
 
 <PropertyList>
   <path>fuel12.1.ac</path>
-  
+
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Glass</object-name>

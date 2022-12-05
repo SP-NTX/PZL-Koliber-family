@@ -3,25 +3,35 @@
 	<name>exterior-opaque</name>
 	<inherits-from>Effects/model-combined</inherits-from>
 	<parameters>
-		<splash-x><use>/environment/aircraft-effects/splash-vector-x</use></splash-x>
-		<splash-y><use>/environment/aircraft-effects/splash-vector-y</use></splash-y>
-		<splash-z><use>/environment/aircraft-effects/splash-vector-z</use></splash-z>
+		<splash-x>
+			<use>/environment/aircraft-effects/splash-vector-x</use>
+		</splash-x>
+		<splash-y>
+			<use>/environment/aircraft-effects/splash-vector-y</use>
+		</splash-y>
+		<splash-z>
+			<use>/environment/aircraft-effects/splash-vector-z</use>
+		</splash-z>
 		<surface-mapping-scheme type="int">1</surface-mapping-scheme>
-		<rnorm><use>/environment/rain-norm</use></rnorm>
-		<gsnorm><use>/environment/aircraft-effects/ground-splash-norm</use></gsnorm>
+		<rnorm>
+			<use>/environment/rain-norm</use>
+		</rnorm>
+		<gsnorm>
+			<use>/environment/aircraft-effects/ground-splash-norm</use>
+		</gsnorm>
 		<!-- no fog and frost on outside surfaces -->
 		<frost-level>0</frost-level>
 		<fog-level>0</fog-level>
-	        <reflection-enabled type="int"> 1 </reflection-enabled>
-	        <reflection-correction type="float">-0.2</reflection-correction>
-	        <reflection-fresnel-factor type="float">0.6</reflection-fresnel-factor>
-	        <reflection-type type="int">2</reflection-type>
-	        <reflection-dynamic type="int"> 2 </reflection-dynamic>
-	        <reflection-fresnel type="float"> 0.2 </reflection-fresnel>
-	        <reflection-rainbow type="float"> 0.1 </reflection-rainbow>
-	        <reflection-noise type="float"> 0.7 </reflection-noise>
+		<reflection-enabled type="int"> 1 </reflection-enabled>
+		<reflection-correction type="float">-0.2</reflection-correction>
+		<reflection-fresnel-factor type="float">0.6</reflection-fresnel-factor>
+		<reflection-type type="int">2</reflection-type>
+		<reflection-dynamic type="int"> 2 </reflection-dynamic>
+		<reflection-fresnel type="float"> 0.2 </reflection-fresnel>
+		<reflection-rainbow type="float"> 0.1 </reflection-rainbow>
+		<reflection-noise type="float"> 0.7 </reflection-noise>
 		<rain-enabled type="int">2</rain-enabled>
-		<texture n= "5">
+		<texture n="5">
 			<type>cubemap</type>
 			<images>
 				<positive-x>Aircraft/Generic/Effects/CubeMaps/buildings/N.png</positive-x>
