@@ -31,24 +31,9 @@
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
     <type>noshadow</type>
-    <object-name>szkło.80</object-name>
+    <object-name>Glass</object-name>
   </animation>
-
-  <!--effect>
-       <inherits-from>Effects/model-transparent</inherits-from>
-         <object-name>vitre</object-name>
-     <condition>
-       <property>sim/rendering/rembrandt/enabled</property>
-     </condition>
-   </effect-->
 
   <animation>
     <type>material</type>
