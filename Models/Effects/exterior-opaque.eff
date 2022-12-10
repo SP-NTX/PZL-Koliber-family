@@ -22,6 +22,15 @@
 		<!-- no fog and frost on outside surfaces -->
 		<frost-level>0</frost-level>
 		<fog-level>0</fog-level>
+		<normalmap-enabled type="int">1</normalmap-enabled>
+		<normalmap-dds type="int">0</normalmap-dds>
+		<texture n="2">
+			<image>Aircraft/PZL-Koliber-family/Models/Effects/exterior-normalmap.png</image>
+			<filter>linear-mipmap-linear</filter>
+			<wrap-s>repeat</wrap-s>
+			<wrap-t>repeat</wrap-t>
+			<internal-format>normalized</internal-format>
+		</texture>			
 		<reflection-enabled type="int"> 1 </reflection-enabled>
 		<reflection-correction type="float">-0.2</reflection-correction>
 		<reflection-fresnel-factor type="float">0.6</reflection-fresnel-factor>
@@ -43,4 +52,58 @@
 			</images>
 		</texture>
 	</parameters>
+	<!-- ####################
+	### NORMALMAP INCLUDE ###
+	######################### -->
+	<generate>
+		<tangent type="int">6</tangent>
+		<binormal type="int">7</binormal>
+	</generate>
+
+	<technique n="4">
+		<pass>
+			<program>
+				<attribute>
+					<name>tangent</name>
+					<index>6</index>
+				</attribute>
+				<attribute>
+					<name>binormal</name>
+					<index>7</index>
+				</attribute>
+			</program>
+		</pass>
+	</technique>
+
+	<technique n="7">
+		<pass>
+			<program>
+				<attribute>
+					<name>tangent</name>
+					<index>6</index>
+				</attribute>
+				<attribute>
+					<name>binormal</name>
+					<index>7</index>
+				</attribute>
+			</program>
+		</pass>
+		</technique>
+		<technique n="9">
+		<pass>
+			<program>
+				<attribute>
+					<name>tangent</name>
+					<index>6</index>
+				</attribute>
+				<attribute>
+					<name>binormal</name>
+					<index>7</index>
+				</attribute>
+			</program>
+		</pass>
+	</technique>
+	<!-- ########################
+	### END NORMALMAP INCLUDE ###
+	############################# -->
 </PropertyList>
