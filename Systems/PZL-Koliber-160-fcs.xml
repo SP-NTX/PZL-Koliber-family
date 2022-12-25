@@ -275,14 +275,14 @@
 					<independentVar lookup="row">/controls/engines/engine/primer</independentVar>
 					<independentVar lookup="column">/controls/engines/engine/throttle</independentVar>
 					<tableData>
-                                 0.00    0.1    0.25    0.5
-                            2    0       0      0      0
-                            3    1       1      1      0
-                            4    1       1      1      0
-                            5    1       1      0      0
-                            6    1       0      0      0
-                            7    0       0      0      0
-                        </tableData>
+							0	0.1		0.25	0.5
+						2	0	0		0		0
+						3	1	1		1		2
+						4	1	1		1		2
+						5	1	1		2		2
+						6	1	2		2		2
+						7	2	2		2		2
+					</tableData>
 				</table>
 			</function>
 		</fcs_function>
@@ -296,10 +296,9 @@
 			<default value="fcs/mixture-cmd-norm" />
 			<output>fcs/mixture-pos-norm</output>
 			<test logic="AND" value="fcs/mixture-primer">
-                    /controls/engines/engine/use-primer eq 1
-                    /engines/engine[0]/oil-temperature-degf le 75
-                </test>
+				/controls/engines/engine/use-primer eq 1
+				/engines/engine[0]/oil-temperature-degf le 75
+			</test>
 		</switch>
-
 	</channel>
 </flight_control>
