@@ -73,6 +73,8 @@
 			<!--temporary until Koliber 235 will be made -->
 		</tags>
 
+		<checklists include="PZL-Koliber-160-checklists.xml" />
+
 		<urls>
 			<home-page>https://wiki.flightgear.org/PZL-Koliber-family</home-page>
 			<support>https://github.com/SP-NTX/PZL-Koliber-family/issues</support>
