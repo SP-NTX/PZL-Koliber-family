@@ -14,6 +14,8 @@
 		<aircraft-version>0.12</aircraft-version>
 
 		<status>beta</status>
+		
+		<expected-aircraft-dir-name>PZL-Koliber-family</expected-aircraft-dir-name>
 
 		<rating>
 			<FDM type="int">4</FDM>
