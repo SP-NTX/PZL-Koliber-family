@@ -212,6 +212,16 @@
 		</view>
 
 		<!--<help include="help.xml">-->
+		<rendering>
+			<headshake>
+				<enabled>true</enabled> <!-- very controversional approach of making pilots fly realistically to be honest. I had to. -->
+				<groundshake>
+					<default-aircraft-scaler-factor>5</default-aircraft-scaler-factor>
+					<default-aircraft-scaler-min-knots>1</default-aircraft-scaler-min-knots>
+					<default-aircraft-scaler-max-knots>25</default-aircraft-scaler-max-knots>
+				</groundshake>
+			</headshake> 
+		</rendering>
 
 		<flaps>
 			<setting>0</setting>
@@ -311,7 +321,11 @@
 			</tank>
 		</fuel>
 	</consumables>
-
+	
+	<init>
+		<progress>0</progress>
+		<state>.</state>
+	</init>
 
 	<nasal>
 		<pzl_koliber_160a>
@@ -320,6 +334,7 @@
 			<file>Aircraft/PZL-Koliber-family/Nasal/fuel.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
 		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>

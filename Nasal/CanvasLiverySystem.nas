@@ -9,7 +9,7 @@ var root = liveryCanvas.createGroup();
 var update = func(){
 var layers = {};
 var path="Aircraft/PZL-Koliber-family/Models/"; # IF YOU WANT TO USE IT WITH OTHER AIRCRAFTS JUST CHANGE THIS
-var image= getprop('/sim/model/livery/texture');
+var image= getprop('sim/model/livery/texture');
 layers[image] = root.createChild("image")
      .setFile(path~image)
      .setSize(2048,2048);
