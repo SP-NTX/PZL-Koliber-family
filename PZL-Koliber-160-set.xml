@@ -220,6 +220,15 @@
 		</flaps>
 	</sim>
 
+	<koliber>
+		<web-data> <!-- will be fully handled using nasal only -->
+			<latest-version>10000000</latest-version> <!--dirty way to fix no connection error-->
+			<update-version>0</update-version>
+			<break>0</break> <!-- never ever use this ntx or anyone -->
+			<stop-using-web-sync>0</stop-using-web-sync>
+		</web-data>
+	</koliber>
+
 	<instrumentation>
 		<nav>
 			<power-btn type="bool">false</power-btn>
