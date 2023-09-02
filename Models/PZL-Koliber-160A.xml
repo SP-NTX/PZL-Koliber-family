@@ -6,8 +6,16 @@
   <model>
     <name>Instruments</name>
     <path>Aircraft/PZL-Koliber-family/Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
+			<defaults>
+			<order-by-xyz/> <!-- idk where to add this -->
+		</defaults>
+		
   </model>
-
+  
+		<defaults>
+			<order-by-xyz/> <!-- also there -->
+		</defaults>
+		
   <effect>
     <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-opaque</inherits-from>
     <object-name>fuselage</object-name>
