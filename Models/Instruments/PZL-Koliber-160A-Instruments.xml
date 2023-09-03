@@ -32,7 +32,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/ai/ai.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/ai/RCA_22-41.xml</path>
 		<offsets>
 			<x-m>-0.5895</x-m>
 			<y-m> -0.2495</y-m>
