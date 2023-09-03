@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <path>ai-1.1.ac</path>
+  <path>AI.ac</path>
 
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
