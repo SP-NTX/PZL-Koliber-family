@@ -968,7 +968,7 @@
   </animation>
 
 
-  <light>
+  <!--<light>
     <name>alternator-warn</name>
     <type>point</type>
     <position>
@@ -1003,7 +1003,7 @@
     <dim-factor>
       <property>/switches/lights/alternator-light</property>
     </dim-factor>
-  </light>
+  </light> -->
 
   <animation>
     <type>textranslate</type>
@@ -1080,7 +1080,7 @@
   </animation>
 
 
-  <light>
+  <!--<light>
     <name>starter-warn</name>
     <type>point</type>
     <position>
@@ -1115,7 +1115,7 @@
     <dim-factor>
       <property>/switches/lights/starter-light</property>
     </dim-factor>
-  </light>
+  </light> -->
 
 
   <!--WŁĄCZNIK POPMPY PALIWA-->
@@ -1403,6 +1403,18 @@
         <command>property-toggle</command>
         <property>controls/lighting/landing-lights</property>
       </binding>
+	  	    <binding>
+        <command>property-assign</command>
+        <property>sim/model/lights/landing/level</property>
+		<value>10000</value>
+      </binding>
+	  <mod-up>
+	    <binding>
+        <command>property-assign</command>
+        <property>sim/model/lights/landing/level</property>
+		<value>0</value>
+      </binding>
+	  </mod-up>
     </action>
     <hovered>
       <binding>
@@ -1844,7 +1856,7 @@
       </binding>
     </action>
   </animation>
-  <light>
+  <!--<light>
     <name>fuel_light1</name>
     <type>point</type>
     <position>
@@ -1915,7 +1927,7 @@
     <dim-factor>
       <property>controls/lighting/panel-norm</property>
     </dim-factor>
-  </light>
+  </light> -->
 
   <model>
     <path>Instruments/primer/primer.xml</path>

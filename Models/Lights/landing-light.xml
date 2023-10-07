@@ -97,6 +97,12 @@
 			<l>0</l>
 			<q>0.0001</q>
 		</attenuation>
+		<color>
+			<r>1.0</r>
+			<g>0.95</g>
+			<b>0.95</b>
+		</color>
+		<intensity><value>sim/model/lights/landing/level</value></intensity>
 		<spot-exponent>10</spot-exponent>
 		<spot-cutoff>50</spot-cutoff>
 		<range-m>500</range-m>

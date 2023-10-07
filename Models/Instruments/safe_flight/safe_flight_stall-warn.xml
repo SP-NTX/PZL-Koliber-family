@@ -78,7 +78,7 @@
   </animation>
 
 
-  <light>
+  <!--<light>
     <name>safe-flight_stall_warn</name>
     <type>point</type>
     <position>
@@ -113,7 +113,7 @@
     <dim-factor>
       <property>instrumentation/stall-warn/lamp-lit</property>
     </dim-factor>
-  </light>
+  </light> -->
 
 
 </PropertyList>
