@@ -27,7 +27,7 @@ liveryCanvas.addPlacement({"node": "left-slat"});
 liveryCanvas.addPlacement({"node": "right-slat"});
 liveryCanvas.addPlacement({"node": "wing"});
 };
-setlistener("/sim/model/livery/livery-change", func {
+setlistener("sim/model/livery/livery-change", func {
 update();
-setprop("/sim/model/livery/livery-change", 0);
+setprop("sim/model/livery/livery-change", 0);
 }, 1, 0);
