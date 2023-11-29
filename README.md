@@ -20,6 +20,8 @@
 - JSBsim FDM
 - Auto slats (WIP)
 - Realistic sounds
+- Updated textures
+- New Attitude Indicator
 
 ### Developers
 
