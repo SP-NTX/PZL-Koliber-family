@@ -10,6 +10,10 @@ disengage_starter_timer.singleShot = 1;
 var autostart = func {
 	props.globals.setBoolValue("/controls/electric/battery-switch", 1);
 	props.globals.setBoolValue("/controls/engines/engine/master-alt", 1);
+	props.globals.setBoolValue("/controls/switches/alternator", 1);
+	props.globals.setBoolValue("/controls/switches/battery", 1);
+	props.globals.setBoolValue("/controls/switches/turn-coordinator", 1);
+	props.globals.setBoolValue("/controls/switches/beacon", 1);
 	props.globals.setIntValue("/controls/engines/engine/magnetos", 3);
 	props.globals.setIntValue("/controls/engines/engine/primer-pump", 6);
 	props.globals.setDoubleValue("/controls/engines/engine/throttle", 0.15);
