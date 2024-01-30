@@ -38,4 +38,4 @@ Originally by: Mariusz Migut SP-MMA - 3D, Sounds; Patrice Poly (WooT) - Old FDM
 
 ### Licence
 
-GNU GENERAL PUBLIC LICENSE Version 2
+GNU General Public License v2.0 (check the [LICENSE](https://github.com/SP-NTX/PZL-Koliber-family/blob/jsbsim-dev/LICENSE))
