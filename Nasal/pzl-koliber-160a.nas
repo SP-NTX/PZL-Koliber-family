@@ -14,6 +14,7 @@ var autostart = func {
 	props.globals.setBoolValue("/controls/switches/battery", 1);
 	props.globals.setBoolValue("/controls/switches/turn-coordinator", 1);
 	props.globals.setBoolValue("/controls/switches/beacon", 1);
+	props.globals.setBoolValue("/controls/lighting/nav-lights", 1);
 	props.globals.setIntValue("/controls/engines/engine/magnetos", 3);
 	props.globals.setIntValue("/controls/engines/engine/primer-pump", 6);
 	props.globals.setDoubleValue("/controls/engines/engine/throttle", 0.15);
