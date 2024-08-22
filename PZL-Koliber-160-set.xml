@@ -59,18 +59,18 @@
 			<tag n="0">aerobatic</tag>
 			<tag n="1">ga</tag>
 			<tag n="2">trainer</tag>
-			<tag n="4">1990s</tag>
-			<tag n="5">2000s</tag>
-			<tag n="6">vfr</tag>
-			<tag n="7">ifr</tag>
-			<tag n="8">low-wing</tag>
-			<tag n="9">tricycle</tag>
-			<tag n="10">single-engine</tag>
-			<tag n="11">piston</tag>
-			<tag n="12">propeller</tag>
-			<tag n="13">fixed-pitch</tag>
-			<tag n="14">PZL</tag>
-			<tag n="15">Koliber</tag>
+			<tag n="3">1990s</tag>
+			<tag n="4">2000s</tag>
+			<tag n="5">vfr</tag>
+			<tag n="6">ifr</tag>
+			<tag n="7">low-wing</tag>
+			<tag n="8">tricycle</tag>
+			<tag n="9">single-engine</tag>
+			<tag n="10">piston</tag>
+			<tag n="11">propeller</tag>
+			<tag n="12">fixed-pitch</tag>
+			<tag n="13">PZL</tag>
+			<tag n="14">Koliber</tag>
 			<!--<tag n="16">tow</tag>-->
 			<!--temporary until Koliber 235 will be made -->
 		</tags>
