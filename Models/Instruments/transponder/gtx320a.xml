@@ -13,7 +13,16 @@
   <path>gtx320a.ac</path>
 
   <params>
+
+
+
+    <id-code>/instrumentation/transponder[0]/id-code</id-code>
+    <ident>/instrumentation/transponder[0]/ident</ident>
+    
+
+
     <serviceable>instrumentation/transponder/serviceable</serviceable>
+    <operable>instrumentation/transponder/operable</operable>
 
     <knob-mode>instrumentation/transponder/inputs/knob-mode</knob-mode>
     <ident-btn>instrumentation/transponder/inputs/ident-btn</ident-btn>

@@ -205,7 +205,7 @@
       <name>FuelPump</name>
       <type>avionics</type>
       <mode>looped</mode>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/FuelPump.wav</path>
+      <path>Sounds/fuelpump.wav</path>
       <condition>
         <and>
           <property>/controls/switches/battery</property>
@@ -221,7 +221,7 @@
       <name>Gyro</name>
       <type>avionics</type>
       <mode>looped</mode>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/gyro.wav</path>
+      <path>Sounds/gyro.wav</path>
       <condition>
         <and>
           <property>/controls/switches/battery</property>
@@ -236,7 +236,7 @@
     <!--                  Toggle Switches                  -->
     <click>
       <name>Battery on</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <path>Sounds/ButtonPower.wav</path>
       <condition>
         <property>/controls/switches/battery</property>
       </condition>
@@ -247,7 +247,7 @@
 
     <click>
       <name>Battery off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <path>Sounds/ButtonPower.wav</path>
       <condition>
         <not>
           <property>controls/switches/battery</property>
@@ -260,7 +260,7 @@
 
     <click>
       <name>Generator on</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <path>Sounds/ButtonPower.wav</path>
       <condition>
         <property>controls/switches/alternator</property>
       </condition>
@@ -271,7 +271,7 @@
 
     <click>
       <name>Generator off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonPower.wav</path>
+      <path>Sounds/ButtonPower.wav</path>
       <condition>
         <not>
           <property>controls/switches/alternator</property>
@@ -284,7 +284,7 @@
 
     <click>
       <name>Fuel Pump on</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>/controls/switches/fuelpump</property>
       </condition>
@@ -295,7 +295,7 @@
 
     <click>
       <name>Fuel Pump off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>/controls/switches/fuelpump</property>
@@ -308,7 +308,7 @@
 
     <click>
       <name>Nav Light On</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>controls/lighting/nav-lights</property>
       </condition>
@@ -319,7 +319,7 @@
 
     <click>
       <name>Nav Light Off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>controls/lighting/nav-lights</property>
@@ -332,7 +332,7 @@
 
     <click>
       <name>Landing Light On</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>/controls/lighting/landing-lights</property>
       </condition>
@@ -343,7 +343,7 @@
 
     <click>
       <name>Landing Light Off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>/controls/lighting/landing-lights</property>
@@ -356,7 +356,7 @@
 
     <click>
       <name>Turn and Bank On</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>/controls/switches/turn-coordinator</property>
       </condition>
@@ -367,7 +367,7 @@
 
     <click>
       <name>Turn and Bank Off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>/controls/switches/turn-coordinator</property>
@@ -380,7 +380,7 @@
 
     <click>
       <name>Flashing Beacon On</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>controls/switches/beacon</property>
       </condition>
@@ -391,7 +391,7 @@
 
     <click>
       <name>Flashing Beacon Off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>controls/switches/beacon</property>
@@ -404,7 +404,7 @@
 
     <click>
       <name>Pitot Heat On</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>controls/anti-ice/pitot-heat</property>
       </condition>
@@ -415,7 +415,7 @@
 
     <click>
       <name>Pitot Heat Off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>controls/anti-ice/pitot-heat</property>
@@ -489,7 +489,7 @@
 
     <click>
       <name>Taxi Light On</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <property>controls/lighting/taxi-lights</property>
       </condition>
@@ -500,7 +500,7 @@
 
     <click>
       <name>Taxi Light Off</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/ButtonLights.wav</path>
+      <path>Sounds/ButtonLights.wav</path>
       <condition>
         <not>
           <property>controls/lighting/taxi-lights</property>
@@ -537,7 +537,7 @@
     <!-- zawór paliwa -->
     <click>
       <name>Fuel valve</name>
-      <path>Aircraft/PZL-Koliber-160A/Sounds/pump-valve.wav</path>
+      <path>Sounds/pump-valve.wav</path>
       <condition>
         <property>controls/fuel-selector</property>
       </condition>

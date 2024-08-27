@@ -5,7 +5,7 @@
   <path>PZL-Koliber-160A.ac</path>
   <model>
     <name>Instruments</name>
-    <path>Aircraft/PZL-Koliber-family/Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
+    <path>Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
 			<defaults>
 			<order-by-xyz/> <!-- idk where to add this -->
 		</defaults>
@@ -17,7 +17,7 @@
 		</defaults>
 		
   <effect>
-    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-opaque</inherits-from>
+    <inherits-from>Models/Effects/exterior-opaque</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>fuselage.011</object-name>
     <object-name>hstab</object-name>
@@ -34,7 +34,7 @@
 
   </effect>
   <effect>
-    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-glass</inherits-from>
+    <inherits-from>Models/Effects/exterior-glass</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>okno.lewe</object-name>
     <object-name>okno.prawe</object-name>
@@ -2029,7 +2029,7 @@
         ##############################################################################
       -->
       <![CDATA[
-        var livery_update = aircraft.livery_update.new("Aircraft/PZL-Koliber-family/Models/Liveries");
+        var livery_update = aircraft.livery_update.new("Models/Liveries");
       ]]>
     </load>
 

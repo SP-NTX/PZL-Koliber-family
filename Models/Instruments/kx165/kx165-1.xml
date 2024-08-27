@@ -24,23 +24,33 @@
   
    Modified the knobs for use with only the left mouse button - WooT march 2009
   -->
-
-  <params>
+ <params>
     <comm-serviceable>instrumentation/comm[0]/serviceable</comm-serviceable>
     <nav-serviceable>instrumentation/nav[0]/serviceable</nav-serviceable>
     <power>instrumentation/nav[0]/power-btn</power>
-
+    <power>instrumentation/comm[0]/operable</power>
     <comm-frq-swp>instrumentation/comm[0]/frq-swap-btn</comm-frq-swp>
     <comm-frq-selected>instrumentation/comm[0]/frequencies/selected-mhz</comm-frq-selected>
     <comm-frq-standby>instrumentation/comm[0]/frequencies/standby-mhz</comm-frq-standby>
+    <comm-dial-khz>instrumentation/comm[0]/frequencies/dial-khz</comm-dial-khz>
+    <comm-dial-mhz>instrumentation/comm[0]/frequencies/dial-mhz</comm-dial-mhz>
+    <comm-volume-selected>instrumentation/comm[0]/volume-selected</comm-volume-selected>
     <comm-volume>instrumentation/comm[0]/volume</comm-volume>
     <comm-test>instrumentation/comm[0]/test-btn</comm-test>
+    <channel-mode-selector>instrumentation/comm[0]/channel-mode-selector</channel-mode-selector>
 
     <nav-frq-swp>instrumentation/nav[0]/frq-swap-btn</nav-frq-swp>
     <nav-frq-selected>instrumentation/nav[0]/frequencies/selected-mhz</nav-frq-selected>
     <nav-frq-standby>instrumentation/nav[0]/frequencies/standby-mhz</nav-frq-standby>
     <nav-volume>instrumentation/nav[0]/volume</nav-volume>
     <nav-audio>instrumentation/nav[0]/audio-btn</nav-audio>
+    <nav-dial-khz>instrumentation/nav[0]/frequencies/dial-khz</nav-dial-khz>
+    <nav-dial-mhz>instrumentation/nav[0]/frequencies/dial-mhz</nav-dial-mhz>
+    <signal-quality-norm>/instrumentation/comm[0]/signal-quality-norm</signal-quality-norm>
+    <airport-id>/instrumentation/comm[0]/airport-id</airport-id>
+    <station-name>/instrumentation/comm[0]/station-name</station-name>
+    <tracking-distance>/instrumentation/comm[0]/track-distance-m</tracking-distance>
+    <true-bearing-to-deg>/instrumentation/comm[0]/true-bearing-to-deg</true-bearing-to-deg>
 
     <dimming>instrumentation/comm[0]/dimming-norm</dimming>
   </params>
