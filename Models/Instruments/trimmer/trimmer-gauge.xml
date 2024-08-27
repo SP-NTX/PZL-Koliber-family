@@ -31,7 +31,7 @@
         <property>/controls/flight/elevator-trim</property>
         <interpolation>
             <entry>
-                <ind>1.0</ind>
+                <ind>-1.0</ind>
                 <dep>85</dep>
             </entry>
             <entry>
@@ -39,7 +39,7 @@
                 <dep>0.00</dep>
             </entry>
             <entry>
-                <ind>-1.0</ind>
+                <ind>1.0</ind>
                 <dep>-85</dep>
             </entry>
         </interpolation>
