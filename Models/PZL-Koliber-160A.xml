@@ -612,8 +612,7 @@
     </center>
     <axis>
       <x>0</x>
-      controls
-      <y>1</y>
+      <y>-1</y>
       <z>0</z>
     </axis>
   </animation>
@@ -640,7 +639,7 @@
     </center>
     <axis>
       <x>0</x>
-      <y>1</y>
+      <y>-1</y>
       <z>0</z>
     </axis>
   </animation>
