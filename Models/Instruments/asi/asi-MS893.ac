@@ -507,7 +507,7 @@ OBJECT poly
 name "ASIring_1"
 data 8
 Mesh.009
-texture "asi-MS893.png"
+texture "asi.png"
 texrep 1 1
 crease 30.000000
 numvert 96
@@ -1117,7 +1117,7 @@ OBJECT poly
 name "ASIface"
 data 8
 Mesh.007
-texture "asi-MS893.png"
+texture "asi.png"
 texrep 1 1
 crease 30.000000
 numvert 16

@@ -12,7 +12,7 @@ name "ASIface"
 data 12
 ASIface.mesh
 crease 40.0
-texture "asi-MS893.png"
+texture "asi.png"
 numvert 16
 -0.00182 0.02747 -0.02747
 -0.00182 0.01487 -0.03589

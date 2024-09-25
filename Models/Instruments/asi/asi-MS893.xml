@@ -29,47 +29,27 @@
     <interpolation>
       <entry>
         <ind>  0</ind>
-        <dep>    0</dep>
+        <dep>    -180</dep>
       </entry>
       <entry>
         <ind>  40</ind>
-        <dep>    15</dep>
+        <dep>    -130</dep>
       </entry>
       <entry>
         <ind>  60</ind>
-        <dep>   41</dep>
+        <dep>   -80</dep>
       </entry>
       <entry>
-        <ind>  80</ind>
-        <dep>   76</dep>
-      </entry>
-      <entry>
-        <ind>  100</ind>
-        <dep>  114</dep>
+        <ind>  90</ind>
+        <dep>   0</dep>
       </entry>
       <entry>
         <ind> 120</ind>
-        <dep>  150</dep>
+        <dep>  80</dep>
       </entry>
       <entry>
         <ind> 140</ind>
-        <dep>  190</dep>
-      </entry>
-      <entry>
-        <ind> 160</ind>
-        <dep>  226</dep>
-      </entry>
-      <entry>
-        <ind> 180</ind>
-        <dep>  265</dep>
-      </entry>
-      <entry>
-        <ind> 200</ind>
-        <dep>  302</dep>
-      </entry>
-      <entry>
-        <ind> 215</ind>
-        <dep>  331</dep>
+        <dep>  130</dep>
       </entry>
     </interpolation>
     <axis>
@@ -86,47 +66,27 @@
     <interpolation>
       <entry>
         <ind>  0</ind>
-        <dep>    0</dep>
+        <dep>    -180</dep>
       </entry>
       <entry>
         <ind>  40</ind>
-        <dep>    15</dep>
+        <dep>    -130</dep>
       </entry>
       <entry>
         <ind>  60</ind>
-        <dep>   41</dep>
+        <dep>   -80</dep>
       </entry>
       <entry>
-        <ind>  80</ind>
-        <dep>   76</dep>
-      </entry>
-      <entry>
-        <ind>  100</ind>
-        <dep>  114</dep>
+        <ind>  90</ind>
+        <dep>   0</dep>
       </entry>
       <entry>
         <ind> 120</ind>
-        <dep>  150</dep>
+        <dep>  80</dep>
       </entry>
       <entry>
         <ind> 140</ind>
-        <dep>  190</dep>
-      </entry>
-      <entry>
-        <ind> 160</ind>
-        <dep>  226</dep>
-      </entry>
-      <entry>
-        <ind> 180</ind>
-        <dep>  265</dep>
-      </entry>
-      <entry>
-        <ind> 200</ind>
-        <dep>  302</dep>
-      </entry>
-      <entry>
-        <ind> 215</ind>
-        <dep>  331</dep>
+        <dep>  130</dep>
       </entry>
     </interpolation>
     <axis>
@@ -135,5 +95,4 @@
       <z>0</z>
     </axis>
   </animation>
-
 </PropertyList>

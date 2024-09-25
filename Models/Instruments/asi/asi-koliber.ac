@@ -10,7 +10,7 @@ name "Blender_export__asi-koliber.ac"
 kids 5
 OBJECT poly
 name "ASIface"
-texture "asi-MS893.png"
+texture "asi.png"
 texrep 1 1
 numvert 16
 0.0010720 0.0274700 -0.0274700
