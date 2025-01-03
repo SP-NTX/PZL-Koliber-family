@@ -12,6 +12,23 @@
 		
   </model>
   
+  
+  
+    <model>
+    <path>Aircraft/PZL-Koliber-family/Models/Effects/Smoke/smoke.xml</path>
+    <offsets>
+      <x-m> -0.150 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.733 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+  
+  
 		<defaults>
 			<order-by-xyz/> <!-- also there -->
 		</defaults>

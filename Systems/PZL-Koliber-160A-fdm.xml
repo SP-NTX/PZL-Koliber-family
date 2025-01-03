@@ -291,7 +291,7 @@
       <dynamic_friction> 1 </dynamic_friction>
       <spring_coeff unit="N/M">     27352.62 </spring_coeff>
       <damping_coeff unit="N/M/SEC"> 13676.31 </damping_coeff>
-    </contact>
+    </contact>PZL-Koliber-160-fcs
 
     <contact type="STRUCTURE" name="NOSE_STR">
       <location unit="M">
@@ -320,9 +320,9 @@
   </ground_reactions>
 
 
-  <flight_control file="Systems/PZL-Koliber-160-fcs.xml" />
+  <flight_control file="Systems/PZL-Koliber-160A-fcs.xml" />
 
-  <aerodynamics file="Systems/PZL-Koliber-160-aerodynamics.xml" />
+  <aerodynamics file="Systems/PZL-Koliber-160A-aerodynamics.xml" />
 
   <external_reactions />
 </fdm_config>

@@ -136,7 +136,7 @@
 			</product>
 		</function>
 
-		<!--<function name="aero/force/Lift_left_slat">
+		<function name="aero/force/Lift_left_slat">
 			 <description>Delta lift due to left slat</description>
 			 <product>
 				<property>aero/qbar-psf</property>
@@ -189,7 +189,7 @@
 					</tableData>
 				</table>
 			</product>
-		</function>-->
+		</function>
 	</axis>
 
 	<axis name="DRAG">

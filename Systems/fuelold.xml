@@ -1,34 +1,8 @@
 <?xml version="1.0"?>
-
-<!-- PZL Koliber Fuel System -->
-<!-- Copyright (c) 2024 SP-NTX -->
 <!-- based on fuel system from c172p -->
 
-<system name="PZl Koliber Fuel System">
+<system name="fuel">
 
-	<channel name="Main Fuel Logic" execrate="16">
-
-		<!-- Fuel tank selector -->
-		<switch name="/systems/fuel/from-tank_0">
-			<default value="0"/>
-			<test value="1">
-				/controls/fuel/selector eq -1
-			</test>
-            <output>/controls/fuel-valve/from-tank_0</output>
-		</switch>
-
-        <switch name="/systems/fuel/from-tank_1">
-			<default value="0"/>
-			<test value="1">
-				/controls/fuel/selector eq 1
-			</test>
-            <output>/controls/fuel-valve/from-tank_1</output>
-		</switch>
-
-
-	</channel>
-
-    <!-- old logic (to be rewritten or improved-->
     <channel name="To Tank6">
         <!-- from Tank 0 (to Collector Tank 4) -->
         <fcs_function name="propulsion/tank[0]/contents-volume-gal">
@@ -50,7 +24,7 @@
         <switch name="fuel/from-tank0-to-tank2">
             <default value="0" />
             <test logic="AND" value="0.1">
-                propulsion/tank[0]/priority EQ 1
+                propulsion/tank[0]/priority EQ 1 
                 propulsion/tank[0]/contents-volume-gal GT propulsion/tank[0]/unusable-volume-gal
                 /consumables/fuel/tank[2]/level-lbs LT 0.22
                 propulsion/tank[2]/priority EQ 1
@@ -71,7 +45,7 @@
         <switch name="fuel/from-tank1-to-tank2">
             <default value="0" />
             <test logic="AND" value="0.1">
-                propulsion/tank[1]/priority EQ 1
+                propulsion/tank[1]/priority EQ 1 
                 propulsion/tank[1]/contents-volume-gal GT propulsion/tank[1]/unusable-volume-gal
                 /consumables/fuel/tank[2]/level-lbs LT 0.22
                 propulsion/tank[2]/priority EQ 1

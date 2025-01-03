@@ -11,7 +11,7 @@
 		</long-description>
 
 
-		<aircraft-version>0.13.1</aircraft-version>
+		<aircraft-version>0.13.2</aircraft-version>
 
 		<status>beta</status>
 		
@@ -84,6 +84,12 @@
 			<code-repository>https://github.com/SP-NTX/PZL-Koliber-family</code-repository>
 		</urls>
 
+		<multiplay>
+			<generic>
+				<int n="6" alias="/controls/smoke">0</int> <!-- 6 smoke -->
+			</generic>
+		</multiplay>
+
 		<previews>
 			<preview>
 				<type>exterior</type>
@@ -133,7 +139,7 @@
 		</previews>
 
 		<flight-model>jsb</flight-model>
-		<aero>Systems/PZL-Koliber-160-fdm</aero>
+		<aero>Systems/PZL-Koliber-160A-fdm</aero>
 
 		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
 
@@ -212,16 +218,6 @@
 		</view>
 
 		<!--<help include="help.xml">-->
-		<rendering>
-			<headshake>
-				<enabled>true</enabled> <!-- very controversional approach of making pilots fly realistically to be honest. I had to. -->
-				<groundshake>
-					<default-aircraft-scaler-factor>5</default-aircraft-scaler-factor>
-					<default-aircraft-scaler-min-knots>1</default-aircraft-scaler-min-knots>
-					<default-aircraft-scaler-max-knots>25</default-aircraft-scaler-max-knots>
-				</groundshake>
-			</headshake> 
-		</rendering>
 
 		<flaps>
 			<setting>0</setting>
@@ -230,6 +226,18 @@
 		</flaps>
 	</sim>
 
+	<input>
+		<keyboard>
+			<key n="83">
+			<name>S</name>
+			<desc>Start/stop smoke</desc>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/smoke</property>
+			</binding>
+			</key>
+		</keyboard>
+	</input>
 	<instrumentation>
 		<nav>
 			<power-btn type="bool">false</power-btn>
@@ -328,14 +336,20 @@
 	</init>
 
 	<nasal>
+		<pts>
+			<file>Aircraft/PZL-Koliber-family/Nasal/property-tree-setup.nas</file>
+		</pts>
+		<systems>
+			<file>Aircraft/PZL-Koliber-family/Nasal/systems.nas</file>
+		</systems>
 		<pzl_koliber_160a>
-			<file>Nasal/PZL-Koliber-160A-Electrical.nas</file>
-			<file>Nasal/k160a.nas</file>
-			<file>Nasal/fuel.nas</file>
-			<file>Nasal/liveries.nas</file>
-			<file>Nasal/CanvasLiverySystem.nas</file>
-			<file>Nasal/init.nas</file>
-			<file>Nasal/kx165a.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
+    	<file>Aircraft/PZL-Koliber-family/Nasal/kx165a.nas</file>
+    	<file>Aircraft/PZL-Koliber-family/k160a.nas</file>
 		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>
