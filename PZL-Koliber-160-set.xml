@@ -11,7 +11,7 @@
 		</long-description>
 
 
-		<aircraft-version>0.04.0</aircraft-version>
+		<aircraft-version>0.04.0</aircraft-version> <!--XX.YY.Z, X is for FGAddon release, which means it will be 0 until we have one, YY is git release, Z is bugfix. When bugfix is 0 it is pre-release of the git release -->
 
 		<status>beta</status>
 		
