@@ -6,13 +6,14 @@
 
 <PropertyList>
 	<sim>
-
 		<aircraft-version>0.04.0</aircraft-version> <!--XX.YY.Z, X is for FGAddon release, which means it will be 0 until we have one, YY is git release, Z is bugfix. When bugfix is 0 it is pre-release of the git release -->
 
 		<status>beta</status>
 		
 		<expected-aircraft-dir-name>PZL-Koliber-family</expected-aircraft-dir-name>
-
+		
+		<variant-of>PZL-Koliber-160A</variant-of>
+		
 		<rating>
 			<FDM type="int">4</FDM>
 			<systems type="int">2</systems>
@@ -74,7 +75,7 @@
 			<!--<tag n="16">tow</tag>-->
 			<!--temporary until Koliber 235 will be made -->
 		</tags>
-
+		
 		<urls>
 			<home-page>https://wiki.flightgear.org/PZL-Koliber-family</home-page>
 			<support>https://github.com/SP-NTX/PZL-Koliber-family/issues</support>
@@ -88,40 +89,9 @@
 			</generic>
 		</multiplay>
 
-		<previews>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/1.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/2.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/3.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/4.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/5.png</path>
-
-			</preview>
-		</previews>
-
 		<flight-model>jsb</flight-model>
 		
-		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
-
-		<systems include="Systems/PZL-Koliber-160A-electrical.xml">
+		<systems>
 			<property-rule n="100">
 				<name>Light states</name>
 				<path>Systems/lights.xml</path>
@@ -139,23 +109,18 @@
 				<path>Systems/engine.xml</path>
 			</property-rule>
 		</systems>
-
+		
 		<instrumentation>
 			<path>Systems/generic-instrumentation.xml</path>
 		</instrumentation>
-
-		<sound>
-			<path>Sounds/PZL-Koliber-160A-sound.xml</path>
-		</sound>
-
+		
 		<model>
-			<path>Models/PZL-Koliber-160A.xml</path>
 			<livery>
 				<file type="string" />
 				<livery-change type="int">0</livery-change>
 			</livery>
 		</model>
-
+		
 		<view>
 			<internal type="bool">true</internal>
 			<config>
@@ -194,14 +159,15 @@
 				</limits>
 			</config>
 		</view>
-
+		
 		<flaps>
 			<setting>0</setting>
 			<setting>0.5</setting>
 			<setting>1</setting>
 		</flaps>
+		
 	</sim>
-
+	
 	<input>
 		<keyboard>
 			<key n="83">
@@ -214,12 +180,46 @@
 			</key>
 		</keyboard>
 	</input>
-	
 	<instrumentation>
 		<nav>
 			<power-btn type="bool">false</power-btn>
 		</nav>
 	</instrumentation>
+	
+	<controls>
+		<fuel-valve>
+			<from-tank_0>0</from-tank_0>
+			<from-tank_1>0</from-tank_1>
+		</fuel-valve>
+
+		<lighting>
+			<beacon type="bool">false</beacon>
+			<strobe type="bool">false</strobe>
+			<nav-lights type="bool">false</nav-lights>
+			<landing-lights type="bool">false</landing-lights>
+		</lighting>
+
+		<fuel>
+			<selector type="int">0</selector>
+		</fuel>
+
+		<engine n="0">
+			<magnetos>3</magnetos>
+		</engine>
+
+		<gear>
+			<brake-parking type="bool">true</brake-parking>
+		</gear>
+
+		<engines>
+			<engine>
+				<primer>0</primer>
+				<primer-pump type='int'>0</primer-pump>
+				<primer-pump-pos>false</primer-pump-pos>
+				<use-primer>1</use-primer>
+			</engine>
+		</engines>
+	</controls>
 
 	<payload>
 		<weight n="0">
@@ -247,27 +247,10 @@
 			<max-lb type="double">170.0</max-lb>
 		</weight>
 	</payload>
-	
+		
 	<init>
 		<progress>0</progress>
 		<state>.</state>
 	</init>
-
-	<nasal>
-		<pts>
-			<file>Aircraft/PZL-Koliber-family/Nasal/property-tree-setup.nas</file>
-		</pts>
-		<systems>
-			<file>Aircraft/PZL-Koliber-family/Nasal/systems.nas</file>
-		</systems>
-		<pzl_koliber_160a>
-			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/kx165a.nas</file>
-			<file>Aircraft/PZL-Koliber-family/k160a.nas</file>
-		</pzl_koliber_160a>
-	</nasal>
+	
 </PropertyList>
