@@ -103,47 +103,47 @@
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/1.png</path>
+				<path>Previews/PZL-Koliber-160A/1.png</path>
 			</preview>
 			<preview>
 				<type>panel</type>
 				<splash type="bool">true</splash>
-				<path>Previews/2.png</path>
+				<path>Previews/PZL-Koliber-160A/2.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/3.png</path>
+				<path>Previews/PZL-Koliber-160A/3.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/4.png</path>
+				<path>Previews/PZL-Koliber-160A/4.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/5.png</path>
+				<path>Previews/PZL-Koliber-160A/5.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/6.png</path>
+				<path>Previews/PZL-Koliber-160A/6.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/7.png</path>
+				<path>Previews/PZL-Koliber-160A/7.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/8.png</path>
+				<path>Previews/PZL-Koliber-160A/8.png</path>
 			</preview>
 			<preview>
 				<type>exterior</type>
 				<splash type="bool">true</splash>
-				<path>Previews/9.png</path>
+				<path>Previews/PZL-Koliber-160A/9.png</path>
 			</preview>
 		</previews>
 
