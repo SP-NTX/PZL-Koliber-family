@@ -1,3 +1,6 @@
+# SP-NTX's Canvas Livery System
+# Copyright (C) SP-NTX 2022-2025
+
 var liveryCanvas = canvas.new({
   "name": "Livery System",
   "size": [2048, 2048],
