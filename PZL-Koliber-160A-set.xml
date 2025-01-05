@@ -17,7 +17,7 @@
 
 		<primary-set type="bool">true</primary-set>
 
-		<checklists include="PZL-Koliber-160A-checklists.xml" />
+		<checklists include="Checklists/PZL-Koliber-160A-checklists.xml" />
 
 		<previews>
 			<preview>

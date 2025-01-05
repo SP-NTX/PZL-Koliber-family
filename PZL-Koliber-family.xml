@@ -12,8 +12,6 @@
 		
 		<expected-aircraft-dir-name>PZL-Koliber-family</expected-aircraft-dir-name>
 		
-		<variant-of>PZL-Koliber-160A</variant-of>
-		
 		<rating>
 			<FDM type="int">4</FDM>
 			<systems type="int">2</systems>

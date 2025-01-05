@@ -14,8 +14,10 @@
 		The PZL-Koliber 150A aircraft is a four-seat low-wing aircraft with a take-off weight of up to 850 kg, equipped with a 150 hp (112 kW) Lycoming O-320-E2A engine.
 		It was produced in the years 1993-1995 at PZL Okęcie in the number of 16 pieces, mainly exported to the USA.
 		</long-description>
+		
+		<variant-of>PZL-Koliber-160A</variant-of>
 
-		<checklists include="PZL-Koliber-160A-checklists.xml" />
+		<checklists include="Checklists/PZL-Koliber-150A-checklists.xml" />
 
 		<previews>
 			<preview>
@@ -48,7 +50,7 @@
 
 		<aero>Systems/PZL-Koliber-150A-fdm</aero>
 
-		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
+		<menubar include="Dialogs/PZL-Koliber-150A-menu.xml" />
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml"></systems>
 

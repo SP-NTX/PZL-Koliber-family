@@ -11,7 +11,7 @@
 			<enabled type="bool">false</enabled>
 		</menu>
 		<menu n="101">
-			<label>PZL-Koliber 160A</label>
+			<label>PZL-Koliber 150A</label>
 			<enabled type="bool">true</enabled>
 			<item>
 				<label>Aircraft Options</label>
