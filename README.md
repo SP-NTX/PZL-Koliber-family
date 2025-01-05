@@ -13,6 +13,7 @@
 ### This model includes
 
 - PZL-110 Koliber 160A
+- PZL-110 Koliber 150A
 
 ### Features
 
