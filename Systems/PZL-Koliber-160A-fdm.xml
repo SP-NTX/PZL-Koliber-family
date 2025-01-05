@@ -134,7 +134,7 @@
   <propulsion>
 
 
-    <engine file="Lycoming_O-320">
+    <engine file="Lycoming_O-320-D2A">
       <feed>2</feed>
 
       <thruster file="sensenich_propeller">
