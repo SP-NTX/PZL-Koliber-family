@@ -46,7 +46,7 @@
 			</preview>
 		</previews>
 
-		<aero>Systems/PZL-Koliber-160A-fdm</aero>
+		<aero>Systems/PZL-Koliber-150A-fdm</aero>
 
 		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
 
