@@ -106,7 +106,7 @@
 				<path>Previews/PZL-Koliber-160A/1.png</path>
 			</preview>
 			<preview>
-				<type>panel</type>
+				<type>exterior</type>
 				<splash type="bool">true</splash>
 				<path>Previews/PZL-Koliber-160A/2.png</path>
 			</preview>
@@ -124,26 +124,7 @@
 				<type>exterior</type>
 				<splash type="bool">true</splash>
 				<path>Previews/PZL-Koliber-160A/5.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/6.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/7.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/8.png</path>
-			</preview>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>Previews/PZL-Koliber-160A/9.png</path>
+
 			</preview>
 		</previews>
 
