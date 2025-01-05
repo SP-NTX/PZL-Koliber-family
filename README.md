@@ -1,4 +1,4 @@
-# PZL-Koliber-family
+# PZL Koliber family
 
 ![PZL Koliber in flight](https://github.com/SP-NTX/PZL-Koliber-family/blob/development/Previews/PZL-Koliber-160A/2.png)
 
