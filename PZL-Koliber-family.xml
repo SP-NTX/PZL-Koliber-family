@@ -119,6 +119,10 @@
 			</livery>
 		</model>
 		
+		<sound>
+			<path>Sounds/PZL-Koliber-family-sound.xml</path>
+		</sound>
+		
 		<view>
 			<internal type="bool">true</internal>
 			<config>

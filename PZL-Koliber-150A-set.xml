@@ -54,12 +54,8 @@
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml"></systems>
 
-		<sound>
-			<path>Sounds/PZL-Koliber-160A-sound.xml</path>
-		</sound>
-
 		<model>
-			<path>Models/PZL-Koliber-160A.xml</path>
+			<path>Models/PZL-Koliber-150A.xml</path>
 		</model>
 
 	</sim>

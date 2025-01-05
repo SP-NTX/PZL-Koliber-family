@@ -53,11 +53,7 @@
 		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml"></systems>
-
-		<sound>
-			<path>Sounds/PZL-Koliber-160A-sound.xml</path>
-		</sound>
-
+		
 		<model>
 			<path>Models/PZL-Koliber-160A.xml</path>
 		</model>
