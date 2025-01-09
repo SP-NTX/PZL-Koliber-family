@@ -65,7 +65,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/turn/turn.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/tc/tc.xml</path>
 		<offsets>
 			<x-m>-0.5910</x-m>
 			<y-m> -0.3374</y-m>
