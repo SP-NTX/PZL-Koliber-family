@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <name>failures-dialog</name>
+    <layout>vbox</layout>
+    <resizable>false</resizable>
+    <modal>false</modal>
+    <draggable>true</draggable>
+
+    <nasal>
+        <open>
+            # Failures
+            var failprops = ["/pzl/failures/engine", "/pzl/failures/electric", "/pzl/failures/alternator", "/pzl/failures/comms", "/pzl/failures/ailerons", "/pzl/failures/rudder", "/pzl/failures/flaps", "/pzl/failures/fuel", "/pzl/failures/slats", "/pzl/failures/oil", "/pzl/failures/vaccum", "/pzl/failures/brakes"];
+            setprop("/pzl/failures/enabled", false);
+            setprop("/pzl/failures/timermax", 60);
+            setprop("/pzl/failures/timermin", 0);
+            setprop("/pzl/failures/random", 0);
+            foreach(var prop; failprops){
+                if (!getprop(prop)){
+                    setprop(prop, 0);
+                };
+            };
+            var createFailure= func{
+                var activatedprops = [];
+                foreach(var prop; failprops){
+                    if (getprop(prop)==1){
+                        append(activatedprops,prop);
+                    };
+                };
+                var propslen = size(activatedprops);
+                if (propslen==0){
+                    setprop("/pzl/failures/enabled", 0);
+                    failuretimer.stop();
+                    return;
+                };
+                var myindex = math.floor(rand() * propslen);
+                print ("Failing: ", activatedprops[myindex]);
+                setprop("/pzl/failures/enabled", 0);
+                failuretimer.stop();
+            };
+            var failuretimer= maketimer (0,createFailure);
+            var toggleEnable = func{
+                var myvalue = getprop("/pzl/failures/enabled");
+                if (myvalue==0){
+                    setprop("/pzl/failures/enabled", true);
+                    var mymin = getprop("/pzl/failures/timermin");
+                    var mymax = getprop("/pzl/failures/timermax");
+                    var rtime = (rand() * (mymax - mymin) + mymin)*60;
+                    failuretimer.restart(rtime);
+                }else{
+                    setprop("/pzl/failures/enabled", false);
+                    failuretimer.stop();
+                };
+            };
+            var toggleAll= func{
+                foreach(var prop; failprops){
+                    var myvalue = getprop(prop);
+                    if (myvalue==0){
+                        setprop(prop, 1);
+                    }else{
+                        setprop(prop, 0);
+                    };
+                };
+            };
+
+        </open>
+    </nasal>
+    <group>
+        <layout>hbox</layout>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <text>
+            <label>Failures</label>
+        </text>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <button>
+            <legend>X</legend>
+            <key>Esc</key>
+            <halign>right</halign>
+            <pref-width>20</pref-width>
+            <pref-height>20</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <padding>6</padding>
+        <group>
+            <layout>vbox</layout>
+            <checkbox>
+                <halign>left</halign>
+                <valign>center</valign>
+                <label>Enable Failures</label>
+                <property>/pzl/failures/enabled</property>
+                <live>true</live>
+                <binding>
+                    <command>nasal</command>
+                    <script>toggleEnable();</script>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <valign>center</valign>
+                <label>Toggle All Systems</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>toggleAll();</script>
+                </binding>
+            </checkbox>
+            <group>
+                <layout>vbox</layout>
+                <valign>bottom</valign>
+                <group>
+                    <layout>hbox</layout>
+                    <text>
+                        <label>Minimum time to failure:</label>
+                        <halign>right</halign>
+                    </text>
+                    <text>
+                        <label>123</label>
+                        <halign>left</halign>
+                        <format>%d</format>
+                        <live>true</live>
+                        <property>/pzl/failures/timermin</property>
+                    </text>
+                    <slider>
+                        <name>min_fail_time</name>
+                        <min>0</min>
+                        <max>60</max>
+                        <live>true</live>
+                        <property>/pzl/failures/timermin</property>
+                        <binding>
+                            <command>dialog-apply</command>
+                            <name>min_fail_time</name>
+                        </binding>
+                    </slider>
+                </group>
+                <group>
+                    <layout>hbox</layout>
+                    <text>
+                        <label>Maximum time to failure:</label>
+                        <halign>right</halign>
+                    </text>
+                    <text>
+                        <label>123</label>
+                        <halign>left</halign>
+                        <format>%d</format>
+                        <live>true</live>
+                        <property>/pzl/failures/timermax</property>
+                    </text>
+                    <slider>
+                        <name>maxfail_time</name>
+                        <min>0</min>
+                        <max>60</max>
+                        <live>true</live>
+                        <property>/pzl/failures/timermax</property>
+                        <binding>
+                            <command>dialog-apply</command>
+                            <name>max_fail_time</name>
+                        </binding>
+                    </slider>
+                </group>
+            </group>
+            <button>
+                <halign>center</halign>
+                <legend>Fail Now!</legend>
+                <pref-width>160</pref-width>
+                <pref-height>28</pref-height>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                            createFailure();
+                    </script>
+                </binding>
+            </button>
+        </group>
+        <vrule/>
+        <group>
+            <layout>vbox</layout>
+            <text>
+                <label>Selected Systems</label>
+                <halign>center</halign>
+            </text>
+            <hrule/>
+            <checkbox>
+                <halign>left</halign>
+                <label>Engine</label>
+                <property>/pzl/failures/engine</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Fuel</label>
+                <property>/pzl/failures/fuel</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Electric</label>
+                <property>/pzl/failures/electric</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Alternator</label>
+                <property>/pzl/failures/alternator</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Comms</label>
+                <property>/pzl/failures/comms</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Ailerons</label>
+                <property>/pzl/failures/ailerons</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Rudders</label>
+                <property>/pzl/failures/rudder</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Flaps</label>
+                <property>/pzl/failures/flaps</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Slats</label>
+                <property>/pzl/failures/slats</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Oil</label>
+                <property>/pzl/failures/oil</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Vaccum</label>
+                <property>/pzl/failures/vaccum</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <label>Brakes</label>
+                <property>/pzl/failures/brakes</property>
+                <live>true</live>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </checkbox>
+        </group>
+        <hrule/>
+    </group>
+</PropertyList>

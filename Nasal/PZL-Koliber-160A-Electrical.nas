@@ -43,7 +43,8 @@ var electrical_update = func {
     if (kind == "alternator") {
       var min = components[supplier].getNode("source-min").getValue();
       var source_val = getprop(components[supplier].getNode("source-prop").getValue());
-      if (min == nil) { min = 0; }						# Minimum value may not yet be initialized
+      if (min == nil) { min = 0; }	# Minimum value may not yet be initialized
+      if (source_val == nil) { source_val = 0; } # Source value may not yet be initialized
       if (min == 0 or source_val >= min) {					# Alternator has good volts if source is up to speed
         volts = ideal_volts;
       }
