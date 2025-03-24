@@ -10,7 +10,8 @@
         <open>
             var dlgRoot = cmdarg();
             var dlgname = dlgRoot.getNode("name").getValue();
-            var failureprops = [
+            var failureprops =[
+                {"name":"Systems","props": [
                 { failprop: "/pzl/failures/engine", servprop: "/sim/failure-manager/engines/engine/serviceable", name: "Engine" },
                 { failprop: "/pzl/failures/electric", servprop: "/pzl/failures/electric", name: "Electric" },
                 { failprop: "/pzl/failures/alternator", servprop: "/pzl/failures/alternator", name: "Alternator" },
@@ -23,20 +24,32 @@
                 { failprop: "/pzl/failures/oil", servprop: "/pzl/failures/oil", name: "Oil" },
                 { failprop: "/pzl/failures/vaccum", servprop: "/pzl/failures/vaccum", name: "Vaccum" },
                 { failprop: "/pzl/failures/brakes", servprop: "/pzl/failures/brakes", name: "Brakes" }
+            ]},{"name":"Instruments","props":[]},
+            {"name":"Hydraulics","props":[]},
+            {"name":"Pneumatics","props":[]},
+            {"name":"Avionics","props":[]},
+            {"name":"Misc","props":[]}
             ];
+
             var failurelist = gui.findElementByName(dlgRoot, "failures-systems");
-            foreach (var prop; failureprops){
-                var mycheckbox = failurelist.addChild("checkbox");
-                print(prop['name'],prop['failprop'],prop['servprop']);
-                mycheckbox.setValue ("label",prop['name']);
-                mycheckbox.setValue ("halign","left"); 
-                mycheckbox.setValue ("property",prop['failprop']);
-                mycheckbox.setValue ("live","true");
-                var mybinding = mycheckbox.addChild("binding");
-                mybinding.setValue("command","dialog-apply");       
-                props.dump(mycheckbox);
-                print ('ADDEDDDD ',prop['name']);
-                
+            foreach (var failureprop;failureprops){
+                print("-----------------",  failureprop['name']);
+                var mygroup = failurelist.addChild("group");
+                mygroup.setValue("layout","vbox");
+                mygroup.setValue("valign","top");
+                var mytext = mygroup.addChild('text');
+                mytext.setValue("label",failureprop['name']);
+                mygroup.addChild("hrule");
+                foreach (var prop; failureprop['props']){
+                    var mycheckbox = mygroup.addChild("checkbox");
+                    print(prop['name'],prop['failprop'],prop['servprop']);
+                    mycheckbox.setValue ("label",prop['name']);
+                    mycheckbox.setValue ("halign","left"); 
+                    mycheckbox.setValue ("property",prop['failprop']);
+                    mycheckbox.setValue ("live","true");
+                    var mybinding = mycheckbox.addChild("binding");
+                    mybinding.setValue("command","dialog-apply");       
+                };    
             };
             # Failures
             setprop("/pzl/failures/enabled", false);
@@ -44,17 +57,22 @@
             setprop("/pzl/failures/timermin", 0);
             setprop("/pzl/failures/random", 0);
             
-            foreach(var prop; failureprops){
-                if (!getprop(prop['failprop'])){
-                    setprop(prop['failprop'], 0);
+            foreach(var props; failureprops){
+                foreach(var prop; props['props']){
+                        if (!getprop(prop['failprop'])){
+                        setprop(prop['failprop'], 0);
+                    };
                 };
             };
+            print ('DONE');
           
             var createFailure= func{
                 var activatedprops = [];
-                foreach(var prop; failureprops){
-                    if (getprop(prop['failprop'])==1){
-                        append(activatedprops,prop);
+                foreach(var props; failureprops){
+                    foreach(var prop; props['props']){
+                        if (getprop(prop['failprop'])==1){
+                            append(activatedprops,prop);
+                        };
                     };
                 };
                 var propslen = size(activatedprops);
@@ -85,12 +103,14 @@
                 };
             };
             var toggleAll= func{
-                foreach(var prop; failureprops){
-                    var myvalue = getprop(prop['failprop']);
-                    if (myvalue==0){
-                        setprop(prop['failprop'], 1);
-                    }else{
-                        setprop(prop['failprop'], 0);
+                foreach (var props; failureprops){
+                    foreach(var prop; props['props']){
+                        var myvalue = getprop(prop['failprop']);
+                        if (myvalue==0){
+                            setprop(prop['failprop'], 1);
+                        }else{
+                            setprop(prop['failprop'], 0);
+                        };
                     };
                 };
             };
@@ -215,12 +235,7 @@
         <vrule/>
         <group>
             <name>failures-systems</name>
-            <layout>vbox</layout>
-            <text>
-                <label>Selected Systems</label>
-                <halign>center</halign>
-            </text>
-            <hrule/>
+            <layout>hbox</layout>
         </group>
         <hrule/>
     </group>
