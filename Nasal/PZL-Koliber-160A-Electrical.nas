@@ -145,7 +145,18 @@ var electrical_update = func {
 
 
 var electrical_init = func {
-
+  ### ADDING FAILURE PROP FOR ALTERNATOR
+  setprop("/systems/electrical/suppliers/serviceable", 1);
+  var fail = { SERVICEABLE : 1, JAM : 2, ENGINE: 3};
+  var type = { MTBF : 1, MCBF: 2 };
+  var failure_root = "/sim/failure-manager";
+  #HUD
+  var prop = "/systems/electrical/alternator";
+  var t = "/mtbf";
+  props.globals.initNode(failure_root ~ prop ~ t, 0);
+  print ('=======================> INIT NODE ',failure_root ~ prop ~ t);
+  props.globals.initNode(prop ~ "/serviceable", 1, "BOOL");
+  print ('=======================> INIT NODE ',prop ~ "/serviceable");
   print("Initializing electrical system...");
   										# Validate and build component list:
   for(var i=0; i<size(component_list); i+=1) {

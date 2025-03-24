@@ -8,8 +8,13 @@
 
     <nasal>
         <open>
+
+
+
+
             # Failures
             var failprops = ["/pzl/failures/engine", "/pzl/failures/electric", "/pzl/failures/alternator", "/pzl/failures/comms", "/pzl/failures/ailerons", "/pzl/failures/rudder", "/pzl/failures/flaps", "/pzl/failures/fuel", "/pzl/failures/slats", "/pzl/failures/oil", "/pzl/failures/vaccum", "/pzl/failures/brakes"];
+            var servprops = ["/sim/failure-manager/engines/engine/serviceable", "/pzl/failures/electric", "/pzl/failures/alternator", "/pzl/failures/comms", "/pzl/failures/ailerons", "/pzl/failures/rudder", "/pzl/failures/flaps", "/pzl/failures/fuel", "/pzl/failures/slats", "/pzl/failures/oil", "/pzl/failures/vaccum", "/pzl/failures/brakes"];
             setprop("/pzl/failures/enabled", false);
             setprop("/pzl/failures/timermax", 60);
             setprop("/pzl/failures/timermin", 0);
@@ -18,6 +23,16 @@
                 if (!getprop(prop)){
                     setprop(prop, 0);
                 };
+            };
+            var findService = func(whichprop){
+                var myindex = 0;
+                foreach(var prop; failprops){
+                    if (prop==whichprop){
+                        return servprops[myindex];
+                    };
+                    myindex = myindex + 1;
+                };
+                return '';
             };
             var createFailure= func{
                 var activatedprops = [];
@@ -33,6 +48,9 @@
                     return;
                 };
                 var myindex = math.floor(rand() * propslen);
+                print ("Failing: ", activatedprops[myindex]);
+                var serviceableprop = findService(activatedprops[myindex]);
+                setprop(serviceableprop, 0);
                 print ("Failing: ", activatedprops[myindex]);
                 setprop("/pzl/failures/enabled", 0);
                 failuretimer.stop();
