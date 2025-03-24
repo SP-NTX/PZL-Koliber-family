@@ -8,36 +8,52 @@
 
     <nasal>
         <open>
-
-
-
-
+            var dlgRoot = cmdarg();
+            var dlgname = dlgRoot.getNode("name").getValue();
+            var failureprops = [
+                { failprop: "/pzl/failures/engine", servprop: "/sim/failure-manager/engines/engine/serviceable", name: "Engine" },
+                { failprop: "/pzl/failures/electric", servprop: "/pzl/failures/electric", name: "Electric" },
+                { failprop: "/pzl/failures/alternator", servprop: "/pzl/failures/alternator", name: "Alternator" },
+                { failprop: "/pzl/failures/comms", servprop: "/pzl/failures/comms", name: "Comms" },
+                { failprop: "/pzl/failures/ailerons", servprop: "/pzl/failures/ailerons", name: "Ailerons" },
+                { failprop: "/pzl/failures/rudder", servprop: "/pzl/failures/rudder", name: "Rudder" },
+                { failprop: "/pzl/failures/flaps", servprop: "/pzl/failures/flaps", name: "Flaps" },
+                { failprop: "/pzl/failures/fuel", servprop: "/pzl/failures/fuel", name: "Fuel" },
+                { failprop: "/pzl/failures/slats", servprop: "/pzl/failures/slats", name: "Slats" },
+                { failprop: "/pzl/failures/oil", servprop: "/pzl/failures/oil", name: "Oil" },
+                { failprop: "/pzl/failures/vaccum", servprop: "/pzl/failures/vaccum", name: "Vaccum" },
+                { failprop: "/pzl/failures/brakes", servprop: "/pzl/failures/brakes", name: "Brakes" }
+            ];
+            var failurelist = gui.findElementByName(dlgRoot, "failures-systems");
+            foreach (var prop; failureprops){
+                var mycheckbox = failurelist.addChild("checkbox");
+                print(prop['name'],prop['failprop'],prop['servprop']);
+                mycheckbox.setValue ("label",prop['name']);
+                mycheckbox.setValue ("halign","left"); 
+                mycheckbox.setValue ("property",prop['failprop']);
+                mycheckbox.setValue ("live","true");
+                var mybinding = mycheckbox.addChild("binding");
+                mybinding.setValue("command","dialog-apply");       
+                props.dump(mycheckbox);
+                print ('ADDEDDDD ',prop['name']);
+                
+            };
             # Failures
-            var failprops = ["/pzl/failures/engine", "/pzl/failures/electric", "/pzl/failures/alternator", "/pzl/failures/comms", "/pzl/failures/ailerons", "/pzl/failures/rudder", "/pzl/failures/flaps", "/pzl/failures/fuel", "/pzl/failures/slats", "/pzl/failures/oil", "/pzl/failures/vaccum", "/pzl/failures/brakes"];
-            var servprops = ["/sim/failure-manager/engines/engine/serviceable", "/pzl/failures/electric", "/pzl/failures/alternator", "/pzl/failures/comms", "/pzl/failures/ailerons", "/pzl/failures/rudder", "/pzl/failures/flaps", "/pzl/failures/fuel", "/pzl/failures/slats", "/pzl/failures/oil", "/pzl/failures/vaccum", "/pzl/failures/brakes"];
             setprop("/pzl/failures/enabled", false);
             setprop("/pzl/failures/timermax", 60);
             setprop("/pzl/failures/timermin", 0);
             setprop("/pzl/failures/random", 0);
-            foreach(var prop; failprops){
-                if (!getprop(prop)){
-                    setprop(prop, 0);
+            
+            foreach(var prop; failureprops){
+                if (!getprop(prop['failprop'])){
+                    setprop(prop['failprop'], 0);
                 };
             };
-            var findService = func(whichprop){
-                var myindex = 0;
-                foreach(var prop; failprops){
-                    if (prop==whichprop){
-                        return servprops[myindex];
-                    };
-                    myindex = myindex + 1;
-                };
-                return '';
-            };
+          
             var createFailure= func{
                 var activatedprops = [];
-                foreach(var prop; failprops){
-                    if (getprop(prop)==1){
+                foreach(var prop; failureprops){
+                    if (getprop(prop['failprop'])==1){
                         append(activatedprops,prop);
                     };
                 };
@@ -48,10 +64,9 @@
                     return;
                 };
                 var myindex = math.floor(rand() * propslen);
-                print ("Failing: ", activatedprops[myindex]);
-                var serviceableprop = findService(activatedprops[myindex]);
-                setprop(serviceableprop, 0);
-                print ("Failing: ", activatedprops[myindex]);
+                print ("Failing: ", activatedprops[myindex]['name']);
+                setprop(activatedprops[myindex]['servprop'], 0);
+                print ("Failing: ", activatedprops[myindex]['servprop']);
                 setprop("/pzl/failures/enabled", 0);
                 failuretimer.stop();
             };
@@ -70,12 +85,12 @@
                 };
             };
             var toggleAll= func{
-                foreach(var prop; failprops){
-                    var myvalue = getprop(prop);
+                foreach(var prop; failureprops){
+                    var myvalue = getprop(prop['failprop']);
                     if (myvalue==0){
-                        setprop(prop, 1);
+                        setprop(prop['failprop'], 1);
                     }else{
-                        setprop(prop, 0);
+                        setprop(prop['failprop'], 0);
                     };
                 };
             };
@@ -199,120 +214,13 @@
         </group>
         <vrule/>
         <group>
+            <name>failures-systems</name>
             <layout>vbox</layout>
             <text>
                 <label>Selected Systems</label>
                 <halign>center</halign>
             </text>
             <hrule/>
-            <checkbox>
-                <halign>left</halign>
-                <label>Engine</label>
-                <property>/pzl/failures/engine</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Fuel</label>
-                <property>/pzl/failures/fuel</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Electric</label>
-                <property>/pzl/failures/electric</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Alternator</label>
-                <property>/pzl/failures/alternator</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Comms</label>
-                <property>/pzl/failures/comms</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Ailerons</label>
-                <property>/pzl/failures/ailerons</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Rudders</label>
-                <property>/pzl/failures/rudder</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Flaps</label>
-                <property>/pzl/failures/flaps</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Slats</label>
-                <property>/pzl/failures/slats</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Oil</label>
-                <property>/pzl/failures/oil</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Vaccum</label>
-                <property>/pzl/failures/vaccum</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
-            <checkbox>
-                <halign>left</halign>
-                <label>Brakes</label>
-                <property>/pzl/failures/brakes</property>
-                <live>true</live>
-                <binding>
-                    <command>dialog-apply</command>
-                </binding>
-            </checkbox>
         </group>
         <hrule/>
     </group>
