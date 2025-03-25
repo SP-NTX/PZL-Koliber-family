@@ -14,21 +14,34 @@
                 {"name":"Systems","props": [
                 { failprop: "/pzl/failures/engine", servprop: "/sim/failure-manager/engines/engine/serviceable", name: "Engine" },
                 { failprop: "/pzl/failures/electric", servprop: "/pzl/failures/electric", name: "Electric" },
-                { failprop: "/pzl/failures/alternator", servprop: "/pzl/failures/alternator", name: "Alternator" },
-                { failprop: "/pzl/failures/comms", servprop: "/pzl/failures/comms", name: "Comms" },
-                { failprop: "/pzl/failures/ailerons", servprop: "/pzl/failures/ailerons", name: "Ailerons" },
-                { failprop: "/pzl/failures/rudder", servprop: "/pzl/failures/rudder", name: "Rudder" },
-                { failprop: "/pzl/failures/flaps", servprop: "/pzl/failures/flaps", name: "Flaps" },
                 { failprop: "/pzl/failures/fuel", servprop: "/pzl/failures/fuel", name: "Fuel" },
-                { failprop: "/pzl/failures/slats", servprop: "/pzl/failures/slats", name: "Slats" },
-                { failprop: "/pzl/failures/oil", servprop: "/pzl/failures/oil", name: "Oil" },
-                { failprop: "/pzl/failures/vaccum", servprop: "/pzl/failures/vaccum", name: "Vaccum" },
-                { failprop: "/pzl/failures/brakes", servprop: "/pzl/failures/brakes", name: "Brakes" }
-            ]},{"name":"Instruments","props":[]},
+                { failprop: "/pzl/failures/vacuum", servprop: "/sim/failure-manager/systems/vacuum/serviceable", name: "Vacuum" },
+                { failprop: "/pzl/failures/pitot", servprop: "/sim/failure-manager/systems/pitot/serviceable", name: "Pitot" },
+                { failprop: "/pzl/failures/static", servprop: "/sim/failure-manager/systems/static/serviceable", name: "Static" },
+            ]},{"name":"Instruments","props":[
+                                        { failprop: "/pzl/failures/airspeed-indicator", servprop: "/sim/failure-manager/instrumentation/airspeed-indicator/serviceable", name: "Airspeed Indicator" },
+                                        { failprop: "/pzl/failures/altimeter", servprop: "/sim/failure-manager/instrumentation/altimeter/serviceable", name: "Altimeter" },
+                                        { failprop: "/pzl/failures/attitude-indicator", servprop: "/sim/failure-manager/instrumentation/attitude-indicator/serviceable", name: "Attitude Indicator" },
+                                        { failprop: "/pzl/failures/heading-indicator", servprop: "/sim/failure-manager/instrumentation/heading-indicator/serviceable", name: "Heading Indicator" },
+                                        { failprop: "/pzl/failures/vertical-speed-indicator", servprop: "/sim/failure-manager/instrumentation/vertical-speed-indicator/serviceable", name: "Vertical Speed Indicator" },
+                                        { failprop: "/pzl/failures/slip-skid-ball", servprop: "/sim/failure-manager/instrumentation/slip-skid-ball/serviceable", name: "Slip-Skid Ball" },
+                                        { failprop: "/pzl/failures/turn-indicator", servprop: "/sim/failure-manager/instrumentation/turn-indicator/serviceable", name: "Turn Coordinator" }
+                                        ]},
             {"name":"Hydraulics","props":[]},
-            {"name":"Pneumatics","props":[]},
-            {"name":"Avionics","props":[]},
-            {"name":"Misc","props":[]}
+            {"name":"Controls","props":[{ failprop: "/pzl/failures/ailerons", servprop: "/sim/failure-manager/controls/flight/aileron/serviceable", name: "Ailerons" },
+                                        { failprop: "/pzl/failures/slats", servprop: "/pzl/failures/slats", name: "Slats" },                                        
+                                        { failprop: "/pzl/failures/elevator", servprop: "/sim/failure-manager/controls/flight/elevator/serviceable", name: "Elevator" },
+                                        { failprop: "/pzl/failures/rudder", servprop: "/sim/failure-manager/controls/flight/rudder/serviceable", name: "Rudder" },
+                                        { failprop: "/pzl/failures/flaps", servprop: "/sim/failure-manager/controls/flight/flaps/serviceable", name: "Flaps" },
+                                        { failprop: "/pzl/failures/brakes", servprop: "/pzl/failures/brakes", name: "Brakes" }
+                ]},
+            {"name":"Avionics","props":[{ failprop: "/pzl/failures/comms", servprop: "/pzl/failures/comms", name: "Comms" },
+                                        { failprop: "/pzl/failures/nav", servprop: "/pzl/failures/nav", name: "Nav" },
+                                        { failprop: "/pzl/failures/transponder", servprop: "/pzl/failures/transponder", name: "Transponder" },
+                ]},
+            {"name":"Misc","props":[    { failprop: "/pzl/failures/alternator", servprop: "/pzl/failures/alternator", name: "Alternator" },
+                                        { failprop: "/pzl/failures/oil", servprop: "/pzl/failures/oil", name: "Oil" }
+                ]}
             ];
 
             var failurelist = gui.findElementByName(dlgRoot, "failures-systems");
