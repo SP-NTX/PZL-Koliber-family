@@ -4,7 +4,7 @@
 
 ## Make fuel flow serviceable
 setprop('/sim/failure-manager/fuel/flow/serviceable',1);
-
+setprop('/sim/failure-manager/controls/slats/serviceable',1);
 
 var progress = maketimer(0.5, func {
 	var progress = getprop("init//progress");
