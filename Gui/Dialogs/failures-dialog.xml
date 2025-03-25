@@ -27,7 +27,6 @@
                                         { failprop: "/pzl/failures/slip-skid-ball", servprop: "/sim/failure-manager/instrumentation/slip-skid-ball/serviceable", name: "Slip-Skid Ball" },
                                         { failprop: "/pzl/failures/turn-indicator", servprop: "function", name: "Turn Coordinator" }
                                         ]},
-            {"name":"Hydraulics","props":[]},
             {"name":"Controls","props":[{ failprop: "/pzl/failures/ailerons", servprop: "/sim/failure-manager/controls/flight/aileron/serviceable", name: "Ailerons" },
                                         { failprop: "/pzl/failures/slats", servprop: "/sim/failure-manager/controls/slats/serviceable", name: "Slats" },                                        
                                         { failprop: "/pzl/failures/elevator", servprop: "/sim/failure-manager/controls/flight/elevator/serviceable", name: "Elevator" },
