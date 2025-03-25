@@ -13,8 +13,8 @@
             var failureprops =[
                 {"name":"Systems","props": [
                 { failprop: "/pzl/failures/engine", servprop: "/sim/failure-manager/engines/engine/serviceable", name: "Engine" },
-                { failprop: "/pzl/failures/electric", servprop: "/pzl/failures/electric", name: "Electric" },
-                { failprop: "/pzl/failures/fuel", servprop: "/pzl/failures/fuel", name: "Fuel" },
+                { failprop: "/pzl/failures/electric", servprop: "function", name: "Electric" },
+                { failprop: "/pzl/failures/fuel", servprop: "/sim/failure-manager/fuel/flow/serviceable", name: "Fuel" },
                 { failprop: "/pzl/failures/vacuum", servprop: "/sim/failure-manager/systems/vacuum/serviceable", name: "Vacuum" },
                 { failprop: "/pzl/failures/pitot", servprop: "/sim/failure-manager/systems/pitot/serviceable", name: "Pitot" },
                 { failprop: "/pzl/failures/static", servprop: "/sim/failure-manager/systems/static/serviceable", name: "Static" },
@@ -25,44 +25,76 @@
                                         { failprop: "/pzl/failures/heading-indicator", servprop: "/sim/failure-manager/instrumentation/heading-indicator/serviceable", name: "Heading Indicator" },
                                         { failprop: "/pzl/failures/vertical-speed-indicator", servprop: "/sim/failure-manager/instrumentation/vertical-speed-indicator/serviceable", name: "Vertical Speed Indicator" },
                                         { failprop: "/pzl/failures/slip-skid-ball", servprop: "/sim/failure-manager/instrumentation/slip-skid-ball/serviceable", name: "Slip-Skid Ball" },
-                                        { failprop: "/pzl/failures/turn-indicator", servprop: "/sim/failure-manager/instrumentation/turn-indicator/serviceable", name: "Turn Coordinator" }
+                                        { failprop: "/pzl/failures/turn-indicator", servprop: "function", name: "Turn Coordinator" }
                                         ]},
             {"name":"Hydraulics","props":[]},
             {"name":"Controls","props":[{ failprop: "/pzl/failures/ailerons", servprop: "/sim/failure-manager/controls/flight/aileron/serviceable", name: "Ailerons" },
-                                        { failprop: "/pzl/failures/slats", servprop: "/pzl/failures/slats", name: "Slats" },                                        
+                                        { failprop: "/pzl/failures/slats", servprop: "function", name: "Slats" },                                        
                                         { failprop: "/pzl/failures/elevator", servprop: "/sim/failure-manager/controls/flight/elevator/serviceable", name: "Elevator" },
                                         { failprop: "/pzl/failures/rudder", servprop: "/sim/failure-manager/controls/flight/rudder/serviceable", name: "Rudder" },
                                         { failprop: "/pzl/failures/flaps", servprop: "/sim/failure-manager/controls/flight/flaps/serviceable", name: "Flaps" },
-                                        { failprop: "/pzl/failures/brakes", servprop: "/pzl/failures/brakes", name: "Brakes" }
+                                        { failprop: "/pzl/failures/leftbrakes", servprop: "/sim/failure-manager/controls/gear/left-brake/serviceable", name: "Left-Brake" },
+                                        { failprop: "/pzl/failures/rightbrakes", servprop: "/sim/failure-manager/controls/gear/right-brake/serviceable", name: "Right-Brake" }
                 ]},
-            {"name":"Avionics","props":[{ failprop: "/pzl/failures/comms", servprop: "/pzl/failures/comms", name: "Comms" },
-                                        { failprop: "/pzl/failures/nav", servprop: "/pzl/failures/nav", name: "Nav" },
-                                        { failprop: "/pzl/failures/transponder", servprop: "/pzl/failures/transponder", name: "Transponder" },
+            {"name":"Avionics","props":[{ failprop: "/pzl/failures/comms", servprop: "function", name: "Comms" },
+                                        { failprop: "/pzl/failures/nav", servprop: "function", name: "Nav" },
+                                        { failprop: "/pzl/failures/transponder", servprop: "function", name: "Transponder" },
                 ]},
-            {"name":"Misc","props":[    { failprop: "/pzl/failures/alternator", servprop: "/pzl/failures/alternator", name: "Alternator" },
-                                        { failprop: "/pzl/failures/oil", servprop: "/pzl/failures/oil", name: "Oil" }
+            {"name":"Misc","props":[    { failprop: "/pzl/failures/alternator", servprop: "function", name: "Alternator" },
+                                        { failprop: "/pzl/failures/oil", servprop: "function", name: "Oil" }
                 ]}
             ];
 
+            var customFailure= func(myprop){
+                var myvalue = myprop['name'];
+                print ("Failing:", myvalue);
+                if (myvalue=='Alternator'){
+                    var myprop = props.getNode('/controls/switches/alternator');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+                if (myvalue=='Electric'){
+                    var myprop = props.getNode('/controls/switches/battery');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+                if (myvalue=='Turn Coordinator'){
+                    var myprop = props.getNode('/controls/switches/turn-coordinator');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+                if (myvalue=='Fuel Pump'){
+                    var myprop = props.getNode('/controls/switches/fuel-pump');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+            };
+            
             var failurelist = gui.findElementByName(dlgRoot, "failures-systems");
-            foreach (var failureprop;failureprops){
-                print("-----------------",  failureprop['name']);
-                var mygroup = failurelist.addChild("group");
-                mygroup.setValue("layout","vbox");
-                mygroup.setValue("valign","top");
-                var mytext = mygroup.addChild('text');
-                mytext.setValue("label",failureprop['name']);
-                mygroup.addChild("hrule");
-                foreach (var prop; failureprop['props']){
-                    var mycheckbox = mygroup.addChild("checkbox");
-                    print(prop['name'],prop['failprop'],prop['servprop']);
-                    mycheckbox.setValue ("label",prop['name']);
-                    mycheckbox.setValue ("halign","left"); 
-                    mycheckbox.setValue ("property",prop['failprop']);
-                    mycheckbox.setValue ("live","true");
-                    var mybinding = mycheckbox.addChild("binding");
-                    mybinding.setValue("command","dialog-apply");       
-                };    
+            var childNum = size(failurelist.getChildren());
+            print ('-----------------------------------------', childNum);
+            if (childNum>2) {
+            }else{
+                foreach (var failureprop;failureprops){
+                    print("-----------------",  failureprop['name']);
+                    var mygroup = failurelist.addChild("group");
+                    mygroup.setValue("layout","vbox");
+                    mygroup.setValue("valign","top");
+                    var mytext = mygroup.addChild('text');
+                    mytext.setValue("label",failureprop['name']);
+                    mygroup.addChild("hrule");
+                    foreach (var myprop; failureprop['props']){
+                        var mycheckbox = mygroup.addChild("checkbox");
+                        mycheckbox.setValue ("label",myprop['name']);
+                        mycheckbox.setValue ("halign","left"); 
+                        mycheckbox.setValue ("property",myprop['failprop']);
+                        mycheckbox.setValue ("live","true");
+                        var mybinding = mycheckbox.addChild("binding");
+                        mybinding.setValue("command","dialog-apply");
+                        ## Initialize servicable prop, for custom failures, although it will do for All
+                        setprop(myprop['servprop'], 1);    
+                    };    
+                };
             };
             # Failures
             setprop("/pzl/failures/enabled", false);
@@ -70,21 +102,20 @@
             setprop("/pzl/failures/timermin", 0);
             setprop("/pzl/failures/random", 0);
             
-            foreach(var props; failureprops){
-                foreach(var prop; props['props']){
-                        if (!getprop(prop['failprop'])){
-                        setprop(prop['failprop'], 0);
+            foreach(var myprops; failureprops){
+                foreach(var myprop; myprops['props']){
+                        if (!getprop(myprop['failprop'])){
+                        setprop(myprop['failprop'], 0);
                     };
                 };
             };
-            print ('DONE');
-          
+         
             var createFailure= func{
                 var activatedprops = [];
-                foreach(var props; failureprops){
-                    foreach(var prop; props['props']){
-                        if (getprop(prop['failprop'])==1){
-                            append(activatedprops,prop);
+                foreach(var myprops; failureprops){
+                    foreach(var myprop; myprops['props']){
+                        if (getprop(myprop['failprop'])==1){
+                            append(activatedprops,myprop);
                         };
                     };
                 };
@@ -96,8 +127,12 @@
                 };
                 var myindex = math.floor(rand() * propslen);
                 print ("Failing: ", activatedprops[myindex]['name']);
-                setprop(activatedprops[myindex]['servprop'], 0);
-                print ("Failing: ", activatedprops[myindex]['servprop']);
+                if (activatedprops[myindex]['servprop'] == "function"){
+                    customFailure(activatedprops[myindex]);
+                }else{
+                    setprop(activatedprops[myindex]['servprop'], 0);
+                    print ("Failing: ", activatedprops[myindex]['servprop']);
+                };
                 setprop("/pzl/failures/enabled", 0);
                 failuretimer.stop();
             };
@@ -116,13 +151,13 @@
                 };
             };
             var toggleAll= func{
-                foreach (var props; failureprops){
-                    foreach(var prop; props['props']){
-                        var myvalue = getprop(prop['failprop']);
+                foreach (var myprops; failureprops){
+                    foreach(var myprop; myprops['props']){
+                        var myvalue = getprop(myprop['failprop']);
                         if (myvalue==0){
-                            setprop(prop['failprop'], 1);
+                            setprop(myprop['failprop'], 1);
                         }else{
-                            setprop(prop['failprop'], 0);
+                            setprop(myprop['failprop'], 0);
                         };
                     };
                 };

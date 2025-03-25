@@ -40,16 +40,23 @@ var electrical_update = func {
     var volts = 0;
     var ideal_volts = components[supplier].getNode("volts").getValue();		# Not very realistic, but good enough
     var kind = components[supplier].getNode("kind").getValue();
+    var alt_on = props.getNode("/controls/switches/alternator").getValue();
+    var batt_on = props.getNode("/controls/switches/battery").getValue();
+    ## Add alternator switch to supplier calculation
     if (kind == "alternator") {
       var min = components[supplier].getNode("source-min").getValue();
       var source_val = getprop(components[supplier].getNode("source-prop").getValue());
       if (min == nil) { min = 0; }	# Minimum value may not yet be initialized
       if (source_val == nil) { source_val = 0; } # Source value may not yet be initialized
-      if (min == 0 or source_val >= min) {					# Alternator has good volts if source is up to speed
-        volts = ideal_volts;
-      }
-      else {
-        volts = source_val / min * ideal_volts;					# Otherwise it delivers some weak fractional voltage
+      if (alt_on){  #If alternator is off volts are 0
+        if (min == 0 or source_val >= min) {					# Alternator has good volts if source is up to speed
+          volts = ideal_volts;
+        }
+        else {
+          volts = source_val / min * ideal_volts;					# Otherwise it delivers some weak fractional voltage
+        }
+      }else{
+        volts = 0;
       }
     }
     elsif (kind == "external") {						# Simple conditions for ground service
@@ -58,7 +65,11 @@ var electrical_update = func {
       }
     }
     else { #kind == "battery"							# Stub: currently batteries always show good volts.
-      volts = ideal_volts;
+      if (batt_on){
+        volts = ideal_volts;
+      }else{
+        volts = 0;
+      }
     }
     setprop(components[supplier].getNode("prop").getValue(),volts);
   }
@@ -81,7 +92,6 @@ var electrical_update = func {
       last_test = getprop(switch.getValue());					# Save the last test for 'variable' outputs
       if (last_test == nil or last_test == 0) {
         closed = 0;								# Stop tests if any switch is open
-        break;
       }
     }
     var input_component = components[connector.getNode("input").getValue()];
@@ -90,7 +100,6 @@ var electrical_update = func {
     if (closed) {								# Switches all tested positive
       input_volts = getprop(input_component.getChildren("prop")[0].getValue());
       if (input_volts == nil) { input_volts = 0; }				# Non-suppliers may not yet be initialized
-
       if (input_volts > 0 and connector.getNode("variable") != nil) {		# Indicates special variable control switch output
         if (connector.getNode("scale") != nil) {				# Indicates variable output scales input volts
           input_volts = input_volts * last_test * connector.getNode("scale").getValue();
@@ -145,8 +154,6 @@ var electrical_update = func {
 
 
 var electrical_init = func {
-  ### ADDING FAILURE PROP FOR ALTERNATOR
-  setprop("/systems/electrical/suppliers/serviceable", 1);
   var fail = { SERVICEABLE : 1, JAM : 2, ENGINE: 3};
   var type = { MTBF : 1, MCBF: 2 };
   var failure_root = "/sim/failure-manager";
