@@ -6,15 +6,16 @@
   <model>
     <name>Instruments</name>
     <path>Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
-			<defaults>
-			<order-by-xyz/> <!-- idk where to add this -->
-		</defaults>
-		
+    <defaults>
+      <order-by-xyz/>
+      <!-- idk where to add this -->
+    </defaults>
+
   </model>
-  
-  
-  
-    <model>
+
+
+
+  <model>
     <path>Aircraft/PZL-Koliber-family/Models/Effects/Smoke/smoke.xml</path>
     <offsets>
       <x-m> -0.150 </x-m>
@@ -25,14 +26,15 @@
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
-  
-  
-  
-  
-		<defaults>
-			<order-by-xyz/> <!-- also there -->
-		</defaults>
-		
+
+
+
+
+  <defaults>
+    <order-by-xyz/>
+    <!-- also there -->
+  </defaults>
+
   <effect>
     <inherits-from>Models/Effects/exterior-opaque</inherits-from>
     <object-name>fuselage</object-name>
@@ -54,7 +56,7 @@
 
   </effect>
 
-<effect>
+  <effect>
     <inherits-from>Models/Effects/exterior-glass</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>okno.lewe</object-name>
@@ -931,6 +933,12 @@
     <type>rotate</type>
     <object-name>generator-switch</object-name>
     <property>/switches/alternator-switch-pos</property>
+    <condition>
+      <equals>
+        <property>/sim/failure-manager/electrical/alternator/serviceable</property>
+        <value>1</value>
+      </equals>
+    </condition>
     <factor>-30.0</factor>
     <center>
       <x-m>-0.58867</x-m>

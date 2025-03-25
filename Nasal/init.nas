@@ -2,9 +2,11 @@
 # based on acconfig by Octal450
 
 
-## Make fuel flow serviceable
+## Init serviceable props
 setprop('/sim/failure-manager/fuel/flow/serviceable',1);
 setprop('/sim/failure-manager/controls/slats/serviceable',1);
+setprop('/sim/failure-manager/electrical/alternator/serviceable',1);
+
 
 var progress = maketimer(0.5, func {
 	var progress = getprop("init//progress");

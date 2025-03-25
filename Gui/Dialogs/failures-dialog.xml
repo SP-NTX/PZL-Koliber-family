@@ -49,6 +49,7 @@
                 var myvalue = myprop['name'];
                 print ("Failing:", myvalue);
                 if (myvalue=='Alternator'){
+                    setprop ("/sim/failure-manager/electrical/alternator/serviceable", 0);
                     var myprop = props.getNode('/controls/switches/alternator');
                     myprop.setValue(0);
                     myprop.setAttribute("writable",0);
