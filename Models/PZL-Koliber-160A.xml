@@ -899,6 +899,12 @@
     <type>rotate</type>
     <object-name>bat-switch</object-name>
     <property>/switches/bat-switch-pos</property>
+        <condition>
+      <equals>
+        <property>/sim/failure-manager/electrical/serviceable</property>
+        <value>1</value>
+      </equals>
+    </condition>
     <factor>-30.0</factor>
     <center>
       <x-m>-0.58867</x-m>
