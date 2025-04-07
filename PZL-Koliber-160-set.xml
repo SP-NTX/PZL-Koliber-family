@@ -141,7 +141,7 @@
 		<flight-model>jsb</flight-model>
 		<aero>Systems/PZL-Koliber-160A-fdm</aero>
 
-		<menubar include="Gui/Dialogs/PZL-Koliber-160A-menu.xml" />
+		<menubar include="gui/dialogs/PZL-Koliber-160A-menu.xml" />
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml">
 			<property-rule n="100">
