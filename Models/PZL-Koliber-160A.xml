@@ -27,6 +27,9 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Generic/marker.xml</path>
+  </model>
 
 
 
@@ -899,7 +902,7 @@
     <type>rotate</type>
     <object-name>bat-switch</object-name>
     <property>/switches/bat-switch-pos</property>
-        <condition>
+    <condition>
       <equals>
         <property>/sim/failure-manager/electrical/serviceable</property>
         <value>1</value>
@@ -1996,6 +1999,8 @@
       <pitch-deg>-11</pitch-deg>
     </offsets>
   </model>
+
+
 
   <!-- ****************** ŚWIATŁA *****************************-->
 

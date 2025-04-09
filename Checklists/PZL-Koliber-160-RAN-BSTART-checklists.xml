@@ -1,318 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <PropertyList>
-<checklist>
-        <title>Preflight Inspection</title>
-        <page>
-            <item>
-                <name></name>
-                <value>COCKPIT</value>
-            </item>
-            <item>
-                <name>Canopy</name>
-                <value>Canopy check/Open</value>
-            </item>
-            <item>
-                <name>Aircraft docs (AROW)</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Weight and Balance</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Control wheel lock</name>
-                <value>Remove</value>
-            </item>
-            <item>
-                <name>Hobbs/Tach</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Magneto SW/Ignition</name>
-                <value>Off</value>
-            </item>
-            <item>
-                <name>Avionics Power Switch</name>
-                <value>Off</value>
-            </item>
-            <item>
-                <name>Master Switch</name>
-                <value>On</value>
-            </item>
-            <item>
-                <name>Fuel quantity indicators</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Flaps</name>
-                <value>Extend</value>
-            </item>
-            <item>
-                <name>Trimming tab</name>
-                <value>"T-O" Position</value>
-            </item>
-            <item>
-                <name>Fuel valve</name>
-                <value>On fullest tank</value>
-            </item>
-            <item>
-                <name>Stall warning</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Master Switch</name>
-                <value>Off</value>
-            </item>
-        </page>
-        <page>
-            <item>
-                <name></name>
-                <value>LEFT WING</value>
-            </item>
-            <item>
-                <name>Wing tie-down</name>
-                <value>Disconnect</value>
-            </item>
-            <item>
-                <name>Flaps</name>
-                <value>Secure</value>
-            </item>
-            <item>
-                <name>Aileron</name>
-                <value>Free and Secure</value>
-            </item>
-            <item>
-                <name>Pitot tube</name>
-                <value>Uncover and Check</value>
-            </item>
-            <item>
-                <name>Fuel tank vent open</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Slats</name>
-                <value>Checked</value>
-            </item>
-            <item>
-                <name>Fuel Quantity</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Fuel Filler Plug</name>
-                <value>Secure</value>
-            </item>
-            <item>
-                <name>Fuel tank sump</name>
-                <value>Sample</value>
-            </item>
-            <item>
-                <name>Main wheel tire</name>
-                <value>Inflated/Cond</value>
-            </item>
-            <item>
-                <name>Brakes</name>
-                <value>Not Leaking</value>
-            </item>
-            <item>
-                <name>Landing/Taxi Light(s)</name>
-                <value>Clean/Cond</value>
-            </item>
-        </page>
-        <page>
-            <item>
-                <name></name>
-                <value>NOSE</value>
-            </item>
-            <item>
-                <name>Engine oil level</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Fuel strainer</name>
-                <value>Sample</value>
-            </item>
-            <item>
-                <name>Propeller and spinner</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Alternator belt</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Air intake</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Carburetor air filter</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Nose wheel strut and tire</name>
-                <value>Check</value>
-            </item>
-        </page>
-        <page>
-            <item>
-                <name></name>
-                <value>RIGHT WING</value>
-            </item>
-            <item>
-                <name>Wing tie-down</name>
-                <value>Disconnect</value>
-            </item>
-            <item>
-                <name>Flaps</name>
-                <value>Secure</value>
-            </item>
-            <item>
-                <name>Aileron</name>
-                <value>Free and Secure</value>
-            </item>
-            <item>
-                <name>Slats</name>
-                <value>Checked</value>
-            </item>
-            <item>
-                <name>Fuel Quantity</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Fuel Filler Plug</name>
-                <value>Secure</value>
-            </item>
-            <item>
-                <name>Fuel tank sump</name>
-                <value>Sample</value>
-            </item>
-            <item>
-                <name>Main wheel tire</name>
-                <value>Inflated/Cond</value>
-            </item>
-            <item>
-                <name>Brakes</name>
-                <value>Not Leaking</value>
-            </item>
-        </page>
-        <page>
-            <item>
-                <name></name>
-                <value>FUSELAGE AND EMPENAGE</value>
-            </item>
-            <item>
-                <name>Rivets</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Rudder Cables Both sides</name>
-                <value>Check</value>
-            </item>
-            <item>
-                <name>Tail Tie-Down</name>
-                <value>Disconnect</value>
-            </item>
-            <item>
-                <name>Control surfaces</name>
-                <value>Free and Secure</value>
-            </item>
-            <item>
-                <name>Trim Tab</name>
-                <value>Check Security</value>
-            </item>
-            <item>
-                <name>Antennas</name>
-                <value>Check Security</value>
-            </item>
-        </page>
-    </checklist>
+    <name>RAN Before Start</name>
 
     <checklist>
-        <title>Before starting engine</title>
+        <title>Before starting engine RAN</title>
         <item>
             <name>Preflight inspection</name>
             <value>Complete</value>
         </item>
         <item>
-            <name>Passenger Briefing</name>
-            <value>Complete</value>
+            <name>Tow Bar</name>
+            <value>In Sight</value>
         </item>
         <item>
-            <name>Seats, belts</name>
+            <name>Safety Belts</name>
             <value>Adjust and Lock</value>
         </item>
         <item>
+            <name>Electric Equipment</name>
+            <value>Off</value>
+        </item>
+        <item>
+            <name>Circuit Brakers</name>
+            <value>Inserted</value>
+        </item>
+        <item>
             <name>Brakes</name>
-            <value>As Required</value>
-        </item>
-        <item>
-            <name>Fuel Selector Valve</name>
-            <value>Fullest Tank</value>
-        </item>
-        <item>
-            <name>Avionics Power Switch</name>
-            <value>Off</value>
-        </item>
-        <item>
-            <name>Electrical Equip</name>
-            <value>Off</value>
-        </item>
-        <item>
-            <name>Circuit breakers</name>
-            <value>Check in</value>
+            <value>Step On</value>
         </item>
     </checklist>
-
     <checklist>
-        <title>Starting engine</title>
+        <title>Starting engine RAN</title>
         <item>
             <name>Mixture</name>
             <value>Rich (IN)</value>
         </item>
         <item>
-            <name>Carburetor heat</name>
-            <value>Cold (IN)</value>
+            <name>Carburetor Heat</name>
+            <value>Off (IN)</value>
         </item>
         <item>
-            <name>Battery and Alternator SW</name>
+            <name>Battery Master</name>
             <value>On</value>
         </item>
         <item>
             <name>Fuel Pump</name>
-            <value>On</value>
+            <value>On &amp; Check</value>
         </item>
         <item>
-            <name>Anti-Collision light</name>
-            <value>On</value>
+            <name>Lights</name>
+            <value>As Required</value>
         </item>
         <item>
-            <name>Prime</name>
-            <value>AS Required</value>
+            <name>Primer</name>
+            <value>Pump Twice</value>
+        </item>
+        <item>
+            <name>Fuel Pump</name>
+            <value>Off</value>
         </item>
         <item>
             <name>Throttle</name>
-            <value>Open 1/4 inch</value>
+            <value>1/2 cm In</value>
         </item>
         <item>
-            <name>Propeller area</name>
+            <name>Propeller Area</name>
             <value>Clear</value>
         </item>
         <item>
             <name>Starter</name>
-            <value>Engage</value>
+            <value>Ignite</value>
+        </item>
+        <item>
+            <name>Startup</name>
+            <value>1000 RPM</value>
+        </item>
+        <item>
+            <name>Oil Pressure</name>
+            <value>Green Before 15 Seconds</value>
         </item>
         <item>
             <name>Engine</name>
             <value>800-1000 rpm</value>
         </item>
         <item>
-            <name>Oil Pressuer</name>
-            <value>Check</value>
+            <name>Alternator</name>
+            <value>On &amp; Check</value>
+        </item>
+        <item>
+            <name>Mixture</name>
+            <value>Release 2cm</value>
+        </item>
+        <item>
+            <name>Flaps</name>
+            <value>Retract</value>
         </item>
     </checklist>
-
     <checklist>
-        <title>Before Taxi</title>
+        <title>Before Taxi RAN</title>
         <item>
             <name>Avionics Master Switch</name>
             <value>On</value>
@@ -342,7 +127,6 @@
             <value>Locked in</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Taxi</title>
         <item>
@@ -358,7 +142,6 @@
             <value>Monitor</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Engine Run-Up</title>
         <item>
@@ -398,7 +181,6 @@
             <value>800-1000 rpm</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Before Takeoff</title>
         <item>
@@ -438,7 +220,6 @@
             <value>As Required</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Takeoff Normal</title>
         <item>
@@ -462,7 +243,6 @@
             <value>Fuel Pump Off</value>
         </item>
     </checklist>
-
     <checklist>
         <title>T/O Short and Soft</title>
         <item>
@@ -498,7 +278,6 @@
             <value>Fuel Pump Off</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Climb</title>
         <item>
@@ -522,7 +301,6 @@
             <value>As Required</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Cruise</title>
         <item>
@@ -543,7 +321,6 @@
             <value>Switch tanks with Pumps on</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Descent</title>
         <item>
@@ -559,7 +336,6 @@
             <value>As Required</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Before Landing</title>
         <item>
@@ -605,7 +381,6 @@
             <value>62 KIAS (Flaps Dn)</value>
         </item>
     </checklist>
-
     <checklist>
         <title>After landing</title>
         <item>
@@ -625,7 +400,6 @@
             <value>Off</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Parking</title>
         <item>
@@ -653,7 +427,6 @@
             <value>Off</value>
         </item>
     </checklist>
-
     <checklist>
         <title>Securing the aircraft</title>
         <item>
