@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
     <name>Before Takeoff RAN</name>
-
     <checklist>
         <title>Before starting engine RAN</title>
         <item>
@@ -763,322 +762,418 @@
         </item>
     </checklist>
     <checklist>
-        <title>Taxi</title>
+        <title>Taxi RAN</title>
         <item>
-            <name>Elevator</name>
-            <value>Neutral or Aft.</value>
+            <name>ATC Authorization</name>
+            <value>Ok</value>
         </item>
         <item>
-            <name>Flaps</name>
-            <value>Up</value>
+            <name>Brakes</name>
+            <value>Test</value>
+            <view>
+                <heading-offset-deg>359.4</heading-offset-deg>
+                <pitch-offset-deg>-3.4</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.4</x-offset-m>
+                <y-offset-m>0.6</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>120.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.6736</x-m>
+                <y-m>-0.2504</y-m>
+                <z-m>0.0240</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
-            <name>Flight and Engine Inst.</name>
-            <value>Monitor</value>
+            <name>Flight Controls</name>
+            <value>Grab</value>
+            <view>
+                <heading-offset-deg>336.5</heading-offset-deg>
+                <pitch-offset-deg>-26.3</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.5</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.3107</x-m>
+                <y-m>-0.2579</y-m>
+                <z-m>0.3240</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
     </checklist>
     <checklist>
-        <title>Engine Run-Up</title>
+        <title>Engine Run-Up RAN</title>
         <item>
-            <name>Parking brake</name>
-            <value>Set</value>
+            <name>Brakes</name>
+            <value>Step On</value>
+            <view>
+                <heading-offset-deg>359.4</heading-offset-deg>
+                <pitch-offset-deg>-3.4</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.4</x-offset-m>
+                <y-offset-m>0.6</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>120.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.6736</x-m>
+                <y-m>-0.2504</y-m>
+                <z-m>0.0240</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <and>
+                    <equals>
+                        <property>/controls/gear/brake-left</property>
+                        <value>1</value>
+                    </equals>
+                    <equals>
+                        <property>/controls/gear/brake-right</property>
+                        <value>1</value>
+                    </equals>
+                </and>
+            </condition>
+        </item>
+        <item>
+            <name>Fuel Tank</name>
+            <value>Fullest</value>
+            <view>
+                <heading-offset-deg>356.5</heading-offset-deg>
+                <pitch-offset-deg>-42.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>61.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.6000</x-m>
+                <y-m>-0.1000</y-m>
+                <z-m>0.0570</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Mixture</name>
-            <value>Rich</value>
+            <value>Rich (IN)</value>
+            <view>
+                <heading-offset-deg>332.8</heading-offset-deg>
+                <pitch-offset-deg>-32.1</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>55.3</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5579</x-m>
+                <y-m>0.0628</y-m>
+                <z-m>0.3298</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/controls/engines/engine/mixture</property>
+                    <value>1</value>
+                </equals>
+            </condition>
         </item>
         <item>
             <name>Throttle</name>
-            <value>1800 rpm</value>
+            <value>1800 RPM</value>
+            <view>
+                <heading-offset-deg>5.7</heading-offset-deg>
+                <pitch-offset-deg>-15.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.1</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5901</x-m>
+                <y-m>0.0694</y-m>
+                <z-m>0.5860</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/engines/engine/rpm</property>
+                        <value>1760</value>
+                    </greater-than>
+                    <less-than>
+                        <property>/engines/engine/rpm</property>
+                        <value>1840</value>
+                    </less-than>
+                </and>
+            </condition>
         </item>
+
         <item>
             <name>Magnetos</name>
-            <value>Checlk</value>
+            <value>Max fall 150 - diff 50</value>
+            <view>
+                <heading-offset-deg>5.7</heading-offset-deg>
+                <pitch-offset-deg>-15.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.1</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5901</x-m>
+                <y-m>0.0694</y-m>
+                <z-m>0.5860</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Carburetor Heat</name>
+            <value>Max Fall Check</value>
+            <view>
+                <heading-offset-deg>5.7</heading-offset-deg>
+                <pitch-offset-deg>-15.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.1</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5901</x-m>
+                <y-m>0.0694</y-m>
+                <z-m>0.5860</z-m>
+                <scale>1.0000</scale>
+            </marker>
+        </item>
+        <item>
+            <name>Mixture (Quickly off/on)</name>
+            <value>Check Fall</value>
+            <view>
+                <heading-offset-deg>5.7</heading-offset-deg>
+                <pitch-offset-deg>-15.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.1</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5901</x-m>
+                <y-m>0.0694</y-m>
+                <z-m>0.5860</z-m>
+                <scale>1.0000</scale>
+            </marker>
+        </item>
+        <item>
+            <name>Engine Instruments</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>2.6</heading-offset-deg>
+                <pitch-offset-deg>-4.7</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.5</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>108.9</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5488</x-m>
+                <y-m>0.2017</y-m>
+                <z-m>0.5686</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
-            <name>Engine Inst. and Ammeter</name>
-            <value>Check</value>
+            <name>Suction</name>
+            <value>Between 4 and 6</value>
+            <view>
+                <heading-offset-deg>356.5</heading-offset-deg>
+                <pitch-offset-deg>-42.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>61.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5719</x-m>
+                <y-m>-0.4074</y-m>
+                <z-m>0.3818</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
-            <name>Fuel Pump</name>
-            <value>On and Check</value>
-        </item>
-        <item>
-            <name>Suction Gauge</name>
-            <value>4 to 6"</value>
-        </item>
-        <item>
-            <name>Thrtottle</name>
-            <value>800-1000 rpm</value>
+            <name>Throttle</name>
+            <value>1800 RPM</value>
+            <view>
+                <heading-offset-deg>5.7</heading-offset-deg>
+                <pitch-offset-deg>-15.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.1</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5901</x-m>
+                <y-m>0.0694</y-m>
+                <z-m>0.5860</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/engines/engine/rpm</property>
+                        <value>960</value>
+                    </greater-than>
+                    <less-than>
+                        <property>/engines/engine/rpm</property>
+                        <value>1040</value>
+                    </less-than>
+                </and>
+            </condition>
         </item>
     </checklist>
     <checklist>
-        <title>Before Takeoff</title>
+        <title>Before Takeoff RAN</title>
         <item>
-            <name>Flight Controls</name>
-            <value>Free and Correct</value>
+            <name>Briefing</name>
+            <value>Explain</value>
         </item>
         <item>
             <name>Canopy</name>
             <value>Closed</value>
+            <view>
+                <heading-offset-deg>320.0</heading-offset-deg>
+                <pitch-offset-deg>31.4</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>61.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.2719</x-m>
+                <y-m>-0.0074</y-m>
+                <z-m>0.8818</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
-            <name>Emergency Trim S/W</name>
-            <value>Check</value>
-        </item>
-        <item>
-            <name>Electric Trim</name>
-            <value>Check and Set</value>
+            <name>Lights</name>
+            <value>As Required</value>
+            <view>
+                <heading-offset-deg>1.6</heading-offset-deg>
+                <pitch-offset-deg>-27.7</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>53.5</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5843</x-m>
+                <y-m>-0.3256</y-m>
+                <z-m>0.2554</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Flaps</name>
-            <value>Check and Set</value>
+            <value>As Required</value>
+            <view>
+                <heading-offset-deg>342.1</heading-offset-deg>
+                <pitch-offset-deg>-60.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.4843</x-m>
+                <y-m>-0.0174</y-m>
+                <z-m>0.1364</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
-            <name>Encoder Switch</name>
-            <value>On</value>
+            <name>ATC Authorization</name>
+            <value>Ok</value>
         </item>
         <item>
             <name>Transponder</name>
-            <value>Check and set</value>
-        </item>
-        <item>
-            <name>Avionics</name>
-            <value>Set</value>
-        </item>
-        <item>
-            <name>Lights</name>
-            <value>As Required</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Takeoff Normal</title>
-        <item>
-            <name>Flaps</name>
-            <value>Up</value>
-        </item>
-        <item>
-            <name>Throttle</name>
-            <value>Full Open</value>
-        </item>
-        <item>
-            <name>Rotate</name>
-            <value>55 Kts.</value>
-        </item>
-        <item>
-            <name>Initial Climb</name>
-            <value>67 Kts.</value>
-        </item>
-        <item>
-            <name>Passing 500 FT</name>
-            <value>Fuel Pump Off</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>T/O Short and Soft</title>
-        <item>
-            <name>Flaps</name>
-            <value>Full</value>
-        </item>
-        <item>
-            <name>Control Stick</name>
-            <value>Full Back</value>
-        </item>
-        <item>
-            <name>Throttle</name>
-            <value>Full Open</value>
-        </item>
-        <item>
-            <name>Control Stick</name>
-            <value>Ease Forward</value>
-        </item>
-        <item>
-            <name>Initial Climb</name>
-            <value>62 Kts.</value>
-        </item>
-        <item>
-            <name>Passing 100 FT</name>
-            <value>67 Kts.</value>
-        </item>
-        <item>
-            <name>Flaps</name>
-            <value>Retract Slowly</value>
-        </item>
-        <item>
-            <name>Passing 500 FT</name>
-            <value>Fuel Pump Off</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Climb</title>
-        <item>
-            <name>Power</name>
-            <value>Full Open</value>
-        </item>
-        <item>
-            <name>Engine Temp</name>
-            <value>Check</value>
-        </item>
-        <item>
-            <name>Best Angle of Climb Vx</name>
-            <value>62 Kts.</value>
-        </item>
-        <item>
-            <name>Best Rate of Climb Vy</name>
-            <value>67 Kts.</value>
-        </item>
-        <item>
-            <name>Lights</name>
-            <value>As Required</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Cruise</title>
-        <item>
-            <name>Power</name>
-            <value>Set</value>
-        </item>
-        <item>
-            <name>Mixture</name>
-            <value>Adjust</value>
-        </item>
-        <item>
-            <name>Trim</name>
-            <value>Set</value>
-        </item>
-        <item>
-            <name>Fuel Tanks</name>
-            <value>Switch</value>
-            <value>Switch tanks with Pumps on</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Descent</title>
-        <item>
-            <name>Power</name>
-            <value>Set</value>
-        </item>
-        <item>
-            <name>Mixture</name>
-            <value>Rich</value>
-        </item>
-        <item>
-            <name>Carburetor Heat</name>
-            <value>As Required</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Before Landing</title>
-        <item>
-            <name>Belts and Harnesses</name>
-            <value>Secure</value>
-        </item>
-        <item>
-            <name>Flight instruments</name>
-            <value>Ckd and Set</value>
-        </item>
-        <item>
-            <name>Radios</name>
-            <value>Checked</value>
-        </item>
-        <item>
-            <name>ATIS</name>
-            <value>Checked</value>
+            <value>On</value>
+            <view>
+                <heading-offset-deg>0.0</heading-offset-deg>
+                <pitch-offset-deg>-7.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5686</x-m>
+                <y-m>0.2917</y-m>
+                <z-m>0.3587</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/instrumentation/transponder/inputs/knob-mode</property>
+                    <value>4</value>
+                </equals>
+            </condition>
         </item>
         <item>
             <name>Fuel Pump</name>
             <value>On</value>
+            <view>
+                <heading-offset-deg>328.3</heading-offset-deg>
+                <pitch-offset-deg>-22.8</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5843</x-m>
+                <y-m>-0.3835</y-m>
+                <z-m>0.2562</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/switches/fuelpump/</property>
+                    <value>1</value>
+                </equals>
+            </condition>
         </item>
-        <item>
-            <name>Fuel Tanks</name>
-            <value>Switch</value>
-            <value>Switch tanks with Pumps on</value>
-        </item>
-        <item>
-            <name>Carburetor Heat</name>
-            <value>On (Out)</value>
-        </item>
-        <item>
-            <name>Mixture</name>
-            <value>Rich</value>
-        </item>
-        <item>
-            <name>Landing Light</name>
-            <value>On</value>
-        </item>
-        <item>
-            <name>Airspeed</name>
-            <value>70 KIAS (Flaps UP)</value>
-            <value>62 KIAS (Flaps Dn)</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>After landing</title>
-        <item>
-            <name>Flaps</name>
-            <value>Up</value>
-        </item>
-        <item>
-            <name>Carburetor Heat</name>
-            <value>Cold (In)</value>
-        </item>
-        <item>
-            <name>Transponder</name>
-            <value>Standby</value>
-        </item>
-        <item>
-            <name>Landing light</name>
-            <value>Off</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Parking</title>
-        <item>
-            <name>Avionics</name>
-            <value>Off</value>
-        </item>
-        <item>
-            <name>Electrical</name>
-            <value>Off</value>
-        </item>
-        <item>
-            <name>Throttle</name>
-            <value>1000 rpm</value>
-        </item>
-        <item>
-            <name>Mixture</name>
-            <value>Cut-off</value>
-        </item>
-        <item>
-            <name>Ignition switch</name>
-            <value>Off</value>
-        </item>
-        <item>
-            <name>Master switch</name>
-            <value>Off</value>
-        </item>
-    </checklist>
-    <checklist>
-        <title>Securing the aircraft</title>
-        <item>
-            <name>Control lock</name>
-            <value>Install</value>
-        </item>
-        <item>
-            <name>Hobbs/Tach</name>
-            <value>Record</value>
-        </item>
-        <item>
-            <name>Canopy</name>
-            <value>Secure</value>
-        </item>
-        <item>
-            <name>Tie-downs</name>
-            <value>Secure</value>
-        </item>
+
+
     </checklist>
 </PropertyList>
