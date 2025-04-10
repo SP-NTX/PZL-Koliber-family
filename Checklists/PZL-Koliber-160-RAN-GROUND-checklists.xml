@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-    <name>RAN Ground</name>
+    <name>Ground RAN</name>
 
     <checklist>
         <title>Preflight Inspection RAN</title>
@@ -441,26 +441,102 @@
         <item>
             <name>Nose Wheel And Suspension</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>56.2</heading-offset-deg>
+                <pitch-offset-deg>11.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-1.6826</x-m>
+                <y-m>0.0000</y-m>
+                <z-m>-0.4711</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Propeller And Cone</name>
             <value>Check</value>
-        </item>
-        <item>
-            <name>Propeller and spinner</name>
-            <value>Check</value>
+            <view>
+                <heading-offset-deg>5.8</heading-offset-deg>
+                <pitch-offset-deg>5.8</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-2.3826</x-m>
+                <y-m>0.0000</y-m>
+                <z-m>0.4289</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Air intake</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>3.2</heading-offset-deg>
+                <pitch-offset-deg>11.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-1.9826</x-m>
+                <y-m>-0.2000</y-m>
+                <z-m>0.4289</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Alternator belt</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>3.2</heading-offset-deg>
+                <pitch-offset-deg>11.5</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-1.9826</x-m>
+                <y-m>0.2000</y-m>
+                <z-m>0.4289</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Oil Level</name>
             <value>Between 6 &amp; 8</value>
+            <view>
+                <heading-offset-deg>336.3</heading-offset-deg>
+                <pitch-offset-deg>-2.0</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-1.6405</x-m>
+                <y-m>0.2711</y-m>
+                <z-m>0.5603</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
     </checklist>
     <checklist>
@@ -468,35 +544,163 @@
         <item>
             <name>Wheel Tire</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>354.2</heading-offset-deg>
+                <pitch-offset-deg>3.6</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.0405</x-m>
+                <y-m>0.9711</y-m>
+                <z-m>-0.4397</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Brakes and Pads</name>
             <value>Not Leaking and Checked</value>
+            <view>
+                <heading-offset-deg>18.0</heading-offset-deg>
+                <pitch-offset-deg>11.0</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.0405</x-m>
+                <y-m>0.8438</y-m>
+                <z-m>-0.5132</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Slats</name>
             <value>Extended</value>
+            <view>
+                <heading-offset-deg>328.2</heading-offset-deg>
+                <pitch-offset-deg>-7.6</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>55.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.4405</x-m>
+                <y-m>2.2438</y-m>
+                <z-m>0.3868</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Fuel Cap</name>
             <value>Secured</value>
+            <view>
+                <heading-offset-deg>335.3</heading-offset-deg>
+                <pitch-offset-deg>-18.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>74.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.1000</x-m>
+                <y-m>2.7000</y-m>
+                <z-m>0.4000</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Fuel Tank Ventilation</name>
             <value>Open</value>
+            <view>
+                <heading-offset-deg>357.1</heading-offset-deg>
+                <pitch-offset-deg>9.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>74.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.1000</x-m>
+                <y-m>2.7000</y-m>
+                <z-m>0.0901</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Navigation Light</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>293.2</heading-offset-deg>
+                <pitch-offset-deg>7.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>116.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.3008</x-m>
+                <y-m>4.8661</y-m>
+                <z-m>0.5562</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
 
         <item>
             <name>Aileron</name>
             <value>Free and Secure</value>
+            <view>
+                <heading-offset-deg>258.1</heading-offset-deg>
+                <pitch-offset-deg>2.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>116.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>0.8992</x-m>
+                <y-m>3.7661</y-m>
+                <z-m>0.3562</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Flaps</name>
             <value>Secured</value>
+            <view>
+                <heading-offset-deg>229.2</heading-offset-deg>
+                <pitch-offset-deg>1.1</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>116.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>0.7992</x-m>
+                <y-m>2.2322</y-m>
+                <z-m>0.1132</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
     </checklist>
     <checklist>
@@ -504,30 +708,142 @@
         <item>
             <name>Static Intake</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>214.1</heading-offset-deg>
+                <pitch-offset-deg>-3.0</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>70.7</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>1.7835</x-m>
+                <y-m>0.3917</y-m>
+                <z-m>0.1132</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Rudder Cables</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>288.0</heading-offset-deg>
+                <pitch-offset-deg>-13.0</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>89.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>3.0835</x-m>
+                <y-m>0.3917</y-m>
+                <z-m>0.6132</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Stabilizer</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>226.5</heading-offset-deg>
+                <pitch-offset-deg>9.0</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>116.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>3.9835</x-m>
+                <y-m>1.3917</y-m>
+                <z-m>0.4471</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
-            <name>Control surfaces</name>
-            <value>Free and Secure</value>
+            <name>Elevator and Rudder</name>
+            <value>Free</value>
+            <view>
+                <heading-offset-deg>209.8</heading-offset-deg>
+                <pitch-offset-deg>10.3</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>116.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>3.9835</x-m>
+                <y-m>0.0917</y-m>
+                <z-m>0.5471</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Rudder Cables</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>184.3</heading-offset-deg>
+                <pitch-offset-deg>0.7</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>116.1</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>2.9835</x-m>
+                <y-m>-0.1083</y-m>
+                <z-m>0.5471</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Static Intake</name>
             <value>Check</value>
+            <view>
+                <heading-offset-deg>178.3</heading-offset-deg>
+                <pitch-offset-deg>5.6</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>78.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>2.5207</x-m>
+                <y-m>-0.3083</y-m>
+                <z-m>0.2074</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
         <item>
             <name>Antennas</name>
             <value>Check Security</value>
+            <view>
+                <heading-offset-deg>192.9</heading-offset-deg>
+                <pitch-offset-deg>-10.8</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>0.0</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>5.0</z-offset-m>
+                <field-of-view>78.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>1.9207</x-m>
+                <y-m>-0.0322</y-m>
+                <z-m>0.6074</z-m>
+                <scale>1.0000</scale>
+            </marker>
         </item>
     </checklist>
 </PropertyList>
