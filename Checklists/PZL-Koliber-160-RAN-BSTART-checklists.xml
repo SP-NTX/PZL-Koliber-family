@@ -241,8 +241,6 @@
         <item>
             <name>Fuel Pump</name>
             <value>Off</value>
-            <name>Fuel Pump</name>
-            <value>On</value>
             <view>
                 <heading-offset-deg>328.3</heading-offset-deg>
                 <pitch-offset-deg>-22.8</pitch-offset-deg>
