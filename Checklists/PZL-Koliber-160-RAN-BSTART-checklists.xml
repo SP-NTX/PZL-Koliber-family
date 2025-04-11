@@ -497,7 +497,7 @@
             <condition>
                 <equals>
                     <property>/controls/flight/flaps</property>
-                    <value>0s</value>
+                    <value>0</value>
                 </equals>
             </condition>
         </item>

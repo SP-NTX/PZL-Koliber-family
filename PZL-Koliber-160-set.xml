@@ -76,6 +76,7 @@
 		</tags>
 
 		<checklists>
+			<group include="Checklists/PZL-Koliber-160-RAN-TAKEOFF-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-RAN-BSTART-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-RAN-GROUND-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-checklists.xml"/>
