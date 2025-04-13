@@ -11,16 +11,18 @@
 		<!-- Fuel tank selector -->
 		<switch name="/systems/fuel/from-tank_0">
 			<default value="0"/>
-			<test value="1">
+			<test logic="AND" value="1">
 				/controls/fuel/selector eq -1
+                /sim/failure-manager/fuel/flow/serviceable eq 1
 			</test>
             <output>/controls/fuel-valve/from-tank_0</output>
 		</switch>
 
         <switch name="/systems/fuel/from-tank_1">
 			<default value="0"/>
-			<test value="1">
+			<test logic="AND" value="1">
 				/controls/fuel/selector eq 1
+                /sim/failure-manager/fuel/flow/serviceable eq 1
 			</test>
             <output>/controls/fuel-valve/from-tank_1</output>
 		</switch>

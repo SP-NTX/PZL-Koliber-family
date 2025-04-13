@@ -1,6 +1,13 @@
 # Copyright SP-NTX 2022
 # based on acconfig by Octal450
 
+
+## Init serviceable props
+setprop('/sim/failure-manager/fuel/flow/serviceable',1);
+setprop('/sim/failure-manager/controls/slats/serviceable',1);
+setprop('/sim/failure-manager/electrical/alternator/serviceable',1);
+
+
 var progress = maketimer(0.5, func {
 	var progress = getprop("init//progress");
 	if (progress == 0) {
@@ -41,3 +48,24 @@ setlistener("instrumentation/comm[0]/volume", func(node) {
 	}
 	progress.stop();
 });
+
+## OVERRIDE BRAKING FUNCTION
+if (getprop("/sim/failure-manager/controls/gear/left-brake/serviceable") == nil) {
+	setprop("/sim/failure-manager/controls/gear/left-brake/serviceable", 1);
+}
+if (getprop("/sim/failure-manager/controls/gear/right-brake/serviceable") == nil) {
+	setprop("/sim/failure-manager/controls/gear/right-brake/serviceable", 1);
+}
+var newApplyBrakes = func(v, which = 0) {
+	print ('MYBRAKES');
+	var fullBrakeTime = 0.5;
+	var rboperative = getprop("/sim/failure-manager/controls/gear/right-brake/serviceable");
+	var lboperative = getprop("/sim/failure-manager/controls/gear/left-brake/serviceable");
+	print("RB: ", rboperative, " LB: ", lboperative);
+	if (which <= 0 and lboperative) { interpolate("/controls/gear/brake-left", v, fullBrakeTime); }
+    if (which >= 0 and rboperative) { interpolate("/controls/gear/brake-right", v, fullBrakeTime); }
+    if (v and props.globals.getNode("/sim/controls/brake-cancels-parking-brake", 1).getBoolValue() and rboperative and lboperative) {
+        setprop("/controls/gear/brake-parking", 0);
+    }
+}
+controls.applyBrakes= newApplyBrakes;
