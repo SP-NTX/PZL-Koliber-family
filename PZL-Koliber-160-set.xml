@@ -76,8 +76,16 @@
 		</tags>
 
 		<checklists>
-
+			<group include="Checklists/PZL-Koliber-160-RAN-GROUND-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-BSTART-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-TAKEOFF-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-INAIR-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-LANDING-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-AFTERLANDING-checklists.xml"/>		
+			<group include="Checklists/PZL-Koliber-160-RAN-GOAROUND-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEFAILURE-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEFIRE-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ELECTRICFIRE-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-checklists.xml"/>
 		</checklists>
 		<urls>

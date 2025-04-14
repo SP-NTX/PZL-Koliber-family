@@ -143,35 +143,35 @@
         <item>
             <name>Fuel Selector</name>
             <value>Off</value>
-       <view>
-           <heading-offset-deg>358.3</heading-offset-deg>
-           <pitch-offset-deg>-29.2</pitch-offset-deg>
-           <roll-offset-deg>0.0</roll-offset-deg>
-           <x-offset-m>-0.3</x-offset-m>
-           <y-offset-m>0.7</y-offset-m>
-           <z-offset-m>-0.0</z-offset-m>
-           <field-of-view>97.0</field-of-view>
-       </view>
-       <marker>
-           <x-m>-0.5595</x-m>
-           <y-m>-0.1347</y-m>
-           <z-m>-0.1000</z-m>
-           <scale>2.3884</scale>
-       </marker>
+            <view>
+                <heading-offset-deg>358.3</heading-offset-deg>
+                <pitch-offset-deg>-29.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5595</x-m>
+                <y-m>-0.1347</y-m>
+                <z-m>-0.1000</z-m>
+                <scale>2.3884</scale>
+            </marker>
             <condition>
                 <and>
-                <equals>
-                    <property>/controls/fuel-valve/from-tank_0</property>
-                    <value>0</value>
-                </equals>
-                <equals>
-                    <property>/controls/fuel-valve/from-tank_1</property>
-                    <value>0</value>
-                </equals>
+                    <equals>
+                        <property>/controls/fuel-valve/from-tank_0</property>
+                        <value>0</value>
+                    </equals>
+                    <equals>
+                        <property>/controls/fuel-valve/from-tank_1</property>
+                        <value>0</value>
+                    </equals>
                 </and>
             </condition>
         </item>
-                <item>
+        <item>
             <name>Flaps</name>
             <value>Full (With Landing Secured)</value>
             <view>
@@ -343,6 +343,23 @@
         <item>
             <name>Fuel Selector</name>
             <value>Change Tank</value>
+            <view>
+                <heading-offset-deg>358.3</heading-offset-deg>
+                <pitch-offset-deg>-29.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5595</x-m>
+                <y-m>-0.1347</y-m>
+                <z-m>-0.1000</z-m>
+                <scale>2.3884</scale>
+            </marker>
+
+
         </item>
         <item>
             <name>Primer</name>
@@ -407,6 +424,33 @@
         <item>
             <name>Fuel Selector</name>
             <value>Off</value>
+            <view>
+                <heading-offset-deg>358.3</heading-offset-deg>
+                <pitch-offset-deg>-29.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5595</x-m>
+                <y-m>-0.1347</y-m>
+                <z-m>-0.1000</z-m>
+                <scale>2.3884</scale>
+            </marker>
+            <condition>
+                <and>
+                    <equals>
+                        <property>/controls/fuel-valve/from-tank_0</property>
+                        <value>0</value>
+                    </equals>
+                    <equals>
+                        <property>/controls/fuel-valve/from-tank_1</property>
+                        <value>0</value>
+                    </equals>
+                </and>
+            </condition>
         </item>
         <item>
             <name>Throttle</name>
@@ -486,8 +530,8 @@
                     <value>7700</value>
                 </equals>
             </condition>
-    </item>
-            <item>
+        </item>
+        <item>
             <name>Canopy</name>
             <value>Unlocked</value>
             <view>
@@ -507,7 +551,7 @@
                 <scale>1.0000</scale>
             </marker>
         </item>
-                <item>
+        <item>
             <name>Flaps</name>
             <value>Full (With Landing Secured)</value>
             <view>
