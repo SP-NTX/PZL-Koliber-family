@@ -86,6 +86,8 @@
 			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEFAILURE-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEFIRE-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-RAN-ELECTRICFIRE-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEMALF-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-OTHEREMER-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-checklists.xml"/>
 		</checklists>
 		<urls>
