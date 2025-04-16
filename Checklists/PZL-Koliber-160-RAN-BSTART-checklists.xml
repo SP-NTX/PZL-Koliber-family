@@ -241,8 +241,6 @@
         <item>
             <name>Fuel Pump</name>
             <value>Off</value>
-            <name>Fuel Pump</name>
-            <value>On</value>
             <view>
                 <heading-offset-deg>328.3</heading-offset-deg>
                 <pitch-offset-deg>-22.8</pitch-offset-deg>
@@ -1021,7 +1019,7 @@
         </item>
         <item>
             <name>Throttle</name>
-            <value>1800 RPM</value>
+            <value>1000 RPM</value>
             <view>
                 <heading-offset-deg>5.7</heading-offset-deg>
                 <pitch-offset-deg>-15.5</pitch-offset-deg>

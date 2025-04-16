@@ -6,7 +6,8 @@
 setprop('/sim/failure-manager/fuel/flow/serviceable',1);
 setprop('/sim/failure-manager/controls/slats/serviceable',1);
 setprop('/sim/failure-manager/electrical/alternator/serviceable',1);
-
+### Setting default value for rudder-trim (0 is nto advisable)
+setprop('/controls/flight/rudder-trim',0.026);
 
 var progress = maketimer(0.5, func {
 	var progress = getprop("init//progress");

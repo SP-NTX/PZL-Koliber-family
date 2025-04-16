@@ -76,16 +76,19 @@
 		</tags>
 
 		<checklists>
-			<group include="Checklists/PZL-Koliber-160-RAN-LANDING-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-INAIR-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-TAKEOFF-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-BSTART-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-RAN-GROUND-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-BSTART-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-TAKEOFF-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-INAIR-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-LANDING-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-AFTERLANDING-checklists.xml"/>		
+			<group include="Checklists/PZL-Koliber-160-RAN-GOAROUND-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEFAILURE-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEFIRE-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ELECTRICFIRE-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-ENGINEMALF-checklists.xml"/>
+			<group include="Checklists/PZL-Koliber-160-RAN-OTHEREMER-checklists.xml"/>
 			<group include="Checklists/PZL-Koliber-160-checklists.xml"/>
-			<ransequence>
-				<index n="0">0</index> <!-- Before starting engines -->
-      			<index n="1">1</index> <!-- Start engines -->
-			</ransequence>
 		</checklists>
 		<urls>
 			<home-page>https://wiki.flightgear.org/PZL-Koliber-family</home-page>
@@ -337,6 +340,8 @@
 			</tank>
 		</fuel>
 	</consumables>
+
+
 
 	<init>
 		<progress>0</progress>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <auto-tutorial>false</auto-tutorial>
+    <name>Go Around RAN</name>
+    <checklist>
+        <title>Go Around RAN</title>
+        <item>
+            <name>Throttle</name>
+            <value>Full</value>
+            <view>
+                <heading-offset-deg>0.0</heading-offset-deg>
+                <pitch-offset-deg>-7.2</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5736</x-m>
+                <y-m>-0.0281</y-m>
+                <z-m>0.3182</z-m>
+                <scale>1.4959</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/controls/engines/engine/throttle</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+        </item>
+        <item>
+            <name>Carburetor Heat</name>
+            <value>Off</value>
+            <view>
+                <heading-offset-deg>309.7</heading-offset-deg>
+                <pitch-offset-deg>-26.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5686</x-m>
+                <y-m>-0.1000</y-m>
+                <z-m>0.3182</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/controls/anti-ice/engine/carb-heat</property>
+                    <value>0</value>
+                </equals>
+            </condition>
+        </item>
+        <item>
+            <name>Climb</name>
+            <value>Vy 67 KIAS (No Flaps)</value>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>66</value>
+                    </greater-than>
+                    <less-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>68</value>
+                    </less-than>
+                </and>
+            </condition>
+        </item>
+    </checklist>
+</PropertyList>

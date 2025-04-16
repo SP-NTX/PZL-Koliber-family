@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <auto-tutorial>false</auto-tutorial>
+    <name>Electric Fire RAN</name>
+    <checklist>
+        <title>Electric Fire RAN</title>
+        <item>
+            <name>Battery Master</name>
+            <value>Off</value>
+            <view>
+                <heading-offset-deg>13.0</heading-offset-deg>
+                <pitch-offset-deg>-32.3</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>43.8</field-of-view>
+            </view>
+            <marker>
+                <x-m>-0.5752</x-m>
+                <y-m>-0.4198</y-m>
+                <z-m>0.2661</z-m>
+                <scale>1.0000</scale>
+            </marker>
+        </item>
+        <item>
+            <name>Alternator</name>
+            <value>Off</value>
+            <view>
+                <heading-offset-deg>333.2</heading-offset-deg>
+                <pitch-offset-deg>-35.8</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5818</x-m>
+                <y-m>-0.4083</y-m>
+                <z-m>0.2554</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/controls/switches/alternator</property>
+                    <value>0</value>
+                </equals>
+            </condition>
+        </item>
+        <item>
+            <name>Flaps &amp; Trim</name>
+            <value>Not Working</value>
+        </item>
+        <item>
+            <name>Fire</name>
+            <value>Extinguish</value>
+        </item>
+        <item>
+            <name>Cockpit Ventilation</name>
+            <value>Opened</value>
+        </item>
+        <item>
+            <name>Land</name>
+            <value>Closest Field</value>
+        </item>
+
+    </checklist>
+</PropertyList>
