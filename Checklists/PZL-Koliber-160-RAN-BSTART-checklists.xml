@@ -1019,7 +1019,7 @@
         </item>
         <item>
             <name>Throttle</name>
-            <value>1800 RPM</value>
+            <value>1000 RPM</value>
             <view>
                 <heading-offset-deg>5.7</heading-offset-deg>
                 <pitch-offset-deg>-15.5</pitch-offset-deg>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
+    <auto-tutorial>false</auto-tutorial>
     <name>Engine Malfunction RAN</name>
     <checklist>
         <title>Engine Malfunction RAN</title>
