@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <name>Landing RAN</name>
+    <checklist>
+        <title>Before Landing RAN</title>
+        <item>
+            <name>Secuirty Belts</name>
+            <value>Fastened</value>
+        </item>
+        <item>
+            <name>Fuel Pump</name>
+            <value>On</value>
+            <view>
+                <heading-offset-deg>328.3</heading-offset-deg>
+                <pitch-offset-deg>-22.8</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5843</x-m>
+                <y-m>-0.3835</y-m>
+                <z-m>0.2562</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/switches/fuelpump/</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+        </item>
+        <item>
+            <name>Fuel Tank</name>
+            <value>Fullest</value>
+            <view>
+                <heading-offset-deg>356.5</heading-offset-deg>
+                <pitch-offset-deg>-42.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>61.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.6000</x-m>
+                <y-m>-0.1000</y-m>
+                <z-m>0.0570</z-m>
+                <scale>1.0000</scale>
+            </marker>
+        </item>
+        <item>
+            <name>Engine Instruments</name>
+            <value>Check</value>
+            <view>
+                <heading-offset-deg>2.6</heading-offset-deg>
+                <pitch-offset-deg>-4.7</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.5</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>108.9</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5488</x-m>
+                <y-m>0.2017</y-m>
+                <z-m>0.5686</z-m>
+                <scale>1.0000</scale>
+            </marker>
+        </item>
+        <item>
+            <name>ATC Authorization</name>
+            <value>Ok</value>
+        </item>
+    </checklist>
+    <checklist>
+        <title>Gliding RAN</title>
+        <item>
+            <name>Speed (Clean)</name>
+            <value>70 KIAS</value>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>69</value>
+                    </greater-than>
+                    <less-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>71</value>
+                    </less-than>
+                </and>
+            </condition>
+        </item>
+
+        <item>
+            <name>Speed (W/Flaps)</name>
+            <value>62 KIAS</value>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>61</value>
+                    </greater-than>
+                    <less-than>
+                        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+                        <value>63</value>
+                    </less-than>
+                </and>
+            </condition>
+        </item>
+        <item>
+            <name>Carburetor Heat</name>
+            <value>On</value>
+            <view>
+                <heading-offset-deg>309.7</heading-offset-deg>
+                <pitch-offset-deg>-26.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5686</x-m>
+                <y-m>-0.1000</y-m>
+                <z-m>0.3182</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/controls/anti-ice/engine/carb-heat</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+        </item>
+        <item>
+            <name>Carburetor Heat</name>
+            <value>Off with secured landing</value>
+            <view>
+                <heading-offset-deg>309.7</heading-offset-deg>
+                <pitch-offset-deg>-26.9</pitch-offset-deg>
+                <roll-offset-deg>0.0</roll-offset-deg>
+                <x-offset-m>-0.3</x-offset-m>
+                <y-offset-m>0.7</y-offset-m>
+                <z-offset-m>-0.0</z-offset-m>
+                <field-of-view>97.0</field-of-view>
+            </view>
+
+            <marker>
+                <x-m>-0.5686</x-m>
+                <y-m>-0.1000</y-m>
+                <z-m>0.3182</z-m>
+                <scale>1.0000</scale>
+            </marker>
+            <condition>
+                <equals>
+                    <property>/controls/anti-ice/engine/carb-heat</property>
+                    <value>0</value>
+                </equals>
+            </condition>
+        </item>
+    </checklist>
+</PropertyList>

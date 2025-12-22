@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <name>failures-dialog</name>
+    <layout>vbox</layout>
+    <resizable>false</resizable>
+    <modal>false</modal>
+    <draggable>true</draggable>
+
+    <nasal>
+        <open>
+            var dlgRoot = cmdarg();
+            var dlgname = dlgRoot.getNode("name").getValue();
+            var failureprops =[
+                {"name":"Systems","props": [
+                { failprop: "/pzl/failures/engine", servprop: "/sim/failure-manager/engines/engine/serviceable", name: "Engine" },
+                { failprop: "/pzl/failures/electric", servprop: "function", name: "Electric" },
+                { failprop: "/pzl/failures/fuel", servprop: "/sim/failure-manager/fuel/flow/serviceable", name: "Fuel" },
+                { failprop: "/pzl/failures/vacuum", servprop: "/sim/failure-manager/systems/vacuum/serviceable", name: "Vacuum" },
+                { failprop: "/pzl/failures/pitot", servprop: "/sim/failure-manager/systems/pitot/serviceable", name: "Pitot" },
+                { failprop: "/pzl/failures/static", servprop: "/sim/failure-manager/systems/static/serviceable", name: "Static" },
+            ]},{"name":"Instruments","props":[
+                                        { failprop: "/pzl/failures/airspeed-indicator", servprop: "/sim/failure-manager/instrumentation/airspeed-indicator/serviceable", name: "Airspeed Indicator" },
+                                        { failprop: "/pzl/failures/altimeter", servprop: "/sim/failure-manager/instrumentation/altimeter/serviceable", name: "Altimeter" },
+                                        { failprop: "/pzl/failures/attitude-indicator", servprop: "/sim/failure-manager/instrumentation/attitude-indicator/serviceable", name: "Attitude Indicator" },
+                                        { failprop: "/pzl/failures/heading-indicator", servprop: "/sim/failure-manager/instrumentation/heading-indicator/serviceable", name: "Heading Indicator" },
+                                        { failprop: "/pzl/failures/vertical-speed-indicator", servprop: "/sim/failure-manager/instrumentation/vertical-speed-indicator/serviceable", name: "Vertical Speed Indicator" },
+                                        { failprop: "/pzl/failures/slip-skid-ball", servprop: "/sim/failure-manager/instrumentation/slip-skid-ball/serviceable", name: "Slip-Skid Ball" },
+                                        { failprop: "/pzl/failures/turn-indicator", servprop: "function", name: "Turn Coordinator" }
+                                        ]},
+            {"name":"Controls","props":[{ failprop: "/pzl/failures/ailerons", servprop: "/sim/failure-manager/controls/flight/aileron/serviceable", name: "Ailerons" },
+                                        { failprop: "/pzl/failures/slats", servprop: "/sim/failure-manager/controls/slats/serviceable", name: "Slats" },                                        
+                                        { failprop: "/pzl/failures/elevator", servprop: "/sim/failure-manager/controls/flight/elevator/serviceable", name: "Elevator" },
+                                        { failprop: "/pzl/failures/rudder", servprop: "/sim/failure-manager/controls/flight/rudder/serviceable", name: "Rudder" },
+                                        { failprop: "/pzl/failures/flaps", servprop: "/sim/failure-manager/controls/flight/flaps/serviceable", name: "Flaps" },
+                                        { failprop: "/pzl/failures/leftbrakes", servprop: "/sim/failure-manager/controls/gear/left-brake/serviceable", name: "Left-Brake" },
+                                        { failprop: "/pzl/failures/rightbrakes", servprop: "/sim/failure-manager/controls/gear/right-brake/serviceable", name: "Right-Brake" }
+                ]},
+            {"name":"Avionics","props":[{ failprop: "/pzl/failures/comms", servprop: "function", name: "Comms" },
+                                        { failprop: "/pzl/failures/nav", servprop: "function", name: "Nav" },
+                                        { failprop: "/pzl/failures/transponder", servprop: "function", name: "Transponder" },
+                ]},
+            {"name":"Misc","props":[    { failprop: "/pzl/failures/alternator", servprop: "function", name: "Alternator" },
+                                        { failprop: "/pzl/failures/oil", servprop: "function", name: "Oil" }
+                ]}
+            ];
+
+            var customFailure= func(myprop){
+                var myvalue = myprop['name'];
+                if (myvalue=='Alternator'){
+                    setprop ("/sim/failure-manager/electrical/alternator/serviceable", 0);
+                    var myprop = props.getNode('/controls/switches/alternator');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+                if (myvalue=='Electric'){
+                    var myprop = props.getNode('/controls/switches/battery');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+                if (myvalue=='Turn Coordinator'){
+                    var myprop = props.getNode('/controls/switches/turn-coordinator');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+                if (myvalue=='Fuel Pump'){
+                    var myprop = props.getNode('/controls/switches/fuel-pump');
+                    myprop.setValue(0);
+                    myprop.setAttribute("writable",0);
+                };
+            };
+            
+            var failurelist = gui.findElementByName(dlgRoot, "failures-systems");
+            var childNum = size(failurelist.getChildren());
+            if (childNum>2) {
+            }else{
+                foreach (var failureprop;failureprops){
+                    var mygroup = failurelist.addChild("group");
+                    mygroup.setValue("layout","vbox");
+                    mygroup.setValue("valign","top");
+                    var mytext = mygroup.addChild('text');
+                    mytext.setValue("label",failureprop['name']);
+                    mygroup.addChild("hrule");
+                    foreach (var myprop; failureprop['props']){
+                        var mycheckbox = mygroup.addChild("checkbox");
+                        mycheckbox.setValue ("label",myprop['name']);
+                        mycheckbox.setValue ("halign","left"); 
+                        mycheckbox.setValue ("property",myprop['failprop']);
+                        mycheckbox.setValue ("live","true");
+                        var mybinding = mycheckbox.addChild("binding");
+                        mybinding.setValue("command","dialog-apply");
+                        ## Initialize servicable prop, for custom failures, although it will do for All
+                        setprop(myprop['servprop'], 1);    
+                    };    
+                };
+            };
+            # Failures
+            setprop("/pzl/failures/enabled", false);
+            setprop("/pzl/failures/timermax", 60);
+            setprop("/pzl/failures/timermin", 0);
+            setprop("/pzl/failures/random", 0);
+            
+            foreach(var myprops; failureprops){
+                foreach(var myprop; myprops['props']){
+                        if (!getprop(myprop['failprop'])){
+                        setprop(myprop['failprop'], 0);
+                    };
+                };
+            };
+         
+            var createFailure= func{
+                var activatedprops = [];
+                foreach(var myprops; failureprops){
+                    foreach(var myprop; myprops['props']){
+                        if (getprop(myprop['failprop'])==1){
+                            append(activatedprops,myprop);
+                        };
+                    };
+                };
+                var propslen = size(activatedprops);
+                if (propslen==0){
+                    setprop("/pzl/failures/enabled", 0);
+                    failuretimer.stop();
+                    return;
+                };
+                var myindex = math.floor(rand() * propslen);
+                if (activatedprops[myindex]['servprop'] == "function"){
+                    customFailure(activatedprops[myindex]);
+                }else{
+                    setprop(activatedprops[myindex]['servprop'], 0);
+                };
+                setprop("/pzl/failures/enabled", 0);
+                failuretimer.stop();
+            };
+            var failuretimer= maketimer (0,createFailure);
+            var toggleEnable = func{
+                var myvalue = getprop("/pzl/failures/enabled");
+                if (myvalue==0){
+                    setprop("/pzl/failures/enabled", true);
+                    var mymin = getprop("/pzl/failures/timermin");
+                    var mymax = getprop("/pzl/failures/timermax");
+                    var rtime = (rand() * (mymax - mymin) + mymin)*60;
+                    failuretimer.restart(rtime);
+                }else{
+                    setprop("/pzl/failures/enabled", false);
+                    failuretimer.stop();
+                };
+            };
+            var toggleAll= func{
+                foreach (var myprops; failureprops){
+                    foreach(var myprop; myprops['props']){
+                        var myvalue = getprop(myprop['failprop']);
+                        if (myvalue==0){
+                            setprop(myprop['failprop'], 1);
+                        }else{
+                            setprop(myprop['failprop'], 0);
+                        };
+                    };
+                };
+            };
+
+        </open>
+    </nasal>
+    <group>
+        <layout>hbox</layout>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <text>
+            <label>Failures</label>
+        </text>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <button>
+            <legend>X</legend>
+            <key>Esc</key>
+            <halign>right</halign>
+            <pref-width>20</pref-width>
+            <pref-height>20</pref-height>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <padding>6</padding>
+        <group>
+            <layout>vbox</layout>
+            <checkbox>
+                <halign>left</halign>
+                <valign>center</valign>
+                <label>Enable Failures</label>
+                <property>/pzl/failures/enabled</property>
+                <live>true</live>
+                <binding>
+                    <command>nasal</command>
+                    <script>toggleEnable();</script>
+                </binding>
+            </checkbox>
+            <checkbox>
+                <halign>left</halign>
+                <valign>center</valign>
+                <label>Toggle All Systems</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>toggleAll();</script>
+                </binding>
+            </checkbox>
+            <group>
+                <layout>vbox</layout>
+                <valign>bottom</valign>
+                <group>
+                    <layout>hbox</layout>
+                    <text>
+                        <label>Minimum time to failure:</label>
+                        <halign>right</halign>
+                    </text>
+                    <text>
+                        <label>123</label>
+                        <halign>left</halign>
+                        <format>%d</format>
+                        <live>true</live>
+                        <property>/pzl/failures/timermin</property>
+                    </text>
+                    <slider>
+                        <name>min_fail_time</name>
+                        <min>0</min>
+                        <max>60</max>
+                        <live>true</live>
+                        <property>/pzl/failures/timermin</property>
+                        <binding>
+                            <command>dialog-apply</command>
+                            <name>min_fail_time</name>
+                        </binding>
+                    </slider>
+                </group>
+                <group>
+                    <layout>hbox</layout>
+                    <text>
+                        <label>Maximum time to failure:</label>
+                        <halign>right</halign>
+                    </text>
+                    <text>
+                        <label>123</label>
+                        <halign>left</halign>
+                        <format>%d</format>
+                        <live>true</live>
+                        <property>/pzl/failures/timermax</property>
+                    </text>
+                    <slider>
+                        <name>maxfail_time</name>
+                        <min>0</min>
+                        <max>60</max>
+                        <live>true</live>
+                        <property>/pzl/failures/timermax</property>
+                        <binding>
+                            <command>dialog-apply</command>
+                            <name>max_fail_time</name>
+                        </binding>
+                    </slider>
+                </group>
+            </group>
+            <button>
+                <halign>center</halign>
+                <legend>Fail Now!</legend>
+                <pref-width>160</pref-width>
+                <pref-height>28</pref-height>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                            createFailure();
+                    </script>
+                </binding>
+            </button>
+        </group>
+        <vrule/>
+        <group>
+            <name>failures-systems</name>
+            <layout>hbox</layout>
+        </group>
+        <hrule/>
+    </group>
+</PropertyList>

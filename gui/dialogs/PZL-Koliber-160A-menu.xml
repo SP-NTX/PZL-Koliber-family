@@ -32,6 +32,13 @@
 					<script>aircraft.livery.dialog.open()</script>
 				</binding>
 			</item>
+			<item>
+				<label>Random Failures</label>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name>failures-dialog</dialog-name>
+				</binding>
+			</item>
 		</menu>
 
 	</default>
