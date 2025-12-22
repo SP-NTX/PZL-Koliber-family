@@ -239,17 +239,13 @@
 	<channel name="Slats">
 		<fcs_function name="fcs/slat-cmd-norm">
 			<function>
-				<ifthen>
-					<property>/sim/failure-manager/controls/slats/serviceable</property>					<!-- Check if the property is true -->
-					<table>
-						<independentVar lookup="row">velocities/ve-kts</independentVar>
-						<tableData>
-								64  1
-								68  0
-						</tableData>
-					</table>
-  				    <property>fcs/slat-cmd-norm</property>
-				</ifthen>
+				<table>
+					<independentVar lookup="row">velocities/ve-kts</independentVar>
+					<tableData>
+						64	1
+						68	0
+					</tableData>
+				</table>
 			</function>
 		</fcs_function>
 

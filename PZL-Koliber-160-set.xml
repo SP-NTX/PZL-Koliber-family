@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
+<PropertyList>
 	<sim>
 
 		<description>PZL Koliber 160A</description>
@@ -14,7 +14,7 @@
 		<aircraft-version>0.13.2</aircraft-version>
 
 		<status>beta</status>
-
+		
 		<expected-aircraft-dir-name>PZL-Koliber-family</expected-aircraft-dir-name>
 
 		<rating>
@@ -75,18 +75,8 @@
 			<!--temporary until Koliber 235 will be made -->
 		</tags>
 
-		<checklists>
-			<group include="Checklists/PZL-Koliber-160-RAN-LANDING-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-INAIR-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-TAKEOFF-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-BSTART-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-RAN-GROUND-checklists.xml"/>
-			<group include="Checklists/PZL-Koliber-160-checklists.xml"/>
-			<ransequence>
-				<index n="0">0</index> <!-- Before starting engines -->
-      			<index n="1">1</index> <!-- Start engines -->
-			</ransequence>
-		</checklists>
+		<checklists include="PZL-Koliber-160-checklists.xml" />
+
 		<urls>
 			<home-page>https://wiki.flightgear.org/PZL-Koliber-family</home-page>
 			<support>https://github.com/SP-NTX/PZL-Koliber-family/issues</support>
@@ -96,7 +86,7 @@
 
 		<multiplay>
 			<generic>
-				<int n="6" alias="/controls/smoke">0</int>				<!-- 6 smoke -->
+				<int n="6" alias="/controls/smoke">0</int> <!-- 6 smoke -->
 			</generic>
 		</multiplay>
 
@@ -151,7 +141,7 @@
 		<flight-model>jsb</flight-model>
 		<aero>Systems/PZL-Koliber-160A-fdm</aero>
 
-		<menubar include="gui/dialogs/PZL-Koliber-160A-menu.xml" />
+		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml">
 			<property-rule n="100">
@@ -206,9 +196,9 @@
 			<config>
 				<from-model type="bool">true</from-model>
 				<from-model-idx type="int">0</from-model-idx>
-				<x-offset-m type="double">-0.253</x-offset-m>				<!--right -->
-				<y-offset-m type="double">0.6750</y-offset-m>				<!--up -->
-				<z-offset-m type="double">-0.01</z-offset-m>				<!--back -->
+				<x-offset-m type="double">-0.253</x-offset-m> <!--right -->
+				<y-offset-m type="double">0.6750</y-offset-m> <!--up -->
+				<z-offset-m type="double">-0.01</z-offset-m> <!--back -->
 				<pitch-offset-deg>-7.23</pitch-offset-deg>
 				<default-field-of-view-deg>97.0</default-field-of-view-deg>
 				<limits>
@@ -227,6 +217,8 @@
 			</config>
 		</view>
 
+		<!--<help include="help.xml">-->
+
 		<flaps>
 			<setting>0</setting>
 			<setting>0.5</setting>
@@ -237,12 +229,12 @@
 	<input>
 		<keyboard>
 			<key n="83">
-				<name>S</name>
-				<desc>Start/stop smoke</desc>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/smoke</property>
-				</binding>
+			<name>S</name>
+			<desc>Start/stop smoke</desc>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/smoke</property>
+			</binding>
 			</key>
 		</keyboard>
 	</input>
@@ -337,7 +329,7 @@
 			</tank>
 		</fuel>
 	</consumables>
-
+	
 	<init>
 		<progress>0</progress>
 		<state>.</state>
@@ -350,15 +342,14 @@
 		<systems>
 			<file>Aircraft/PZL-Koliber-family/Nasal/systems.nas</file>
 		</systems>
-
 		<pzl_koliber_160a>
 			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/pzl-koliber-160a.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/kx165a.nas</file>
-			<file>Aircraft/PZL-Koliber-family/k160a.nas</file>
+    	<file>Aircraft/PZL-Koliber-family/Nasal/kx165a.nas</file>
+    	<file>Aircraft/PZL-Koliber-family/k160a.nas</file>
 		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>
