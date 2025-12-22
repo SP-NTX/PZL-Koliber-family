@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This file is part of PZL Koliber family for FlightGear available at https://github.com/SP-NTX/PZL-Koliber-family licensed under GNU General Public License v2.0. See LICENSE file.
+    Copyright (c) 2022-2025 SP-NTX, jakkos98, TheFGFSEagle, sryu1, and others.
+-->
+
+<PropertyList include="PZL-Koliber-family.xml">
+	<sim>
+
+		<description>PZL Koliber 150A</description>
+
+		<long-description>The PZL-Koliber 150A is a version of the Polish PZL-110 Koliber series
+		developed on the basis of the SOCATA Rallye 100 ST license purchased by PZL in 1976 and produced since 1979.
+		The PZL-Koliber 150A aircraft is a four-seat low-wing aircraft with a take-off weight of up to 850 kg, equipped with a 150 hp (112 kW) Lycoming O-320-E2A engine.
+		It was produced in the years 1993-1995 at PZL Okęcie in the number of 16 pieces, mainly exported to the USA.
+		</long-description>
+		
+		<variant-of>PZL-Koliber-160A</variant-of>
+
+		<checklists include="Checklists/PZL-Koliber-150A-checklists.xml" />
+
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/PZL-Koliber-160A/1.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/PZL-Koliber-160A/2.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/PZL-Koliber-160A/3.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/PZL-Koliber-160A/4.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/PZL-Koliber-160A/5.png</path>
+
+			</preview>
+		</previews>
+
+		<aero>Systems/PZL-Koliber-150A-fdm</aero>
+
+		<menubar include="Dialogs/PZL-Koliber-150A-menu.xml" />
+
+		<systems include="Systems/PZL-Koliber-160A-electrical.xml"></systems>
+
+		<model>
+			<path>Models/PZL-Koliber-150A.xml</path>
+		</model>
+
+	</sim>
+
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name type="string">Left Wing</name>
+				<capacity-gal_us type="double">21.3</capacity-gal_us>
+				<unusable-gal_us type="double">1.3</unusable-gal_us>
+				<level-gal_us type="double">15.0</level-gal_us>
+			</tank>
+			<tank n="1">
+				<name type="string">Right Wing</name>
+				<capacity-gal_us type="double">21.3</capacity-gal_us>
+				<unusable-gal_us type="double">1.3</unusable-gal_us>
+				<level-gal_us type="double">15.0</level-gal_us>
+			</tank>
+			<tank n="2">
+				<name type="string">Engine feed</name>
+				<capacity-gal_us type="double">0.034</capacity-gal_us>
+				<unusable-gal_us type="double">0.004</unusable-gal_us>
+				<level-gal_us type="double">0.0</level-gal_us>
+				<hidden type="bool">true</hidden>
+			</tank>
+		</fuel>
+	</consumables>
+
+
+	<nasal>
+		<pts>
+			<file>Aircraft/PZL-Koliber-family/Nasal/property-tree-setup.nas</file>
+		</pts>
+		<systems>
+			<file>Aircraft/PZL-Koliber-family/Nasal/systems.nas</file>
+		</systems>
+		<pzl_koliber_160a>
+			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A-Electrical.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/PZL-Koliber-160A.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/kx165a.nas</file>
+			<file>Aircraft/PZL-Koliber-family/k160a.nas</file>
+		</pzl_koliber_160a>
+	</nasal>
+	
+</PropertyList>

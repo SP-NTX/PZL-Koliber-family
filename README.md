@@ -1,6 +1,6 @@
 # PZL Koliber family
 
-![obraz](https://user-images.githubusercontent.com/72032903/190264836-66ec08f8-5351-4bb5-bd48-a179c9de8aa5.png)
+![PZL Koliber in flight](https://github.com/SP-NTX/PZL-Koliber-family/blob/development/Previews/PZL-Koliber-160A/2.png)
 
 ## PZL Koliber family for FlightGear
 
@@ -13,6 +13,7 @@
 ### This model includes
 
 - PZL-110 Koliber 160A
+- PZL-110 Koliber 150A
 
 ### Features
 

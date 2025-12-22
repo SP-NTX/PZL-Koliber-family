@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This file is part of PZL Koliber family for FlightGear available at https://github.com/SP-NTX/PZL-Koliber-family licensed under GNU General Public License v2.0. See LICENSE file.
+    Copyright (c) 2022-2025 SP-NTX, jakkos98, TheFGFSEagle, sryu1, and others.
+-->
+
+<PropertyList>
+	<default>
+		<menu n="100">
+			<label>|</label>
+			<enabled type="bool">false</enabled>
+		</menu>
+		<menu n="101">
+			<label>PZL-Koliber 150A</label>
+			<enabled type="bool">true</enabled>
+			<item>
+				<label>Aircraft Options</label>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name>aircraft-dialog</dialog-name>
+				</binding>
+			</item>
+
+			<item>
+				<label>Autostart</label>
+				<binding>
+					<command>nasal</command>
+					<script>pzl_koliber_160a.autostart();</script>
+				</binding>
+			</item>
+			<item>
+				<label>Select Livery</label>
+				<binding>
+					<command>nasal</command>
+					<script>aircraft.livery.dialog.open()</script>
+				</binding>
+			</item>
+		</menu>
+
+	</default>
+
+</PropertyList>

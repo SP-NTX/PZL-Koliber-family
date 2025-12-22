@@ -3,6 +3,9 @@
 # to co chcemy.
 # EGT Exhaust Gas Temperature - temperatura gazów spalinowych
 # CHT Cylinder Head Temperature - temperatura głowic silnika
+#    This file is part of PZL Koliber family for FlightGear available at https://github.com/SP-NTX/PZL-Koliber-family licensed under GNU General Public License v2.0. See LICENSE file.
+#    Copyright (c) 2022-2025 SP-NTX, jakkos98, TheFGFSEagle, sryu1, and others.
+
 # GPH Gallons Per Hour - spalanie galonów na godzinę
 var disengage_starter_timer = maketimer(2, func { props.globals.setBoolValue("/controls/engines/engine/starter", 0); });
 disengage_starter_timer.singleShot = 1;
@@ -15,6 +18,7 @@ var autostart = func {
 	props.globals.setBoolValue("/controls/switches/turn-coordinator", 1);
 	props.globals.setBoolValue("/controls/switches/beacon", 1);
 	props.globals.setBoolValue("/controls/lighting/nav-lights", 1);
+	props.globals.setDoubleValue("/instrumentation/comm/volume", 1.0);
 	props.globals.setIntValue("/controls/engines/engine/magnetos", 3);
 	props.globals.setIntValue("/controls/engines/engine/primer-pump", 6);
 	props.globals.setDoubleValue("/controls/engines/engine/throttle", 0.15);

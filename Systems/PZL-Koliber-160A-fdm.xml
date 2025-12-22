@@ -1,5 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+<!-- 
+    This file is part of PZL Koliber family for FlightGear available at https://github.com/SP-NTX/PZL-Koliber-family licensed under GNU General Public License v2.0. See LICENSE file.
+    Copyright (c) 2022-2025 SP-NTX, jakkos98, TheFGFSEagle, sryu1, and others.
+-->
 
 <fdm_config name="PZL-Koliber-160" version="2.0" release="ALPHA"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -130,7 +134,7 @@
   <propulsion>
 
 
-    <engine file="Lycoming_O-320">
+    <engine file="Lycoming_O-320-D2A">
       <feed>2</feed>
 
       <thruster file="sensenich_propeller">
